@@ -1,0 +1,92 @@
+@mixin block_padding() {
+    padding: 2.5rem 3rem;
+
+    @media(max-width: $tablet_lg_width) {
+        padding: 3rem;
+    }
+
+    @media(max-width: $tablet_width) {
+        padding: 1.5rem;
+    }
+}
+
+@mixin block_margin() {
+    margin: 0 15rem;
+    margin-bottom: 2.5rem;
+
+    //до 1500 px
+    @media(max-width: $desktop_md_width) {
+        margin: 0 5rem;
+        margin-bottom: 4rem;
+    }
+    // до 1360px
+    @media(max-width: $desktop_sm_width) {
+        margin: 0 4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    // до 1024px
+    @media(max-width: $tablet_lg_width) {
+        margin: 0 2rem;
+        margin-bottom: 1.5rem;
+    }
+    // до 960px
+    @media(max-width: $tablet_width) {
+        margin: 0 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@mixin block_container() {
+    background-color: white;
+    
+    @include block_padding();
+    @include block_margin();
+    border-radius: 12px;
+}
+
+@mixin wrapper() {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $desktop_lg_width;
+    min-width: $min_width;
+    background-color: transparent;
+    
+    // до 1500px
+    @media(max-width: $desktop_md_width) {
+        max-width: 1400px;
+    }
+    // до 1360px
+    @media(max-width: $desktop_sm_width) {
+        max-width: $desktop_sm_width;
+
+    }
+
+    // до 1024px
+    @media(max-width: $tablet_lg_width) {
+        max-width: $tablet_lg_width;
+
+    }
+    // до 960px
+    @media(max-width: $tablet_width) {
+        max-width: $tablet_width;
+    }
+}
+
+@mixin link_hover() {
+    color: $color-white;
+    
+    @media(min-width: $tablet_width) {
+        transition: color $transition-rules;
+    
+    
+        &:hover,
+        &:focus {
+            color: $color-maroon;
+        }
+    
+        &:active {
+            color: $color-maroon;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+.description {
+    &__wrapper {
+        @include block_container();
+    }
+}

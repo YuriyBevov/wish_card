@@ -1,0 +1,9 @@
+.cmn {
+    &__wrapper {
+        @include wrapper();
+    }
+}
+
+main {
+    margin-top: 2rem;
+}

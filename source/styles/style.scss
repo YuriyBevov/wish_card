@@ -1,0 +1,18 @@
+@import "fonts";
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "global";
+@import "cmn";
+
+//--- plugins
+
+@import "plugins/swiper";
+
+// blocks
+@import "common/header";
+
+@import "blocks/card";
+@import "blocks/offers";
+@import "blocks/description";
+@import "blocks/advantages";

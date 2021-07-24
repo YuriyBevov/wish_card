@@ -1,0 +1,45 @@
+//fonts
+
+$font_prim_reg: 'Roboto-Regular';
+// $font_prim_med: 'Roboto-Medium';
+$font_sec-reg: 'RobotoCondensed-Regular';
+$font_sec-bold: 'RobotoCondensed-Bold';
+$font_exo-med: 'Exo-Medium';
+// $font_exo2-med: 'Exo2-Medium'; !! проверить название !!
+// $font_inter-semi: 'Inter-SemiBold';
+
+// work
+
+$outline: 1px solid red;
+
+// animation
+
+$transition_rules: 0.3s 0.1s ease;
+
+// widths
+
+$desktop_lg_width: 1920px;
+$desktop_md_width: 1500px;
+$desktop_sm_width: 1360px;
+$tablet_lg_width: 1024px;
+$tablet_width: 960px;
+// $mobile_lg_width: 534px;
+$mobile_width: 320px;
+
+$min-width: $mobile_width;
+
+// colors
+
+$color_main-bg: #f6f9fc;
+
+$color_white: #ffffff;
+$color_black: #000000;
+$color_lightblack: #333333;
+$color_blue: #175cff;
+$color_darkblue: #163560;
+
+
+// retina
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
