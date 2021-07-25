@@ -1,12 +1,13 @@
 //fonts
 
 $font_prim_reg: 'Roboto-Regular';
-// $font_prim_med: 'Roboto-Medium';
+$font_prim_med: 'Roboto-Medium';
+$font_prim_italic: 'Roboto-Italic';
 $font_sec-reg: 'RobotoCondensed-Regular';
 $font_sec-bold: 'RobotoCondensed-Bold';
 $font_exo-med: 'Exo-Medium';
-// $font_exo2-med: 'Exo2-Medium'; !! проверить название !!
-// $font_inter-semi: 'Inter-SemiBold';
+$font_exo2-med: 'Exo2-Medium';
+$font_inter-semi: 'Inter-SemiBold';
 
 // work
 
@@ -20,7 +21,7 @@ $transition_rules: 0.3s 0.1s ease;
 
 $desktop_lg_width: 1920px;
 $desktop_md_width: 1500px;
-$desktop_sm_width: 1360px;
+$desktop_sm_width: 1366px;
 $tablet_lg_width: 1024px;
 $tablet_width: 960px;
 // $mobile_lg_width: 534px;

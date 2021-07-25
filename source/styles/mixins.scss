@@ -73,6 +73,23 @@
     }
 }
 
+@mixin hover-effect-opacity() {
+    opacity: 1;
+
+    @media(min-width: $tablet_width) {
+        transition: opacity $transition-rules;
+    
+        &:hover,
+        &:focus {
+            opacity: 0.7;
+        }
+    
+        &:active {
+            opacity: 0.5;
+        }
+    }
+}
+
 @mixin link_hover() {
     color: $color-white;
     
