@@ -8,10 +8,7 @@ $font_sec-bold: 'RobotoCondensed-Bold';
 $font_exo-med: 'Exo-Medium';
 $font_exo2-med: 'Exo2-Medium';
 $font_inter-semi: 'Inter-SemiBold';
-
-// work
-
-$outline: 1px solid red;
+$font_inter_reg: 'Inter-Regular';
 
 // animation
 
@@ -20,19 +17,19 @@ $transition_rules: 0.3s 0.1s ease;
 // widths
 
 $desktop_lg_width: 1920px;
-$desktop_md_width: 1500px;
+// $desktop_md_width: 1500px;
 $desktop_sm_width: 1366px;
 $tablet_lg_width: 1024px;
 $tablet_width: 960px;
-// $mobile_lg_width: 534px;
 $mobile_width: 320px;
-
 $min-width: $mobile_width;
 
 // colors
 
 $color_main-bg: #f6f9fc;
-
+$color_desc-btn-bg-active: #f0f0f0;
+$color_desc-btn-active: #121212;
+$color_desc-btn: #b5b5b5;
 $color_white: #ffffff;
 $color_black: #000000;
 $color_lightblack: #333333;

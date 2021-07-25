@@ -1,5 +1,137 @@
 .description {
     &__wrapper {
         @include block_container();
+        position: relative;
+
+        @media(max-width: $tablet_width) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__brand-card {
+        position: absolute;
+        top: 2.5rem;
+        right: 3rem;
+        padding: 2rem;
+        margin-left: auto;
+        max-width: 31rem;
+        background: #F6F8FB;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+
+        @media(max-width: $desktop_sm_width) {
+            top: 8.5rem;
+        }
+
+        @media(max-width: $tablet_width) {
+            position: relative;
+            top: 0;
+            left: 0;
+            margin-left: 0;
+        }
+
+        .description__brand-name {
+            display: flex;
+            margin-bottom: 1.6rem;
+
+            img {
+                margin-right: 0.4rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+
+                color: $color_lightblack;
+            }
+        }
+
+
+        p {
+            max-width: 26rem;
+            font-family: $font_inter_reg;
+            font-size: 1.2rem;
+            line-height: 1.9rem;
+            margin-bottom: 1.6rem;
+            
+            color: #97A2AC;
+        }
+
+        a { 
+            display: block;
+            width: fit-content;
+            border-bottom: 1px solid #dddddd;
+            font-size: 1.2rem;
+            line-height: 1.9rem;
+                        
+            color: #424242;
+
+            &:not(:last-child) {
+                margin-bottom: 0.8rem;
+            }
+
+            @include hover-effect-opacity();
+        }
+    }
+
+    &__tabs-box {
+        max-width: 78rem;
+
+        @media(max-width: $desktop_sm_width) {
+            max-width: 100%;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 4rem;
+        overflow: hidden;
+
+        &-btn {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            padding: 0.4rem 0.9rem;
+            border: 0;
+            border-radius: 0.6rem;
+            background-color: transparent;
+            color: $color_desc-btn;
+            margin-right: 1.5rem;
+
+            transition: color $transition_rules, background-color $transition_rules;
+
+            &.active {
+                color: $color_desc-btn-active;
+                background-color: $color_desc-btn-bg-active;
+            }
+        }
+    }
+
+    &__content {
+        .hidden {
+            display: none;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 2.5rem;
+            }
+
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+
+            color: #121212;
+        }
+
+
+        @media(max-width: $desktop_sm_width) {
+            max-width: 53.5rem;
+        }
+
+        @media(max-width: $tablet_width) {
+            margin-bottom: 1.6rem;
+        }
     }
 }

@@ -15,7 +15,7 @@
     margin-bottom: 2.5rem;
 
     //до 1500 px
-    @media(max-width: $desktop_md_width) {
+    @media(max-width: $desktop_lg_width) {
         margin: 0 5rem;
         margin-bottom: 4rem;
     }
@@ -53,9 +53,9 @@
     background-color: transparent;
     
     // до 1500px
-    @media(max-width: $desktop_md_width) {
+    /* @media(max-width: $desktop_md_width) {
         max-width: 1400px;
-    }
+    }*/
     // до 1360px
     @media(max-width: $desktop_sm_width) {
         max-width: $desktop_sm_width;
