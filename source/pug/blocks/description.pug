@@ -81,10 +81,11 @@ section.description
   .cmn__wrapper
     .description__wrapper
       .description__tabs-box
-        ul.description__header
-          each btn in buttons
-            li.description__header-item
-              button.description__header-btn(data-id=btn.data_id class=btn.class ? btn.class : null)= btn.text
+        .description__header.description-swiper-container
+          .swiper-wrapper
+            each btn in buttons
+              .swiper-slide
+                button.description__header-btn(data-id=btn.data_id class=btn.class ? btn.class : null)= btn.text
 
         ul.description__content
           each desc in descriptions
