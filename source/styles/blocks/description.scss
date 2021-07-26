@@ -88,7 +88,6 @@
         display: flex;
         flex-wrap: nowrap;
         margin-bottom: 4rem;
-        overflow: hidden;
 
         &-btn {
             font-size: 1.6rem;
@@ -98,7 +97,6 @@
             border-radius: 0.6rem;
             background-color: transparent;
             color: $color_desc-btn;
-            //margin-right: 1.5rem;
 
             transition: color $transition_rules, background-color $transition_rules;
 
@@ -133,14 +131,5 @@
         @media(max-width: $tablet_width) {
             margin-bottom: 1.6rem;
         }
-    }
-}
-
-.description-swiper-container {
-    //width: 78rem;
-
-
-    .swiper-slide {
-        width: fit-content !important;
     }
 }

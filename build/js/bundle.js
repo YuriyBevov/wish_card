@@ -12271,7 +12271,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+/* harmony import */ var swiper_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/core */ "./node_modules/swiper/swiper.esm.js");
+
+swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_core__WEBPACK_IMPORTED_MODULE_0__["Scrollbar"], swiper_core__WEBPACK_IMPORTED_MODULE_0__["Navigation"]]);
 
 
 // ширина при которой происходит destroy
@@ -12293,7 +12295,7 @@ const breakpointChecker = function() {
 
 
 const enableSwiper = function() {
-   mySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"] ('.description-swiper-container', {
+   mySwiper = new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] ('.description-swiper-container', {
         slidesPerView: 'auto',
         slideToClickedSlide: true,
         spaceBetween: 15,
@@ -12304,6 +12306,27 @@ const enableSwiper = function() {
 breakpoint.addEventListener('change', breakpointChecker);
 // проверяю ширину viewport`а при загрузке
 breakpointChecker();
+
+
+const offerSlider = document.querySelector('.offers-swiper-container');
+
+if(offerSlider) {
+   new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (offerSlider, {
+      slidesPerView: 'auto',
+      slideToClickedSlide: true,
+      spaceBetween: 15,
+
+      scrollbar: {
+         el: '.swiper-scrollbar',
+         draggable: true,
+      },
+
+      navigation: {
+      nextEl: ".offers-swiper-button-next",
+      prevEl: ".offers-swiper-button-prev",
+      },
+   });
+}
 
 /***/ }),
 

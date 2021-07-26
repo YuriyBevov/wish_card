@@ -1,0 +1,18 @@
+
+mixin acc_card(className, saleValue, accName, accGift, newPrice, oldPrice, imgUrl)
+  .acc-card(class= ClassName)
+    .acc-card__header
+      span= saleValue
+      button(type="button" aria-label="добавить в избранное")
+      img(src= imgUrl, alt= accName)
+    .acc-card__content
+      .acc-card__content-left
+        h3= accName
+        span= accGift
+      .acc-card__content-right  
+        p.acc-card__price= newPrice
+        p.acc-card__price.acc-card__price--old= oldPrice
+    .acc-card__footer
+      button.cmn__btn.cmn__btn--blue Добавить в корзину
+      button.cmn__btn.cmn__btn--blue Подробнее
+

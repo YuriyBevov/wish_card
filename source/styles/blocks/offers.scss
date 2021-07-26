@@ -1,5 +1,21 @@
-.offer {
+.offers {
     &__wrapper {
         @include block_container();
+
+        /*@media (max-width: $tablet_width) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        } */
+
+        // расстояние между слайдами!!!
+    }
+
+    &__title {
+        font-family: $font_sec-reg;
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+        letter-spacing: -0.01em;
+        margin-bottom: 2rem;
+        color: #163560;
     }
 }

@@ -1,0 +1,104 @@
+.description-swiper-container {
+    position: relative;
+    overflow: hidden;
+    .swiper-slide {
+        width: fit-content !important;
+    }
+}
+
+.offers-swiper-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2rem;
+
+    .swiper-slide {
+        width: fit-content !important;
+
+        @media (max-width: $tablet_width) {
+            padding: 1.5rem;
+        }
+    }
+
+    .swiper-scrollbar {
+        background: #e5e5e5;
+        left: 0;
+        width: 100%;
+
+        &-drag {
+            background-color: #6a96e2;
+        }
+
+        @media (max-width: $tablet_width) {
+            left: 2rem;
+            width: calc(100% - 4rem);
+        }
+    }
+
+    .offers-swiper-button-next,
+    .offers-swiper-button-prev {
+        position: absolute;
+        top: 0;
+        width: 180px;
+        height: 260px;
+
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(270.8deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
+        border-radius: 7px;
+
+        opacity: 1;
+        transition: opacity $transition-rules;
+
+        &::after {
+            position: relative;
+            top: 0;
+            right: -85px;
+            content: '';
+            width: 6px;
+            height: 11px;
+            background-size: cover;
+            background-image: url(../assets/img/slider-arr.svg);
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: $tablet_width) {
+            background: $color-white;
+            width: 2rem;
+
+            &:after {
+                right: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .offers-swiper-button-next {
+        right: 0;
+        left: auto;
+
+        @media (max-width: $tablet_width) {
+            &:after {
+                top: 20px;
+            }
+        }
+    }
+
+    .offers-swiper-button-prev {
+        left: 0;
+        right: auto;
+        transform: rotate(180deg);
+
+        @media (max-width: $tablet_width) {
+            &:after {
+                top: -20px;
+            }
+        }
+    }
+
+    .swiper-button-disabled {
+        opacity: 0;
+    }
+}

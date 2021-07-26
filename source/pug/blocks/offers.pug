@@ -1,3 +1,127 @@
+include ./components/acc_card
+
+-
+  const accessories = [
+    {
+      className: '.offer__card',
+      saleValue: '-10%',
+      accName: 'AirPods Pro',
+      accGift: '+ адаптер питания',
+      newPrice: '16 990 ₽',
+      oldPrice: '18 990 ₽',
+      imgUrl: '/assets/img/headphones.png'
+    },
+
+        {
+      className: '.offer__card',
+      saleValue: '-10%',
+      accName: 'AirPods Pro',
+      accGift: '+ адаптер питания',
+      newPrice: '16 990 ₽',
+      oldPrice: '18 990 ₽',
+      imgUrl: '/assets/img/headphones.png'
+    },
+
+    {
+      className: '.offer__card',
+      saleValue: '-10%',
+      accName: 'AirPods Pro',
+      accGift: '+ адаптер питания',
+      newPrice: '16 990 ₽',
+      oldPrice: '18 990 ₽',
+      imgUrl: '/assets/img/headphones.png'
+    },
+
+    {
+      className: '.offer__card',
+      saleValue: '-10%',
+      accName: 'AirPods Pro',
+      accGift: '+ адаптер питания',
+      newPrice: '16 990 ₽',
+      oldPrice: '18 990 ₽',
+      imgUrl: '/assets/img/headphones.png'
+    },
+
+    {
+      className: '.offer__card',
+      saleValue: '-10%',
+      accName: 'AirPods Pro',
+      accGift: '+ адаптер питания',
+      newPrice: '16 990 ₽',
+      oldPrice: '18 990 ₽',
+      imgUrl: '/assets/img/headphones.png'
+    },
+
+    {
+      className: '.offer__card',
+      saleValue: '-10%',
+      accName: 'AirPods Pro',
+      accGift: '+ адаптер питания',
+      newPrice: '16 990 ₽',
+      oldPrice: '18 990 ₽',
+      imgUrl: '/assets/img/headphones.png'
+    },
+
+    {
+      className: '.offer__card',
+      saleValue: '-10%',
+      accName: 'AirPods Pro',
+      accGift: '+ адаптер питания',
+      newPrice: '16 990 ₽',
+      oldPrice: '18 990 ₽',
+      imgUrl: '/assets/img/headphones.png'
+    },
+
+    {
+      className: '.offer__card',
+      saleValue: '-10%',
+      accName: 'AirPods Pro',
+      accGift: '+ адаптер питания',
+      newPrice: '16 990 ₽',
+      oldPrice: '18 990 ₽',
+      imgUrl: '/assets/img/headphones.png'
+    },
+
+    {
+      className: '.offer__card',
+      saleValue: '-10%',
+      accName: 'AirPods Pro',
+      accGift: '+ адаптер питания',
+      newPrice: '16 990 ₽',
+      oldPrice: '18 990 ₽',
+      imgUrl: '/assets/img/headphones.png'
+    },
+
+    {
+      className: '.offer__card',
+      saleValue: '-10%',
+      accName: 'AirPods Pro',
+      accGift: '+ адаптер питания',
+      newPrice: '16 990 ₽',
+      oldPrice: '18 990 ₽',
+      imgUrl: '/assets/img/headphones.png'
+    },
+
+    {
+      className: '.offer__card',
+      saleValue: '-10%',
+      accName: 'AirPods Pro',
+      accGift: '+ адаптер питания',
+      newPrice: '16 990 ₽',
+      oldPrice: '18 990 ₽',
+      imgUrl: '/assets/img/headphones.png'
+    },
+  ];
+      
 section.offers
   .cmn__wrapper
     .offers__wrapper
+      h2.offers__title В комплекте выгоднее!
+      .offers-swiper-container
+        .swiper-wrapper
+          each acc in accessories
+            .swiper-slide
+              +acc_card(acc.clasName, acc.saleValue, acc.accName, acc.accGift, acc.newPrice, acc.oldPrice, acc.imgUrl)
+        <div class="offers-swiper-button-next"></div>
+        <div class="offers-swiper-button-prev"></div>
+        <div class="swiper-scrollbar"></div>

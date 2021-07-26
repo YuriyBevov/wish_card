@@ -1,3 +1,5 @@
+import SwiperCore, { Scrollbar, Navigation } from 'swiper/core';
+SwiperCore.use([Scrollbar, Navigation]);
 import Swiper from 'swiper'
 
 // ширина при которой происходит destroy
@@ -30,3 +32,24 @@ const enableSwiper = function() {
 breakpoint.addEventListener('change', breakpointChecker);
 // проверяю ширину viewport`а при загрузке
 breakpointChecker();
+
+
+const offerSlider = document.querySelector('.offers-swiper-container');
+
+if(offerSlider) {
+   new Swiper (offerSlider, {
+      slidesPerView: 'auto',
+      slideToClickedSlide: true,
+      spaceBetween: 15,
+
+      scrollbar: {
+         el: '.swiper-scrollbar',
+         draggable: true,
+      },
+
+      navigation: {
+      nextEl: ".offers-swiper-button-next",
+      prevEl: ".offers-swiper-button-prev",
+      },
+   });
+}
