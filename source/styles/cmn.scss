@@ -2,8 +2,47 @@
     &__wrapper {
         @include wrapper();
     }
-}
 
-main {
-    margin-top: 2rem;
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $font_sec-reg;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        padding: 0.9rem;
+        width: fit-content;
+
+        border: 1px solid $color_blue;
+        border-radius: 6px;
+
+        color: $color_blue;
+        background-color: $color-white;
+
+        &--reg {
+            @include hover-effect-opacity();
+        }
+
+        &--color-bg {
+            opacity: 1;
+            color: $color-white;
+            background-color: $color_blue;
+            transition: opacity $transition-rules, color $transition-rules, background-color $transition-rules;
+
+            @media (min-width: $tablet_width) {
+                &:hover,
+                &:focus {
+                    color: $color_blue;
+                    background-color: $color_white;
+                }
+
+                &:active {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+
+
+    }
 }

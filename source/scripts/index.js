@@ -1,4 +1,5 @@
 'use strict'
 
-import tabs from './modules/tabs.js'
+import offersTabs from './modules/offersTabs.js'
+import descriptionTabs from './modules/descriptionTabs.js'
 import swiper from './modules/swiper.js'

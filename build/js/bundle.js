@@ -12252,9 +12252,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_tabs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs.js */ "./source/scripts/modules/tabs.js");
-/* harmony import */ var _modules_tabs_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_tabs_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/swiper.js */ "./source/scripts/modules/swiper.js");
+/* harmony import */ var _modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/offersTabs.js */ "./source/scripts/modules/offersTabs.js");
+/* harmony import */ var _modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_descriptionTabs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/descriptionTabs.js */ "./source/scripts/modules/descriptionTabs.js");
+/* harmony import */ var _modules_descriptionTabs_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_descriptionTabs_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swiper.js */ "./source/scripts/modules/swiper.js");
+
 
 
 
@@ -12262,15 +12265,137 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./source/scripts/modules/descriptionTabs.js":
+/*!***************************************************!*\
+  !*** ./source/scripts/modules/descriptionTabs.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+let currentTab = document.querySelector('.description__header-btn.active');
+const tabs = document.querySelectorAll('.description__header-btn');
+const contents = document.querySelectorAll('.description__content-item');
+let currentTabID = '1'
+
+const onClickShowTabInfo = (evt) => {
+    const activeTab = evt.target;
+    currentTab.classList.remove('active')
+    activeTab.classList.add('active')
+    currentTab = activeTab
+    const dataID = activeTab.getAttribute('data-id');
+
+    if(currentTabID !== dataID) {
+        currentTabID = dataID
+
+        contents.forEach((content, i) => {
+            if((i + 1).toString() !== dataID) {
+                !content.classList.contains('hidden') ?
+                content.classList.add('hidden') : null
+            } else {
+                content.classList.contains('hidden') ? 
+                content.classList.remove('hidden') : null
+            }    
+        })
+    }
+}
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', onClickShowTabInfo)    
+});
+
+/***/ }),
+
+/***/ "./source/scripts/modules/offersTabs.js":
+/*!**********************************************!*\
+  !*** ./source/scripts/modules/offersTabs.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*import { initOffersSlider } from '../modules/swiper.js'
+
+let currentTab = document.querySelector('.offers__tabs>.active');
+const tabs = document.querySelectorAll('.offers__tabs button');
+const contents = document.querySelectorAll('.offers-swiper-container');
+const title = document.querySelector('.offers__title');
+let currentTabID = '1'
+
+const onClickShowTabInfo = (evt) => {
+
+    const activeTab = evt.target;
+    currentTab.classList.remove('active')
+    activeTab.classList.add('active')
+    currentTab = activeTab
+    const dataID = activeTab.getAttribute('data-id');
+
+    if(currentTabID !== dataID) {
+        currentTabID = dataID
+
+        contents.forEach((content, i) => {
+            if((i + 1).toString() !== dataID) {
+                !content.classList.contains('hidden') ?
+                content.classList.add('hidden') : null
+            } else {
+                if(content.classList.contains('hidden')) {
+                    content.classList.remove('hidden')                   
+
+                    i + 1 === 1 ? 
+                    title.innerHTML = 'В комплекте выгоднее!' : 
+                    i + 1 === 2 ? 
+                    title.innerHTML = 'Аксессуары по выгодной цене !' : null
+                    initOffersSlider(content);
+                } 
+            }    
+        })
+    }
+} 
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', onClickShowTabInfo)    
+});*/
+
+
+let currentTab = document.querySelector('.offers__tabs>.active');
+const tabs = document.querySelectorAll('.offers__tabs button');
+const title = document.querySelector('.offers__title');
+let currentTabID = '1'
+
+const onClickShowTabInfo = (evt) => {
+
+    const activeTab = evt.target;
+
+    currentTab.classList.remove('active')
+    activeTab.classList.add('active')
+    
+    currentTab = activeTab
+    const dataID = activeTab.getAttribute('data-id');
+
+    if(currentTabID !== dataID) {
+        currentTabID = dataID
+
+        currentTabID === '1' ? 
+        title.innerHTML = 'В комплекте выгоднее!' : 
+        currentTabID === '2' ? 
+        title.innerHTML = 'Аксессуары по выгодной цене !' : null
+    }
+} 
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', onClickShowTabInfo)    
+});
+
+/***/ }),
+
 /***/ "./source/scripts/modules/swiper.js":
 /*!******************************************!*\
   !*** ./source/scripts/modules/swiper.js ***!
   \******************************************/
-/*! no exports provided */
+/*! exports provided: initOffersSlider */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initOffersSlider", function() { return initOffersSlider; });
 /* harmony import */ var swiper_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/core */ "./node_modules/swiper/swiper.esm.js");
 
 swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_core__WEBPACK_IMPORTED_MODULE_0__["Scrollbar"], swiper_core__WEBPACK_IMPORTED_MODULE_0__["Navigation"]]);
@@ -12307,66 +12432,34 @@ breakpoint.addEventListener('change', breakpointChecker);
 // проверяю ширину viewport`а при загрузке
 breakpointChecker();
 
+const initOffersSlider = (slider) => {
+
+   
+   if(slider) {
+      
+      new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
+         slidesPerView: 'auto',
+         spaceBetween: 14,
+   
+         scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+         },
+   
+         navigation: {
+            nextEl: ".offers-swiper-button-next",
+            prevEl: ".offers-swiper-button-prev",
+         }
+      });
+   }
+}
 
 const offerSlider = document.querySelector('.offers-swiper-container');
 
-if(offerSlider) {
-   new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (offerSlider, {
-      slidesPerView: 'auto',
-      slideToClickedSlide: true,
-      spaceBetween: 15,
+initOffersSlider(offerSlider);
 
-      scrollbar: {
-         el: '.swiper-scrollbar',
-         draggable: true,
-      },
 
-      navigation: {
-      nextEl: ".offers-swiper-button-next",
-      prevEl: ".offers-swiper-button-prev",
-      },
-   });
-}
 
-/***/ }),
-
-/***/ "./source/scripts/modules/tabs.js":
-/*!****************************************!*\
-  !*** ./source/scripts/modules/tabs.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-let currentTab = document.querySelector('.description__header-btn.active');
-const tabs = document.querySelectorAll('.description__header-btn');
-const contents = document.querySelectorAll('.description__content-item');
-let currentTabID = '1'
-
-const onClickShowTabInfo = (evt) => {
-    const activeTab = evt.target;
-    currentTab.classList.remove('active')
-    activeTab.classList.add('active')
-    currentTab = activeTab
-    const dataID = activeTab.getAttribute('data-id');
-
-    if(currentTabID !== dataID) {
-        currentTabID = dataID
-
-        contents.forEach((content, i) => {
-            if((i + 1).toString() !== dataID) {
-                !content.classList.contains('hidden') ?
-                content.classList.add('hidden') : null
-            } else {
-                content.classList.contains('hidden') ? 
-                content.classList.remove('hidden') : null
-            }    
-        })
-    }
-}
-
-tabs.forEach(tab => {
-    tab.addEventListener('click', onClickShowTabInfo)    
-});
 
 /***/ })
 

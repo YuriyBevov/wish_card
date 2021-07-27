@@ -33,23 +33,30 @@ breakpoint.addEventListener('change', breakpointChecker);
 // проверяю ширину viewport`а при загрузке
 breakpointChecker();
 
+const initOffersSlider = (slider) => {
+
+   
+   if(slider) {
+      
+      new Swiper (slider, {
+         slidesPerView: 'auto',
+         spaceBetween: 14,
+   
+         scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+         },
+   
+         navigation: {
+            nextEl: ".offers-swiper-button-next",
+            prevEl: ".offers-swiper-button-prev",
+         }
+      });
+   }
+}
 
 const offerSlider = document.querySelector('.offers-swiper-container');
 
-if(offerSlider) {
-   new Swiper (offerSlider, {
-      slidesPerView: 'auto',
-      slideToClickedSlide: true,
-      spaceBetween: 15,
+initOffersSlider(offerSlider);
 
-      scrollbar: {
-         el: '.swiper-scrollbar',
-         draggable: true,
-      },
-
-      navigation: {
-      nextEl: ".offers-swiper-button-next",
-      prevEl: ".offers-swiper-button-prev",
-      },
-   });
-}
+export { initOffersSlider }
