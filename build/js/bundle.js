@@ -12252,8 +12252,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/offersTabs.js */ "./source/scripts/modules/offersTabs.js");
-/* harmony import */ var _modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/offersTabs.js */ "./source/scripts/modules/offersTabs.js");
+/* harmony import */ var _modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_descriptionTabs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/descriptionTabs.js */ "./source/scripts/modules/descriptionTabs.js");
 /* harmony import */ var _modules_descriptionTabs_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_descriptionTabs_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swiper.js */ "./source/scripts/modules/swiper.js");

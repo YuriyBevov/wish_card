@@ -1,3 +1,94 @@
+-
+  chars = [
+    {
+      name: 'Артикул:',
+      desc: '2766/2763'
+    },
+    {
+      name: 'Операционная система:',
+      desc: 'iOS'
+    },
+    {
+      name: 'Водозащита:',
+      desc: 'IP68'
+    },
+    {
+      name: 'Количество SIM-карт:',
+      desc: '2 (nano SIM+eSIM)'
+    },
+    {
+      name: 'Количество SIM-карт:',
+      desc: '2 (nano SIM+eSIM)'
+    },
+    {
+      name: 'еще поле',
+      desc: 'еще описание'
+    },
+    {
+      name: 'еще поле',
+      desc: 'еще описание'
+    },
+    {
+      name: 'еще поле',
+      desc: 'еще описание'
+    },
+  ];
 section.card
   .cmn__wrapper
     .card__wrapper
+      .card__preview
+        p slider
+
+      .card__content
+
+        
+        .card__content-header
+          h1 Смартфон Apple iPhone 12 256GB
+          .card__content-header-menu
+            a(href="#") Поделиться
+            a(href="#") Все товары
+
+        .card__content-main
+          .card__content-main-chars.chars
+            h2.chars__title Краткие характеристики
+            ul.chars__list
+              each char in chars
+                li.chars__item
+                  p.char__item-name= char.name
+                  p.char__item-desc= char.desc
+            button(type="button").chars__btn Смотреть все характеристики
+
+          .card__content-main-purchase.purchase
+            .purchase__header
+              p.purchase__header-price 80 380 ₽
+              button(type="button").purchase__header-btn Отложить
+              button(type="button").purchase__header-btn Сравнить
+
+            .purchase__content
+              .purchase__content-info
+                p.purchase__content-info-name Накопитель
+                span.purchase__content-info-desc 256 ГБ
+              .purchase__content-info
+                p.purchase__content-info-name Цвет
+                ul.purchase__content-info-color.color-list
+                  li.color-list__item.color-list__item--white
+                    span.visually-hidden белый
+                    
+                  li.color-list__item.color-list__item--green
+                    span.visually-hidden зеленый
+
+                  li.color-list__item.color-list__item--red
+                    span.visually-hidden красный
+
+                  li.color-list__item.color-list__item--blue
+                    span.visually-hidden синий
+
+                  li.color-list__item.color-list__item--black
+                    span.visually-hidden черный 
+
+                  li.color-list__item.color-list__item--violet
+                    span.visually-hidden фиолетовый
+
+        .card__content-footer
+          button(type="button").cmn__btn Добавить в корзину
+          button(type="button").cmn__btn Быстрый заказ
