@@ -20,28 +20,15 @@
       name: 'Количество SIM-карт:',
       desc: '2 (nano SIM+eSIM)'
     },
-    {
-      name: 'еще поле',
-      desc: 'еще описание'
-    },
-    {
-      name: 'еще поле',
-      desc: 'еще описание'
-    },
-    {
-      name: 'еще поле',
-      desc: 'еще описание'
-    },
+
   ];
-section.card
+//section.card
   .cmn__wrapper
     .card__wrapper
       .card__preview
         p slider
 
-      .card__content
-
-        
+    //.card__content      
         .card__content-header
           h1 Смартфон Apple iPhone 12 256GB
           .card__content-header-menu
@@ -71,24 +58,101 @@ section.card
               .purchase__content-info
                 p.purchase__content-info-name Цвет
                 ul.purchase__content-info-color.color-list
-                  li.color-list__item.color-list__item--white
+                  li.color-list__item.color-list__item-inner--white
                     span.visually-hidden белый
                     
-                  li.color-list__item.color-list__item--green
+                  li.color-list__item.color-list__item-inner--green
                     span.visually-hidden зеленый
 
-                  li.color-list__item.color-list__item--red
+                  li.color-list__item.color-list__item-inner--red
                     span.visually-hidden красный
 
-                  li.color-list__item.color-list__item--blue
+                  li.color-list__item.color-list__item-inner--blue
                     span.visually-hidden синий
 
-                  li.color-list__item.color-list__item--black
+                  li.color-list__item.color-list__item-inner--black
                     span.visually-hidden черный 
 
-                  li.color-list__item.color-list__item--violet
+                  li.color-list__item.color-list__item-inner--violet
                     span.visually-hidden фиолетовый
 
         .card__content-footer
           button(type="button").cmn__btn Добавить в корзину
           button(type="button").cmn__btn Быстрый заказ
+
+section.card
+  .cmn__wrapper.card__wrapper
+    .card__header
+      h1 Смартфон Apple iPhone 12 256GB
+      .breadcrumbs
+        a(href="#") Главная
+        a(href="#") Каталог
+        a(href="#") Apple
+        a(href="#") iPhone
+        a(href="#") iPhone 12
+        a(href="#") Смартфон Apple iPhone 12 256GB
+      .card__header-menu
+        a(href="#") Поделиться
+          // svg
+        a(href="#") Все товары
+          //svg
+    
+    .card__content
+      .card__content-wrapper
+        .card__slider
+          p slider
+        .card__desc
+          .card__desc-header
+            .card__desc-header-wrapper
+              .card__chars.chars
+                h2.chars__title Краткие характеристики
+                ul.chars__list
+                  each char in chars
+                    li.chars__item
+                      p.char__item-name= char.name
+                      p.char__item-desc= char.desc
+                button(type="button").chars__btn Смотреть все характеристики
+
+              .card__purchase.purchase
+                .purchase__header
+                  p.purchase__header-price 80 380 ₽
+                  button(type="button").purchase__header-btn Отложить
+                  button(type="button").purchase__header-btn Сравнить
+
+                .purchase__content
+                  .purchase__content-info
+                    p.purchase__content-info-name Накопитель
+                    span.purchase__content-info-desc 256 ГБ
+                  .purchase__content-info
+                    p.purchase__content-info-name Цвет
+                    ul.purchase__content-info-color.color-list
+                      li.color-list__item
+                        .color-list__item-inner.color-list__item-inner--white
+                          span.visually-hidden белый
+                        
+                      li.color-list__item.active
+                        .color-list__item-inner.color-list__item-inner--green
+                          span.visually-hidden зеленый
+
+                      li.color-list__item
+                        .color-list__item-inner.color-list__item-inner--red
+                          span.visually-hidden красный
+
+                      li.color-list__item
+                        .color-list__item-inner.color-list__item-inner--blue
+                          span.visually-hidden синий
+
+                      li.color-list__item
+                        .color-list__item-inner.color-list__item-inner--black
+                          span.visually-hidden черный 
+
+                      li.color-list__item
+                        .color-list__item-inner.color-list__item-inner--violet
+                          span.visually-hidden фиолетовый
+                .purchase__footer
+                  button(type="button").cmn__btn.cmn__btn--color-bg Добавить в корзину
+                  button(type="button").cmn__btn Быстрый заказ
+          .card__desc-footer
+            .card__features
+
+            .card__banner

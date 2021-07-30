@@ -1,0 +1,51 @@
+.color-list {
+    display: flex;
+
+    &__item {
+        border: 1px solid transparent;
+        border-radius: 8px;
+        width: 3rem;
+        height: 3rem;
+        padding: 0.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.active {
+            border: 1px solid #E5E5E5;
+        }
+
+        &-inner {
+            width: 2.4rem;
+            height: 2.4rem;
+
+            border-radius: 6px;
+
+            &--white {
+                background-color: $color-white;
+            }
+    
+            &--green {
+                background-color: #DDF1D5;
+            }
+    
+            &--red {
+                background-color: #D83838;
+            }
+    
+            &--blue {
+                background-color: #206C9E;
+            }
+    
+            &--black {
+                background-color: #3A3B41;
+            }
+    
+            &--violet {
+                background-color: #BAAEF3;
+            }
+        }
+
+       
+    }
+}

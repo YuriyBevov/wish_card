@@ -15,83 +15,153 @@
     </div>
     <!-- include ../blocks/common/header-->
     <main>
+      <!--section.card
+      .cmn__wrapper
+        .card__wrapper
+          .card__preview
+            p slider
+      
+        //.card__content      
+            .card__content-header
+              h1 Смартфон Apple iPhone 12 256GB
+              .card__content-header-menu
+                a(href="#") Поделиться
+                a(href="#") Все товары
+      
+            .card__content-main
+              .card__content-main-chars.chars
+                h2.chars__title Краткие характеристики
+                ul.chars__list
+                  each char in chars
+                    li.chars__item
+                      p.char__item-name= char.name
+                      p.char__item-desc= char.desc
+                button(type="button").chars__btn Смотреть все характеристики
+      
+              .card__content-main-purchase.purchase
+                .purchase__header
+                  p.purchase__header-price 80 380 ₽
+                  button(type="button").purchase__header-btn Отложить
+                  button(type="button").purchase__header-btn Сравнить
+      
+                .purchase__content
+                  .purchase__content-info
+                    p.purchase__content-info-name Накопитель
+                    span.purchase__content-info-desc 256 ГБ
+                  .purchase__content-info
+                    p.purchase__content-info-name Цвет
+                    ul.purchase__content-info-color.color-list
+                      li.color-list__item.color-list__item-inner--white
+                        span.visually-hidden белый
+                        
+                      li.color-list__item.color-list__item-inner--green
+                        span.visually-hidden зеленый
+      
+                      li.color-list__item.color-list__item-inner--red
+                        span.visually-hidden красный
+      
+                      li.color-list__item.color-list__item-inner--blue
+                        span.visually-hidden синий
+      
+                      li.color-list__item.color-list__item-inner--black
+                        span.visually-hidden черный 
+      
+                      li.color-list__item.color-list__item-inner--violet
+                        span.visually-hidden фиолетовый
+      
+            .card__content-footer
+              button(type="button").cmn__btn Добавить в корзину
+              button(type="button").cmn__btn Быстрый заказ
+      
+      -->
       <section class="card">
-        <div class="cmn__wrapper">
-          <div class="card__wrapper">
-            <div class="card__preview">
-              <p>slider</p>
-            </div>
-            <div class="card__content">
-              <div class="card__content-header">
-                <h1>Смартфон Apple iPhone 12 256GB</h1>
-                <div class="card__content-header-menu"><a href="#">Поделиться</a><a href="#">Все товары</a></div>
+        <div class="cmn__wrapper card__wrapper">
+          <div class="card__header">
+            <h1>Смартфон Apple iPhone 12 256GB</h1>
+            <div class="breadcrumbs"><a href="#">Главная</a><a href="#">Каталог</a><a href="#">Apple</a><a href="#">iPhone</a><a href="#">iPhone 12</a><a href="#">Смартфон Apple iPhone 12 256GB</a></div>
+            <div class="card__header-menu"><a href="#">Поделиться
+                <!-- svg--></a><a href="#">Все товары
+                <!--svg--></a></div>
+          </div>
+          <div class="card__content">
+            <div class="card__content-wrapper">
+              <div class="card__slider">
+                <p>slider</p>
               </div>
-              <div class="card__content-main">
-                <div class="card__content-main-chars chars">
-                  <h2 class="chars__title">Краткие характеристики</h2>
-                  <ul class="chars__list">
-                    <li class="chars__item">
-                      <p class="char__item-name">Артикул:</p>
-                      <p class="char__item-desc">2766/2763</p>
-                    </li>
-                    <li class="chars__item">
-                      <p class="char__item-name">Операционная система:</p>
-                      <p class="char__item-desc">iOS</p>
-                    </li>
-                    <li class="chars__item">
-                      <p class="char__item-name">Водозащита:</p>
-                      <p class="char__item-desc">IP68</p>
-                    </li>
-                    <li class="chars__item">
-                      <p class="char__item-name">Количество SIM-карт:</p>
-                      <p class="char__item-desc">2 (nano SIM+eSIM)</p>
-                    </li>
-                    <li class="chars__item">
-                      <p class="char__item-name">Количество SIM-карт:</p>
-                      <p class="char__item-desc">2 (nano SIM+eSIM)</p>
-                    </li>
-                    <li class="chars__item">
-                      <p class="char__item-name">еще поле</p>
-                      <p class="char__item-desc">еще описание</p>
-                    </li>
-                    <li class="chars__item">
-                      <p class="char__item-name">еще поле</p>
-                      <p class="char__item-desc">еще описание</p>
-                    </li>
-                    <li class="chars__item">
-                      <p class="char__item-name">еще поле</p>
-                      <p class="char__item-desc">еще описание</p>
-                    </li>
-                  </ul>
-                  <button class="chars__btn" type="button">Смотреть все характеристики</button>
-                </div>
-                <div class="card__content-main-purchase purchase">
-                  <div class="purchase__header">
-                    <p class="purchase__header-price">80 380 ₽</p>
-                    <button class="purchase__header-btn" type="button">Отложить</button>
-                    <button class="purchase__header-btn" type="button">Сравнить</button>
-                  </div>
-                  <div class="purchase__content">
-                    <div class="purchase__content-info">
-                      <p class="purchase__content-info-name">Накопитель</p><span class="purchase__content-info-desc">256 ГБ</span>
-                    </div>
-                    <div class="purchase__content-info">
-                      <p class="purchase__content-info-name">Цвет</p>
-                      <ul class="purchase__content-info-color color-list">
-                        <li class="color-list__item color-list__item--white"><span class="visually-hidden">белый</span></li>
-                        <li class="color-list__item color-list__item--green"><span class="visually-hidden">зеленый</span></li>
-                        <li class="color-list__item color-list__item--red"><span class="visually-hidden">красный</span></li>
-                        <li class="color-list__item color-list__item--blue"><span class="visually-hidden">синий</span></li>
-                        <li class="color-list__item color-list__item--black"><span class="visually-hidden">черный </span></li>
-                        <li class="color-list__item color-list__item--violet"><span class="visually-hidden">фиолетовый</span></li>
+              <div class="card__desc">
+                <div class="card__desc-header">
+                  <div class="card__desc-header-wrapper">
+                    <div class="card__chars chars">
+                      <h2 class="chars__title">Краткие характеристики</h2>
+                      <ul class="chars__list">
+                        <li class="chars__item">
+                          <p class="char__item-name">Артикул:</p>
+                          <p class="char__item-desc">2766/2763</p>
+                        </li>
+                        <li class="chars__item">
+                          <p class="char__item-name">Операционная система:</p>
+                          <p class="char__item-desc">iOS</p>
+                        </li>
+                        <li class="chars__item">
+                          <p class="char__item-name">Водозащита:</p>
+                          <p class="char__item-desc">IP68</p>
+                        </li>
+                        <li class="chars__item">
+                          <p class="char__item-name">Количество SIM-карт:</p>
+                          <p class="char__item-desc">2 (nano SIM+eSIM)</p>
+                        </li>
+                        <li class="chars__item">
+                          <p class="char__item-name">Количество SIM-карт:</p>
+                          <p class="char__item-desc">2 (nano SIM+eSIM)</p>
+                        </li>
                       </ul>
+                      <button class="chars__btn" type="button">Смотреть все характеристики</button>
+                    </div>
+                    <div class="card__purchase purchase">
+                      <div class="purchase__header">
+                        <p class="purchase__header-price">80 380 ₽</p>
+                        <button class="purchase__header-btn" type="button">Отложить</button>
+                        <button class="purchase__header-btn" type="button">Сравнить</button>
+                      </div>
+                      <div class="purchase__content">
+                        <div class="purchase__content-info">
+                          <p class="purchase__content-info-name">Накопитель</p><span class="purchase__content-info-desc">256 ГБ</span>
+                        </div>
+                        <div class="purchase__content-info">
+                          <p class="purchase__content-info-name">Цвет</p>
+                          <ul class="purchase__content-info-color color-list">
+                            <li class="color-list__item">
+                              <div class="color-list__item-inner color-list__item-inner--white"><span class="visually-hidden">белый</span></div>
+                            </li>
+                            <li class="color-list__item active">
+                              <div class="color-list__item-inner color-list__item-inner--green"><span class="visually-hidden">зеленый</span></div>
+                            </li>
+                            <li class="color-list__item">
+                              <div class="color-list__item-inner color-list__item-inner--red"><span class="visually-hidden">красный</span></div>
+                            </li>
+                            <li class="color-list__item">
+                              <div class="color-list__item-inner color-list__item-inner--blue"><span class="visually-hidden">синий</span></div>
+                            </li>
+                            <li class="color-list__item">
+                              <div class="color-list__item-inner color-list__item-inner--black"><span class="visually-hidden">черный </span></div>
+                            </li>
+                            <li class="color-list__item">
+                              <div class="color-list__item-inner color-list__item-inner--violet"><span class="visually-hidden">фиолетовый</span></div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="purchase__footer">
+                        <button class="cmn__btn cmn__btn--color-bg" type="button">Добавить в корзину</button>
+                        <button class="cmn__btn" type="button">Быстрый заказ</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="card__content-footer">
-                <button class="cmn__btn" type="button">Добавить в корзину</button>
-                <button class="cmn__btn" type="button">Быстрый заказ</button>
+                <div class="card__desc-footer">
+                  <div class="card__features"></div>
+                  <div class="card__banner"></div>
+                </div>
               </div>
             </div>
           </div>

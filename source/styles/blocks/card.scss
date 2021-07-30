@@ -1,3 +1,98 @@
 .card {
+    &__wrapper {
+        @include block_container();
+        background-color: transparent;
+    }
+
+    &__header {
+        position: relative;
+        margin-bottom: 2.4rem;
+
+        h1 {
+            font-family: $font_sec-reg;
+            font-weight: 400;
+            font-size: 3.6rem;
+            line-height: 5rem;
+            letter-spacing: -0.01em;
     
+            color: $color_darkblue;
+            margin-bottom: 1.2rem;
+        }
+
+        &-menu {
+            position: absolute;
+            top: 0;
+            right: 10rem;
+
+            a {
+                display: block;
+                font-family: $font_inter_reg;
+                font-size: 1.2rem;
+                line-height: 1.7rem;
+    
+                color: #97A2AC;
+
+                svg {
+                    // svg
+                }
+            }
+        }
+    }
+
+    &__content {
+        &-wrapper {
+            display: flex;
+        }
+
+        .card__desc {
+            min-width: 96.4rem; // temp
+            &-header {
+                border-radius: 1.2rem;
+                background-color: $color-white;
+                &-wrapper {
+                    display: flex;
+                    padding: 1.5rem 2rem;
+                }
+            }
+
+            &-footer {
+                .card__features {
+
+                }
+
+                .card__banner {
+
+                }
+            }
+        }
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+
+    a {
+        display: block;
+        position: relative;
+        font-family: $font_inter_reg;
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        padding-right: 1.7rem;
+        margin-right: 1rem;
+        
+        color: #505050;
+
+        &:not(:last-child)::after {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+            content: '';
+            width: 0.7rem;
+            height: 0.8rem;
+
+            background-image: url("../assets/img/breadcrumb-arr.svg");
+        }
+    }
 }
