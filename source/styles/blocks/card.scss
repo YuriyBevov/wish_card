@@ -1,7 +1,12 @@
 .card {
+
     &__wrapper {
         @include block_container();
         background-color: transparent;
+
+        @media(max-width: $desktop_lg_width) {
+            margin-bottom: 0;
+        }
     }
 
     &__header {

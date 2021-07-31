@@ -1,5 +1,5 @@
-import SwiperCore, { Scrollbar, Navigation } from 'swiper/core';
-SwiperCore.use([Scrollbar, Navigation]);
+import SwiperCore, { Scrollbar, Navigation, Thumbs } from 'swiper/core';
+SwiperCore.use([Scrollbar, Navigation, Thumbs]);
 import Swiper from 'swiper'
 
 // ширина при которой происходит destroy
@@ -33,9 +33,55 @@ breakpoint.addEventListener('change', breakpointChecker);
 // проверяю ширину viewport`а при загрузке
 breakpointChecker();
 
+//-------------
+
+
+const cardSlider = document.querySelector('.card-swiper-container');
+
+if(cardSlider) {
+   let swiper = new Swiper(".card-slider-thumbs", {
+      slidesPerView: 4,
+      //watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      spaceBetween: 50,
+      direction: "vertical",
+
+      /* breakpoints: {
+
+        768: {
+          direction: "vertical",
+          spaceBetween: 0,
+          slidesPerView: 4,
+        },
+
+        534: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          direction: "horizontal",
+          direction: "horizontal",
+        },
+      } */
+   });
+
+   let swiperThumbs = new Swiper(".card-slider", {
+      loop: true,
+      spaceBetween: 10,
+
+      thumbs: {
+        swiper: swiper,
+      },
+
+      navigation: {
+         nextEl: ".card-slider-thumbs-swiper-button-next",
+         prevEl: ".card-slider-thumbs-swiper-button-prev"
+      }
+   });
+}
+
+//-------------
+
 const initOffersSlider = (slider) => {
 
-   
    if(slider) {
       
       new Swiper (slider, {

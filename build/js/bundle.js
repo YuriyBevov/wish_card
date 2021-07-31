@@ -12398,7 +12398,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initOffersSlider", function() { return initOffersSlider; });
 /* harmony import */ var swiper_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/core */ "./node_modules/swiper/swiper.esm.js");
 
-swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_core__WEBPACK_IMPORTED_MODULE_0__["Scrollbar"], swiper_core__WEBPACK_IMPORTED_MODULE_0__["Navigation"]]);
+swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_core__WEBPACK_IMPORTED_MODULE_0__["Scrollbar"], swiper_core__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper_core__WEBPACK_IMPORTED_MODULE_0__["Thumbs"]]);
 
 
 // ширина при которой происходит destroy
@@ -12432,9 +12432,55 @@ breakpoint.addEventListener('change', breakpointChecker);
 // проверяю ширину viewport`а при загрузке
 breakpointChecker();
 
+//-------------
+
+
+const cardSlider = document.querySelector('.card-swiper-container');
+
+if(cardSlider) {
+   let swiper = new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".card-slider-thumbs", {
+      slidesPerView: 4,
+      //watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      spaceBetween: 50,
+      direction: "vertical",
+
+      /* breakpoints: {
+
+        768: {
+          direction: "vertical",
+          spaceBetween: 0,
+          slidesPerView: 4,
+        },
+
+        534: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          direction: "horizontal",
+          direction: "horizontal",
+        },
+      } */
+   });
+
+   let swiperThumbs = new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".card-slider", {
+      loop: true,
+      spaceBetween: 10,
+
+      thumbs: {
+        swiper: swiper,
+      },
+
+      navigation: {
+         nextEl: ".card-slider-thumbs-swiper-button-next",
+         prevEl: ".card-slider-thumbs-swiper-button-prev"
+      }
+   });
+}
+
+//-------------
+
 const initOffersSlider = (slider) => {
 
-   
    if(slider) {
       
       new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {

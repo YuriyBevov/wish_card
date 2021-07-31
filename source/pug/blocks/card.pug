@@ -46,13 +46,48 @@
     },
 
     {
-      name: 'Новое оригинальное </br> запечатанное устройство',
+      name: 'Новое оригинальное запечатанное устройство',
       svgPath: './assets/img/original.svg'
     },
 
     {
       name: 'Кэшбек 300р</br>за&nbsp;отзыв',
       svgPath: '../assets/img/cashback.svg'
+    },
+  ];
+
+-
+  imgList = [
+    {
+      imgUrl: '../assets/img/card-item.png'
+    },
+
+    {
+      imgUrl: '../assets/img/card-item2.png'
+    },
+
+    {
+      imgUrl: '../assets/img/card-item.png'
+    },
+
+    {
+      imgUrl: '../assets/img/card-item2.png'
+    },
+
+    {
+      imgUrl: '../assets/img/card-item.png'
+    },
+
+    {
+      imgUrl: '../assets/img/card-item2.png'
+    },
+
+    {
+      imgUrl: '../assets/img/card-item.png'
+    },
+
+    {
+      imgUrl: '../assets/img/card-item2.png'
     },
   ];
 
@@ -75,8 +110,20 @@ section.card
     
     .card__content
       .card__content-wrapper
-        .card__slider
-          p slider
+        .card__slider.slider
+          .card-swiper-container.card-slider 
+            .swiper-wrapper
+              each img in imgList
+                .swiper-slide
+                  img(src=img.imgUrl, alt="товар")
+          .card-swiper-container.card-slider-thumbs(thumbsSlider="")
+            .swiper-wrapper
+              each img in imgList
+                .swiper-slide
+                  img(src=img.imgUrl, alt="товар")
+            <div class="card-slider-thumbs-swiper-button-prev"></div>
+            <div class="card-slider-thumbs-swiper-button-next"></div>
+
         .card__desc
           .card__desc-header
             .card__desc-header-wrapper

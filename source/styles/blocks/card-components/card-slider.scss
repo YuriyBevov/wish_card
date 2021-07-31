@@ -1,0 +1,72 @@
+.slider {
+    display: flex;
+
+    .card-swiper-container {
+        width: 100%;
+        height: 49rem;
+        overflow: hidden;
+    }
+
+    .card-slider  {
+        width: 54rem;
+        height: 49rem;
+        order: 2;
+        margin-right: 3.4rem;
+        border-radius: 10px;
+
+        .swiper-slide { 
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+
+    .card-slider-thumbs {
+        position: relative;
+        width: 6.2rem;
+        order: 1;
+        margin-right: 2rem;
+        padding: 5rem 0;
+
+        .swiper-slide {
+            width: 6rem;
+            height: 6rem !important;
+            border: 1px solid #D4D4D4;
+            border-radius: 10px;
+            opacity: 0.3;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+
+            &-thumb-active {
+                opacity: 1;
+            }
+        }
+
+        .card-slider-thumbs-swiper-button-next,
+        .card-slider-thumbs-swiper-button-prev {
+            position: absolute;
+            width: 100%;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        .card-slider-thumbs-swiper-button-next {
+            bottom: 0;
+            width: 100%;
+            background-image: url("../assets/img/card-slider-arr-bottom.svg");;
+        }
+
+        .card-slider-thumbs-swiper-button-prev {
+            top: 0;
+            background-image: url("../assets/img/card-slider-arr-top.svg");;
+        }
+    }
+}
