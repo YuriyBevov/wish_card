@@ -15,65 +15,6 @@
     </div>
     <!-- include ../blocks/common/header-->
     <main>
-      <!--section.card
-      .cmn__wrapper
-        .card__wrapper
-          .card__preview
-            p slider
-      
-        //.card__content      
-            .card__content-header
-              h1 Смартфон Apple iPhone 12 256GB
-              .card__content-header-menu
-                a(href="#") Поделиться
-                a(href="#") Все товары
-      
-            .card__content-main
-              .card__content-main-chars.chars
-                h2.chars__title Краткие характеристики
-                ul.chars__list
-                  each char in chars
-                    li.chars__item
-                      p.char__item-name= char.name
-                      p.char__item-desc= char.desc
-                button(type="button").chars__btn Смотреть все характеристики
-      
-              .card__content-main-purchase.purchase
-                .purchase__header
-                  p.purchase__header-price 80 380 ₽
-                  button(type="button").purchase__header-btn Отложить
-                  button(type="button").purchase__header-btn Сравнить
-      
-                .purchase__content
-                  .purchase__content-info
-                    p.purchase__content-info-name Накопитель
-                    span.purchase__content-info-desc 256 ГБ
-                  .purchase__content-info
-                    p.purchase__content-info-name Цвет
-                    ul.purchase__content-info-color.color-list
-                      li.color-list__item.color-list__item-inner--white
-                        span.visually-hidden белый
-                        
-                      li.color-list__item.color-list__item-inner--green
-                        span.visually-hidden зеленый
-      
-                      li.color-list__item.color-list__item-inner--red
-                        span.visually-hidden красный
-      
-                      li.color-list__item.color-list__item-inner--blue
-                        span.visually-hidden синий
-      
-                      li.color-list__item.color-list__item-inner--black
-                        span.visually-hidden черный 
-      
-                      li.color-list__item.color-list__item-inner--violet
-                        span.visually-hidden фиолетовый
-      
-            .card__content-footer
-              button(type="button").cmn__btn Добавить в корзину
-              button(type="button").cmn__btn Быстрый заказ
-      
-      -->
       <section class="card">
         <div class="cmn__wrapper card__wrapper">
           <div class="card__header">
@@ -120,12 +61,12 @@
                     <div class="card__purchase purchase">
                       <div class="purchase__header">
                         <p class="purchase__header-price">80 380 ₽</p>
-                        <button class="purchase__header-btn" type="button">Отложить</button>
-                        <button class="purchase__header-btn" type="button">Сравнить</button>
+                        <button class="purchase__header-btn purchase__header-btn--put" type="button">Отложить</button>
+                        <button class="purchase__header-btn purchase__header-btn--chart" type="button">Сравнить</button>
                       </div>
                       <div class="purchase__content">
                         <div class="purchase__content-info">
-                          <p class="purchase__content-info-name">Накопитель</p><span class="purchase__content-info-desc">256 ГБ</span>
+                          <p class="purchase__content-info-name">Накопитель</p><span class="purchase__content-info-desc"><span>256</span> ГБ</span>
                         </div>
                         <div class="purchase__content-info">
                           <p class="purchase__content-info-name">Цвет</p>
@@ -159,8 +100,34 @@
                   </div>
                 </div>
                 <div class="card__desc-footer">
-                  <div class="card__features"></div>
-                  <div class="card__banner"></div>
+                  <div class="card__features features">
+                    <ul class="features__list">
+                      <li class="features__item">
+                        <p class="features__item-name">Проверка устройства до оплаты</p><img src="./assets/img/check.svg" alt="иконка"><a class="features__item-link" href="#">Подробнее</a>
+                      </li>
+                      <li class="features__item">
+                        <p class="features__item-name">Доставка в день заказа</p><img src="./assets/img/delivery.svg" alt="иконка"><a class="features__item-link" href="#">Подробнее</a>
+                      </li>
+                      <li class="features__item">
+                        <p class="features__item-name">Бесплатный самовывоз при заказе день в день</p><img src="./assets/img/free.svg" alt="иконка"><a class="features__item-link" href="#">Подробнее</a>
+                      </li>
+                      <li class="features__item">
+                        <p class="features__item-name">2 года расширенной гарантии</p><img src="./assets/img/garanty.svg" alt="иконка"><a class="features__item-link" href="#">Подробнее</a>
+                      </li>
+                      <li class="features__item">
+                        <p class="features__item-name">Новое оригинальное <br> запечатанное устройство</p><img src="./assets/img/original.svg" alt="иконка"><a class="features__item-link" href="#">Подробнее</a>
+                      </li>
+                      <li class="features__item">
+                        <p class="features__item-name">Кэшбек 300р<br>за&nbsp;отзыв</p><img src="../assets/img/cashback.svg" alt="иконка"><a class="features__item-link" href="#">Подробнее</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card__banner banner">
+                    <div class="banner__header">
+                      <div class="banner__header-title">Почему у нас дешевле?</div><a class="banner__header-link" href="#">Подробнее</a>
+                    </div>
+                    <p class="banner__content">Ценовая политика нашего магазина основывается на принципах минимальной стоимости любого из  аппаратов в рамках рынка.</p>
+                  </div>
                 </div>
               </div>
             </div>

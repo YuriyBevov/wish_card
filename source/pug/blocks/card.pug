@@ -22,63 +22,39 @@
     },
 
   ];
-//section.card
-  .cmn__wrapper
-    .card__wrapper
-      .card__preview
-        p slider
 
-    //.card__content      
-        .card__content-header
-          h1 Смартфон Apple iPhone 12 256GB
-          .card__content-header-menu
-            a(href="#") Поделиться
-            a(href="#") Все товары
+- 
+  featureList = [
+    {
+      name: 'Проверка устройства до оплаты',
+      svgPath: './assets/img/check.svg'
+    },
 
-        .card__content-main
-          .card__content-main-chars.chars
-            h2.chars__title Краткие характеристики
-            ul.chars__list
-              each char in chars
-                li.chars__item
-                  p.char__item-name= char.name
-                  p.char__item-desc= char.desc
-            button(type="button").chars__btn Смотреть все характеристики
+    {
+      name: 'Доставка в день заказа',
+      svgPath: './assets/img/delivery.svg'
+    },
 
-          .card__content-main-purchase.purchase
-            .purchase__header
-              p.purchase__header-price 80 380 ₽
-              button(type="button").purchase__header-btn Отложить
-              button(type="button").purchase__header-btn Сравнить
+    {
+      name: 'Бесплатный самовывоз при заказе день в день',
+      svgPath: './assets/img/free.svg'
+    },
 
-            .purchase__content
-              .purchase__content-info
-                p.purchase__content-info-name Накопитель
-                span.purchase__content-info-desc 256 ГБ
-              .purchase__content-info
-                p.purchase__content-info-name Цвет
-                ul.purchase__content-info-color.color-list
-                  li.color-list__item.color-list__item-inner--white
-                    span.visually-hidden белый
-                    
-                  li.color-list__item.color-list__item-inner--green
-                    span.visually-hidden зеленый
+    {
+      name: '2 года расширенной гарантии',
+      svgPath: './assets/img/garanty.svg'
+    },
 
-                  li.color-list__item.color-list__item-inner--red
-                    span.visually-hidden красный
+    {
+      name: 'Новое оригинальное </br> запечатанное устройство',
+      svgPath: './assets/img/original.svg'
+    },
 
-                  li.color-list__item.color-list__item-inner--blue
-                    span.visually-hidden синий
-
-                  li.color-list__item.color-list__item-inner--black
-                    span.visually-hidden черный 
-
-                  li.color-list__item.color-list__item-inner--violet
-                    span.visually-hidden фиолетовый
-
-        .card__content-footer
-          button(type="button").cmn__btn Добавить в корзину
-          button(type="button").cmn__btn Быстрый заказ
+    {
+      name: 'Кэшбек 300р</br>за&nbsp;отзыв',
+      svgPath: '../assets/img/cashback.svg'
+    },
+  ];
 
 section.card
   .cmn__wrapper.card__wrapper
@@ -116,13 +92,13 @@ section.card
               .card__purchase.purchase
                 .purchase__header
                   p.purchase__header-price 80 380 ₽
-                  button(type="button").purchase__header-btn Отложить
-                  button(type="button").purchase__header-btn Сравнить
+                  button(type="button").purchase__header-btn.purchase__header-btn--put Отложить
+                  button(type="button").purchase__header-btn.purchase__header-btn--chart Сравнить
 
                 .purchase__content
                   .purchase__content-info
                     p.purchase__content-info-name Накопитель
-                    span.purchase__content-info-desc 256 ГБ
+                    span.purchase__content-info-desc <span>256</span> ГБ
                   .purchase__content-info
                     p.purchase__content-info-name Цвет
                     ul.purchase__content-info-color.color-list
@@ -153,6 +129,16 @@ section.card
                   button(type="button").cmn__btn.cmn__btn--color-bg Добавить в корзину
                   button(type="button").cmn__btn Быстрый заказ
           .card__desc-footer
-            .card__features
+            .card__features.features
+              ul.features__list
+                each feature in featureList
+                  li.features__item
+                    p.features__item-name!= feature.name
+                    img(src=feature.svgPath, alt="иконка")
+                    a(href="#").features__item-link Подробнее
 
-            .card__banner
+            .card__banner.banner
+              .banner__header
+                .banner__header-title Почему у нас дешевле?
+                a(href="#").banner__header-link Подробнее
+              p.banner__content Ценовая политика нашего магазина основывается на принципах минимальной стоимости любого из  аппаратов в рамках рынка.

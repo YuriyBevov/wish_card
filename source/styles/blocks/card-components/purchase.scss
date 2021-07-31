@@ -20,18 +20,43 @@
         }
 
         &-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
             font-family: $font_sec-reg;
             font-size: 1.1rem;
             line-height: 1.5rem;
             border: 1px solid #E1E7EB;
             border-radius: 6px;
             background-color: transparent;
-            padding: 0.8rem 2rem;
-            padding-left: 3rem;
+            padding: 0.7rem 2rem;
+            padding-left: 3.3rem;
 
             color: #45454E;
+
             &:not(:last-child) {
                 margin-right: 0.8rem;
+            }
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 1rem;
+                transform: translateY(-50%);
+                content: '';
+                background-size: cover;
+            }
+
+            &--put::before {
+                width: 1.4rem;
+                height: 1.2rem;
+                background-image: url("../assets/img/cart-heart.svg");
+            }
+
+            &--chart::before {
+                width: 1.6rem;
+                height: 1.6rem;
+                background-image: url("../assets/img/chart.svg");
             }
         }
     }
@@ -43,6 +68,7 @@
 
         &-info {
             min-width: 20%;
+
             &-name {
                 font-family: $font_sec-reg;
                 font-size: 1.4rem;
@@ -53,12 +79,15 @@
             }
 
             &-desc {
-                font-family: $font_exo-med;
+                display: block;
                 font-weight: 500;
                 font-size: 2.4rem;
                 line-height: 2.4rem;
-
                 letter-spacing: -0.01em;
+
+                span {
+                    font-family: $font_exo-med;
+                }
 
                 color: $color_darkblue;
             }

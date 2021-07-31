@@ -1,0 +1,54 @@
+.features {
+    padding: 2.7rem 2rem;
+    padding-bottom: 1rem;
+    background: $color-white;
+    border-radius: 1.2rem;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 72rem;
+    }
+
+    &__item {
+        position: relative;
+        min-height: 7.8rem;
+        padding-left: 6.8rem;
+        width: calc(100%/3 - 1rem);
+        border: 1px solid #E5E5E5;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-name {
+            font-family: $font_sec-bold;
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+            margin-bottom: 0.6rem;
+
+            color: $color_blue;
+        }
+
+        &-link {
+            font-family: $font_sec-reg;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+
+            text-decoration-line: underline;
+
+            color: $color_darkblue;
+        }
+
+        img {
+            width: 4rem;
+            height: 4rem;
+            position: absolute;
+            top: 2.2rem;
+            left: 1.4rem;
+            object-fit: contain;
+        }
+    }
+}

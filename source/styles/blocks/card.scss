@@ -46,9 +46,11 @@
 
         .card__desc {
             min-width: 96.4rem; // temp
+
             &-header {
                 border-radius: 1.2rem;
                 background-color: $color-white;
+                margin-bottom: 0.8rem;
                 &-wrapper {
                     display: flex;
                     padding: 1.5rem 2rem;
@@ -56,12 +58,12 @@
             }
 
             &-footer {
-                .card__features {
-
-                }
+                position: relative;
 
                 .card__banner {
-
+                    position: absolute;
+                    top: 0;
+                    right: 0;
                 }
             }
         }
