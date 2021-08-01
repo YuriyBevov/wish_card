@@ -23,39 +23,6 @@
 
   ];
 
-- 
-  featureList = [
-    {
-      name: 'Проверка устройства до оплаты',
-      svgPath: './assets/img/check.svg'
-    },
-
-    {
-      name: 'Доставка в день заказа',
-      svgPath: './assets/img/delivery.svg'
-    },
-
-    {
-      name: 'Бесплатный самовывоз при заказе день в день',
-      svgPath: './assets/img/free.svg'
-    },
-
-    {
-      name: '2 года расширенной гарантии',
-      svgPath: './assets/img/garanty.svg'
-    },
-
-    {
-      name: 'Новое оригинальное запечатанное устройство',
-      svgPath: './assets/img/original.svg'
-    },
-
-    {
-      name: 'Кэшбек 300р</br>за&nbsp;отзыв',
-      svgPath: '../assets/img/cashback.svg'
-    },
-  ];
-
 -
   imgList = [
     {
@@ -92,9 +59,9 @@
   ];
 
 section.card
-  .cmn__wrapper.card__wrapper
-    .card__header
-      h1 Смартфон Apple iPhone 12 256GB
+  .cmn__wrapper
+
+    .card__wrapper
       .breadcrumbs
         a(href="#") Главная
         a(href="#") Каталог
@@ -102,90 +69,32 @@ section.card
         a(href="#") iPhone
         a(href="#") iPhone 12
         a(href="#") Смартфон Apple iPhone 12 256GB
-      .card__header-menu
-        a(href="#") Поделиться
-          // svg
-        a(href="#") Все товары
-          //svg
+
     
-    .card__content
-      .card__content-wrapper
-        .card__slider.slider
-          .card-swiper-container.card-slider 
-            .swiper-wrapper
-              each img in imgList
-                .swiper-slide
-                  img(src=img.imgUrl, alt="товар")
-          .card-swiper-container.card-slider-thumbs(thumbsSlider="")
-            .swiper-wrapper
-              each img in imgList
-                .swiper-slide
-                  img(src=img.imgUrl, alt="товар")
-            <div class="card-slider-thumbs-swiper-button-prev"></div>
-            <div class="card-slider-thumbs-swiper-button-next"></div>
+      .card__content
+        .card__content-wrapper
+          .card__slider
+            include ./components/slider
 
-        .card__desc
-          .card__desc-header
-            .card__desc-header-wrapper
-              .card__chars.chars
-                h2.chars__title Краткие характеристики
-                ul.chars__list
-                  each char in chars
-                    li.chars__item
-                      p.char__item-name= char.name
-                      p.char__item-desc= char.desc
-                button(type="button").chars__btn Смотреть все характеристики
+          .card__desc
+            .card__header
+              h1 Смартфон Apple iPhone 12 256GB
+              .card__header-menu
+                a(href="#").card__header-link.card__header-link--share Поделиться
+                  
+                a(href="#").card__header-link.card__header-link--store Все товары
+                  
+            .card__desc-header
+              .card__desc-header-wrapper
+                .card__chars
+                  include ./components/chars
 
-              .card__purchase.purchase
-                .purchase__header
-                  p.purchase__header-price 80 380 ₽
-                  button(type="button").purchase__header-btn.purchase__header-btn--put Отложить
-                  button(type="button").purchase__header-btn.purchase__header-btn--chart Сравнить
+                .card__purchase
+                  include ./components/purchase
+                  
+            .card__desc-footer
+              .card__features
+                include ./components/features
 
-                .purchase__content
-                  .purchase__content-info
-                    p.purchase__content-info-name Накопитель
-                    span.purchase__content-info-desc <span>256</span> ГБ
-                  .purchase__content-info
-                    p.purchase__content-info-name Цвет
-                    ul.purchase__content-info-color.color-list
-                      li.color-list__item
-                        .color-list__item-inner.color-list__item-inner--white
-                          span.visually-hidden белый
-                        
-                      li.color-list__item.active
-                        .color-list__item-inner.color-list__item-inner--green
-                          span.visually-hidden зеленый
-
-                      li.color-list__item
-                        .color-list__item-inner.color-list__item-inner--red
-                          span.visually-hidden красный
-
-                      li.color-list__item
-                        .color-list__item-inner.color-list__item-inner--blue
-                          span.visually-hidden синий
-
-                      li.color-list__item
-                        .color-list__item-inner.color-list__item-inner--black
-                          span.visually-hidden черный 
-
-                      li.color-list__item
-                        .color-list__item-inner.color-list__item-inner--violet
-                          span.visually-hidden фиолетовый
-                .purchase__footer
-                  button(type="button").cmn__btn.cmn__btn--color-bg Добавить в корзину
-                  button(type="button").cmn__btn Быстрый заказ
-          .card__desc-footer
-            .card__features.features
-              ul.features__list
-                each feature in featureList
-                  li.features__item
-                    p.features__item-name!= feature.name
-                    img(src=feature.svgPath, alt="иконка")
-                    a(href="#").features__item-link Подробнее
-
-            .card__banner.banner
-              .banner__header
-                .banner__header-title Почему у нас дешевле?
-                a(href="#").banner__header-link Подробнее
-              p.banner__content Ценовая политика нашего магазина основывается на принципах минимальной стоимости любого из  аппаратов в рамках рынка.
+              .card__banner
+                include ./components/banner

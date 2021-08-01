@@ -1,5 +1,12 @@
 .slider {
+    width: 100%;
+    max-width: 62rem;
     display: flex;
+    margin-right: 3.4rem;
+
+    @media(max-width: $desktop_sm_width) {
+        max-width: 51rem;
+    }
 
     .card-swiper-container {
         width: 100%;
@@ -11,8 +18,11 @@
         width: 54rem;
         height: 49rem;
         order: 2;
-        margin-right: 3.4rem;
         border-radius: 10px;
+
+        @media(max-width: $desktop_sm_width) {
+            max-width: 43rem;s
+        }
 
         .swiper-slide { 
             img {

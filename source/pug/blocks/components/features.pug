@@ -1,0 +1,40 @@
+- 
+  featureList = [
+    {
+      name: 'Проверка устройства до оплаты',
+      svgPath: './assets/img/check.svg'
+    },
+
+    {
+      name: 'Доставка в день заказа',
+      svgPath: './assets/img/delivery.svg'
+    },
+
+    {
+      name: 'Бесплатный самовывоз при заказе день в день',
+      svgPath: './assets/img/free.svg'
+    },
+
+    {
+      name: '2 года расширенной гарантии',
+      svgPath: './assets/img/garanty.svg'
+    },
+
+    {
+      name: 'Новое оригинальное запечатанное устройство',
+      svgPath: './assets/img/original.svg'
+    },
+
+    {
+      name: 'Кэшбек 300р</br>за&nbsp;отзыв',
+      svgPath: '../assets/img/cashback.svg'
+    },
+  ];
+  
+.features
+  ul.features__list
+    each feature in featureList
+      li.features__item
+        p.features__item-name!= feature.name
+        img(src=feature.svgPath, alt="иконка")
+        a(href="#").features__item-link Подробнее

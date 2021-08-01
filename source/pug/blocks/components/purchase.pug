@@ -1,0 +1,39 @@
+.purchase
+  .purchase__header
+    p.purchase__header-price 80 380 ₽
+    button(type="button").purchase__header-btn.purchase__header-btn--put Отложить
+    button(type="button").purchase__header-btn.purchase__header-btn--chart Сравнить
+
+  .purchase__content
+    .purchase__content-info
+      p.purchase__content-info-name Накопитель
+      span.purchase__content-info-desc <span>256</span> ГБ
+    .purchase__content-info
+      p.purchase__content-info-name Цвет
+      ul.purchase__content-info-color.color-list
+        li.color-list__item
+          .color-list__item-inner.color-list__item-inner--white
+            span.visually-hidden белый
+            
+        li.color-list__item.active
+          .color-list__item-inner.color-list__item-inner--green
+            span.visually-hidden зеленый
+
+        li.color-list__item
+          .color-list__item-inner.color-list__item-inner--red
+            span.visually-hidden красный
+
+        li.color-list__item
+          .color-list__item-inner.color-list__item-inner--blue
+            span.visually-hidden синий
+
+        li.color-list__item
+          .color-list__item-inner.color-list__item-inner--black
+            span.visually-hidden черный 
+
+        li.color-list__item
+          .color-list__item-inner.color-list__item-inner--violet
+            span.visually-hidden фиолетовый
+  .purchase__footer
+    button(type="button").cmn__btn.cmn__btn--color-bg Добавить в корзину
+    button(type="button").cmn__btn Быстрый заказ

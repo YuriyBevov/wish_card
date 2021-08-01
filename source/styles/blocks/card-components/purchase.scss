@@ -1,9 +1,13 @@
 .purchase {
-    width: 60%;
     background-color: #F6F8FB;
     border-radius: 16px;
 
     padding: 2.5rem 1.6rem;
+
+    @media(max-width: $desktop_lg_width) {
+        max-width: 100%;
+        margin-bottom: 1.6rem;
+    }
 
     &__header {
         display: flex;

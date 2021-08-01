@@ -1,0 +1,13 @@
+.slider
+  .card-swiper-container.card-slider 
+    .swiper-wrapper
+      each img in imgList
+        .swiper-slide
+          img(src=img.imgUrl, alt="товар")
+  .card-swiper-container.card-slider-thumbs(thumbsSlider="")
+    .swiper-wrapper
+      each img in imgList
+        .swiper-slide
+          img(src=img.imgUrl, alt="товар")
+    <div class="card-slider-thumbs-swiper-button-prev"></div>
+    <div class="card-slider-thumbs-swiper-button-next"></div>

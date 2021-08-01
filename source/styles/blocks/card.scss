@@ -1,17 +1,26 @@
 .card {
-
     &__wrapper {
         @include block_container();
         background-color: transparent;
+        padding: 2.5rem 0;
 
         @media(max-width: $desktop_lg_width) {
             margin-bottom: 0;
+            position: relative;
         }
     }
 
     &__header {
         position: relative;
         margin-bottom: 2.4rem;
+        display: flex;
+        align-items: center;
+
+        @media(max-width: $desktop_lg_width) {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
         h1 {
             font-family: $font_sec-reg;
@@ -21,13 +30,10 @@
             letter-spacing: -0.01em;
     
             color: $color_darkblue;
-            margin-bottom: 1.2rem;
         }
 
         &-menu {
-            position: absolute;
-            top: 0;
-            right: 10rem;
+            margin-left: auto;
 
             a {
                 display: block;
@@ -36,39 +42,116 @@
                 line-height: 1.7rem;
     
                 color: #97A2AC;
+            }
 
-                svg {
-                    // svg
-                }
+            @media(max-width: $desktop_lg_width) {
+                display: none;
+            }
+        }
+
+        &-link {
+            position: relative;
+            padding-right: 3rem;
+            margin-bottom: 0.4rem;
+
+            &--share::after,
+            &--store::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                content: '';
+                width: 1.6rem;
+                height: 1.6rem;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            &--share::after {
+                background-image: url("../assets/img/share-arr.svg");
+            }
+
+            &--store::after  {
+                background-image: url("../assets/img/apple.svg");
             }
         }
     }
 
     &__content {
+        
         &-wrapper {
             display: flex;
+            position: relative;
+        }
+
+        .card__slider {
+            @media(max-width: $desktop_lg_width) {
+                padding-top: 10.3rem;
+            }
         }
 
         .card__desc {
-            min-width: 96.4rem; // temp
+            width: 100%;
+            max-width: 96.5rem;
+
+            @media(max-width: $desktop_lg_width) {
+                max-width: 100%;
+            }
 
             &-header {
                 border-radius: 1.2rem;
                 background-color: $color-white;
                 margin-bottom: 0.8rem;
+
                 &-wrapper {
                     display: flex;
                     padding: 1.5rem 2rem;
+
+                    @media(max-width: $desktop_lg_width) {
+                        flex-direction: column;
+                    }
+                }
+            }
+
+            .card__chars {
+                width: 100%;
+                max-width: 37rem;
+                margin-right: auto;
+
+                @media(max-width: $desktop_lg_width) {
+                    order: 2;
+                }
+            }
+
+            .card__purchase {
+                width: 100%;
+                max-width: 53.5rem;
+                background-color: #f6f8fb;
+                border-radius: 16px;
+                padding: 2.5rem 1.6rem;
+
+                @media(max-width: $desktop_lg_width) {
+                    max-width: 100%;
                 }
             }
 
             &-footer {
                 position: relative;
+                background-color: $color-white;
+                padding: 2.7rem 2rem 0;
+                border-radius: 1.2rem;
+
+                @media(max-width: $desktop_lg_width) {
+                    padding: 3.2rem 2.4rem;
+                }
 
                 .card__banner {
                     position: absolute;
                     top: 0;
                     right: 0;
+
+                    @media(max-width: $desktop_lg_width) {
+                        position: relative;
+                    }
                 }
             }
         }
@@ -77,6 +160,13 @@
 
 .breadcrumbs {
     display: flex;
+    margin-bottom: 2.4rem;
+
+    @media(max-width: $desktop_lg_width) {
+        position: absolute;
+        left: 0;
+        top: 8.5rem;
+    }
 
     a {
         display: block;
