@@ -1,89 +1,27 @@
--
-  chars = [
-    {
-      name: 'Артикул:',
-      desc: '2766/2763'
-    },
-    {
-      name: 'Операционная система:',
-      desc: 'iOS'
-    },
-    {
-      name: 'Водозащита:',
-      desc: 'IP68'
-    },
-    {
-      name: 'Количество SIM-карт:',
-      desc: '2 (nano SIM+eSIM)'
-    },
-    {
-      name: 'Количество SIM-карт:',
-      desc: '2 (nano SIM+eSIM)'
-    },
-
-  ];
-
--
-  imgList = [
-    {
-      imgUrl: '../assets/img/card-item.png'
-    },
-
-    {
-      imgUrl: '../assets/img/card-item2.png'
-    },
-
-    {
-      imgUrl: '../assets/img/card-item.png'
-    },
-
-    {
-      imgUrl: '../assets/img/card-item2.png'
-    },
-
-    {
-      imgUrl: '../assets/img/card-item.png'
-    },
-
-    {
-      imgUrl: '../assets/img/card-item2.png'
-    },
-
-    {
-      imgUrl: '../assets/img/card-item.png'
-    },
-
-    {
-      imgUrl: '../assets/img/card-item2.png'
-    },
-  ];
-
 section.card
   .cmn__wrapper
-
     .card__wrapper
-      .breadcrumbs
-        a(href="#") Главная
-        a(href="#") Каталог
-        a(href="#") Apple
-        a(href="#") iPhone
-        a(href="#") iPhone 12
-        a(href="#") Смартфон Apple iPhone 12 256GB
+      .card__header
+        h1 Смартфон Apple iPhone 12 256GB
+        .card__header-menu
+          a(href="#").card__header-link.card__header-link--share Поделиться
+            
+          a(href="#").card__header-link.card__header-link--store Все товары
+        .breadcrumbs
+          a(href="#") Главная
+          a(href="#") Каталог
+          a(href="#") Apple
+          a(href="#") iPhone
+          a(href="#") iPhone 12
+          a(href="#") Смартфон Apple iPhone 12 256GB
 
-    
-      .card__content
+      //.card__content
         .card__content-wrapper
           .card__slider
             include ./components/slider
 
           .card__desc
-            .card__header
-              h1 Смартфон Apple iPhone 12 256GB
-              .card__header-menu
-                a(href="#").card__header-link.card__header-link--share Поделиться
-                  
-                a(href="#").card__header-link.card__header-link--store Все товары
-                  
+                 
             .card__desc-header
               .card__desc-header-wrapper
                 .card__chars

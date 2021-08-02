@@ -16,12 +16,18 @@
 
     .card-slider  {
         width: 54rem;
-        height: 49rem;
+        height: 58rem;
         order: 2;
         border-radius: 10px;
 
+        @media(max-width: $desktop_lg_width) {
+            width: 54rem;
+            height: 49rem;
+        }
+
         @media(max-width: $desktop_sm_width) {
-            max-width: 43rem;s
+            width: 43rem;
+            height: 43.5rem;
         }
 
         .swiper-slide { 
@@ -30,7 +36,6 @@
                 height: 100%;
             }
         }
-
     }
 
     .card-slider-thumbs {

@@ -1,0 +1,38 @@
+.breadcrumbs {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2.4rem;
+
+    @media(max-width: $tablet_lg_width) {
+        margin-bottom: 3.7rem;
+    }
+
+    @media(max-width: $tablet_width) {
+        display: none;
+    }
+
+    a {
+        display: block;
+        position: relative;
+        font-family: $font_inter_reg;
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        padding-right: 1.7rem;
+        margin-right: 1rem;
+        
+        color: #505050;
+
+        &:not(:last-child)::after {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+            content: '';
+            width: 0.7rem;
+            height: 0.8rem;
+
+            background-image: url("../assets/img/breadcrumb-arr.svg");
+        }
+    }
+}
