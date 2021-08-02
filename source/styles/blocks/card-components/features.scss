@@ -1,12 +1,26 @@
 .features {
-    padding-bottom: 1rem;
+    width: 100%;
+    max-width: 75rem;
+
+    @media(max-width: $desktop_lg_width) {
+        max-width: 100%;
+    }
 
     &__list {
         display: flex;
         flex-wrap: wrap;
-        max-width: 74rem;
-    }
+        padding: 2.7rem 0 0 1rem;
 
+        @media(max-width: $desktop_lg_width) {
+            margin-bottom: 0.6rem;
+        }
+
+        @media(max-width: $desktop_sm_width) {
+            padding-right: 1rem;
+            margin-bottom: 0;
+        }
+    }
+    
     &__item {
         position: relative;
         min-height: 7.8rem;
@@ -14,14 +28,19 @@
         width: 22.6rem;
         border: 1px solid #E5E5E5;
         border-radius: 1rem;
+        margin: 0 1rem;
         margin-bottom: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-right: 1.9rem;
 
         @media(max-width: $desktop_lg_width) {
-            margin-right: 1.4rem;
+            margin: 0 0.7rem;
+            margin-bottom: 0.8rem;
+        }
+
+        @media(max-width: $desktop_sm_width) {
+            width: 100%;
         }
 
         &-name {

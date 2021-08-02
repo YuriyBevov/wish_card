@@ -1,13 +1,15 @@
 .banner {
-    width: 212px;
+    width: 215px;
     height: 233px;
     background-image: url("../assets/img/banner-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 1.2rem;
-    padding: 4.5rem 1.7rem;
-    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media(max-width: $desktop_lg_width) {
         display: flex;
@@ -16,6 +18,27 @@
         height: 7.8rem;
         padding: 0.9rem 1.4rem;
         padding-right: 0.5rem;
+        margin-left: 2rem;
+        margin-bottom: 3.2rem;
+    }
+
+    @media(max-width: $desktop_sm_width) {
+        width: calc(100% - 4rem);
+        height: 100%;
+        padding: 1.6rem;
+    }
+
+    &__wrapper {
+        @media(max-width: $desktop_lg_width) {
+            display: flex;
+            align-items: center;
+        }
+
+        @media(max-width: $desktop_sm_width) {
+            flex-direction: column;
+            width: 100%;
+            align-items: initial;
+        }
     }
 
     &__header {
@@ -27,6 +50,11 @@
         @media(max-width: $desktop_lg_width) {
             flex-direction: column;
             align-items: flex-start;
+        }
+
+        @media(max-width: $desktop_sm_width) {
+            flex-direction: row;
+            align-items: center;
         }
 
         &-title {
@@ -41,6 +69,11 @@
             @media(max-width: $desktop_lg_width) {
                 max-width: 15rem;
                 margin-bottom: 0.6rem;
+            }
+
+            @media(max-width: $desktop_sm_width) {
+                max-width: 25rem;
+                margin-bottom: 0;
             }
         }
 
@@ -64,6 +97,10 @@
 
         @media(max-width: $desktop_lg_width) {
             max-width: 32.8rem;
+        }
+
+        @media(max-width: $desktop_sm_width) {
+            max-width: 100%;
         }
     }
 }

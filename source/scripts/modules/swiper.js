@@ -43,24 +43,22 @@ if(cardSlider) {
       slidesPerView: 4,
       //watchSlidesVisibility: true,
       watchSlidesProgress: true,
-      spaceBetween: 50,
+      spaceBetween: 35,
       direction: "vertical",
 
-      /* breakpoints: {
+      breakpoints: {
 
-        768: {
-          direction: "vertical",
-          spaceBetween: 0,
-          slidesPerView: 4,
+        1024: {
+          spaceBetween: 50,
         },
 
-        534: {
+        /*534: {
           slidesPerView: 3,
           spaceBetween: 10,
           direction: "horizontal",
           direction: "horizontal",
-        },
-      } */
+        },*/
+      }
    });
 
    let swiperThumbs = new Swiper(".card-slider", {

@@ -2,7 +2,12 @@
     width: 100%;
     max-width: 62rem;
     display: flex;
+    align-items: center;
     margin-right: 3.4rem;
+
+    @media(max-width: $desktop_lg_width) {
+        margin-right: 1.9rem;
+    }
 
     @media(max-width: $desktop_sm_width) {
         max-width: 51rem;
@@ -10,24 +15,37 @@
 
     .card-swiper-container {
         width: 100%;
-        height: 49rem;
+        height: 58rem;
         overflow: hidden;
+
+        @media(max-width: $desktop_lg_width) {
+            height: 49rem;
+        }
+
+        @media(max-width: $desktop_sm_width) {
+            height: 43.5rem;
+        }
+
+        @media(max-width: $tablet_lg_width) {
+            height: 41.2rem;
+        }
     }
 
     .card-slider  {
         width: 54rem;
-        height: 58rem;
         order: 2;
         border-radius: 10px;
 
         @media(max-width: $desktop_lg_width) {
             width: 54rem;
-            height: 49rem;
         }
 
         @media(max-width: $desktop_sm_width) {
             width: 43rem;
-            height: 43.5rem;
+        }
+
+        @media(max-width: $tablet_lg_width) {
+            width: 40.8rem;
         }
 
         .swiper-slide { 
@@ -44,6 +62,10 @@
         order: 1;
         margin-right: 2rem;
         padding: 5rem 0;
+
+        @media(max-width: $desktop_sm_width) {
+            padding: 4rem 0;
+        }
 
         .swiper-slide {
             width: 6rem;

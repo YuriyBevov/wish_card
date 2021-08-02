@@ -1,4 +1,6 @@
 .purchase {
+    width: 100%;
+    max-width: 53.5rem;
     background-color: #F6F8FB;
     border-radius: 16px;
 
@@ -7,6 +9,7 @@
     @media(max-width: $desktop_lg_width) {
         max-width: 100%;
         margin-bottom: 1.6rem;
+        order: 1;
     }
 
     &__header {
@@ -21,6 +24,14 @@
 
             color: $color_darkblue;
             margin-right: auto;
+        }
+
+        &-menu {
+            display: flex;
+
+            @media(max-width: $desktop_sm_width) {
+                flex-direction: column;
+            }
         }
 
         &-btn {
@@ -40,6 +51,11 @@
 
             &:not(:last-child) {
                 margin-right: 0.8rem;
+
+                @media(max-width: $desktop_sm_width) {
+                    margin-right: 0;
+                    margin-bottom: 0.5rem;
+                }
             }
 
             &::before {
@@ -71,7 +87,8 @@
         margin-bottom: 2.4rem;
 
         &-info {
-            min-width: 20%;
+            min-width: 10rem;
+            margin-right: 4.5rem;
 
             &-name {
                 font-family: $font_sec-reg;
