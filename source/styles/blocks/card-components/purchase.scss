@@ -12,6 +12,10 @@
         order: 1;
     }
 
+    @media(max-width: $tablet_width) {
+        margin-bottom: 0;
+    }
+
     &__header {
         display: flex;
         margin-bottom: 3.3rem;
@@ -87,8 +91,10 @@
         margin-bottom: 2.4rem;
 
         &-info {
-            min-width: 10rem;
-            margin-right: 4.5rem;
+            &:not(:last-child) {
+                min-width: 10rem;
+                margin-right: 4.5rem;
+            }
 
             &-name {
                 font-family: $font_sec-reg;

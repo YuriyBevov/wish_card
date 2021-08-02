@@ -40,30 +40,43 @@ const cardSlider = document.querySelector('.card-swiper-container');
 
 if(cardSlider) {
    let swiper = new Swiper(".card-slider-thumbs", {
-      slidesPerView: 4,
+      slidesPerView: 'auto',
       //watchSlidesVisibility: true,
       watchSlidesProgress: true,
-      spaceBetween: 35,
-      direction: "vertical",
+      spaceBetween: 20,
+      direction: "horizontal",
 
       breakpoints: {
 
-        1024: {
-          spaceBetween: 50,
-        },
+         960: {
+            spaceBetween: 35,
+            slidesPerView: 4,
+            direction: "vertical",
+         },
 
-        /*534: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-          direction: "horizontal",
-          direction: "horizontal",
-        },*/
+         1024: {
+            spaceBetween: 50,
+            slidesPerView: 4,
+            direction: "vertical",
+         }
       }
    });
 
    let swiperThumbs = new Swiper(".card-slider", {
       loop: true,
       spaceBetween: 10,
+      slidesPerView: 1,
+
+      breakpoints: {
+
+         768: {
+            slidesPerView: 2,
+         },
+
+         960: {
+            slidesPerView: 1,
+         }
+      },
 
       thumbs: {
         swiper: swiper,
@@ -72,7 +85,9 @@ if(cardSlider) {
       navigation: {
          nextEl: ".card-slider-thumbs-swiper-button-next",
          prevEl: ".card-slider-thumbs-swiper-button-prev"
-      }
+      },
+
+
    });
 }
 
