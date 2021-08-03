@@ -41,7 +41,6 @@ const cardSlider = document.querySelector('.card-swiper-container');
 if(cardSlider) {
    let swiper = new Swiper(".card-slider-thumbs", {
       slidesPerView: 'auto',
-      //watchSlidesVisibility: true,
       watchSlidesProgress: true,
       spaceBetween: 20,
       direction: "horizontal",

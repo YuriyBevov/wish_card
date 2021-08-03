@@ -2,32 +2,32 @@
   featureList = [
     {
       name: 'Проверка устройства до оплаты',
-      svgPath: './assets/img/check.svg'
+      svgName: '#icon-check'
     },
 
     {
       name: 'Доставка в день заказа',
-      svgPath: './assets/img/delivery.svg'
+      svgName: '#icon-delivery'
     },
 
     {
       name: 'Бесплатный самовывоз при заказе день в день',
-      svgPath: './assets/img/free.svg'
+      svgName: '#icon-free'
     },
 
     {
       name: '2 года расширенной гарантии',
-      svgPath: './assets/img/garanty.svg'
+      svgName: '#icon-garanty'
     },
 
     {
       name: 'Новое оригинальное запечатанное устройство',
-      svgPath: './assets/img/original.svg'
+      svgName: '#icon-original'
     },
 
     {
       name: 'Кэшбек 300р</br>за&nbsp;отзыв',
-      svgPath: '../assets/img/cashback.svg'
+      svgName: '#icon-cashback',
     },
   ];
   
@@ -36,5 +36,6 @@
     each feature in featureList
       li.features__item
         p.features__item-name!= feature.name
-        img(src=feature.svgPath, alt="иконка")
+        svg
+          use(xlink:href= feature.svgName)
         a(href="#").features__item-link Подробнее

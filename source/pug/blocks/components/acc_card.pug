@@ -4,6 +4,8 @@ mixin acc_card(className, saleValue, accName, accGift, newPrice, oldPrice, imgUr
     .acc-card__header
       span= saleValue
       button(type="button" aria-label="добавить в избранное")
+        svg(width="23" height="20")
+          use(xlink:href="#icon-heart")
       img(src= imgUrl, alt= accName)
     .acc-card__content
       .acc-card__content-left

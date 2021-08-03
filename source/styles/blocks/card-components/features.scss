@@ -56,19 +56,19 @@
             font-family: $font_sec-reg;
             font-size: 1.2rem;
             line-height: 1.2rem;
-
             text-decoration-line: underline;
 
             color: $color_darkblue;
         }
 
-        img {
+        svg {
             width: 4rem;
             height: 4rem;
             position: absolute;
             top: 2.2rem;
             left: 1.4rem;
             object-fit: contain;
+            fill: black;
         }
     }
 }

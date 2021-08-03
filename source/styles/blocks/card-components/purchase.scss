@@ -48,8 +48,7 @@
             border: 1px solid #E1E7EB;
             border-radius: 6px;
             background-color: transparent;
-            padding: 0.7rem 2rem;
-            padding-left: 3.3rem;
+            padding: 0.7rem 0.8rem;
 
             color: #45454E;
 
@@ -62,26 +61,7 @@
                 }
             }
 
-            &::before {
-                position: absolute;
-                top: 50%;
-                left: 1rem;
-                transform: translateY(-50%);
-                content: '';
-                background-size: cover;
-            }
-
-            &--put::before {
-                width: 1.4rem;
-                height: 1.2rem;
-                background-image: url("../assets/img/cart-heart.svg");
-            }
-
-            &--chart::before {
-                width: 1.6rem;
-                height: 1.6rem;
-                background-image: url("../assets/img/chart.svg");
-            }
+            svg {margin-right: 0.8rem;}
         }
     }
 

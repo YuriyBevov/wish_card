@@ -12440,7 +12440,6 @@ const cardSlider = document.querySelector('.card-swiper-container');
 if(cardSlider) {
    let swiper = new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".card-slider-thumbs", {
       slidesPerView: 'auto',
-      //watchSlidesVisibility: true,
       watchSlidesProgress: true,
       spaceBetween: 20,
       direction: "horizontal",
