@@ -1,0 +1,27 @@
+.nav
+  a(href="index.html").nav__logo
+    img(src="./assets/img/logo.png" alt="логотип" width="46" height="111").nav__logo-img
+    img(src="./assets/img/logo-name.png" alt="логотип" width="175" height="13")
+
+  button.nav__menu
+    svg(width="10" height="8")
+      use(xlink:href="#icon-burger")
+    span Меню
+    
+  ul.nav__list.nav__list--tab-hide
+    li.nav__item.nav__item--stock
+      a(href="#")
+        img(src="../assets/img/jet.png" alt="иконка молнии" width="9" height="17")
+        span Акции
+
+    li.nav__item
+      a(href="#") 
+        span Доставка и самовывоз
+
+    li.nav__item.nav__item--dmd-hide
+      a(href="#")
+        span Контакты
+
+    li.nav__item.nav__item--dmd-hide
+      a(href="#") 
+        span Гарантия и возврат

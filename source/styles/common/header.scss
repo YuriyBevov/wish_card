@@ -1,0 +1,47 @@
+.header {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+
+    &__wrapper {
+        position: relative;
+        padding-left: 12.3rem;
+        max-width: 1920px;
+        margin: 0 auto;
+        
+        @media(max-width: $desktop_lg_width) {
+            margin-bottom: 0;
+        }
+
+        @media(max-width: $desktop_sm_width) {
+            padding-left: 9.3rem;
+        }
+        
+        @media(max-width: $tablet_lg_width) {
+            padding-left: 6.3rem;
+        }
+        
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+
+        /*@media(max-width: $desktop_lg_width) {
+            padding: 1rem 0;
+        } */
+
+        border-bottom: 1px solid #E6E6E6;
+
+        .header__nav {
+            margin-right: auto;
+        }
+
+
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+    }
+}

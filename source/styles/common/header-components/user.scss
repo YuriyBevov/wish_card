@@ -1,0 +1,29 @@
+.user {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1.4rem;
+    background: #F6F9FC;
+    border-radius: 1.2rem;
+    min-height: 6.3rem;
+    margin-right: 0.8rem;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        span {
+            font-family: $font_sec-reg;
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+
+            text-align: center;
+
+            color: $color_darkblue;
+        }
+    }
+}

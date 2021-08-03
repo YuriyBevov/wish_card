@@ -11,6 +11,10 @@
 
 // blocks
 @import "common/header";
+@import "common/header-components/nav";
+@import "common/header-components/city-info";
+@import "common/header-components/user";
+@import "common/header-components/cart";
 
 @import "blocks/card";
 @import "blocks/card-components/chars";

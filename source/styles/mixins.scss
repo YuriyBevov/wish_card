@@ -14,11 +14,7 @@
     margin: 0 15rem;
     margin-bottom: 2.5rem;
 
-    //до 1500 px
-    @media(max-width: $desktop_lg_width) {
-        margin: 0 5rem;
-        margin-bottom: 4rem;
-    }
+
     // до 1360px
     @media(max-width: $desktop_sm_width) {
         margin: 0 4rem;

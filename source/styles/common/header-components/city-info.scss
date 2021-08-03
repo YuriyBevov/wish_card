@@ -1,0 +1,58 @@
+.city-info {
+    display: flex;
+    padding: 1rem 2.3rem;
+    padding-right: 3.8rem;
+    background: #F6F9FC;
+    border-radius: 1.2rem;
+    
+    min-height: 6.3rem;
+    margin-right: 1.2rem;
+    margin-left: auto;
+
+    &__choose {
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+        border-right: 1px solid rgba(106, 150, 226, 0.54);
+
+        span {
+            font-family: $font_sec-bold;
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+            margin-bottom: 0.4rem;
+
+            color: $color_darkblue;
+        }
+
+        a {
+            font-family: $font_sec-bold;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            text-decoration-line: underline;
+
+            color: $color_darkblue;
+        }
+    }
+
+    &__phone {
+        &-list {
+            display: flex;
+            flex-direction: column;
+            padding-left: 2rem;
+        }
+
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 0.4rem;
+            }
+            
+            a {
+                font-family: $font_sec-bold;
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+    
+                color: $color_darkblue;
+            }
+        }
+    }
+}

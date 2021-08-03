@@ -1,0 +1,108 @@
+.nav {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        margin-right: 2.3rem;
+
+        &-img {
+            position: absolute;
+            top: 50%;
+            left: 5rem;
+
+            transform: translateY(-50%);
+
+            @media(max-width: $desktop_sm_width) {
+                left: 4rem;
+            }
+
+            @media(max-width: $tablet_lg_width) {
+                left: 1.6rem;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+
+        font-family: $font_sec-reg;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+
+        display: flex;
+        align-items: center;
+
+        color: #97A2AC;
+
+        background-color: transparent;
+        border: 1px solid #97A2AC;
+        border-radius: 0.8rem;
+        margin-right: 2.3rem;
+
+        @media(max-width: $tablet_lg_width) {
+            margin-right: 0;
+        }
+
+        svg {
+            margin-right: 1rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+
+        @media(max-width: $desktop_lg_width) {
+            flex-direction: column;
+        }
+
+        @media(max-width: $desktop_sm_width) {
+            &--tab-hide {
+                display: none;
+            }
+        }
+    }
+
+    &__item {
+        margin-right: 3.2rem;
+        width: fit-content;
+
+        @media(max-width: $desktop_lg_width) {
+            &--dmd-hide {
+                display: none;
+            }
+        }
+
+
+
+        a {    
+            display: block;
+            padding: 0.5rem;
+            
+            span {
+                font-family: $font_sec-bold;
+                font-size: 2rem;
+                line-height: 2.3rem;
+
+                color: $color_darkblue;
+            }
+        }
+
+        &--stock {
+            display: flex;
+            align-items: center;
+
+            a {
+                img {
+                    margin-right: 0.9rem;
+                }
+
+                span {
+                    color: #FF693B;
+                }
+            }
+        }
+    }
+}
