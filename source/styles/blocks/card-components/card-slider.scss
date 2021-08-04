@@ -73,6 +73,42 @@
                 height: 100%;
                 object-fit: cover;
             }
+
+            .slider-banner {
+                position: absolute;
+
+                top: 0;
+                left: 1.7rem;
+            }
+
+            .garanty-banner {
+                width: 8rem;
+                height: 10.3rem;
+
+                @media(max-width: $tablet_width) {
+                    width: 5.8rem;
+                    height: 7.4rem;
+                }
+            }
+
+            .new-banner {
+                width: 8rem;
+                height: 2rem;
+
+                margin-top: 1.2rem;
+            }
+
+            .garanty-banner,
+            .new-banner {
+
+                &.hidden {
+                    display: none;
+                }
+
+                &.showed {
+                    display: block;
+                }
+            }
         }
     }
 

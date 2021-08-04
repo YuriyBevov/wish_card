@@ -1,48 +1,76 @@
 -
-  imgList = [
+  slideList = [
     {
-      imgUrl: './assets/img/card-item.png'
+      imgUrl: './assets/img/card-item.png',
+
+      isNew: true,
+      isGaranty: false
     },
 
     {
-      imgUrl: './assets/img/card-item2.png'
+      imgUrl: './assets/img/card-item2.png',
+
+      isNew: false,
+      isGaranty: true
     },
 
     {
-      imgUrl: './assets/img/card-item.png'
+      imgUrl: './assets/img/card-item.png',
+
+      isNew: false,
+      isGaranty: false
     },
 
     {
-      imgUrl: './assets/img/card-item2.png'
+      imgUrl: './assets/img/card-item2.png',
+
+      isNew: true,
+      isGaranty: true
+    },
+
+        {
+      imgUrl: './assets/img/card-item.png',
+
+      isNew: true,
+      isGaranty: true
     },
 
     {
-      imgUrl: './assets/img/card-item.png'
+      imgUrl: './assets/img/card-item2.png',
+
+      isNew: true,
+      isGaranty: true
+    },
+
+        {
+      imgUrl: './assets/img/card-item.png',
+
+      isNew: true,
+      isGaranty: true
     },
 
     {
-      imgUrl: './assets/img/card-item2.png'
-    },
+      imgUrl: './assets/img/card-item2.png',
 
-    {
-      imgUrl: './assets/img/card-item.png'
+      isNew: true,
+      isGaranty: true
     },
-
-    {
-      imgUrl: './assets/img/card-item2.png'
-    },
+    
   ];
 
 .slider
   .card-swiper-container.card-slider 
     .swiper-wrapper
-      each img in imgList
+      each slide in slideList
         .swiper-slide
-          img(src=img.imgUrl, alt="товар")
+          img(src=slide.imgUrl, alt="товар")
+          .slider-banner
+            img(src=("./assets/img/slider-garanty-banner.png") alt="гарантия" width="80" height="103" class= slide.isGaranty ? 'showed' : 'hidden').garanty-banner
+            img(src=("./assets/img/slider-new-banner.png") alt="новинка" width="80" height="20" class= slide.isNew ? 'showed' : 'hidden').new-banner
   .card-swiper-container.card-slider-thumbs
     .swiper-wrapper
-      each img in imgList
+      each slide in slideList
         .swiper-slide
-          img(src=img.imgUrl, alt="товар")
+          img(src=slide.imgUrl, alt="товар")
     <div class="card-slider-thumbs-swiper-button-prev"></div>
     <div class="card-slider-thumbs-swiper-button-next"></div>
