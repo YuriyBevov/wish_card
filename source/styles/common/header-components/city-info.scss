@@ -57,12 +57,17 @@
             text-decoration-line: underline;
 
             color: $color_darkblue;
-
+            transition: color $transition_rules;
             @media(max-width: $tablet_width) {
                 margin-bottom: 0.4rem;
 
                 font-size: 1.3rem;
                 line-height: 1.5rem;
+            }
+
+            &:hover,
+            &:focus {
+                color: $color_blue;
             }
         }
     }
@@ -90,10 +95,16 @@
                 line-height: 2.1rem;
     
                 color: $color_darkblue;
+                transition: color $transition_rules;
 
                 @media(max-width: $tablet_width) {
                     font-size: 1.6rem;
                     line-height: 1.9rem;
+                }
+
+                &:hover,
+                &:focus {
+                    color: $color_blue;
                 }
             }
         }

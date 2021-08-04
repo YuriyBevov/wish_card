@@ -89,6 +89,13 @@
                 
                 color: $color_white;
             }
+
+            transition: background-color $transition-rules;
+
+            &:hover,
+            &:focus {
+                background-color: #0F4BD7;
+            }
         }
 
         form {

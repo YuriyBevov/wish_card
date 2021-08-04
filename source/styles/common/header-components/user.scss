@@ -24,10 +24,23 @@
             font-family: $font_sec-reg;
             font-size: 1.2rem;
             line-height: 1.4rem;
-
             text-align: center;
 
             color: $color_darkblue;
+
+            transition: color $transition_rules;
+        }
+
+        &:hover,
+        &:focus {
+
+            span {
+                color: $color_blue;
+            }
+
+            svg {
+                fill: $color_blue;
+            }
         }
     }
 }

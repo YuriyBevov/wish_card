@@ -68,7 +68,10 @@
             font-size: 1.2rem;
             line-height: 1.7rem;
             margin-bottom: 0.4rem;
+
             color: #97A2AC;
+
+            transition: color $transition_rules;
 
             @media(max-width: $tablet_width) {
                 font-size: 1.1rem;
@@ -79,6 +82,16 @@
 
             svg {
                 margin-left: 0.6rem;
+                transition: fill $transition_rules;
+            }
+
+            &:hover,
+            &:focus {
+                color: $color_blue;
+
+                svg {
+                    fill: $color_blue;
+                }
             }
         }
     }
@@ -116,7 +129,7 @@
                 display: flex;
                 align-items: center;
                 padding: 1.6rem 2rem;
-                margin-bottom: 0.8rem;
+                margin-bottom: 2.4rem;
 
                 @media(max-width: $tablet_width) {
                     margin-bottom: 2.1rem;

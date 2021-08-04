@@ -18,7 +18,6 @@
             padding-right: 0.2rem;
         }
 
-
         .footer__menu {
             display: flex;
             flex-direction: column;
@@ -44,7 +43,7 @@
             }
         }
 
-        a {
+        &__link {
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -58,13 +57,21 @@
                 margin-right: 0.4rem;
             }
             
-
             span {
                 font-family: $font_sec_reg;
                 font-size: 1.2rem;
                 line-height: 1.4rem;
 
                 color: $color_darkblue;
+            }
+
+            &:hover,
+            &:focus {
+                color: $color_blue;
+    
+                svg {
+                    fill: $color_blue;
+                }
             }
         }
     }

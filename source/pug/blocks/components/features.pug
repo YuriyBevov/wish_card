@@ -35,7 +35,8 @@
   ul.features__list
     each feature in featureList
       li.features__item
-        p.features__item-name!= feature.name
-        svg
-          use(xlink:href= feature.svgName)
-        a(href="#").features__item-link Подробнее
+        a(href="#").features__item-link
+          p.features__item-name!= feature.name
+          svg
+            use(xlink:href= feature.svgName)
+          span Подробнее

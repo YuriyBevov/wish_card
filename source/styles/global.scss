@@ -35,6 +35,8 @@ body {
   background-color: $color_main-bg;
 }
 
+
+
 footer {
   margin-top: auto;
 }
@@ -67,7 +69,8 @@ input, textarea {
 }
 
 svg {
-  fill: $color-white;
+  transition: fill $transition_rules;
+  fill: #97A2AC;
 }
 
 .visually-hidden {

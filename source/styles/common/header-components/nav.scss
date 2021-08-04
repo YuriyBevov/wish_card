@@ -72,6 +72,19 @@
 
         svg {
             margin-right: 1rem;
+            transition: fill $transition-rules;
+        }
+
+        transition: border $transition_rules, color $transition-rules;
+
+        &:hover,
+        &:focus {
+            color: $color_blue;
+            border: 1px solid $color_blue;
+
+            svg {
+                fill: $color_blue;
+            }
         }
     }
 

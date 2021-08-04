@@ -52,6 +52,8 @@
 
             color: #45454E;
 
+            transition: border $transition_rules, color $transition_rules;
+
             &:not(:last-child) {
                 margin-right: 0.8rem;
 
@@ -61,7 +63,20 @@
                 }
             }
 
-            svg {margin-right: 0.8rem;}
+            svg {
+                margin-right: 0.8rem;
+                transition: fill $transition_rules;
+            }
+
+            &:hover,
+            &:focus {
+                border: 1px solid $color_blue;
+                color: $color_blue;
+
+                svg {
+                    fill: $color_blue;
+                }
+            }
         }
     }
 

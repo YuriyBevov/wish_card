@@ -54,5 +54,13 @@
         text-decoration-line: underline;
 
         color: #121212;
+
+        transition: color $transition_rules;
+
+        &:hover,
+        &:focus {
+            color: $color_blue;
+        }
+        
     }
 }
