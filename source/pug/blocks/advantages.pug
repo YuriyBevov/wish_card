@@ -4,7 +4,7 @@ section.advantages
       ul.advantages__list 
         li.advantages__item 
           .advantages__item-img
-            img(src="./assets/img/adv_1.png" width="630" height="373" alt="гарантийное обслуживание")
+            img(src="./assets/img/adv_1.svg" width="630" height="373" alt="гарантийное обслуживание")
           .advantages__item-content
             h3.advantages__title 2 года расширенного гарантийного обслуживания
 
@@ -14,7 +14,7 @@ section.advantages
         
         li.advantages__item 
           .advantages__item-img
-            img(src="./assets/img/adv_2.png" width="630" height="322" alt="бесплатный самовывоз")
+            img(src="./assets/img/adv_2.svg" width="630" height="322" alt="бесплатный самовывоз")
           .advantages__item-content
             h3.advantages__title Бесплатный самовывоз при заказе день в день
 
@@ -26,7 +26,7 @@ section.advantages
 
         li.advantages__item 
           .advantages__item-img
-            img(src="./assets/img/adv_3.png" width="630" height="280" alt="доставка в день заказа")
+            img(src="./assets/img/adv_3.svg" width="630" height="280" alt="доставка в день заказа")
           .advantages__item-content
             h3.advantages__title Доставка в день заказа
 
@@ -36,7 +36,7 @@ section.advantages
 
         li.advantages__item 
           .advantages__item-img
-            img(src="./assets/img/adv_4.png" width="630" height="353" alt="поддержка клиентов")
+            img(src="./assets/img/adv_4.svg" width="630" height="353" alt="поддержка клиентов")
           .advantages__item-content
             h3.advantages__title Вежливая и профессиональная служба поддержки клиентов 
 
@@ -52,8 +52,13 @@ section.advantages
             p.advantages__desc Ответим на все Ваши вопросы в удобном формате: <a href="https://vk.com" class="advantages__link" rel="noopener noreferrer nofollow">ВКонтакте</a>, <a href="https://instagram.com" class="advantages__link" rel="noopener noreferrer nofollow">Instagram</a>, <a href="https://tiktok.com" class="advantages__link" rel="noopener noreferrer nofollow">Tik Tok</a>
 
         li.advantages__item 
-          .advantages__item-img
-            img(src="./assets/img/adv_5.png" width="630" height="256" alt="честные отзывы")
+          .advantages__item-img.advantages__item-img--vk
+            <picture>
+              <source srcset="./assets/img/adv_5-mobile.svg" media="(max-width: 768px)">
+              img(src="./assets/img/adv_5.svg" width="630" height="256" alt="честные отзывы")
+            </picture>
+            img(src="./assets/img/vk.png" alt="подписка" width="363" height="202")
+            
           .advantages__item-content
             h3.advantages__title Более 9000 честных отзывов за почти 5 лет нашей работы:
 

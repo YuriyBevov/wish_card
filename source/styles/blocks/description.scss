@@ -81,6 +81,10 @@
     &__tabs-box {
         max-width: 78rem;
 
+        @media(max-width: $desktop_lg_width) {
+            max-width: 70rem;
+        }
+
         @media(max-width: $desktop_sm_width) {
             max-width: 100%;
         }
