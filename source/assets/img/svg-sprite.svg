@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
-<clipPath id="clip0">
+<clipPath>
 <rect width="30" height="30" fill="white" transform="translate(0 0.5)"/>
 </clipPath>
 
-<clipPath id="clip0">
+<clipPath>
 <rect width="30" height="30" fill="white" transform="translate(0 1.5)"/>
 </clipPath>
 
-<clipPath id="clip0">
+<clipPath>
 <rect width="40" height="40" fill="white"/>
 </clipPath>
 </defs><symbol id="icon-apple" viewBox="0 0 13 16">

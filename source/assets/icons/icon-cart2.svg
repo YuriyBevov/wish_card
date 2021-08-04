@@ -4,7 +4,7 @@
 </g>
 <circle cx="26.25" cy="3.75" r="3.75" fill="#FF5E31"/>
 <defs>
-<clipPath id="clip0">
+<clipPath>
 <rect width="30" height="30" fill="white" transform="translate(0 1.5)"/>
 </clipPath>
 </defs>
