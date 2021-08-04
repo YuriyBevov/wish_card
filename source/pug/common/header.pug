@@ -14,4 +14,18 @@ header.header
         include ../common/header-components/cart
 
     .header__bottom
-      h1 header__bottom
+      a(href="#")
+        svg(width="10" height="10")
+          use(xlink:href="#icon-catalog-menu")
+        span Каталог товаров
+      
+      form(action="")
+        input(type="text" placeholder="Поиск по сайту" autocomplete="off" max-length="70")
+        button(type="submit").header__search-btn
+          svg(width="24" height="24")
+            use(xlink:href="#icon-search")
+      
+      .header__banner
+        img(src="../assets/img/delivery-banner.png" alt="доставка" width="141" height="63")
+        h2.header__banner-title Доставка в день заказа <span>249₽</span>
+        p.header__banner-desc Доставка по Москве осуществляется в день в день при заказе до 17:00»

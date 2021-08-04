@@ -5,12 +5,24 @@
     &__logo {
         margin-right: 2.3rem;
 
+        @media(max-width: $tablet_width) {
+            display: flex;
+            align-items: center;
+
+            &-name {
+                width: 14.4rem;
+                height: 1.1rem;
+            }
+        }
+
+        @media(max-width: 767px) {
+            margin-right: 0;
+        }
+
         &-img {
             position: absolute;
-            top: 50%;
+            top: 3.5rem;
             left: 5rem;
-
-            transform: translateY(-50%);
 
             @media(max-width: $desktop_sm_width) {
                 left: 4rem;
@@ -18,6 +30,15 @@
 
             @media(max-width: $tablet_lg_width) {
                 left: 1.6rem;
+            }
+
+            @media(max-width: $tablet_width) {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 2.9rem;
+                height: 6.9rem;
+                margin-right: 0.7rem;
             }
         }
     }
@@ -43,6 +64,10 @@
 
         @media(max-width: $tablet_lg_width) {
             margin-right: 0;
+        }
+
+        @media(max-width: 767px) {
+            display: none; 
         }
 
         svg {
@@ -74,8 +99,6 @@
                 display: none;
             }
         }
-
-
 
         a {    
             display: block;
