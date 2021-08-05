@@ -12320,7 +12320,8 @@ const menuCloser = document.querySelector('.js-menu-closer');
 const menu = document.querySelector('.header-mobile');
 
 const onClickOpenMenu = (evt) => {
-    evt.stopPropagation()
+    evt.stopPropagation();
+    
     menu.classList.toggle('js-opened');
 
     menuOpener.forEach(btn => {
@@ -12328,7 +12329,7 @@ const onClickOpenMenu = (evt) => {
     })
 
     document.addEventListener('click', evt => {
-        if(menu.contains(evt.target) === false) {
+        if(!menu.contains(evt.target)) {
             menu.classList.remove('js-opened');
 
             menuOpener.forEach(btn => {

@@ -114,12 +114,14 @@
     .card-slider-thumbs {
         position: relative;
         width: 6.2rem;
+        height: 47rem;
         order: 1;
         margin-right: 2rem;
         padding: 5rem 0;
 
         @media(max-width: $desktop_sm_width) {
             padding: 4rem 0;
+            height: 43.5rem;            
         }
 
         @media(max-width: $tablet_width) {
