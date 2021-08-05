@@ -1,9 +1,11 @@
 footer.footer
   include ../common/header-components/cart
 
-  button.footer__menu
-    svg(width="16" height="16")
+  button.footer__menu.js-menu-opener
+    svg(width="16" height="16").footer__menu-closed
       use(xlink:href="#icon-burger")
+    svg(width="16" height="16").footer__menu-opened
+      use(xlink:href="#icon-close")
     span Меню
 
   a(href="#").footer__link  

@@ -28,6 +28,7 @@
             background-color: #F6F9FC;
             border: 0;
             margin-right: 0.4rem;
+            border-radius: 1.2rem;
 
             transition: background-color $transition_rules;
 
@@ -35,6 +36,16 @@
                 margin-right: 0;
                 margin-bottom: 1rem;
                 transition: fill $transition_rules;
+            }
+
+            &-opened {
+                display: none;
+                fill: #97A2AC;
+
+                &:hover,
+                &:focus {
+                    fill: $color_white;
+                }
             }
 
             span {
@@ -75,6 +86,10 @@
             &:not(:last-child) {
                 margin-right: 0.4rem;
             }
+
+            svg {
+                margin-bottom: 0.5rem;
+            }
             
             span {
                 font-family: $font_sec_reg;
@@ -100,4 +115,12 @@
             }
         }
     }
+}
+
+.js-menu-opened > .footer__menu-closed {
+    display: none;
+}
+
+.js-menu-opened > .footer__menu-opened {
+    display: flex;
 }

@@ -1,7 +1,30 @@
 .header-mobile {
     display: none;
+    transform: translateY(-110%);
 
-    &.opened {
+    &__close-btn {
+        width: 46px;
+        height: 46px;
+        padding: 0;
+        border: 0;
+
+        position: absolute;
+        top: -1.6rem;
+        left: 20rem;
+        background-color: transparent;
+
+        @media(max-width: $tablet_sm_width) {
+            top: -2.1rem;
+            left: initial;
+            right: -1.5rem;
+        }
+
+        svg {
+            fill: $color_blue;
+        }
+    }
+
+    &.js-opened {
         display: block;
         position: fixed;
         top: 0;
@@ -13,8 +36,20 @@
         box-shadow: 18px 0px 68px 6px rgba(0, 0, 0, 0.3);
         z-index: 1000;
 
+        animation: showMenuFromTop 0.5s forwards;
+
         @media(max-width: $tablet_sm_width) {
             height: 100%;
+        }
+    }
+
+    @keyframes showMenuFromTop {
+        0% {
+            transform: translateY(-110%);
+        }
+
+        100% {
+            transform: translateY(0);
         }
     }
 
@@ -41,9 +76,17 @@
         margin-right: auto;
 
         max-width: 61rem;
+        position: relative;
+
+        @media(max-width: $tablet_width) {
+            margin-right: 0;
+            width: 100%;
+            max-width: 100%;
+        }
 
         &-logo {
             margin-bottom: 4.6rem;
+            width: fit-content;
 
             @media(max-width: $tablet_lg_width) {
                 margin-bottom: 1.5rem;

@@ -1,8 +1,12 @@
-.header-mobile.opened
+.header-mobile
   .header-mobile__wrapper
     .header-mobile__nav
       a(href="index.html").header-mobile__nav-logo
         img(src="./assets/img/logo-name.png" alt="логотип" width="175" height="13")
+
+      button(aria-label="закрыть меню").header-mobile__close-btn.js-menu-closer
+        svg(width="16" height="16")
+          use(xlink:href="#icon-close")
 
       ul.header-mobile__nav-list
         li.header-mobile__nav-item.header-mobile__nav-item--stock
