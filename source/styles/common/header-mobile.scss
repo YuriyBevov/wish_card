@@ -3,24 +3,24 @@
     transform: translateY(-110%);
 
     &__close-btn {
-        width: 46px;
-        height: 46px;
-        padding: 0;
-        border: 0;
-
-        position: absolute;
-        top: -1.6rem;
-        left: 20rem;
-        background-color: transparent;
+        display: none;
 
         @media(max-width: $tablet_sm_width) {
+            display: block;
+            
+            width: 46px;
+            height: 46px;
+            padding: 0;
+            border: 0;
+    
+            position: absolute;
             top: -2.1rem;
-            left: initial;
             right: -1.5rem;
-        }
+            background-color: transparent;
 
-        svg {
-            fill: $color_blue;
+            svg {
+                fill: $color_blue;
+            }
         }
     }
 
