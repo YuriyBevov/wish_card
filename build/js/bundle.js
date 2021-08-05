@@ -12339,9 +12339,10 @@ const onClickOpenMenu = (evt) => {
 }
 
 menuCloser.addEventListener('click', () => {
-    menu.classList.remove('js-opened');
+    menu.classList.toggle('js-opened');
+    
     menuOpener.forEach(btn => {
-        btn.classList.remove('js-menu-opened');
+        btn.classList.toggle('js-menu-opened');
     })
 })
 
