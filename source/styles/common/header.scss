@@ -6,7 +6,7 @@
     left: 0;
     z-index: 1000;
 
-    @media(max-width: 768px) {
+    @media(max-width: $tablet_sm_width) {
         position: relative;
     }
 
@@ -127,7 +127,7 @@
                 margin-right: 18rem;
             }
 
-            @media(max-width: 634px) {
+            @media(max-width: 644px) {
                 display: none;
             }
 
@@ -242,7 +242,7 @@
                     }
                 }
 
-                @media(max-width: 767px) {
+                @media(max-width: $tablet_sm_width) {
                     margin-bottom: 0.4rem;
                 }
             }

@@ -67,33 +67,11 @@
                     max-width: 36.3rem;
                     max-height: 20.2rem;
 
-                    @media(max-width: 768px) {
+                    @media(max-width: $tablet_sm_width) {
                         position: relative;
                     }
                 }
             }
-
-            /* &--vk {
-                position: relative;
-
-                &::after {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    content: '';
-    
-                    width: 36.3rem;
-                    height: 20.2rem;
-    
-                    background-image: url("../assets/img/vk.png");
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                }
-
-                @media(max-width: 768px) {
-                    padding-bottom: 202px;
-                }
-            } */
 
             @media(max-width: $desktop_sm_width) {
                 max-width: 52rem;

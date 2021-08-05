@@ -7,10 +7,15 @@
         top: 0;
         left: 0;
         width: 100%;
+        height: fit-content;
 
         background: #F6F9FC;
         box-shadow: 18px 0px 68px 6px rgba(0, 0, 0, 0.3);
         z-index: 1000;
+
+        @media(max-width: $tablet_sm_width) {
+            height: 100%;
+        }
     }
 
     &__wrapper {
@@ -19,7 +24,15 @@
         position: relative;
         max-width: 1920px;
         padding: 0.5rem 1.6rem 0.5rem 4rem;
-        margin: 0 auto; 
+        margin: 0 auto;
+
+        @media(max-width: $tablet_sm_width) {
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+
+            padding: 3.2rem 1.6rem 10rem;
+        }
     }
 
     &__nav{
@@ -31,17 +44,33 @@
 
         &-logo {
             margin-bottom: 4.6rem;
+
+            @media(max-width: $tablet_lg_width) {
+                margin-bottom: 1.5rem;
+            }
+
+            @media(max-width: $tablet_sm_width) {
+                margin-bottom: 3rem;
+            }
         }
     
         &-list {
             display: flex;
             flex-wrap: wrap;
             max-width: 61rem;
+
+            @media(max-width: $tablet_sm_width) {
+                flex-direction: column;
+            }
         }
     
         &-item {
             margin-right: 3.2rem;
             width: fit-content;
+
+            @media(max-width: $tablet_lg_width) {
+                margin-right: 1.2rem;
+            }
     
             a {    
                 display: block;
@@ -75,13 +104,40 @@
 
     &__banner {
         position: relative;
-        border-radius: 1.2rem;
+
+        @media(max-width: $tablet_sm_width) {
+            margin-top: auto;
+        }
 
         img {
             border-radius: 1.2rem;
+
+            @media(max-width: 1600px) {
+                width: 33rem;
+                height: 20.1rem;
+            }
+
+            @media(max-width: $tablet_lg_width) {
+                width: 24rem;
+                height: 15rem;
+                object-fit: cover;
+            }
+
+            @media(max-width: $tablet_sm_width) {
+                width: 100%;
+                height: 100%;
+                max-height: 206px;
+            }
         }
 
-        a {
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 1.2rem;
+        }
+
+        span {
             position: absolute;
 
             bottom: 4.8rem;
@@ -100,6 +156,20 @@
             align-items: center;
 
             color: #1D1D1F;
+
+            transition: color $transition-rules, border $transition-rules;
+
+            @media(max-width: $tablet_lg_width) {
+                bottom: 1.8rem;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            span {
+                border: 1px solid $color_blue;
+                color: $color_blue;
+            }
         }
     }
 }

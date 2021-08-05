@@ -1,7 +1,7 @@
 .footer {
     display: none;
 
-    @media(max-width: 767px) {
+    @media(max-width: $tablet_sm_width) {
         display: flex;
         position: sticky;
         bottom: 0;
@@ -29,9 +29,12 @@
             border: 0;
             margin-right: 0.4rem;
 
+            transition: background-color $transition_rules;
+
             svg {
                 margin-right: 0;
                 margin-bottom: 1rem;
+                transition: fill $transition_rules;
             }
 
             span {
@@ -40,6 +43,21 @@
                 line-height: 1.4rem;
 
                 color: $color_darkblue;
+
+                transition: color $transition_rules;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $color_blue;
+
+                span {
+                    color: $color_white;
+                }
+
+                svg {
+                    fill: $color_white;
+                }
             }
         }
 
@@ -52,6 +70,7 @@
             padding: 0.8rem;
             border-radius: 1.2rem;
             background-color: #F6F9FC;
+            transition: background-color $transition_rules;
 
             &:not(:last-child) {
                 margin-right: 0.4rem;
@@ -63,14 +82,20 @@
                 line-height: 1.4rem;
 
                 color: $color_darkblue;
+
+                transition: color $transition_rules;
             }
 
             &:hover,
             &:focus {
-                color: $color_blue;
+                background-color: $color_blue;
+
+                span {
+                    color: $color_white;
+                }
     
                 svg {
-                    fill: $color_blue;
+                    fill: $color_white;
                 }
             }
         }

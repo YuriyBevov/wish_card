@@ -12,7 +12,7 @@
         margin-right: 1.6rem;
     }
 
-    @media(max-width: 767px) {
+    @media(max-width: $tablet_sm_width) {
         display: none;
     }
 

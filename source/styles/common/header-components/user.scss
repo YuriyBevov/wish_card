@@ -7,7 +7,7 @@
     min-height: 6.3rem;
     margin-right: 0.8rem;
 
-    @media(max-width: 767px) {
+    @media(max-width: $tablet_sm_width) {
         display: none; 
     }
 
