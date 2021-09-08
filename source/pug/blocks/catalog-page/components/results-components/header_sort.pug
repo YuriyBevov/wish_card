@@ -1,0 +1,112 @@
+- 
+  const mans = [
+      {
+          id: "1",
+          img: "../assets/img/samsung_logo.png",
+          title: 'Samsung'
+      },
+
+      {
+          id: "2",
+          img: "./assets/img/apple_logo.png",
+          title: 'Apple'
+      },
+
+      {
+          id: "3",
+          img: "./assets/img/samsung_logo.png",
+          title: 'Samsung'
+      },
+
+      {
+          id: "4",
+          img: "./assets/img/huawey_logo.png",
+          title: 'Huawei'
+      },
+
+      {
+          id: "5",
+          img: "./assets/img/samsung_logo.png",
+          title: 'Samsung'
+      },
+
+      {
+          id: "6",
+          img: "./assets/img/oneplus_logo.png",
+          title: 'Oneplus'
+      },
+
+      {
+          id: "7",
+          img: "./assets/img/samsung_logo.png",
+          title: 'Samsung'
+      },
+
+      {
+          id: "8",
+          img: "./assets/img/apple_logo.png",
+          title: 'Apple'
+      },
+
+      {
+          id: "9",
+          img: "./assets/img/huawey_logo.png",
+          title: 'Huawei'
+      },
+
+      {
+          id: "10",
+          img: "./assets/img/oneplus_logo.png",
+          title: 'Oneplus'
+      },
+
+      {
+          id: "11",
+          img: "./assets/img/apple_logo.png",
+          title: 'Apple'
+      },
+
+      {
+          id: "12",
+          img: "./assets/img/oneplus_logo.png",
+          title: 'Oneplus'
+      },
+
+      {
+          id: "13",
+          img: "./assets/img/huawey_logo.png",
+          title: 'Huawei'
+      },
+
+      {
+          id: "14",
+          img: "./assets/img/mi_logo.png",
+          title: 'Xiaomi'
+      },
+
+      {
+          id: "15",
+          img: "./assets/img/apple_logo.png",
+          title: 'Apple'
+      },
+
+      {
+          id: "16",
+          img: "./assets/img/huawey_logo.png",
+          title: 'Huawei'
+      },
+
+      {
+          id: "17",
+          img: "./assets/img/mi_logo.png",
+          title: 'Xiaomi'
+      },
+  ]
+
+.manufacturer
+  ul.manufacturer__list
+    each man in mans
+      li.manufacturer__item
+        a(href="#")
+          img(src=man.img, alt="man.title")
+          span= man.title

@@ -12259,6 +12259,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swiper.js */ "./source/scripts/modules/swiper.js");
 /* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/menu.js */ "./source/scripts/modules/menu.js");
 /* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/filter.js */ "./source/scripts/modules/filter.js");
+/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_filter_js__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -12305,6 +12308,37 @@ const onClickShowTabInfo = (evt) => {
 tabs.forEach(tab => {
     tab.addEventListener('click', onClickShowTabInfo)    
 });
+
+/***/ }),
+
+/***/ "./source/scripts/modules/filter.js":
+/*!******************************************!*\
+  !*** ./source/scripts/modules/filter.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// показ фильтра по клику на название
+
+const btns = document.querySelectorAll('.js-filter-expanded');
+
+let onClickShowContent = (evt) => {
+    evt.target.nextElementSibling.classList.toggle('js-opened');
+}
+
+btns.forEach(btn => {
+    btn.addEventListener('click', onClickShowContent);
+})
+
+// показать больше
+
+
+const filters = document.querySelectorAll('.filter__list');
+
+
+
+
+
 
 /***/ }),
 

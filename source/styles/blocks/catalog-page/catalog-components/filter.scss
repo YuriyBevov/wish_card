@@ -1,6 +1,7 @@
 .filter {
     display: flex;
     flex-direction: column;
+    float: left;
     width: 38.7rem;
     margin-right: 2.3rem;
     padding: 2.4rem 2.9rem 3.2rem 2.4rem;
@@ -42,6 +43,28 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 3.2rem;
+       
+
+        &.js-filter-content {
+            display: none;
+            opacity: 0;
+        }
+
+        &.js-opened {
+            display: flex;
+
+            animation: showContent 0.3s ease forwards;
+        }
+
+        @keyframes showContent {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
     }
 
     &__btn {

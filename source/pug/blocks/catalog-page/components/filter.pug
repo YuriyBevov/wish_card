@@ -132,26 +132,14 @@
         name: 'Название подборки',
         count: 150,
     },
-
-    {
-        id: 'select_6',
-        name: 'Название подборки',
-        count: 150,
-    },
-
-    {
-        id: 'select_7',
-        name: 'Название подборки',
-        count: 150,
-    },
   ]
 
 
 
 aside.filter
-  span.filter__name.filter__name--expanded Смартфоны и телефоны
+  span.filter__name.filter__name--expanded.js-filter-expanded Смартфоны и телефоны
 
-  .filter__content
+  .filter__content.js-filter-content
     ul.filter__list
       each product in products
         li.filter__item.filter__item--checkbox
@@ -204,9 +192,9 @@ aside.filter
       .filter__range
         include ./filter-components/filter_range
 
-  span.filter__name.filter__name--expanded Цвет
+  span.filter__name.filter__name--expanded.js-filter-expanded Цвет
 
-  .filter__content
+  .filter__content.js-filter-content
     ul.filter__list
       each color in colors
       
@@ -219,9 +207,9 @@ aside.filter
         
     button.filter__btn Показать все
 
-  span.filter__name.filter__name--expanded Популярные подборки
+  span.filter__name.filter__name--expanded.js-filter-expanded Популярные подборки
 
-  .filter__content
+  .filter__content.js-filter-content
     ul.filter__list
       each select in selection
         li.filter__item.filter__item--link
