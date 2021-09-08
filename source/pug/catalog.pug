@@ -1,0 +1,13 @@
+extends layouts/main-layout.pug
+
+block variables
+  -
+    const title = "Wish master интернет магазин"
+    const desc = "Продажа электроники"
+    const keywords = ""
+
+block content
+    include ./blocks/catalog-page/catalog
+
+block modals
+  // include ./modals/menuModal

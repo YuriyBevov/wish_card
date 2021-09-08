@@ -48,7 +48,7 @@
 @mixin wrapper() {
     margin: 0 auto;
     width: 100%;
-    max-width: $desktop_lg_width;
+    max-width: 1920px;
     min-width: $min_width;
     background-color: transparent;
     

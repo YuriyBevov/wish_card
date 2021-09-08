@@ -30,6 +30,13 @@
 @import "blocks/description";
 @import "blocks/advantages";
 
+// catalog-page
+
+@import "blocks/catalog-page/catalog";
+@import "blocks/catalog-page/catalog-components/filter";
+@import "blocks/catalog-page/catalog-components/filter-components/range";
+@import "blocks/catalog-page/catalog-components/results";
+
 //components
 @import "blocks/components/acc-card";
 @import "blocks/components/sliders";

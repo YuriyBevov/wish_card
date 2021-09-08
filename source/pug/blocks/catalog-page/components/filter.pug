@@ -1,0 +1,235 @@
+- 
+  const products = [
+      {
+          id: 1,
+          name: 'Samsung',
+          count: 150
+      },
+
+      {
+          id: 2,
+          name: 'Samsung',
+          count: 150
+      },
+
+      {
+          id: 3,
+          name: 'Samsung',
+          count: 150
+      },
+
+      {
+          id: 4,
+          name: 'Samsung',
+          count: 150
+      },
+
+      {
+          id: 5,
+          name: 'Samsung',
+          count: 150
+      },
+
+      {
+          id: 6,
+          name: 'Samsung',
+          count: 150
+      },
+
+      {
+          id: 7,
+          name: 'Samsung',
+          count: 150
+      },
+
+      {
+          id: 8,
+          name: 'Samsung',
+          count: 150
+      },
+  ]
+
+-
+  const colors = [
+      {
+          id: 'color_1',
+          color: '#C4C4C4',
+          name: 'Название цвета',
+          count: 150,
+      },
+
+      {
+          id: 'color_2',
+          color: '#C00707',
+          name: 'Название цвета',
+          count: 150,
+      },
+
+      {
+          id: 'color_3',
+          color: '#023CD0',
+          name: 'Название цвета',
+          count: 150,
+      },
+
+      {
+          id: 'color_4',
+          color: '#D09602',
+          name: 'Название цвета',
+          count: 150,
+      },
+
+      {
+          id: 'color_5',
+          color: '#C4C4C4',
+          name: 'Название цвета',
+          count: 150,
+      },
+
+      {
+          id: 'color_6',
+          color: '#C4C4C4',
+          name: 'Название цвета',
+          count: 150,
+      },
+
+      {
+          id: 'color_7',
+          color: '#C4C4C4',
+          name: 'Название цвета',
+          count: 150,
+      },
+  ]
+
+-
+  const selection = [
+    {
+        id: 'select_1',
+        name: 'Название подборки',
+        count: 150,
+    },
+
+    {
+        id: 'select_2',
+        name: 'Название подборки',
+        count: 150,
+    },
+
+    {
+        id: 'select_3',
+        name: 'Название подборки',
+        count: 150,
+    },
+
+    {
+        id: 'select_4',
+        name: 'Название подборки',
+        count: 150,
+    },
+
+    {
+        id: 'select_5',
+        name: 'Название подборки',
+        count: 150,
+    },
+
+    {
+        id: 'select_6',
+        name: 'Название подборки',
+        count: 150,
+    },
+
+    {
+        id: 'select_7',
+        name: 'Название подборки',
+        count: 150,
+    },
+  ]
+
+
+
+aside.filter
+  span.filter__name.filter__name--expanded Смартфоны и телефоны
+
+  .filter__content
+    ul.filter__list
+      each product in products
+        li.filter__item.filter__item--checkbox
+          input(type="checkbox" id=product.id).visually-hidden
+          label(for=product.id)= product.name
+        
+          span= product.count
+        
+    button.filter__btn Показать все
+
+  span.filter__name Цена
+
+  .filter__content
+    .filter__item.filter__item--range
+      input(type="text" placeholder="От:")
+      input(type="text" placeholder="До: 10000")
+
+      .filter__range
+        include ./filter-components/filter_range
+
+
+
+  span.filter__name Диогональ (дюйм)
+
+  .filter__content
+    .filter__item.filter__item--range
+      input(type="text" placeholder="От:")
+      input(type="text" placeholder="До: 7")
+
+      .filter__range
+        include ./filter-components/filter_range
+
+  span.filter__name Оперативная память (гб)
+ 
+  .filter__content
+    .filter__item.filter__item--range
+      input(type="text" placeholder="От:")
+      input(type="text" placeholder="До: 8")
+
+      .filter__range
+        include ./filter-components/filter_range
+
+  span.filter__name Разрешение тыловой камеры (Мп.) 
+
+  .filter__content 
+    .filter__item.filter__item--range
+      input(type="text" placeholder="От:")
+      input(type="text" placeholder="До: 8")
+
+      .filter__range
+        include ./filter-components/filter_range
+
+  span.filter__name.filter__name--expanded Цвет
+
+  .filter__content
+    ul.filter__list
+      each color in colors
+      
+        li.filter__item.filter__item--checkbox
+          .filter__item-color(style="background-color:" + color.color)
+          input(type="checkbox" id=color.id).visually-hidden
+          label(for=color.id)= color.name
+        
+          span= color.count
+        
+    button.filter__btn Показать все
+
+  span.filter__name.filter__name--expanded Популярные подборки
+
+  .filter__content
+    ul.filter__list
+      each select in selection
+        li.filter__item.filter__item--link
+          a(href="#")= select.name 
+        
+          span= select.count
+        
+    button.filter__btn Показать все
+
+
+      
