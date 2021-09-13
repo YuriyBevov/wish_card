@@ -12261,8 +12261,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/filter.js */ "./source/scripts/modules/filter.js");
 /* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_filter_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/catalogMenu.js */ "./source/scripts/modules/catalogMenu.js");
-/* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/catalogMenu.js */ "./source/scripts/modules/catalogMenu.js");
+/* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
