@@ -1,6 +1,280 @@
-.catalog-results {
+.results {
     width: calc(100% - 41rem);
-    background: $color_white;
-    border-radius: 1.2rem;
+    max-width: 121rem;
     margin-left: auto;
+
+    &__wrapper {
+        position: relative;
+    }
+    
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        background: $color_white;
+        border-radius: 1.2rem;
+        padding: 2.4rem 1.1rem 17.6rem; 
+    }
+
+    &__card {
+        width: 29.7rem;
+        height: 44.4rem;
+        background: #FFFFFF;
+        border: 1px solid #E5E5E5;
+
+        &:nth-child(7) {
+            margin-right: 29.7rem;
+        }
+
+        &:hover,
+        &:focus {
+            box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.07);
+            border: 1px solid #175CFF;
+            padding-bottom: 1.6rem;
+
+            .product-card__footer {
+                position: relative;
+
+                &-chars {
+                    position: absolute;
+                    top: 100%;
+                    left: -1px;
+                    padding: 1.2rem 1.7rem 1.6rem;
+                    opacity: 1;
+                    z-index: 100;
+                    border: 1px solid #175CFF;
+                    border-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: inherit;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        .results__card {
+            height: 54.7rem;
+        }
+    }
+
+    &__header {
+        min-height: 24rem;
+        max-height: 24rem;
+        margin-bottom: 3rem;
+        position: relative;
+
+        &-action {
+            position: absolute;
+            top: 1.4rem;
+            left: 2.1rem;
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+        }
+
+        span {
+            font-family: $font_inter-semi;
+            font-weight: 600;
+            font-size: 1.1rem;
+            line-height: 1.3rem;
+            text-align: center;
+            border-radius: 1.4rem; 
+            padding: 0.2rem 0.4rem;
+            margin-bottom: 0.8rem;
+
+            background: #FFD80E;
+            color: #675A14;
+        }
+
+        button {
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.7rem;
+        margin-top: auto;
+        margin-bottom: 1.6rem;
+        
+        min-height: 10rem;
+        max-height: 10rem;
+
+
+        h3 {
+            width: 100%;
+            font-family: $font_sec-bold;
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            margin-bottom: 0.5rem;
+
+            color: #333333;
+        }
+
+        &-available {
+            position: relative;
+            width: 100%;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            padding-left: 2.3rem;
+
+            color: #333333;
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform:  translateY(-50%);
+                
+            }
+        }
+
+        &-price {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: auto;
+
+            &-actual {
+                width: 100%;
+                font-family: $font_sec-bold;
+                font-weight: 700;
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+                color: #333333;
+            }
+
+            &-prof {
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                padding: 0.4rem;
+                border: 1px solid #E92150;
+                box-sizing: border-box;
+                border-radius: 6px;
+                margin-right: 0.9rem;
+    
+                color: #333333;
+            }
+
+            &-old {
+                position: relative;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+    
+                color: rgba(123, 121, 122, 0.8);
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0 1.7rem;
+        margin-bottom: 1.6rem;
+
+        &-btn {
+            flex-grow: 1;
+            margin-right: 0.5rem;
+        }
+
+        &-chars {
+            position: relative;
+            width: inherit;
+            opacity: 0;
+            background-color: $color_white;
+            z-index: -1;
+            
+            ul {
+                margin-bottom: 0.6rem;
+            }
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px dashed #F5F8FB;
+                padding: 0.4rem 0 0.6rem;
+
+                b,
+                span {
+                    font-size: 1.4rem;
+                    line-height: 1.4rem;
+                }
+
+                b {
+                    font-weight: 400;    
+                    
+                    color: $color_black;
+                }
+
+                span {
+                    color: #818282;
+                }
+            }
+
+            a {
+                font-size: 1.4rem;
+                line-height: 2.7rem;
+                padding: 0.5rem 0;
+
+                border-bottom: 1px dashed #3361C5;
+                color: #3361C5;
+            }
+        }
+    }
+}
+
+.results-banner {
+    position: absolute;
+    top: 46.8rem;
+    right: 1.1rem;
+    background-color: #F6F9FC;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 29.7rem;
+    height: 44.4rem;
+    border: 1px solid #E5E5E5;
+
+    &__content {
+        padding: 4.3rem 1.7rem;
+        padding-bottom: 0;
+
+        b,span {
+            font-family: $font_sec-bold;
+            font-size: 3.6rem;
+            line-height: 3.6rem;
+            margin-bottom: 0.6rem;
+
+            color: #175CFF;
+        }
+
+        span {
+            margin-bottom: 4.3rem;
+        }
+
+        p {
+            font-family: $font_inter_reg;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom: 0.6rem;
+
+            color: #97A2AC;
+        }
+    }
+
+    img {
+        margin-top: auto;
+    }
 }

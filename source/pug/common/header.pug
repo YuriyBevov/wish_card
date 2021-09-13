@@ -14,7 +14,7 @@ header.header
         include ../common/header-components/cart
 
     .header__bottom
-      a(href="#")
+      a(href="#").js-open-catalog-menu
         svg(width="10" height="10")
           use(xlink:href="#icon-catalog-menu")
         span Каталог товаров
@@ -29,3 +29,6 @@ header.header
         img(src="./assets/img/delivery-banner.png" alt="доставка" width="141" height="63")
         p.header__banner-title Доставка в день заказа <span>249₽</span>
         p.header__banner-desc Доставка по Москве осуществляется в день в день при заказе до 17:00»
+
+
+  include ./header-components/catalog-menu 

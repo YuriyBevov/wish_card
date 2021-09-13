@@ -7,6 +7,38 @@
     }
 }
 
+.product-card-swiper-container {
+    position: relative;
+    overflow: hidden;
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0.8rem;
+    }
+
+    .product-card-swiper-pagination {
+        display: flex;
+        justify-content: center;
+
+        
+
+        & .swiper-pagination-bullet {
+            width: 6px;
+            height: 6px;
+            padding: 0;
+            border-radius: 50%;
+            margin: 0 0.2rem;
+            background-color: #C4D9ED;
+
+            &-active {
+                background-color: #175CFF;
+            }
+        }
+    }
+}
+
 .offers-swiper-container {
 
     &.hidden {

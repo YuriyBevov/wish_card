@@ -1,0 +1,51 @@
+mixin product_card(isDiscount, discountValue, isAvailable, name, price, isSale, oldPrice, prof, imgList)
+  
+  .product-card
+    .product-card__header
+      .product-card__header-action
+        if isDiscount  
+          span= discountValue
+        button(type="button" aria-label="добавить в избранное")
+          svg(width="23" height="20")
+            use(xlink:href="#icon-heart")
+      
+      .product-card-swiper-container 
+        .swiper-wrapper
+          each img in imgList
+            .swiper-slide
+              img(src=img.url, alt=img.name)
+        .product-card-swiper-pagination
+
+    .product-card__content
+      h3= name
+      if isAvailable
+        span.product-card__content-available= 'В наличии'
+          svg(width="17" height="17")
+            use(xlink:href="#icon-available")
+
+      .product-card__content-price
+        if isSale
+          span.product-card__content-price-prof!= prof
+          span.product-card__content-price-old= oldPrice
+        span.product-card__content-price-actual= price
+    .product-card__footer
+      button.cmn__btn.cmn__btn--color-bg.product-card__footer-btn Добавить в корзину
+      button.cmn__btn.cmn__btn--reg Подробнее
+
+      .product-card__footer-chars
+        ul
+          li
+              b Экран
+              span 2400x1080, 6.5 дюйм
+          li
+              b Камера
+              span 64 Мп, селфи - 32 Мп
+          li
+              b Память
+              span 128 ГБ / 4 ГБ
+          li
+              b Название
+              span Параметры
+        
+        a(href="#") Купить в 1 клик
+        

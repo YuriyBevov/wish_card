@@ -35,7 +35,21 @@ body {
   background-color: $color_main-bg;
 }
 
+::-webkit-scrollbar { /* 1 - скроллбар */
+  width: 4px;
+  min-height: 12px;
+  background-color: transparent;
 
+}
+
+::-webkit-scrollbar-thumb { /* 5 - ползунок */
+  background-color: #E5E5E5;
+  border-radius: 13px;
+}
+
+::-webkit-scrollbar-corner { /* 6 - уголок */
+  border-radius: 1rem;
+}
 
 footer {
   margin-top: auto;

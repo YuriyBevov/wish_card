@@ -12261,12 +12261,68 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/filter.js */ "./source/scripts/modules/filter.js");
 /* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_filter_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/catalogMenu.js */ "./source/scripts/modules/catalogMenu.js");
+/* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
 
 
 
+
+
+
+/***/ }),
+
+/***/ "./source/scripts/modules/catalogMenu.js":
+/*!***********************************************!*\
+  !*** ./source/scripts/modules/catalogMenu.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+const openBtn = document.querySelector('.js-open-catalog-menu');
+const closeBtn = document.querySelector('.js-close-catalog-menu');
+const catalog = document.querySelector('.catalog-menu');
+
+const onClickShowCatalog = () => {
+    catalog.classList.toggle('js-opened');
+}
+
+const onClickHideCatalog = () => {
+    if(catalog.classList.contains('js-opened')) {
+        catalog.classList.remove('js-opened');
+    }
+}
+
+openBtn.addEventListener('click', onClickShowCatalog)
+closeBtn.addEventListener('click', onClickHideCatalog)
+
+const menuItems = document.querySelectorAll('.catalog-menu__item');
+const innerLists = document.querySelectorAll('.catalog-menu__inner-wrapper');
+
+const onClickShowInnerList = (evt) => {
+    evt.preventDefault();
+
+    menuItems.forEach(item => {
+        item.classList.contains('active') ?
+        item.classList.remove('active') : null
+    })
+
+    innerLists.forEach(list => {
+        list.classList.contains('active') ?
+        list.classList.remove('active') : null
+    })
+
+    const menuItem = evt.currentTarget;
+
+    menuItem.classList.add('active')
+    menuItem.querySelector('.catalog-menu__inner-wrapper').classList.add('active')
+}
+
+menuItems.forEach(item => {
+    item.addEventListener('click', onClickShowInnerList)
+})
 
 
 /***/ }),
@@ -12480,7 +12536,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initOffersSlider", function() { return initOffersSlider; });
 /* harmony import */ var swiper_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/core */ "./node_modules/swiper/swiper.esm.js");
 
-swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_core__WEBPACK_IMPORTED_MODULE_0__["Scrollbar"], swiper_core__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper_core__WEBPACK_IMPORTED_MODULE_0__["Thumbs"]]);
+swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_core__WEBPACK_IMPORTED_MODULE_0__["Autoplay"], swiper_core__WEBPACK_IMPORTED_MODULE_0__["Scrollbar"], swiper_core__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper_core__WEBPACK_IMPORTED_MODULE_0__["Pagination"], swiper_core__WEBPACK_IMPORTED_MODULE_0__["Thumbs"]]);
 
 
 // ширина при которой происходит destroy
@@ -12593,6 +12649,51 @@ const initOffersSlider = (slider) => {
       });
    }
 }
+
+const productCardSliders = document.querySelectorAll('.product-card-swiper-container');
+
+if(productCardSliders.length) {
+
+   productCardSliders.forEach(slider => {
+
+      const pcslider = new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
+         slidesPerView: 1,
+   
+         autoplay: {
+            delay: 1000,
+         },
+   
+         pagination: {
+            el: ".product-card-swiper-pagination",
+         },
+   
+         on: {
+
+            afterInit: function() {
+               this.autoplay.stop();
+            }
+
+            /*afterInit: function() {
+               console.log(this)
+
+               
+              /*var slider = this;
+              pcswiper.mouseenter(function() {
+               pcswiper.autoplay.start();
+              }).mouseleave(function() {
+               pcswiper.autoplay.stop();
+              });*/
+              /*this.addEventListener('click', function() {
+                 console.log('click')
+              })
+            }*/
+         }
+      });
+   })
+   
+}
+
+
 
 const offerSlider = document.querySelector('.offers-swiper-container');
 

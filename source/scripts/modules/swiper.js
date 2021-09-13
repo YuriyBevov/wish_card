@@ -1,5 +1,5 @@
-import SwiperCore, { Scrollbar, Navigation, Thumbs } from 'swiper/core';
-SwiperCore.use([Scrollbar, Navigation, Thumbs]);
+import SwiperCore, { Autoplay, Scrollbar, Navigation, Pagination, Thumbs } from 'swiper/core';
+SwiperCore.use([Autoplay, Scrollbar, Navigation, Pagination, Thumbs]);
 import Swiper from 'swiper'
 
 // ширина при которой происходит destroy
@@ -112,6 +112,51 @@ const initOffersSlider = (slider) => {
       });
    }
 }
+
+const productCardSliders = document.querySelectorAll('.product-card-swiper-container');
+
+if(productCardSliders.length) {
+
+   productCardSliders.forEach(slider => {
+
+      const pcslider = new Swiper(slider, {
+         slidesPerView: 1,
+   
+         autoplay: {
+            delay: 1000,
+         },
+   
+         pagination: {
+            el: ".product-card-swiper-pagination",
+         },
+   
+         on: {
+
+            afterInit: function() {
+               this.autoplay.stop();
+            }
+
+            /*afterInit: function() {
+               console.log(this)
+
+               
+              /*var slider = this;
+              pcswiper.mouseenter(function() {
+               pcswiper.autoplay.start();
+              }).mouseleave(function() {
+               pcswiper.autoplay.stop();
+              });*/
+              /*this.addEventListener('click', function() {
+                 console.log('click')
+              })
+            }*/
+         }
+      });
+   })
+   
+}
+
+
 
 const offerSlider = document.querySelector('.offers-swiper-container');
 
