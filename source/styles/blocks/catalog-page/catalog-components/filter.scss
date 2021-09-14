@@ -45,6 +45,22 @@
                 background-image: url("../assets/img/filter-arr.svg");
                 background-repeat: no-repeat;
             }
+
+            &.opened {
+                &::after {
+                    animation: rotateArrow 0.5s forwards;
+                }
+            }
+
+            @keyframes rotateArrow {
+                0% {
+                    transform: translateY(-50%) rotate(0);
+                }
+
+                100% {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
         }
     }
 
@@ -63,6 +79,8 @@
             display: flex;
 
             animation: showContent 0.3s ease forwards;
+
+
         }
 
         @keyframes showContent {

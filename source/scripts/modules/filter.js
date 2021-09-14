@@ -3,6 +3,7 @@
 const btns = document.querySelectorAll('.js-filter-expanded');
 
 let onClickShowContent = (evt) => {
+    evt.target.classList.toggle('opened');
     evt.target.nextElementSibling.classList.toggle('js-opened');
 }
 
