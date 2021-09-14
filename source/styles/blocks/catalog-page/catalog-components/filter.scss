@@ -239,6 +239,7 @@
 }
 
 .filter-overlay {
+    flex-grow: 1;
     @media(max-width: $tablet_lg_width) {
         &.opened {
             width: 100vw;
