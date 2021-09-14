@@ -1,5 +1,6 @@
 .manufacturer {
-    padding: 4rem 1.5rem;
+    padding: 2rem 1.5rem;
+    padding-top: 4rem;
     background: $color_white;
     border-radius: 1.2rem;
     margin-bottom: 1.6rem;
@@ -7,18 +8,29 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
     }
 
     &__item {
         width: fit-content;
         min-width: 8.1rem;
         margin:  0 2.3rem;
-        margin-bottom: 2.5rem;        
+        margin-bottom: 3.7rem;
+        
+        @media(max-width: $desktop_sm_width) {
+            margin: 0 1.9rem;
+            margin-bottom: 3.7rem;
+        }
 
+        @media(max-width: $desktop_sm_width) {
+            margin: 0 1rem;
+            margin-bottom: 3.7rem;
+        }
+        
         a {
             display: flex;
             flex-direction: column;
+            align-items: center;
             width: 100%;
             height: 100%;
         }
@@ -26,6 +38,7 @@
         img {
             margin-bottom: 1rem;
             margin-top: auto;
+            object-fit: contain;
         }
 
         span {
@@ -38,6 +51,7 @@
             font-size: 1.4rem;
             line-height: 1.4rem;
             margin-top: auto;
+            width: 100%;
 
             color: $color_blue;
         }

@@ -1,0 +1,186 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: inherit;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        .results__card {
+            height: 54.7rem;
+        }
+    }
+
+    &__header {
+        min-height: 24rem;
+        max-height: 24rem;
+        margin-bottom: 3rem;
+        position: relative;
+
+        &-action {
+            position: absolute;
+            top: 1.4rem;
+            left: 2.1rem;
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+        }
+
+        span {
+            font-family: $font_inter-semi;
+            font-weight: 600;
+            font-size: 1.1rem;
+            line-height: 1.3rem;
+            text-align: center;
+            border-radius: 1.4rem; 
+            padding: 0.2rem 0.4rem;
+            margin-bottom: 0.8rem;
+
+            background: #FFD80E;
+            color: #675A14;
+        }
+
+        button {
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.7rem;
+        margin-top: auto;
+        margin-bottom: 1.6rem;
+        
+        min-height: 10rem;
+        max-height: 10rem;
+
+
+        h3 {
+            width: 100%;
+            font-family: $font_sec-bold;
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            margin-bottom: 0.5rem;
+
+            color: #333333;
+        }
+
+        &-available {
+            position: relative;
+            width: 100%;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            padding-left: 2.3rem;
+
+            color: #333333;
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform:  translateY(-50%);
+                
+            }
+        }
+
+        &-price {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: auto;
+
+            &-actual {
+                width: 100%;
+                font-family: $font_sec-bold;
+                font-weight: 700;
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+                
+                margin-top: 4px;
+                color: #333333;
+            }
+
+            &-prof {
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                padding: 0.4rem;
+                border: 1px solid #E92150;
+                box-sizing: border-box;
+                border-radius: 6px;
+                margin-right: 0.9rem;
+    
+                color: #333333;
+            }
+
+            &-old {
+                position: relative;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+    
+                color: rgba(123, 121, 122, 0.8);
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0 1.7rem;
+        margin-bottom: 1.6rem;
+
+        &-btn {
+            flex-grow: 1;
+            margin-right: 0.5rem;
+        }
+
+        &-chars {
+            position: relative;
+            width: inherit;
+            opacity: 0;
+            background-color: $color_white;
+            z-index: -1;
+            
+            ul {
+                margin-bottom: 0.6rem;
+            }
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px dashed #F5F8FB;
+                padding: 0.4rem 0 0.6rem;
+
+                b,
+                span {
+                    font-size: 1.4rem;
+                    line-height: 1.4rem;
+                }
+
+                b {
+                    font-weight: 400;    
+                    
+                    color: $color_black;
+                }
+
+                span {
+                    color: #818282;
+                }
+            }
+
+            a {
+                font-size: 1.4rem;
+                line-height: 2.7rem;
+                padding: 0.5rem 0;
+
+                border-bottom: 1px dashed #3361C5;
+                color: #3361C5;
+            }
+        }
+    }
+}

@@ -12,8 +12,27 @@ btns.forEach(btn => {
 
 // показать больше
 
-
 const filters = document.querySelectorAll('.filter__list');
+
+// показ фильтра
+const filter = document.querySelector('.filter');
+const filterOverlay = document.querySelector('.filter-overlay');
+const filterOpenBtn = document.querySelectorAll('.js-show-filter');
+const filterCloseBtn = document.querySelector('.js-close-filter');
+
+const onClickShowFilter = (evt) => {
+    console.log('show')
+    evt.preventDefault();
+
+    filter.classList.toggle('opened');
+    filterOverlay.classList.toggle('opened');
+}
+
+filterCloseBtn.addEventListener('click', onClickShowFilter);
+
+filterOpenBtn.forEach(btn => {
+    btn.addEventListener('click', onClickShowFilter);
+})
 
 
 

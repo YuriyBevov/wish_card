@@ -3,103 +3,113 @@
       {
           id: "1",
           img: "./assets/img/samsung_logo.png",
-          title: 'Samsung'
+          title: 'Samsung',
+          width: 72,
+          height: 11
       },
 
       {
           id: "2",
           img: "./assets/img/apple_logo.png",
-          title: 'Apple'
+          title: 'Apple',
+          width: 43,
+          height: 52
       },
 
       {
           id: "3",
           img: "./assets/img/samsung_logo.png",
-          title: 'Samsung'
+          title: 'Samsung',
+          width: 72,
+          height: 11
       },
 
       {
           id: "4",
           img: "./assets/img/huawey_logo.png",
-          title: 'Huawei'
+          title: 'Huawei',
+          width: 52,
+          height: 52
       },
 
       {
           id: "5",
           img: "./assets/img/samsung_logo.png",
-          title: 'Samsung'
+          title: 'Samsung',
+          width: 72,
+          height: 11
       },
 
       {
           id: "6",
           img: "./assets/img/oneplus_logo.png",
-          title: 'Oneplus'
+          title: 'Oneplus',
+          width: 72,
+          height: 20
       },
 
       {
           id: "7",
           img: "./assets/img/samsung_logo.png",
-          title: 'Samsung'
+          title: 'Samsung',
+          width: 72,
+          height: 11
       },
 
       {
           id: "8",
           img: "./assets/img/apple_logo.png",
-          title: 'Apple'
+          title: 'Apple',
+          width: 43,
+          height: 52
       },
 
       {
           id: "9",
           img: "./assets/img/huawey_logo.png",
-          title: 'Huawei'
+          title: 'Huawei',
+          width: 52,
+          height: 52
       },
 
       {
           id: "10",
           img: "./assets/img/oneplus_logo.png",
-          title: 'Oneplus'
+          title: 'Oneplus',
+          width: 72,
+          height: 20
       },
 
       {
           id: "11",
           img: "./assets/img/apple_logo.png",
-          title: 'Apple'
+          title: 'Apple',
+          width: 43,
+          height: 52
       },
 
       {
           id: "12",
           img: "./assets/img/oneplus_logo.png",
-          title: 'Oneplus'
+          title: 'Oneplus',
+          width: 72,
+          height: 20
       },
 
       {
           id: "13",
           img: "./assets/img/huawey_logo.png",
-          title: 'Huawei'
+          title: 'Huawei',
+          width: 52,
+          height: 52
       },
 
       {
           id: "14",
           img: "./assets/img/mi_logo.png",
-          title: 'Xiaomi'
-      },
-
-      {
-          id: "15",
-          img: "./assets/img/apple_logo.png",
-          title: 'Apple'
-      },
-
-      {
-          id: "16",
-          img: "./assets/img/huawey_logo.png",
-          title: 'Huawei'
-      },
-
-      {
-          id: "17",
-          img: "./assets/img/mi_logo.png",
-          title: 'Xiaomi'
+          title: 'Xiaomi',
+          width: 45,
+          height: 45
       },
   ]
 
@@ -108,5 +118,5 @@
     each man in mans
       li.manufacturer__item
         a(href="#")
-          img(src=man.img, alt="man.title")
+          img(src=man.img, alt="man.title" width=man.width height=man.height)
           span= man.title

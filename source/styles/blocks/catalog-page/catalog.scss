@@ -19,5 +19,16 @@
             padding: 0;
             padding-top: 2.5rem;
         }
+
+        @media(max-width: 534px) {
+            margin: 0 .5rem;
+        }
+
+        
+    }
+
+    &__content {
+        display: flex;
+        // flex-wrap: wrap;
     }
 }
