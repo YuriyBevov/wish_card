@@ -20,6 +20,10 @@
     @media(max-width: $tablet_width) {
         min-width: 30rem;
     }
+    
+    @media(max-width: $tablet_sm_width) {
+        margin-bottom: 9rem;
+    }
 
     &__wrapper {
         position: relative;
