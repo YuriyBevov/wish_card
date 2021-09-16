@@ -113,6 +113,7 @@ const initOffersSlider = (slider) => {
    }
 }
 
+
 const productCardSliders = document.querySelectorAll('.product-card-swiper-container');
 
 if(productCardSliders.length) {
@@ -123,7 +124,7 @@ if(productCardSliders.length) {
          slidesPerView: 1,
    
          autoplay: {
-            delay: 1000,
+            delay: 2000
          },
    
          pagination: {
@@ -131,30 +132,30 @@ if(productCardSliders.length) {
          },
    
          on: {
-
             afterInit: function() {
                this.autoplay.stop();
             }
-
-            /*afterInit: function() {
-               console.log(this)
-
-               
-              /*var slider = this;
-              pcswiper.mouseenter(function() {
-               pcswiper.autoplay.start();
-              }).mouseleave(function() {
-               pcswiper.autoplay.stop();
-              });*/
-              /*this.addEventListener('click', function() {
-                 console.log('click')
-              })
-            }*/
          }
       });
+
+      slider.addEventListener('mouseover', function() {
+         pcslider.autoplay.start();
+      })
+
+      slider.addEventListener('mouseout', function() {
+         pcslider.autoplay.stop();
+      })
    })
-   
 }
+
+const paramsSlider = document.querySelector('.params-swiper-container');
+
+if(paramsSlider) {
+   new Swiper(".params-swiper-container", {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+   })
+};
 
 
 

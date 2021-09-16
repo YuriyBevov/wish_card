@@ -1,6 +1,55 @@
+-
+  const params = [
+    {
+      name: 'Цена:',
+      valueFrom: '500',
+      valueTo: '10000'
+    },
+
+    {
+      name: 'Диагональ:',
+      valueFrom: '500',
+      valueTo: '10000'
+    },
+
+    {
+      name: 'Диагональ:',
+      valueFrom: '500',
+      valueTo: '10000'
+    },
+
+    {
+      name: 'Диагональ:',
+      valueFrom: '500',
+      valueTo: '10000'
+    },
+  ]
+
 .catalog-footer
   .cmn__wrapper.catalog-footer__wrapper
-    a(href="#" aria-label="Открыть фильтр").js-show-filter Воспользуйтесь фильтром
+    a(href="#").js-show-filter Воспользуйтесь фильтром
+
+    .catalog-footer__filter-active
+      button.catalog-footer__btn.js-clear-filter Сбросить фильтр
+
+      .params-swiper-container.showed
+        .swiper-wrapper
+          each par in params
+            .swiper-slide.params
+              button(aria-label="Cбросить фильтр").js-remove-filter
+                svg(width="7" height="7")
+                  use(xlink:href="#icon-close")
+                
+              span.params__name=par.name
+              span.params__desc от
+                span.params__price.params__price--from= par.valueFrom
+                | до
+                span.params__price.params__price--to= par.valueTo
+
+        <div class="params-swiper-button-next"></div>
+        <div class="params-swiper-button-prev"></div>
+
+      
 
 
   

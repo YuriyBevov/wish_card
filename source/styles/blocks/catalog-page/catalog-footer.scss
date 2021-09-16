@@ -9,7 +9,15 @@
 
     &__wrapper { 
         @include block_padding();
-        padding: 2rem 3rem !important;
+        display: flex;
+        height: 54px;
+        align-items: center;
+        padding: 0 3rem !important;
+
+        
+        @media(max-width: 434px) {
+            flex-direction: column;
+        }
     }
     
     a {
@@ -18,8 +26,14 @@
         font-family: $font_sec-reg;
         font-size: 2.4rem;
         line-height: 3.4rem;
+        margin-right: 2.7rem;
 
         color: #175CFF;
+
+        @media(max-width: $tablet_width) {
+            font-size: 2rem;
+            line-height: 2.8rem;
+        }
     }
 
     @media(max-width: $tablet_lg_width) {
@@ -28,5 +42,52 @@
 
     @media(max-width: $tablet_sm_width) {
         padding-bottom: 9rem;
+    }
+
+    @media(max-width: 434px) {
+        padding-bottom: 10rem;
+    }
+
+    &__btn {
+        font-family: $font_sec-reg;
+        font-size: 1.4rem;
+        line-height: 2.7rem;
+        border: 0;
+        border-bottom: 1px dashed #3361C5;
+        padding: 0;
+        background-color: transparent;
+        margin-right: 0.8rem;
+        
+        height: 2.7rem;
+
+        color: #3361C5;
+
+        @media(max-width: $tablet_width) {
+            margin-right: 0;
+        }
+    }
+
+    &__filter-active {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        .params-swiper-container {
+            display: none;
+
+            &.showed {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        @media(max-width: $tablet_width) {
+            margin-left: auto;
+        }
+
+        @media(max-width: 434px) {
+            margin-left: initial;
+        }
     }
 }

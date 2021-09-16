@@ -22,7 +22,11 @@
         &-img {
             position: absolute;
             top: 3.5rem;
-            left: 5rem;
+            left: 15rem;
+
+            @media(max-width: $desktop_lg_width) {
+                left: 5rem;
+            }
 
             @media(max-width: $desktop_sm_width) {
                 left: 4rem;

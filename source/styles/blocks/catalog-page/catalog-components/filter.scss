@@ -1,21 +1,30 @@
 .filter {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 38.7rem;
-    min-width: 28.2rem;
-    margin-right: 2.3rem;
-    padding: 2.4rem 2.9rem 3.2rem 2.4rem;
-    height: fit-content;
 
-    background: $color_white;
-    border-radius: 1.2rem;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 38.7rem;
+        min-width: 28.2rem;
+        margin-right: 2.3rem;
+        padding: 2.4rem 2.9rem 3.2rem 2.4rem;
+        height: fit-content;
+    
+        background: $color_white;
+        border-radius: 1.2rem;
+    
+        @media(max-width: $desktop_lg_width) {
+            width: initial;
+            max-width: initial;
+    
+            flex-grow: 1;
+        }
 
-    @media(max-width: $desktop_lg_width) {
-        width: initial;
-        max-width: initial;
-
-        flex-grow: 1;
+        @media(max-width: $tablet_lg_width) {
+            margin-right: 0;
+        }
     }
 
     &__name {
@@ -105,6 +114,10 @@
         border-bottom: 1px dashed $color_lightblue;
 
         color: $color_lightblue;
+
+        &.hidden {
+            display: none;
+        }
     }
 
     &__item {
@@ -130,6 +143,10 @@
             text-align: right;
 
             color: rgba(22, 53, 96, 0.8);
+        }
+
+        &.hidden {
+            display: none;
         }
 
         &--checkbox {   
@@ -243,9 +260,8 @@
             left: 0;
             z-index: 1000;
             border-radius: 0;
-
             padding: 1.5rem;
-            padding-top: 0;
+            background: #F6F9FC;
 
             @media(max-width: $tablet_sm_width) {
                 margin-top: 12rem;

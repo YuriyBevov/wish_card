@@ -14,7 +14,7 @@
 
     &__wrapper {
         position: relative;
-        padding-left: 12.3rem;
+        padding-left: 22.3rem;
         max-width: 1920px;
         margin: 0 auto;
         background-color: $color_white;
@@ -22,6 +22,7 @@
         
         @media(max-width: $desktop_lg_width) {
             margin-bottom: 0;
+            padding-left: 12.3rem;
         }
 
         @media(max-width: $desktop_sm_width) {

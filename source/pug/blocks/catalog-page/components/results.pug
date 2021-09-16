@@ -341,14 +341,16 @@ include ./results-components/product_card
 
   .results__wrapper
     ul.results__list
+      li.results__card.results__card--banner
+        .results-banner
+          .results-banner__content
+            b Доставка в&nbsp;день&nbsp;заказа 
+            p Доставка по Москве осуществляется в день в день при заказе до 17:00»
+            <span>249₽</span>
+
+          img(src="./assets/img/catalog_banner.svg" alt="доставка" width="297" height="198")
+
       each item in items
         li.results__card
           +product_card(item.isDiscount, item.discountValue, item.isAvailable, item.name, item.price, item.isSale, item.oldPrice, item.prof, item.imgList)
 
-    .results-banner
-      .results-banner__content
-        b Доставка в&nbsp;день&nbsp;заказа 
-        p Доставка по Москве осуществляется в день в день при заказе до 17:00»
-        <span>249₽</span>
-
-      img(src="./assets/img/catalog_banner.svg" alt="доставка" width="297" height="198")
