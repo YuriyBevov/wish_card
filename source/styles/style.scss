@@ -41,6 +41,15 @@
 @import "blocks/catalog-page/catalog-components/header-sort";
 @import "blocks/catalog-page/catalog-footer";
 
+// news-page
+
+@import "blocks/news-page/news";
+
+// sales-page
+
+@import "blocks/sales-page/sales";
+@import "blocks/sales-page/current-sale";
+
 //components
 @import "blocks/components/acc-card";
 @import "blocks/components/sliders";

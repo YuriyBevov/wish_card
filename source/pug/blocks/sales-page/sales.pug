@@ -1,0 +1,78 @@
+- 
+  const saleList = [
+      {
+          title: 'Заголовок акции',
+          desc: 'Небольшое описание',
+          imgUrl: './assets/img/sales-1.png',
+          imgWidth: '390',
+          imgHeight: '395'
+      },
+      {
+          title: 'Заголовок акции',
+          desc: 'Небольшое описание',
+          imgUrl: './assets/img/sales-1.png',
+          imgWidth: '390',
+          imgHeight: '395'
+      },
+      {
+          title: 'Заголовок акции',
+          desc: 'Небольшое описание',
+          imgUrl: './assets/img/sales-1.png',
+          imgWidth: '390',
+          imgHeight: '395'
+      },
+      {
+          title: 'Заголовок акции',
+          desc: 'Небольшое описание',
+          imgUrl: './assets/img/sales-1.png',
+          imgWidth: '390',
+          imgHeight: '395'
+      },
+      {
+          title: 'Заголовок акции',
+          desc: 'Небольшое описание',
+          imgUrl: './assets/img/sales-1.png',
+          imgWidth: '390',
+          imgHeight: '395'
+      },
+      {
+          title: 'Заголовок акции',
+          desc: 'Небольшое описание',
+          imgUrl: './assets/img/sales-1.png',
+          imgWidth: '390',
+          imgHeight: '395'
+      },
+      {
+          title: 'Заголовок акции',
+          desc: 'Небольшое описание',
+          imgUrl: './assets/img/sales-1.png',
+          imgWidth: '390',
+          imgHeight: '395'
+      },
+      {
+          title: 'Заголовок акции',
+          desc: 'Небольшое описание',
+          imgUrl: './assets/img/sales-1.png',
+          imgWidth: '390',
+          imgHeight: '395'
+      }
+  ]
+
+.sales.cmn
+  .cmn__wrapper
+    .sales__wrapper
+      .sales__header
+        h1.cmn__title Sony анонсировала новую функцию PlayStation 5
+        .breadcrumbs
+            a(href="#") Главная
+            a(href="#") Акции
+
+      .sales__content
+        ul.sales__list
+          each card in saleList
+            li.sales__card
+              img(src=card.imgUrl alt=card.title width=card.imgWidth height=card.imgHeight)
+            
+              .sales__card-content
+                h2.cmn__title.sales__card-title=card.title
+                p.sales__card-desc=card.desc

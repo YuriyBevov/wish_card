@@ -1,9 +1,15 @@
 .slider {
+    
     width: 100%;
     max-width: 62rem;
     display: flex;
     align-items: center;
     margin-right: 3.4rem;
+
+    @media(min-width: $tablet_lg_width) {
+        position: sticky;
+        top: 280px;
+    }
 
     @media(max-width: $desktop_lg_width) {
         margin-right: 1.9rem;

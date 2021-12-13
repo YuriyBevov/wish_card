@@ -1,0 +1,36 @@
+include ../components/acc_card
+- 
+  const sale = {
+        imgUrl: '../assets/img/current-sale.png',
+        imgWidth: '635',
+        imgHeight: '635',
+        title: 'Заголовок если нужен',
+        pars: [
+            'A14 Bionic, самый быстрый процессор iPhone. Дисплей OLED от края до края. Передняя панель Ceramic Shield, которая в четыре раза снижает риск повреждений дисплея при падении. И Ночной режим на всех камерах. Всё это есть в iPhone 12. В двух размерах.',
+            'A14 Bionic — самый быстрый процессор iPhone. И позволяет делать невероятное. Система Neural Engine выполняет триллионы операций. Поддерживается съёмка видео в стандарте Dolby Vision — на такое не способны даже профессиональные кинокамеры. Высокая энергоэффективность обеспечивает долгую работу без подзарядки. A14 Bionic уже сегодня готов к решению задач будущего.',
+            'По беспроводным сетям LTE iPhone 12 способен передавать данные со скоростью до 2 Гбит/с. А значит, можно быстрее скачивать фильмы и сериалы, отправлять фото и смотреть онлайн видео более высокого качества.'
+        ]
+      }
+
+section.sale.cmn
+  .cmn__wrapper
+    .sale__wrapper
+      .sale__header
+        h1.cmn__title Скидки без изъянов
+        .breadcrumbs
+            a(href="#") Главная
+            a(href="#") Акции
+            a(href="#") Скидки без изъянов
+
+      .sale__content
+        .sale__content-img
+          img(src=sale.imgUrl alt=sale.title width=sale.imgWidth height=sale.imgHeight )
+        .sale__content-article
+          h2.cmn__title.sale__title=sale.title
+
+          each par in sale.pars
+            p.sale__text=par
+
+      .sale__slider
+        h2.cmn__title.sale__slider-title Товара учавствующие в акции
+      

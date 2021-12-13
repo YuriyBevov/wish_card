@@ -2,16 +2,11 @@ extends layouts/main-layout.pug
 
 block variables
   -
-    const title = "Wish master интернет магазин"
+    const title = "Wish master интернет-магазин"
     const desc = "Продажа электроники"
     const keywords = ""
 
 block content
-  
-  include ./blocks/card
-  include ./blocks/offers
-  include ./blocks/description
-  include ./blocks/advantages
-
+    include ./blocks/news-page/news
 block modals
   // include ./modals/menuModal
