@@ -1,0 +1,5 @@
+.catalog-category {
+    &__wrapper {
+        @include block_container();
+    }
+}

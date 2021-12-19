@@ -14635,13 +14635,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+//убрать в модуль!
 let Masonry = __webpack_require__(/*! masonry-layout */ "./node_modules/masonry-layout/masonry.js");
 
-let msnry = new Masonry( '.cats__grid', {
-    itemSelector: '.cats__grid-item',
-    percentPosition: true,
-    gutter: 16
-  });
+let masonry = document.querySelector('.cats__grid');
+
+masonry ?
+new Masonry( '.cats__grid', {
+  itemSelector: '.cats__grid-item',
+  percentPosition: true,
+  gutter: 16
+}) : null;
+  // !!
 
 /***/ }),
 
@@ -15061,8 +15067,6 @@ if(cardSlider) {
          nextEl: ".card-slider-thumbs-swiper-button-next",
          prevEl: ".card-slider-thumbs-swiper-button-prev"
       },
-
-
    });
 }
 
@@ -15098,6 +15102,7 @@ if(productCardSliders.length) {
 
       const pcslider = new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
          slidesPerView: 1,
+         nested: true,
    
          autoplay: {
             delay: 2000
@@ -15138,6 +15143,23 @@ if(paramsSlider) {
 const offerSlider = document.querySelector('.offers-swiper-container');
 
 initOffersSlider(offerSlider);
+
+const mainSliders = document.querySelectorAll('.main-slider');
+
+mainSliders ?
+mainSliders.forEach(slider => {
+         
+   new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
+      slidesPerView: 'auto',
+      allowTouchMove: false,
+
+      navigation: {
+         nextEl: ".main-swiper-button-next",
+         prevEl: ".main-swiper-button-prev",
+      }
+   });
+
+}) : null
 
 
 

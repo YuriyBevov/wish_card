@@ -1,0 +1,47 @@
+.catalog-section {
+    flex-direction: column;
+    &__wrapper {
+        @include block_container();
+        background-color: transparent;
+        padding: 0;
+        padding-top: 2.5rem;
+
+        @media(max-width: $desktop_sm_width) {
+            padding: 0;
+            padding-top: 3.3rem;
+        }
+
+        @media(max-width: $tablet_lg_width) {
+            padding: 0;
+            padding-top: 4.3rem;
+        }
+
+        @media(max-width: $tablet_width) {
+            padding: 0;
+            padding-top: 2.5rem;
+        }
+
+        @media(max-width: 534px) {
+            margin: 0 .5rem;
+        }
+    }
+
+    &__banner {
+        margin-bottom: 2.4rem;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__slider {
+        h2 {
+            padding: 0 2.4rem;
+        }
+        padding: 2.4rem 0;
+        background: $color_white;
+        border-radius: 12px;
+        margin-bottom: 2.5rem;
+    }
+}

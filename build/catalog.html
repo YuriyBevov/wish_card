@@ -760,7 +760,7 @@
       </div>
     </div>
     <main>
-      <div class="catalog cmn">
+      <section class="catalog cmn">
         <div class="cmn__wrapper">
           <div class="catalog__wrapper">
             <div class="catalog__header">
@@ -768,8 +768,6 @@
               <div class="breadcrumbs"><a href="#">Главная</a><a href="#">Каталог</a></div>
             </div>
             <div class="catalog__content">
-              <!--include ./components/filter-->
-              <!--include ./components/category-results-->
               <div class="cats">
                 <div class="cats__grid">
                   <div class="cats__grid-sizer">
@@ -782,7 +780,7 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="cats__card-banner">       <img class="cats__card-banner" src="../assets/img/phone1.png"></div>
+                        <div class="cats__card-banner">       <img class="cats__card-banner" src="./assets/img/phone1.png"></div>
                       </div>
                     </div>
                     <div class="cats__grid-item">
@@ -794,7 +792,7 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="cats__card-banner">       <img class="cats__card-banner" src="../assets/img/phone2.png"></div>
+                        <div class="cats__card-banner">       <img class="cats__card-banner" src="./assets/img/phone2.png"></div>
                       </div>
                     </div>
                     <div class="cats__grid-item">
@@ -806,7 +804,7 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="cats__card-banner">       <img class="cats__card-banner" src="../assets/img/phone1.png"></div>
+                        <div class="cats__card-banner">       <img class="cats__card-banner" src="./assets/img/phone1.png"></div>
                       </div>
                     </div>
                     <div class="cats__grid-item">
@@ -818,7 +816,7 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="cats__card-banner">       <img class="cats__card-banner" src="../assets/img/phone1.png"></div>
+                        <div class="cats__card-banner">       <img class="cats__card-banner" src="./assets/img/phone1.png"></div>
                       </div>
                     </div>
                     <div class="cats__grid-item">
@@ -830,7 +828,7 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="cats__card-banner">       <img class="cats__card-banner" src="../assets/img/phone2.png"></div>
+                        <div class="cats__card-banner">       <img class="cats__card-banner" src="./assets/img/phone2.png"></div>
                       </div>
                     </div>
                     <div class="cats__grid-item">
@@ -842,7 +840,7 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="cats__card-banner">       <img class="cats__card-banner" src="../assets/img/phone2.png"></div>
+                        <div class="cats__card-banner">       <img class="cats__card-banner" src="./assets/img/phone2.png"></div>
                       </div>
                     </div>
                     <div class="cats__grid-item">
@@ -854,7 +852,7 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="cats__card-banner">       <img class="cats__card-banner" src="../assets/img/phone2.png"></div>
+                        <div class="cats__card-banner">       <img class="cats__card-banner" src="./assets/img/phone2.png"></div>
                       </div>
                     </div>
                     <div class="cats__grid-item">
@@ -866,7 +864,7 @@
                             </li>
                           </ul>
                         </div>
-                        <div class="cats__card-banner">       <img class="cats__card-banner" src="../assets/img/phone1.png"></div>
+                        <div class="cats__card-banner">       <img class="cats__card-banner" src="./assets/img/phone1.png"></div>
                       </div>
                     </div>
                   </div>
@@ -875,10 +873,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- include ./blocks/catalog-page/footer-->
+      </section>
     </main>
-    <!--у нас несколько футеров, тч убрать и переместить в нужные страницы, либо сделать несколько шаблонов-->
     <footer class="footer">
       <div class="cart"><a class="cart__wrapper" href="#">
           <svg class="cart-icon cart-icon--filled" width="30" height="30">
@@ -902,6 +898,26 @@
         <svg width="25" height="25">
           <use xlink:href="#icon-user"></use>
         </svg><span>Вход</span></a>
+    </footer>
+    <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <div class="main-footer__info">
+          <div class="main-footer__info-section"><img class="main-footer__info-logo" src="../assets/img/logo-name.png" alt="логотип" width="175" height="13"><a href="telto:+74999384565">+7 499 938-45-65</a><a href="telto:+74999384565">+7 499 938-45-65</a></div>
+          <div class="main-footer__info-section"><img src="../assets/img/yandex-banner.png" alt="Оценка яндекса" width="120" height="110"></div>
+          <div class="main-footer__info-section main-footer__info-section--law">
+            <p>Юридическая информация ИП Дегтярев Геннадий Юрьевич ИНН 772077699212 ОГРНИП 320774600425035 </p>
+            <p>Сайт носит информационный характер и не является публичной офертой, определяемой положениями <br> Статьи 437(2) Гражданского кодекса РФ. </p>
+          </div>
+        </div>
+        <div class="main-footer__describe" style="background-image: url(../assets/img/footer-img.svg);">
+          <h3 class="cmn__subtitle">Подпишитесь <br><span>У нас для вас кое-что есть </span></h3>
+          <p>Получайте бонусы на почту через несколько секунд пребывания на сайте.</p>
+          <form action="#">
+            <input type="text" placeholder="Введите почту:">
+            <button class="main-footer__subscribe-btn" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
     </footer>
     <!-- include ./modals/menuModal-->
     <script src="./js/bundle.js"></script>

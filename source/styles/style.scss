@@ -17,8 +17,8 @@
 @import "common/header-components/user";
 @import "common/header-components/cart";
 @import "common/header-components/catalog-menu";
+@import "common/main-slider";
 
-@import "common/footer";
 
 @import "blocks/card";
 @import "blocks/card-components/chars";
@@ -34,11 +34,15 @@
 // catalog-page
 
 @import "blocks/catalog-page/catalog";
+@import "blocks/catalog-page/catalog-section";
+@import "blocks/catalog-page/catalog-category";
+
 @import "blocks/catalog-page/catalog-components/filter";
 @import "blocks/catalog-page/catalog-components/filter-components/range";
 @import "blocks/catalog-page/catalog-components/results";
 @import "blocks/catalog-page/catalog-components/product-card";
-@import "blocks/catalog-page/catalog-components/header-sort";
+@import "blocks/catalog-page/catalog-components/catalog-manufacture";
+@import "blocks/catalog-page/catalog-components/catalog-selection";
 @import "blocks/catalog-page/catalog-components/cats";
 @import "blocks/catalog-page/catalog-footer";
 
@@ -55,3 +59,7 @@
 @import "blocks/components/acc-card";
 @import "blocks/components/sliders";
 @import "blocks/components/breadcrumbs";
+
+
+@import "common/footer";
+@import "common/main-footer";

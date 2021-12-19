@@ -1,0 +1,20 @@
+include ../blocks/catalog-page/components/category-results-components/product_card
+
+mixin slider(array)
+
+  .main-swiper-container.main-slider
+    .swiper-wrapper
+      each slide in array
+        .swiper-slide
+          .slider-content
+            ul
+              li.main-slider-item
+                +product_card(slide.isDiscount, slide.discountValue, slide.isAvailable, slide.name, slide.price, slide.isSale, slide.oldPrice, slide.prof, slide.imgList)
+
+    <div class="main-swiper-button-prev">
+       <div class="btn"></div>
+    </div>
+    <div class="main-swiper-button-next">
+      <div class="btn"></div>
+    </div>
+

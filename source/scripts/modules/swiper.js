@@ -85,8 +85,6 @@ if(cardSlider) {
          nextEl: ".card-slider-thumbs-swiper-button-next",
          prevEl: ".card-slider-thumbs-swiper-button-prev"
       },
-
-
    });
 }
 
@@ -122,6 +120,7 @@ if(productCardSliders.length) {
 
       const pcslider = new Swiper(slider, {
          slidesPerView: 1,
+         nested: true,
    
          autoplay: {
             delay: 2000
@@ -162,5 +161,22 @@ if(paramsSlider) {
 const offerSlider = document.querySelector('.offers-swiper-container');
 
 initOffersSlider(offerSlider);
+
+const mainSliders = document.querySelectorAll('.main-slider');
+
+mainSliders ?
+mainSliders.forEach(slider => {
+         
+   new Swiper (slider, {
+      slidesPerView: 'auto',
+      allowTouchMove: false,
+
+      navigation: {
+         nextEl: ".main-swiper-button-next",
+         prevEl: ".main-swiper-button-prev",
+      }
+   });
+
+}) : null
 
 export { initOffersSlider }
