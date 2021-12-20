@@ -3,7 +3,9 @@
 
     @media(max-width: $tablet_sm_width) {
         display: flex;
-        position: sticky;
+        //position: sticky;
+        position: fixed;
+        width: 100%;
         bottom: 0;
         background: #FFFFFF;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);

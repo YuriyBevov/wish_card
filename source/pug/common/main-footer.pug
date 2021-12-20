@@ -1,21 +1,24 @@
 footer.main-footer
   .main-footer__wrapper
     .main-footer__info
-      .main-footer__info-section
-        img(src="./assets/img/logo-name.png" alt="логотип" width="175" height="13").main-footer__info-logo
+      .main-footer__info-container
+        .main-footer__info-section
+          img(src="./assets/img/logo-name.png" alt="логотип" width="175" height="13").main-footer__info-logo
 
-        a(href="telto:+74999384565") +7 499 938-45-65
-        a(href="telto:+74999384565") +7 499 938-45-65
-      .main-footer__info-section
-        img(src="./assets/img/yandex-banner.png" alt="Оценка яндекса" width="120" height="110")
+          a(href="telto:+74999384565") +7 499 938-45-65
+          a(href="telto:+74999384565") +7 499 938-45-65
+        .main-footer__info-section
+          img(src="./assets/img/yandex-banner.png" alt="Оценка яндекса" width="120" height="110")
 
-      .main-footer__info-section.main-footer__info-section--law
+      .main-footer__info-law
         p Юридическая информация ИП Дегтярев Геннадий Юрьевич ИНН 772077699212 ОГРНИП 320774600425035 
         p Сайт носит информационный характер и не является публичной офертой, определяемой положениями <br/> Статьи 437(2) Гражданского кодекса РФ. 
+
     .main-footer__describe(style="background-image: url(./assets/img/footer-img.svg);")
-      h3.cmn__subtitle Подпишитесь <br/><span>У нас для вас кое-что есть </span>
+      .main-footer__describe-container
+        h3.cmn__subtitle Подпишитесь <br/><span>У нас для вас кое-что есть </span>
       
-      p Получайте бонусы на почту через несколько секунд пребывания на сайте.
+        p Получайте бонусы на почту через несколько секунд пребывания на сайте.
 
       form(action="#")
         input(type="text" placeholder="Введите почту:")
