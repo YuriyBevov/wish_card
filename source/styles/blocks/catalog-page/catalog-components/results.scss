@@ -38,11 +38,17 @@
 
         @media(max-width: $desktop_lg_width) {
             padding: 2.3rem;
+            padding-bottom: 17.6rem; 
         }
 
         @media(max-width: $desktop_sm_width) {
             padding: 1.5rem;
+            padding-bottom: 17.6rem; 
             justify-content: center;
+        }
+
+        @media(max-width: 654px) {
+            padding-bottom: 0;
         }
     }
 
