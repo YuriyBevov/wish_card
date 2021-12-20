@@ -169,7 +169,7 @@ mainSliders.forEach(slider => {
          
    new Swiper (slider, {
       slidesPerView: 'auto',
-      allowTouchMove: false,
+      // allowTouchMove: false,
 
       navigation: {
          nextEl: ".main-swiper-button-next",

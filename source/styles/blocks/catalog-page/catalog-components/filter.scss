@@ -1,6 +1,8 @@
 .filter {
     display: flex;
     flex-direction: column;
+    position: sticky;
+    top: 20rem;
 
     &__wrapper {
         display: flex;

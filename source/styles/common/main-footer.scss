@@ -30,6 +30,10 @@
         @media(max-width: 534px) {
             margin: 0 .5rem;
         } */
+
+        @media(max-width: $tablet_sm_width) {
+            display: none;
+        }
     }
 
     
@@ -37,7 +41,7 @@
     &__info {
         display: flex;
         flex-wrap: wrap;
-        width: 40%;
+        width: 50%;
         max-width: 60rem;
         margin-right: auto;
 
@@ -80,7 +84,7 @@
         display: flex;
         flex-direction: column;
         justify-content: end;
-        width: calc(60% - 1rem);
+        width: calc(50% - 1rem);
         background: #f9f6fc;
         border-radius: 12px;
         padding: 2.5rem 2.8rem 1.2rem;
@@ -130,6 +134,11 @@
                     line-height: 1.6rem;
                     
                     color: #1C468A;
+                }
+
+                @media(max-width: $desktop_sm_width) {
+                    width: 100%;
+                    margin-bottom: 1rem;
                 }
             }
 

@@ -1,0 +1,35 @@
+.sort-block {
+    padding: 1.3rem 1.6rem;
+    border-radius: 12px;
+    background-color: $color_white;
+    margin-bottom: 1.6rem;
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-item {
+        height: 2.8rem;
+        
+        margin-right: 0.4rem;
+        margin-bottom: 0.4rem;
+    }
+
+    select, button {
+        width: fit-content;
+        height: inherit;
+        background-color: #E5E5E5;
+        border: 0;
+        border-radius: 0.4rem;
+        font-family: $font_sec-reg;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        text-align: center;
+
+        font-family: $font_sec-reg;
+        color: $color_blue;
+
+        cursor: pointer;
+    }
+}

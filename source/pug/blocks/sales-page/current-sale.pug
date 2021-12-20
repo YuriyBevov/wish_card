@@ -1,4 +1,341 @@
 include ../components/acc_card
+include ../../mixins/slider
+-
+  const salesItems = [
+    {
+      isDiscount: false,
+      discountValue: '-10%',
+      isAvailable: true,
+      name: 'Xiaomi Mi 10T 8 128Gb RU Black',
+      price: 'Цена 25 990 ₽',
+      isSale: true,
+      oldPrice: '26790 ₽',
+      prof: '-&nbsp;800',
+      
+
+      imgList: [
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+      ]
+    },
+
+    {
+      isDiscount: false,
+      discountValue: '-10%',
+      isAvailable: true,
+      name: 'Xiaomi Mi 10T 8 128Gb RU Black',
+      price: 'Цена 25 990 ₽',
+      isSale: true,
+      oldPrice: '26790 ₽',
+      prof: '-&nbsp;800',
+      
+
+      imgList: [
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+      ]
+    },
+
+    {
+      isDiscount: false,
+      discountValue: '-10%',
+      isAvailable: true,
+      name: 'Xiaomi Mi 10T 8 128Gb RU Black',
+      price: 'Цена 25 990 ₽',
+      isSale: true,
+      oldPrice: '26790 ₽',
+      prof: '-&nbsp;800',
+      
+
+      imgList: [
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+      ]
+    },
+
+    {
+      isDiscount: true,
+      discountValue: '-10%',
+      isAvailable: true,
+      name: 'Xiaomi Mi 10T 8 128Gb RU Black Xiaomi Mi 10T 8 128Gb RU Black',
+      price: 'Цена 25 990 ₽',
+      isSale: false,
+      oldPrice: '26790 ₽',
+      prof: '-&nbsp;800',
+
+      imgList: [
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+      ]
+    },
+
+    {
+      isDiscount: false,
+      discountValue: '-10%',
+      isAvailable: false,
+      name: 'Xiaomi Mi 10T 8 128Gb RU Black',
+      price: 'Цена 25 990 ₽',
+      isSale: true,
+      oldPrice: '26790 ₽',
+      prof: '-&nbsp;800',
+
+      imgList: [
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+      ]
+    },
+    {
+      isDiscount: true,
+      discountValue: '-10%',
+      isAvailable: true,
+      name: 'Xiaomi Mi 10T 8 128Gb RU Black',
+      price: 'Цена 25 990 ₽',
+      isSale: false,
+      oldPrice: '26790 ₽',
+      prof: '-&nbsp;800',
+
+      imgList: [
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+      ]
+    },
+
+    {
+      isDiscount: true,
+      discountValue: '-10%',
+      isAvailable: true,
+      name: 'Xiaomi Mi 10T 8 128Gb RU Black',
+      isSale: false,
+      price: 'Цена 25 990 ₽',
+      oldPrice: '26790 ₽',
+      prof: '-&nbsp;800',
+
+      imgList: [
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+      ]
+    },
+
+    {
+      isDiscount: true,
+      discountValue: '-10%',
+      isAvailable: true,
+      name: 'Xiaomi Mi 10T 8 128Gb RU Black',
+      isSale: false,
+      price: 'Цена 25 990 ₽',
+      oldPrice: '26790 ₽',
+      prof: '-&nbsp;800',
+
+
+      imgList: [
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+      ]
+    },
+
+    {
+      isDiscount: true,
+      discountValue: '-10%',
+      isAvailable: true,
+      name: 'Xiaomi Mi 10T 8 128Gb RU Black',
+      isSale: false,
+      price: 'Цена 25 990 ₽',
+      oldPrice: '26790 ₽',
+      prof: '-&nbsp;800',
+
+      imgList: [
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+      ]
+    },
+
+    {
+      isDiscount: true,
+      discountValue: '-10%',
+      isAvailable: true,
+      name: 'Xiaomi Mi 10T 8 128Gb RU Black',
+      isSale: false,
+      price: 'Цена 25 990 ₽',
+      oldPrice: '26790 ₽',
+      prof: '-&nbsp;800',
+
+      imgList: [
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+      ]
+    },
+
+    {
+      isDiscount: true,
+      discountValue: '-10%',
+      isAvailable: true,
+      name: 'Xiaomi Mi 10T 8 128Gb RU Black',
+      isSale: false,
+      price: 'Цена 25 990 ₽',
+      oldPrice: '26790 ₽',
+      prof: '-&nbsp;800',
+
+      imgList: [
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img.png',
+        },
+        {
+          name: 'наушники IPhone',
+          url: './assets/img/result-card_img-2.png',
+        },
+      ]
+    },
+  ]
+  
 - 
   const sale = {
         imgUrl: './assets/img/current-sale.png',
@@ -32,5 +369,6 @@ section.sale.cmn
             p.sale__text=par
 
       .sale__slider
-        h2.cmn__title.sale__slider-title Товара учавствующие в акции
+        h2.cmn__title.sale__slider-title Товары учавствующие в акции
+        +slider(salesItems)(class="main-swiper")
       

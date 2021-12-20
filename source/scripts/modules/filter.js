@@ -75,12 +75,13 @@ if(filter) {
         filterOverlay.classList.toggle('opened');
     }
 
-    filterCloseBtn.addEventListener('click', onClickShowFilter);
-    filterOverlay.addEventListener('click', onClickCloseFilter);
-
-    filterOpenBtn.addEventListener('click', onClickShowFilter);
-    clearFilter.addEventListener('click', onClickClearFilter);
-    applyFilter.addEventListener('click', onClickApplyFilterParams);
+    if(filterOpenBtn) {
+        filterCloseBtn.addEventListener('click', onClickShowFilter);
+        filterOverlay.addEventListener('click', onClickCloseFilter);
+        filterOpenBtn.addEventListener('click', onClickShowFilter);
+        clearFilter.addEventListener('click', onClickClearFilter);
+        applyFilter.addEventListener('click', onClickApplyFilterParams);
+    }
 }
 
 

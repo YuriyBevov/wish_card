@@ -39,18 +39,18 @@
         position: absolute;
         top: 0;
         left: -8px;
-        width: 30px;
+        width: 67px;
         height: 100%;
         
         z-index: 100;
-        background-color: $color_white;
+        
+        background: linear-gradient(90deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
 
         &.swiper-button-disabled {
-            width: 81px;
-            background: linear-gradient(90deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
-            .btn {
-                display: none;
-            }
+            width: 30px;
+            //background: linear-gradient(90deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
+            background-color: $color_white;
+            
         }
 
         .btn {
@@ -74,17 +74,22 @@
     }
 
     .main-swiper-button-next {
+        left: calc(100% - 67px);
+        background: linear-gradient(270deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
         
-        left: calc(100% - 30px);
+        
         .btn {
-            left: -15px;
-            transform: rotate(-180deg);
+            left: 30px;
+            transform: rotate(-180deg) translateY(14px);
         }
 
         &.swiper-button-disabled {
-            left: calc(100% - 81px);
-            background: linear-gradient(270deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
-            
+            left: calc(100% - 22px);
+            background-color: $color_white;
+
+            .btn {
+                left: -15px;
+            }
         }
     }
 }

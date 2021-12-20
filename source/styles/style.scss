@@ -37,6 +37,9 @@
 @import "blocks/catalog-page/catalog-section";
 @import "blocks/catalog-page/catalog-category";
 
+
+@import "blocks/catalog-page/catalog-components/category-results-components/sort-block";
+@import "blocks/catalog-page/catalog-components/category-results-components/search-block";
 @import "blocks/catalog-page/catalog-components/filter";
 @import "blocks/catalog-page/catalog-components/filter-components/range";
 @import "blocks/catalog-page/catalog-components/results";

@@ -1,0 +1,11 @@
+.search-block
+  select(name="select")
+    option(value="value1" selected) По популярности
+    option(value="value2") По цене
+
+  .search-block-field
+    input(type="text" placeholder="Поиск по категории")
+    button(type="button" aria-label="Поиск")
+      svg(width="20" height="20")
+        use(xlink:href="#icon-search-blue")
+        

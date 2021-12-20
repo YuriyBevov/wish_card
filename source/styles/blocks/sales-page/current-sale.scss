@@ -18,6 +18,16 @@
         @media(max-width: $tablet_width) {
             padding: 0;
             padding-top: 2.5rem;
+
+            .breadcrumbs {
+                display: flex;
+
+                a {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
         }
 
         @media(max-width: 534px) {
@@ -29,6 +39,10 @@
         display: flex;
         margin-bottom: 3.2rem;
 
+        @media(max-width: $tablet_width) {
+            flex-direction: column;
+        }
+
         &-img {
             width: 100%;
             max-width: 63.5rem;
@@ -39,6 +53,10 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+
+                @media(max-width: $tablet_width) {
+                    margin-bottom: 3rem;
+                }
             }
         }
 
@@ -63,11 +81,12 @@
     }
 
     &__slider {
-        padding: 2.5rem 3rem;
+        padding: 2.5rem 0;
         background-color: #ffffff;
         border-radius: 12px;
 
         &-title {
+            padding: 0 2.5rem;
             font-size: 2.4rem;
             line-height: 3.4rem;
         }

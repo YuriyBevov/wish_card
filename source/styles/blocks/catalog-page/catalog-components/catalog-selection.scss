@@ -31,5 +31,17 @@
 
             color: $color_blue;
         }
+
+        @media(max-width: $tablet_width) {
+            &:nth-child(1n + 12):not(:last-child) {
+                display: none;
+            }
+        }
+
+        @media(max-width: $tablet_xs_width) {
+            &:nth-child(1n + 8):not(:last-child) {
+                display: none;
+            }
+        }
     }
 }

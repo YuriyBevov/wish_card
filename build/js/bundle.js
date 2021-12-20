@@ -14828,12 +14828,13 @@ if(filter) {
         filterOverlay.classList.toggle('opened');
     }
 
-    filterCloseBtn.addEventListener('click', onClickShowFilter);
-    filterOverlay.addEventListener('click', onClickCloseFilter);
-
-    filterOpenBtn.addEventListener('click', onClickShowFilter);
-    clearFilter.addEventListener('click', onClickClearFilter);
-    applyFilter.addEventListener('click', onClickApplyFilterParams);
+    if(filterOpenBtn) {
+        filterCloseBtn.addEventListener('click', onClickShowFilter);
+        filterOverlay.addEventListener('click', onClickCloseFilter);
+        filterOpenBtn.addEventListener('click', onClickShowFilter);
+        clearFilter.addEventListener('click', onClickClearFilter);
+        applyFilter.addEventListener('click', onClickApplyFilterParams);
+    }
 }
 
 
@@ -15151,7 +15152,7 @@ mainSliders.forEach(slider => {
          
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
       slidesPerView: 'auto',
-      allowTouchMove: false,
+      // allowTouchMove: false,
 
       navigation: {
          nextEl: ".main-swiper-button-next",

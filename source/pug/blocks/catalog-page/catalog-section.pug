@@ -685,7 +685,10 @@ section.catalog.cmn
         include ./components/catalog-manufactures
 
         .catalog-section__banner
-          img(src="../assets/img/catalog-section-banner1.png" alt="Баннер" width="1620" height="300")
+          a(href="#")
+            picture
+              <source srcset="./assets/img/catalog-section-banner1-mobile.png" media="(max-width: 540px)" width="343" height="362">
+              img(src="./assets/img/catalog-section-banner1.png" alt="Баннер" width="1620" height="300").banner-top
 
         .catalog-section__selection
           include ./components/catalog-selection
@@ -695,7 +698,10 @@ section.catalog.cmn
           +slider(popularItems)(class="main-swiper")
 
         .catalog-section__banner
-          img(src="../assets/img/catalog-section-banner2.png" alt="Баннер" width="1620" height="409")
+          a(href="#") 
+            picture
+              <source srcset="./assets/img/catalog-section-banner2-mobile.png" media="(max-width: 540px)" width="343" height="541">
+              img(src="./assets/img/catalog-section-banner2.png" alt="Баннер" width="1620" height="409").banner-bottom
 
         .catalog-section__slider
           h2.cmn__subtitle Новинки

@@ -26,6 +26,18 @@
             margin: 0 1rem;
             margin-bottom: 3.7rem;
         }
+
+        @media(max-width: $tablet_width) {
+            &:nth-child(1n + 15) {
+                display: none;
+            }
+        }
+
+        @media(max-width: $tablet_width) {
+            &:nth-child(1n + 14) {
+                display: none;
+            }
+        }
         
         a {
             display: flex;
