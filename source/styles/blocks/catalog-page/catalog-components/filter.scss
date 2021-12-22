@@ -174,7 +174,11 @@
             }
 
             input:checked + label::before {
-                background-color: $color_lightblue;  
+                background-image: url("../assets/img/checkbox.svg");
+                background-repeat: no-repeat;
+                background-position: center; 
+                background-size: 12px;
+                border-color: #175CFF;
             }      
         }
 
