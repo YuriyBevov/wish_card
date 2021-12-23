@@ -26,6 +26,15 @@
         }
     }
 
+    select {
+        transition: border $transition_rules;
+    }
+
+    select:hover,
+    select:focus {
+        border: 1px solid #175CFF;
+    }
+
     &-field {
         position: relative;
         width: 100%;

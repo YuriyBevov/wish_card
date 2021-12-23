@@ -32,4 +32,14 @@
 
         cursor: pointer;
     }
+
+    select {
+        transition: all $transition_rules;
+    }
+
+    select:hover,
+    select:focus {
+        background-color: #175CFF;
+        color: $color_white;
+    }
 }
