@@ -10,10 +10,16 @@
     }
 
     &-item {
-        height: 2.8rem;
+        height: 3rem;
         
         margin-right: 0.4rem;
         margin-bottom: 0.4rem;
+
+        @media(max-width: $tablet_xs_width) {
+            &:nth-child(1n + 4):not(:last-child) {
+                display: none;
+            }
+        }
     }
 
     select, button {
@@ -37,7 +43,7 @@
         height: 3rem;
         padding: 0 1rem;
         padding-right: 3rem;
-        appearance: none;/* убираем дефолнтные стрелочки */
+        appearance: none;
         transition: all $transition_rules;
     }
 

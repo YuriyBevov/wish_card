@@ -6,6 +6,10 @@
     background-color: $color_white;
     margin-bottom: 0.4rem;
 
+    @media(max-width: 470px) {
+        flex-direction: column; 
+    }
+
     select {
         width: fit-content;
         max-width: 16.5rem;
@@ -24,16 +28,25 @@
         @media(max-width: $desktop_lg_width) {
             margin-right: 1rem;
         }
+
+        @media(max-width: 470px) {
+            width: 100%;
+            max-width: 100%;
+        }
     }
 
     select {
         padding-right: 5rem;
-        appearance: none;/* убираем дефолнтные стрелочки */
+        appearance: none;
         transition: border $transition_rules;
     }
 
     .select {
         position: relative;
+        @media(max-width: 470px) {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
     }
 
     .select:after {
@@ -73,7 +86,7 @@
             line-height: 1.4rem;
             border: 1px solid #E5E5E5;
             border-radius: 6px;
-            padding: 1rem;
+            padding: 0.9rem;
             padding-right: 4rem;
             color: $color_darkblue;
             background: $color_white;

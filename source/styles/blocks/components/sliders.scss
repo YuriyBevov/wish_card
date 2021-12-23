@@ -11,6 +11,10 @@
     position: relative;
     overflow: hidden;
     padding: 0 2.4rem;
+    @media(max-width: 440px) {
+        padding: 0 1rem;
+    }
+
     &::before {
         position: absolute;
         top: 0;
@@ -20,6 +24,9 @@
         content: '';
         background-color: $color_white;
         z-index: 99;
+        @media(max-width: 440px) {
+            width: 1rem;
+        }
     }
 
     .swiper-slide {    
@@ -46,9 +53,12 @@
         
         background: linear-gradient(90deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
 
+        @media(max-width: 440px) {
+            display: none;
+        }
+
         &.swiper-button-disabled {
             width: 30px;
-            //background: linear-gradient(90deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
             background-color: $color_white;
             
         }
@@ -74,7 +84,7 @@
     }
 
     .main-swiper-button-next {
-        left: calc(100% - 67px);
+        left: calc(100% - 66px);
         background: linear-gradient(270deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
         
         
@@ -88,7 +98,7 @@
             background-color: $color_white;
 
             .btn {
-                left: -15px;
+                left: -14px;
             }
         }
     }
