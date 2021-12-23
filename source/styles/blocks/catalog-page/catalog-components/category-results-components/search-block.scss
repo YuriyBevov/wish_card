@@ -7,7 +7,7 @@
     margin-bottom: 0.4rem;
 
     select {
-        width: 100%;
+        width: fit-content;
         max-width: 16.5rem;
         padding: 1rem;
         background: $color_white;
@@ -27,7 +27,29 @@
     }
 
     select {
+        padding-right: 5rem;
+        appearance: none;/* убираем дефолнтные стрелочки */
         transition: border $transition_rules;
+    }
+
+    .select {
+        position: relative;
+    }
+
+    .select:after {
+        content: "";
+        display: block;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        width: 12px;
+        height: 6px;
+        z-index: 100;
+        transform: translateY(-50%);
+
+        background: url("../assets/img/select-arr-gray.svg") no-repeat;
+        background-size: cover;
     }
 
     select:hover,

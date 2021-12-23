@@ -34,7 +34,37 @@
     }
 
     select {
+        height: 3rem;
+        padding: 0 1rem;
+        padding-right: 3rem;
+        appearance: none;/* убираем дефолнтные стрелочки */
         transition: all $transition_rules;
+    }
+
+    .select {
+        position: relative;
+    }
+
+    .select:after {
+        content: "";
+        display: block;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        width: 12px;
+        height: 6px;
+        z-index: 100;
+        transform: translateY(-50%);
+
+        background: url("../assets/img/select-arr-gray.svg") no-repeat;
+        background-size: cover;
+    }
+
+    .select:hover::after,
+    .select:focus::after {
+        background: url("../assets/img/select-arr.svg") no-repeat;
+        background-size: cover;
     }
 
     select:hover,
