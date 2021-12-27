@@ -1,5 +1,6 @@
 .catalog-section {
     flex-direction: column;
+
     &__wrapper {
         @include block_container();
         background-color: transparent;
@@ -27,12 +28,27 @@
     }
 
     &__banner {
+        position: relative;
         margin-bottom: 2.4rem;
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media(max-width: 540px) {
+            height: 36rem;
+        }
         
         picture {
+            position: absolute;
+            top: 0;
+            left: 0;
+
             display: block;
             width: 100%;
             height: 100%;
+            z-index: -1;
 
             img {
                 width: 100%;
@@ -54,6 +70,38 @@
                     object-position: top;
                 }
             }
+        }
+
+        &-logo {
+            width: 134px;
+            height: 34px;
+            object-fit: contain;
+            margin-bottom: 6rem;
+        }
+
+        &-text {
+            font-family: $font_banner_semi;
+            font-size: 3rem;
+            line-height: 3.6rem;
+
+            background: -webkit-linear-gradient(0, #3948B1 17.32%, #50976A 46.34%, #FF784B 80.33%);
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.2rem;
+        }
+
+        &-btn {
+            font-family: $font_banner_med;
+            border: 0;
+            background-color: transparent;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            padding: 0.8rem 2rem;
+            border: 1px solid #1d1d1f;
+            border-radius: 1.8rem;
+            
+            color: #1D1D1F;
         }
         
     }

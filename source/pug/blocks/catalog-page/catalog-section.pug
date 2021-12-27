@@ -685,10 +685,15 @@ section.catalog.cmn
         include ./components/catalog-manufactures
 
         .catalog-section__banner
-          a(href="#")
-            picture
-              <source srcset="./assets/img/catalog-section-banner1-mobile.png" media="(max-width: 540px)" width="343" height="362">
-              img(src="./assets/img/catalog-section-banner1.png" alt="Баннер" width="1620" height="300").banner-top
+          picture
+            <source srcset="./assets/img/catalog-section-banner1-mobile.png" media="(max-width: 540px)" width="343" height="362">
+            img(src="./assets/img/catalog-banner.png" alt="Баннер" width="1620" height="300").banner-top
+          
+          img(src="./assets/img/iphone-logo.png" alt="Логотип iphone").catalog-section__banner-logo
+          span.catalog-section__banner-text Пять свежих цветов.
+
+          button(type="button").catalog-section__banner-btn Купить
+
 
         .catalog-section__selection
           include ./components/catalog-selection
