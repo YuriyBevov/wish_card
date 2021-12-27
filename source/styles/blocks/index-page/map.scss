@@ -1,0 +1,32 @@
+.map {
+    &__wrapper {
+        @include block_container();
+        background-image: url('../assets/img/index-map.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            top: 40%;
+            right: 34%;
+            transform: translate(-50%, -50%);
+            content: '';
+            width: 4.6rem;
+            height: 11rem;
+            background-image: url('../assets/img/logo-icon.svg');
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        h2 {
+            margin-bottom: 0;
+            margin-right: 1.3rem;
+        }
+    }
+}

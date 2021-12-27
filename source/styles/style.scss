@@ -31,6 +31,16 @@
 @import "blocks/description";
 @import "blocks/advantages";
 
+//index-page
+@import "blocks/index-page/intro";
+@import "blocks/index-page/advantages";
+@import "blocks/index-page/categories";
+@import "blocks/index-page/hits";
+@import "blocks/index-page/stock";
+@import "blocks/index-page/map";
+@import "blocks/index-page/news";
+@import "blocks/index-page/about";
+
 // catalog-page
 
 @import "blocks/catalog-page/catalog";

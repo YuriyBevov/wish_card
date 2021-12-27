@@ -69,4 +69,18 @@
             }
         }
     }
+
+    &__outlined-link {
+        font-family: $font_sec-reg;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        padding: 0.9rem 1.5rem;
+
+        background: $color_white;
+        border: 1px solid $color_blue;
+        box-sizing: border-box;
+        border-radius: 6px;
+
+        color: $color_blue;
+    }
 }
