@@ -1,0 +1,17 @@
+mixin offer-slider(array)
+
+  .offer-swiper-container.offer-slider
+    .swiper-wrapper
+      each slide in array
+        .swiper-slide
+          .slider-content
+            a(href=slide.link) 
+              img(src=slide.imgUrl alt=slide.imgTitle width=slide.imgWidth height=slide.imgHeight)
+
+              p=slide.title
+    <div class="offer-swiper-button-prev">
+       <div class="btn"></div>
+    </div>
+    <div class="offer-swiper-button-next">
+      <div class="btn"></div>
+    </div>

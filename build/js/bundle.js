@@ -15152,11 +15152,26 @@ mainSliders.forEach(slider => {
          
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
       slidesPerView: 'auto',
-      // allowTouchMove: false,
 
       navigation: {
          nextEl: ".main-swiper-button-next",
          prevEl: ".main-swiper-button-prev",
+      }
+   });
+
+}) : null
+
+const offerSliders = document.querySelectorAll('.offer-slider');
+
+offerSliders ?
+offerSliders.forEach(slider => {
+         
+   new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
+      slidesPerView: 'auto',
+
+      navigation: {
+         nextEl: ".offer-swiper-button-next",
+         prevEl: ".offer-swiper-button-prev",
       }
    });
 

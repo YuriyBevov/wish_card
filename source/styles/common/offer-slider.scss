@@ -1,0 +1,23 @@
+.offer-slider {
+    overflow: hidden;
+
+    .swiper-slide {
+        width: 30rem;
+        margin-right: 1.5rem;
+    }
+
+    .slider-content {
+        img {
+            margin-bottom: 1.2rem;
+        }
+
+        p {
+            font-family: $font_sec-bold;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            max-width: 26rem;
+
+            color: $color_darkblue;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+.stock-section {
+    &__wrapper {
+        @include block_container();
+    }
+}

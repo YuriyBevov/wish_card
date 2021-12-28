@@ -1,1 +1,73 @@
-section.news
+include ../../mixins/offer-slider
+
+-
+  const newsList = [
+      {
+          imgUrl: './assets/img/index-stock1.png',
+          imgWidth: '300px',
+          imgHeight: '300px',
+
+          title: 'Новогодняя раздача подарков!',
+          link: '#'
+      },
+      
+      {
+          imgUrl: './assets/img/index-stock2.png',
+          imgWidth: '300px',
+          imgHeight: '300px',
+
+          title: 'Разыгрываем Apple Airpods Max!',
+          link: '#'
+      },
+      
+      {
+          imgUrl: './assets/img/index-stock3.png',
+          imgWidth: '300px',
+          imgHeight: '300px',
+
+          title: 'Дорогие друзья! У нас для вас скидки',
+          link: '#'
+      },
+      
+      {
+          imgUrl: './assets/img/index-stock4.png',
+          imgWidth: '300px',
+          imgHeight: '300px',
+
+          title: 'Ещё одна долгожданная новинка от Apple ждёт вас на нашем сайте',
+          link: '#'
+      },
+      
+      {
+          imgUrl: './assets/img/index-stock5.png',
+          imgWidth: '300px',
+          imgHeight: '300px',
+
+          title: 'Sony анонсировала новую функцию PlayStation 5',
+          link: '#'
+      },
+      
+      {
+          imgUrl: './assets/img/index-stock3.png',
+          imgWidth: '300px',
+          imgHeight: '300px',
+
+          title: 'Разыгрываем Apple Airpods Max! Дорогие друзья!',
+          link: '#'
+      },
+      
+      {
+          imgUrl: './assets/img/index-stock4.png',
+          imgWidth: '300px',
+          imgHeight: '300px',
+
+          title: 'У нас для вас скидки',
+          link: '#'
+      },
+  ]
+
+section.news-section
+  .cmn__wrapper
+    .news-section__wrapper
+      h2.cmn__title Новости
+      +offer-slider(newsList)
