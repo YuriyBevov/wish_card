@@ -1,0 +1,13 @@
+mixin banner-wide-slider(array)
+
+  .banner-wide-swiper-container.banner-wide-slider
+    .swiper-wrapper
+      each slide in array
+        .swiper-slide(style="background-image: url('" + slide.bg + "')")
+          .slider-content
+            img(src=slide.logoImg alt=slide.title)
+            p.cmn__colored-text= slide.desc
+            a(href="#").cmn__banner-link=slide.linkText 
+    <div class="banner-wide-swiper-button-prev"></div>
+    <div class="banner-wide-swiper-button-next"></div>
+    <div class="banner-wide-swiper-pagination"></div>

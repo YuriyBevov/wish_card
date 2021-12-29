@@ -1,5 +1,20 @@
 .hits {
     &__wrapper {
         @include block_container();
+
+        @media(max-width: 375px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        h2 {
+            padding: 0 2.4rem;
+
+            @media(max-width: 440px) {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+                padding: 0 1rem;
+            }
+        }
     }
 }

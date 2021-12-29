@@ -1,4 +1,8 @@
 .adv {
+    @media(max-width: $tablet_xs_width) {
+        display: none;
+    }
+
     &__wrapper {
         @include block_container();
     }
@@ -14,6 +18,14 @@
         flex-direction: column;
         align-items: center;
         margin: 0 4rem;
+
+        @media(max-width: $desktop_lg_width) {
+            margin: 0 3rem; 
+        }
+
+        @media(max-width: $desktop_sm_width) {
+            margin: 0 2rem; 
+        }
 
         img {
             margin-bottom: 1rem;

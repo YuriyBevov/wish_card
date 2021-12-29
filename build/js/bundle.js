@@ -15139,8 +15139,6 @@ if(paramsSlider) {
    })
 };
 
-
-
 const offerSlider = document.querySelector('.offers-swiper-container');
 
 initOffersSlider(offerSlider);
@@ -15176,6 +15174,35 @@ offerSliders.forEach(slider => {
    });
 
 }) : null
+
+const bannerWideSlider = document.querySelector('.banner-wide-swiper-container');
+
+if(bannerWideSlider) {
+   new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".banner-wide-swiper-container", {
+      slidesPerView: 'auto',
+
+      navigation: {
+         nextEl: ".banner-wide-swiper-button-next",
+         prevEl: ".banner-wide-swiper-button-prev",
+      },
+
+      pagination: {
+         el: ".banner-wide-swiper-pagination",
+      }
+   })
+};
+
+const bannerThinSlider = document.querySelector('.banner-thin-swiper-container');
+
+if(bannerThinSlider) {
+   new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".banner-thin-swiper-container", {
+      slidesPerView: 'auto',
+
+      pagination: {
+         el: ".banner-thin-swiper-pagination",
+      }
+   })
+};
 
 
 

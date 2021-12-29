@@ -39,6 +39,10 @@
         background: $color_white;
         border: 1px solid #E5E5E5;
         order: 3;
+
+        @media(max-width: 375px) {
+            width: 27rem;
+        }
     }
 
     .main-swiper-button-prev,
