@@ -15008,6 +15008,7 @@ const enableSwiper = function() {
         slidesPerView: 'auto',
         slideToClickedSlide: true,
         spaceBetween: 15,
+        loop: true,
     });
 };
 
@@ -15027,6 +15028,7 @@ if(cardSlider) {
       watchSlidesProgress: true,
       spaceBetween: 20,
       direction: "horizontal",
+      loop: true,
 
       breakpoints: {
 
@@ -15048,6 +15050,7 @@ if(cardSlider) {
       loop: true,
       spaceBetween: 10,
       slidesPerView: 1,
+      loop: true,
 
       breakpoints: {
 
@@ -15080,6 +15083,7 @@ const initOffersSlider = (slider) => {
       new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
          slidesPerView: 'auto',
          spaceBetween: 14,
+         loop: true,
    
          scrollbar: {
             el: '.swiper-scrollbar',
@@ -15104,6 +15108,7 @@ if(productCardSliders.length) {
       const pcslider = new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
          slidesPerView: 1,
          nested: true,
+         loop: true,
    
          autoplay: {
             delay: 2000
@@ -15136,6 +15141,7 @@ if(paramsSlider) {
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".params-swiper-container", {
       slidesPerView: 'auto',
       spaceBetween: 10,
+      loop: true,
    })
 };
 
@@ -15149,7 +15155,14 @@ mainSliders ?
 mainSliders.forEach(slider => {
          
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
-      slidesPerView: 'auto',
+      slidesPerView: 1,
+      loop: true,
+      
+      breakpoints: {
+         375: {
+            slidesPerView: 'auto',
+         },
+      },
 
       navigation: {
          nextEl: ".main-swiper-button-next",
@@ -15166,6 +15179,7 @@ offerSliders.forEach(slider => {
          
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
       slidesPerView: 'auto',
+      loop: true,
 
       navigation: {
          nextEl: ".offer-swiper-button-next",
@@ -15180,6 +15194,7 @@ const bannerWideSlider = document.querySelector('.banner-wide-swiper-container')
 if(bannerWideSlider) {
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".banner-wide-swiper-container", {
       slidesPerView: 'auto',
+      loop: true,
 
       navigation: {
          nextEl: ".banner-wide-swiper-button-next",
@@ -15197,6 +15212,7 @@ const bannerThinSlider = document.querySelector('.banner-thin-swiper-container')
 if(bannerThinSlider) {
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".banner-thin-swiper-container", {
       slidesPerView: 'auto',
+      loop: true,
 
       pagination: {
          el: ".banner-thin-swiper-pagination",
