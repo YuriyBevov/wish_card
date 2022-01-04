@@ -1,0 +1,91 @@
+.delivery-order {
+    &__wrapper {
+        @include block_container();
+    }
+
+    &__list {
+        display: flex;
+        margin-bottom: 2rem;
+
+        @media(max-width: $desktop_sm_width) {
+            flex-wrap: wrap;
+        }
+
+        li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 25%;
+            max-width: 36rem;
+            padding-left: 5.5rem;
+            height: 13.2rem;
+            margin-right: 2.1rem;
+
+            @media(max-width: $desktop_sm_width) {
+                width: 50%;
+                max-width: calc(50% - 2.1rem);
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 4.7rem;
+                height: 100%;
+                content: '';
+
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            &:nth-child(1)::before {
+                background-image: url('../assets/img/1.png');
+            }
+
+            &:nth-child(2)::before {
+                background-image: url('../assets/img/2.png');
+            }
+
+            &:nth-child(3)::before {
+                background-image: url('../assets/img/3.png');
+            }
+
+            &:nth-child(4)::before {
+                background-image: url('../assets/img/4.png');
+            }
+        }
+    }
+
+    &__adds {
+        display: flex;
+        align-items: center;
+
+        p {
+            color: rgba(51, 51, 51, 0.6);
+            width: calc(100% - 28rem);
+            max-width: 93.5rem;
+            margin-right: auto;
+        }
+
+        a {
+            @include blue-hover();
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 0.9rem;
+            background: $color_blue;
+            border-radius: 8px;
+
+            svg {
+                margin-right: 2.1rem;
+            }
+
+            span {
+                font-family: $font_sec-reg;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                color: $color_white;
+            }
+        }
+    }
+}

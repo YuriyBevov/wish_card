@@ -1,0 +1,15 @@
+extends layouts/catalog-layout.pug
+
+block variables
+  -
+    const title = "Wish master интернет магазин"
+    const desc = "Продажа электроники"
+    const keywords = ""
+
+block content
+  include ./blocks/delivery-page/delivery-rules
+  include ./blocks/delivery-page/delivery-price
+  include ./blocks/delivery-page/delivery-order
+
+block modals
+  // include ./modals/menuModal

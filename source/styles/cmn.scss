@@ -32,6 +32,13 @@
         color: $color_darkblue;
     }
 
+    &__text {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+
+        color: $color_lightblack;
+    }
+
     &__btn {
         display: flex;
         align-items: center;

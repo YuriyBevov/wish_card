@@ -1,0 +1,176 @@
+.delivery-price {
+    margin-bottom: 3.2rem;
+    &__wrapper {
+        @include block_container();
+        background-color: transparent;
+        padding: 0;
+
+        h2 {
+            font-size: 2rem;
+            line-height: 2.6rem;
+        }
+    }
+
+    &__list {
+        margin-bottom: 4.2rem;
+    }
+
+    &__item {
+        margin-bottom: 0.8rem;
+        border-radius: 1.2rem;
+        background-color: $color_white;
+
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2.5rem;
+        padding-right: 48.5rem;
+        min-height: 12rem;
+
+        p {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            color: $color_lightblack;
+        }
+    }
+
+    &__conditions {
+        position: absolute;
+        top: 0;
+        right: 2.5rem;
+        padding: 1rem 1.7rem;
+        background-color: #EDF6FF;
+
+        &::before {
+            position: absolute;
+            bottom: -9px;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 1.7rem;
+            background-image: url("../assets/img/cut-line.png");
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__map {
+        position: relative;
+        height: 63.7rem;
+        width: 100%;
+        background-image: url("../assets/img/delivery-map.png");
+        background-size: cover;
+        border-radius: 1.2rem;
+        background-position: center;
+    }
+
+    &__search {
+        position: absolute;
+        top: 2.5rem;
+        left: 8rem;
+        width: 47.1rem;
+        height: 57.8rem;
+        padding: 4.4rem 2.4rem 3rem;
+        border-radius: 1.2rem;
+        background-color: $color_white;
+
+        @media(max-width: $desktop_sm_width) {
+            left: 2.5rem;
+        }
+
+
+        h2 {
+            font-size: 2rem;
+            line-height: 2.6rem;
+            margin-bottom: 2.5rem;
+        }
+
+        form {
+            position: relative;
+            margin-bottom: 1.7rem;
+
+            input {
+                font-family: $font_sec-reg;
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+                width: 100%;
+
+                background: $color_white;
+                border: 1px solid #E5E5E5;
+                border-radius: 6px;
+                padding: 1rem;
+                padding-right: 5rem;
+
+                color: $color_darkblue;
+
+                &::placeholder {
+                    font-family: $font_sec-reg;
+                    font-size: 1.4rem;
+                    line-height: 1.4rem;
+
+                    color: $color_darkblue;
+                }
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 4rem;
+                border: 0;
+                background-color: transparent;
+            }
+            
+        }
+
+        ul {
+
+            li {
+                position: relative;
+                padding-left: 5rem;
+                padding-bottom: 1.6rem;
+                border-bottom: 1px solid #B0B0B0;
+                margin-bottom: 1.6rem;
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+
+                    transform: translateY(-50%);
+                    content: '';
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+
+            li:nth-child(1)::before {
+                background-color: #7B797A;
+            }
+
+            li:nth-child(2)::before {
+                background-color: #FF77BB;
+            }
+
+            li:nth-child(3)::before {
+                background-color: #6996FF;
+            }
+
+            li:nth-child(4)::before {
+                background-color: #FFB169;
+            }
+
+            li:nth-child(5)::before {
+                background-color: #A2FF69;
+            }
+
+            span {
+                color: $color_blue;
+            }
+        }
+    }
+}
