@@ -9,12 +9,17 @@ section.delivery-rules
 
       .delivery-rules__content
         .delivery-rules__block
-          img(src="./assets/img/delivery1.png" alt="Бизнес-центр" width="800" height="300")
+          picture
+            source(srcset="./assets/img/index-house_mob.jpg" media="(max-width: 534px)")
+            img(src="./assets/img/delivery1.png" alt="Бизнес-центр" width="800" height="300")
+
           .delivery-rules__block-container
             h2.cmn__subtitle Бесплатный самовывоз при заказе день в день
             p Самовывоз находится по адресу: м. Фили, Багратионовский проезд, д. 7, к. 20В, БЦ «Конвент», офис 304. Для доступа в БЦ необходимо иметь при себе удостоверение личности.
-        .delivery-rules__block
-          img(src="./assets/img/delivery.png" alt="Доставка" width="800" height="300")
+        .delivery-rules__block 
+          picture
+            source(srcset="./assets/img/delivery_mob.jpg" media="(max-width: 534px)")
+            img(src="./assets/img/delivery.png" alt="Бизнес-центр" width="800" height="300")
           .delivery-rules__block-container
             h2.cmn__subtitle Доставка по Москве
             p Доставка в пределах МКАД - 390 рублей. Доставка по Москве осуществляется в день заказа при заказе до 17:00. Доставка габаритных товаров (электросамокаты, телевизоры, мониторы , крупные пылесосы) осуществляется день в день до 14 часов при отсутствии свободных курьеров, производится до подъезда, подъём до квартиры оплачивается дополнительно (+100) рублей.

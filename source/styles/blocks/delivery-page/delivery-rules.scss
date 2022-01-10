@@ -43,13 +43,18 @@
             padding: 2.5rem;
         }
 
-        img {
+        picture {
             width: 100%;
             height: 30rem;
             max-width: 80rem;
-            object-fit: cover;
-            object-position: bottom;
-            border-radius: 1.2rem 1.2rem 0 0;
+
+            img {
+                width: 100%;
+                height: inherit;
+                object-fit: cover;
+                object-position: bottom;
+                border-radius: 1.2rem 1.2rem 0 0;
+            }
 
             @media(max-width: $desktop_sm_width) {
                 max-width: 100%;

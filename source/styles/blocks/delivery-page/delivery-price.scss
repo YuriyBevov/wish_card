@@ -26,6 +26,13 @@
         padding: 2.5rem;
         padding-right: 48.5rem;
         min-height: 12rem;
+        margin-bottom: 1.2rem;
+
+        @media(max-width: $tablet_width) {
+            padding-right: 0;
+            border-radius: 1.2rem 1.2rem 0 0;
+            padding-bottom: 0;
+        } 
 
         p {
             font-size: 1.6rem;
@@ -40,29 +47,51 @@
         right: 2.5rem;
         padding: 1rem 1.7rem;
         background-color: #EDF6FF;
+        max-width: 40rem;
+
+        @media(max-width: $tablet_width) {
+            width: calc(100% + 5rem);
+            max-width: calc(100% + 5rem);
+            right: 0;
+            position: relative;
+            margin-left: -2.5rem;
+            margin-top: 15px;
+        }
 
         &::before {
             position: absolute;
-            bottom: -9px;
+            bottom: -7px;
             left: 0;
             content: '';
             width: 100%;
-            height: 1.7rem;
-            background-image: url("../assets/img/cut-line.png");
-            background-size:cover;
-            background-repeat: no-repeat;
+            height: 12px;
+            background-image: url("../assets/img/cut-line-item.png");
+            background-size: 12px 12px;
+            background-repeat: repeat;
         }
     }
 
     &__map {
+        display: flex;
+        flex-direction: column;
         position: relative;
-        height: 63.7rem;
-        width: 100%;
-        background-image: url("../assets/img/delivery-map.png");
-        background-size: cover;
+        min-height: 63.7rem;
         border-radius: 1.2rem;
-        background-position: center;
-    }
+
+        img {
+            width: 100%;
+            height: 100%;
+            min-height: inherit;
+            object-fit: cover;
+            border-radius: 1.2rem;
+
+            @media(max-width: $tablet_width) {
+                order: 2;
+                height: 30rem;
+                min-height: initial;
+            }
+        }
+    } 
 
     &__search {
         position: absolute;
@@ -78,6 +107,13 @@
             left: 2.5rem;
         }
 
+        @media(max-width: $tablet_width) {
+            position: relative;
+            order: 1;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
         h2 {
             font-size: 2rem;
