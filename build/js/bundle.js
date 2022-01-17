@@ -15203,6 +15203,7 @@ if(bannerWideSlider) {
 
       pagination: {
          el: ".banner-wide-swiper-pagination",
+         clickable: true,
       }
    })
 };
@@ -15216,6 +15217,11 @@ if(bannerThinSlider) {
 
       pagination: {
          el: ".banner-thin-swiper-pagination",
+         clickable: true,
+
+         /*renderBullet: function (index, className) {
+            return '<div class="swiper-pagination-container"><span class="' + className + '"></span></div>';
+         }, */
       }
    })
 };
