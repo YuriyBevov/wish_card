@@ -18,6 +18,8 @@ closeBtn.addEventListener('click', onClickHideCatalog)
 const menuItems = document.querySelectorAll('.catalog-menu__item');
 const innerLists = document.querySelectorAll('.catalog-menu__inner');
 
+let isScrolled = false;
+
 const onClickShowInnerList = (evt) => {
     evt.preventDefault();
 
@@ -26,16 +28,21 @@ const onClickShowInnerList = (evt) => {
 
     let posY = elHeight * (num - 1);
 
+    !evt.currentTarget.classList.contains('active') ?
+    isScrolled = false : null;
+
+    isScrolled !== true ?
     catalog.scrollTo({
         top: posY,
         left: 0,
         behavior: 'smooth'
-    });
+    }) : null;
+
+    isScrolled = true;
 
     menuItems.forEach(item => {
         item.classList.contains('active') ?
         item.classList.remove('active') : null
-        item.style.top = '';
     })
 
     innerLists.forEach(list => {

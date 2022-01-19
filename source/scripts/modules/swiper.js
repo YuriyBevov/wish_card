@@ -36,7 +36,6 @@ breakpointChecker();
 
 //-------------
 
-
 const cardSlider = document.querySelector('.card-swiper-container');
 
 if(cardSlider) {
@@ -125,10 +124,10 @@ if(productCardSliders.length) {
       const pcslider = new Swiper(slider, {
          slidesPerView: 1,
          nested: true,
-         loop: true,
+         //loop: true,
    
          autoplay: {
-            delay: 2000
+            delay: 1000
          },
    
          pagination: {
@@ -142,7 +141,39 @@ if(productCardSliders.length) {
          }
       });
 
-      slider.addEventListener('mouseover', function() {
+      slider.addEventListener('mouseover', function(evt) {
+         // console.log(evt.currentTarget)
+
+         // NodeList(6) [div.swiper-slide.swiper-slide-duplicate, div.swiper-slide.swiper-slide-prev, 
+         // div.swiper-slide.swiper-slide-active, div.swiper-slide.swiper-slide-next, div.swiper-slide, 
+         // div.swiper-slide.swiper-slide-duplicate.swiper-slide-duplicate-prev]
+         /*let slides = evt.currentTarget.querySelectorAll('.swiper-slide');
+
+         // DOMRect {x: 669, y: 304.5625, width: 297, height: 240, top: 304.5625, …}
+         let proportions = evt.currentTarget.getBoundingClientRect();
+
+         let currentPos = evt.clientX;
+
+         document.addEventListener('mousemove', function(evt) {
+            console.log(this, pcslider)
+            /*
+               1 - получить координаты карточки(его ширину и позицию относиельно экрана)
+
+               2 - получить кол-во слайдов внутри
+
+               3 - разделить ширину карточки на кол-во слайдов
+
+               4 - определить ширину одного деления для слайда
+               
+               5 - при наведении, определять в каком делении находится мышь, и делать данный слайд активным
+
+               6 - по перемещению из одного деления в другое менять слайд
+            */
+           /* slides[3].classList.add('active');
+
+            pcslider.slideNext();
+         })*/
+
          pcslider.autoplay.start();
       })
 
