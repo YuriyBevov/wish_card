@@ -16,14 +16,26 @@ openBtn.addEventListener('click', onClickShowCatalog)
 closeBtn.addEventListener('click', onClickHideCatalog)
 
 const menuItems = document.querySelectorAll('.catalog-menu__item');
-const innerLists = document.querySelectorAll('.catalog-menu__inner-wrapper');
+const innerLists = document.querySelectorAll('.catalog-menu__inner');
 
 const onClickShowInnerList = (evt) => {
     evt.preventDefault();
 
+    let elHeight = evt.currentTarget.offsetHeight;
+    let num = evt.currentTarget.getAttribute('data-id');
+
+    let posY = elHeight * (num - 1);
+
+    catalog.scrollTo({
+        top: posY,
+        left: 0,
+        behavior: 'smooth'
+    });
+
     menuItems.forEach(item => {
         item.classList.contains('active') ?
         item.classList.remove('active') : null
+        item.style.top = '';
     })
 
     innerLists.forEach(list => {
@@ -33,8 +45,8 @@ const onClickShowInnerList = (evt) => {
 
     const menuItem = evt.currentTarget;
 
-    menuItem.classList.add('active')
-    menuItem.querySelector('.catalog-menu__inner-wrapper').classList.add('active')
+    menuItem.classList.add('active');
+    menuItem.querySelector('.catalog-menu__inner').classList.add('active')
 }
 
 menuItems.forEach(item => {

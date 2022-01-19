@@ -5,7 +5,7 @@
       name: 'Смартфоны',
       dataID: 1,
 
-      //class: 'active',
+      class: 'active',
 
       innerLists: [
 
@@ -19,6 +19,18 @@
                   title: 'Аксессуары для телефонов',
 
                   links: ['Чехлы', 'Защитные стекла', 'Защитные пленки', 'Кабели', 'Зарядные устройства', 'Внешние аккумуляторы', 'Автомобильные держатели', 'Попсокеты и кольца', 'Держатели', 'Карты памяти', 'Полезные услуги', 'Моноподы', 'Автомобильные зарядные устройства']
+              },
+              
+              {
+                title: 'Смартфоны и телефоны',
+
+                links: ['Samsung', 'Xiaomi', 'OnePlus', 'Apple', 'Смотреть все', 'Кнопочные телефоны', 'Радиотелефоны', 'Каталог смартфонов и телефонов']
+              },
+
+              {
+                title: 'Аксессуары для телефонов',
+
+                links: ['Чехлы', 'Защитные стекла', 'Защитные пленки', 'Кабели', 'Зарядные устройства', 'Внешние аккумуляторы', 'Автомобильные держатели', 'Попсокеты и кольца', 'Держатели', 'Карты памяти', 'Полезные услуги', 'Моноподы', 'Автомобильные зарядные устройства']
               },
           ],
     },
@@ -260,9 +272,8 @@
     button(aria-label="Закрыть").catalog-menu__close.js-close-catalog-menu
       svg(width="46" height="46")
         use(xlink:href="#icon-catalog-menu-close")
-    
     .catalog-menu__container
-      ul.catalog-menu__list
+      ul.catalog-menu__list 
         each item in category
           li.catalog-menu__item(class=item.class ? item.class : null data-id=item.dataID)
             a(href="#").catalog-menu__link
@@ -270,14 +281,20 @@
                 use(xlink:href=item.icon)
               span= item.name
 
-            .catalog-menu__inner-wrapper(class= item.class ? item.class : null)
-              each inn in item.innerLists
-                .catalog-menu__inner-container
-                  span= inn.title
+            .catalog-menu__inner(class=item.class ? item.class : null)
+              .menu__grid
+                .menu__grid-sizer
+                  each inn in item.innerLists
+                    .menu__grid-item 
+                      span= inn.title
 
-                  ul.catalog-menu__inner-list
-                    each link in inn.links
-                      li.catalog-menu__inner-item
-                        a(href="#")= link
+                      ul.catalog-menu__inner-cats
+                        each link in inn.links
+                          li.catalog-menu__inner-cats-item
+                            a(href="#")= link
 
-      img(src="./assets/img/catalog-menu-banner.jpg" alt="баннер" width="354" height="558")
+              img(src="./assets/img/catalog-menu-banner.jpg" alt="баннер" width="354" height="558")
+
+
+
+      

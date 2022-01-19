@@ -14627,6 +14627,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_filter_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/catalogMenu.js */ "./source/scripts/modules/catalogMenu.js");
 /* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/masonry.js */ "./source/scripts/modules/masonry.js");
+/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_masonry_js__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
@@ -14636,18 +14638,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-//убрать в модуль!
-let Masonry = __webpack_require__(/*! masonry-layout */ "./node_modules/masonry-layout/masonry.js");
-
-let masonry = document.querySelector('.cats__grid');
-
-masonry ?
-new Masonry( '.cats__grid', {
-  itemSelector: '.cats__grid-item',
-  percentPosition: true,
-  gutter: 16
-}) : null;
-  // !!
 
 /***/ }),
 
@@ -14676,14 +14666,26 @@ openBtn.addEventListener('click', onClickShowCatalog)
 closeBtn.addEventListener('click', onClickHideCatalog)
 
 const menuItems = document.querySelectorAll('.catalog-menu__item');
-const innerLists = document.querySelectorAll('.catalog-menu__inner-wrapper');
+const innerLists = document.querySelectorAll('.catalog-menu__inner');
 
 const onClickShowInnerList = (evt) => {
     evt.preventDefault();
 
+    let elHeight = evt.currentTarget.offsetHeight;
+    let num = evt.currentTarget.getAttribute('data-id');
+
+    let posY = elHeight * (num - 1);
+
+    catalog.scrollTo({
+        top: posY,
+        left: 0,
+        behavior: 'smooth'
+    });
+
     menuItems.forEach(item => {
         item.classList.contains('active') ?
         item.classList.remove('active') : null
+        item.style.top = '';
     })
 
     innerLists.forEach(list => {
@@ -14693,8 +14695,8 @@ const onClickShowInnerList = (evt) => {
 
     const menuItem = evt.currentTarget;
 
-    menuItem.classList.add('active')
-    menuItem.querySelector('.catalog-menu__inner-wrapper').classList.add('active')
+    menuItem.classList.add('active');
+    menuItem.querySelector('.catalog-menu__inner').classList.add('active')
 }
 
 menuItems.forEach(item => {
@@ -14840,6 +14842,38 @@ if(filter) {
 
 
 
+
+
+/***/ }),
+
+/***/ "./source/scripts/modules/masonry.js":
+/*!*******************************************!*\
+  !*** ./source/scripts/modules/masonry.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+let Masonry = __webpack_require__(/*! masonry-layout */ "./node_modules/masonry-layout/masonry.js");
+
+let masonry = document.querySelector('.cats__grid');
+
+masonry ?
+new Masonry( '.cats__grid', {
+  itemSelector: '.cats__grid-item',
+  percentPosition: true,
+  gutter: 16
+}) : null;
+
+let catalogMasonry = document.querySelectorAll('.menu__grid');
+
+catalogMasonry ?
+catalogMasonry.forEach(grid => {
+    new Masonry( grid, {
+        itemSelector: '.menu__grid-item',
+        percentPosition: true,
+        gutter: 16
+      })
+}) : null;
 
 
 /***/ }),

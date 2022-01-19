@@ -6,16 +6,4 @@ import swiper from './modules/swiper.js'
 import menu from './modules/menu.js'
 import filter from './modules/filter.js'
 import catalogMenu from './modules/catalogMenu.js'
-
-//убрать в модуль!
-let Masonry = require('masonry-layout');
-
-let masonry = document.querySelector('.cats__grid');
-
-masonry ?
-new Masonry( '.cats__grid', {
-  itemSelector: '.cats__grid-item',
-  percentPosition: true,
-  gutter: 16
-}) : null;
-  // !!
+import masonry from './modules/masonry.js'
