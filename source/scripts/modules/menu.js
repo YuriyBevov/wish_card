@@ -14,7 +14,7 @@ const onClickOpenMenu = (evt) => {
     document.addEventListener('click', evt => {
         if(!menu.contains(evt.target)) {
             menu.classList.remove('js-opened');
-
+            
             menuOpener.forEach(btn => {
                 btn.classList.remove('js-menu-opened');
             });
