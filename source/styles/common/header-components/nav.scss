@@ -94,6 +94,7 @@
 
     &__list {
         display: flex;
+        flex-grow: 1;
         align-items: center;
 
         @media(max-width: $desktop_lg_width) {
@@ -108,7 +109,8 @@
     }
 
     &__item {
-        margin-right: 3.2rem;
+        margin-right: auto;
+        padding-right: 1rem;
         width: fit-content;
 
         @media(max-width: $desktop_lg_width) {

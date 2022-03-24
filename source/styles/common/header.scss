@@ -12,6 +12,17 @@
         position: relative;
     }
 
+    & p {
+        margin: 0;
+    }
+
+    a {
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
     &__wrapper {
         position: relative;
         padding-left: 22.3rem;
@@ -45,7 +56,8 @@
         border-bottom: 1px solid #E6E6E6;
 
         .header__nav {
-            margin-right: auto;
+            //margin-right: auto;
+            flex-grow: 1;
         }
 
         @media(max-width: $tablet_width) {
@@ -53,6 +65,8 @@
             padding-right: 16rem;
         }
     }
+
+    
 
     &__bottom {
         display: flex;
@@ -107,6 +121,8 @@
 
             &:hover,
             &:focus {
+                color: $color_white;
+                text-decoration: none;
                 background-color: #0F4BD7;
             }
         }
@@ -176,7 +192,7 @@
         .header__banner {
             position: relative;
             padding: 1rem;
-            padding-top: 1.4rem;
+            padding-top: 0.5rem;
             padding-left: 19.6rem;
             margin-left: auto;
             background-color: #F5F8FB;

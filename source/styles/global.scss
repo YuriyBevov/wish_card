@@ -33,17 +33,21 @@ body {
   font-family: $font_prim_reg, sans-serif;
   overflow-x: hidden;
   background-color: $color_main-bg;
+
+  &.body-locked {
+    overflow: hidden;
+  }
 }
 
 ::-webkit-scrollbar { /* 1 - скроллбар */
   width: 4px;
   min-height: 12px;
-  background-color: transparent;
+  background-color: #E5E5E5;
 
 }
 
 ::-webkit-scrollbar-thumb { /* 5 - ползунок */
-  background-color: #E5E5E5;
+  background-color: #1089ff;
   border-radius: 13px;
 }
 
@@ -99,4 +103,16 @@ svg {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
 }

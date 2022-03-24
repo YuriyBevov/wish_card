@@ -7,16 +7,23 @@
         font-family: $font_sec-reg;
         font-weight: 400;
         font-size: 3.6rem;
-        line-height: 5rem;
+        line-height: 1.2;
         letter-spacing: -0.01em;
         margin-bottom: 1.2rem;
         padding-right: 1.5rem;
 
         color: $color_darkblue;
 
-        @media(max-width: $tablet_width) {
+        @media(max-width: $desktop_sm_width) {
+            font-size: 2.8rem;
+        }
+
+        @media(max-width: $desktop_lg_width) {
             font-size: 2.4rem;
-            line-height: 3.4rem;
+        }
+
+        @media(max-width: $tablet_width) {
+            font-size: 1.8rem;
             margin-bottom: 0.7rem;
             padding-right: 0;
         }
@@ -56,12 +63,13 @@
         background-color: $color-white;
 
         transition: border $transition_rules, color $transition_rules, background-color $transition-rules;
-
+        cursor: pointer;
+        
         &:hover,
         &:focus {
-            color: $color-white;
-            background: $color_blue;
-            border: 1px solid $color_blue;
+            color: $color-white !important;
+            background: $color_blue !important;
+            border: 1px solid $color_blue !important;
         }
         
 
@@ -72,7 +80,7 @@
 
             &:hover,
             &:focus {
-                background-color: #0F4BD7;
+                background-color: #0F4BD7 !important;
             }
         }
     }

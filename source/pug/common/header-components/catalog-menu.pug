@@ -2,10 +2,10 @@
   const category = [
     {
       icon: '#icon-smartphone',  
-      name: 'Смартфоны',
+      name: 'Смартфоны Смартфоны Смартфоны Смартфоны Смартфоны',
       dataID: 1,
 
-      class: 'active',
+      class: 'active', 
 
       innerLists: [
 
@@ -121,7 +121,7 @@
 
     {
       icon: '#icon-watch',  
-      name: 'Умные часы и браслеты',
+      name: 'Умные часы и браслеты Умные часыибраслеты',
       dataID: 6,
 
       innerLists: [
@@ -276,24 +276,28 @@
       ul.catalog-menu__list 
         each item in category
           li.catalog-menu__item(class=item.class ? item.class : null data-id=item.dataID)
-            a(href="#").catalog-menu__link
+            a(href="#test").catalog-menu__link
               svg(width="32" height="32")
                 use(xlink:href=item.icon)
               span= item.name
 
+              button(type="button" aria-label="Развернуть")
+
+            
             .catalog-menu__inner(class=item.class ? item.class : null)
-              .menu__grid
-                .menu__grid-sizer
-                  each inn in item.innerLists
-                    .menu__grid-item 
-                      span= inn.title
+              .catalog-menu__inner-container
+                .menu__grid
+                  .menu__grid-sizer
+                    each inn in item.innerLists
+                      .menu__grid-item 
+                        a(href="")= inn.title
 
-                      ul.catalog-menu__inner-cats
-                        each link in inn.links
-                          li.catalog-menu__inner-cats-item
-                            a(href="#")= link
+                        ul.catalog-menu__inner-cats
+                          each link in inn.links
+                            li.catalog-menu__inner-cats-item
+                              a(href="#")= link
 
-              img(src="./assets/img/catalog-menu-banner.jpg" alt="баннер" width="354" height="558")
+                img(src="./assets/img/catalog-menu-banner.jpg" alt="баннер" width="354" height="558")
 
 
 

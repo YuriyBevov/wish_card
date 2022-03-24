@@ -1,41 +1,30 @@
 .range {
+    width: calc(100% - 24px);
+    height: 4px;
+    margin: 0 auto;
     margin-top: 2.6rem;
-    position: relative;
+    border: 0;
+    background: #E5E5E5;
 
-    &__pin {
-        position: absolute;
-        top: 0;
-        
-        transform: translateY(calc(-50% + 0.2rem));
+    .noUi-connect {
+        background-color: $color_blue;
+    }
+
+    .noUi-handle {
         width: 24px;
         height: 24px;
+        top: -9px;
+        right: -12px;
+        box-shadow: none;
+        border: 0;
         border-radius: 50%;
         cursor: pointer;
         
-        background: $color_blue;
+        background-color: $color_blue;
 
-        z-index: 100;
-
-        &--left {
-            left: 0;
-        }
-
-        &--right {
-            right: 50%;
-        }
-    }
-
-    &__track {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: #E5E5E5;
-
-        &--active {
-            width: 50%;
-            background: $color_blue;
+        &::before,
+        &::after {
+            display: none;
         }
     }
 }

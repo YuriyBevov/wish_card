@@ -1,3 +1,5 @@
+//import { offerChange } from './onSwiperChange.js';
+
 import SwiperCore, { Autoplay, Scrollbar, Navigation, Pagination, Thumbs } from 'swiper/core';
 SwiperCore.use([Autoplay, Scrollbar, Navigation, Pagination, Thumbs]);
 import Swiper from 'swiper'
@@ -25,7 +27,6 @@ const enableSwiper = function() {
         slidesPerView: 'auto',
         slideToClickedSlide: true,
         spaceBetween: 15,
-        loop: true,
     });
 };
 
@@ -44,7 +45,7 @@ if(cardSlider) {
       watchSlidesProgress: true,
       spaceBetween: 20,
       direction: "horizontal",
-      loop: true,
+      //loop: true,
 
       breakpoints: {
 
@@ -63,10 +64,9 @@ if(cardSlider) {
    });
 
    let swiperThumbs = new Swiper(".card-slider", {
-      loop: true,
+      //loop: true,
       spaceBetween: 10,
       slidesPerView: 1,
-      loop: true,
 
       breakpoints: {
 
@@ -88,6 +88,30 @@ if(cardSlider) {
          prevEl: ".card-slider-thumbs-swiper-button-prev"
       },
    });
+
+   const colorBtns = document.querySelectorAll('.color-list__item-inner');
+
+   const onClickRefreshSlider = () => {
+      let active = document.querySelector('.color-list__item.active');
+
+      if(active !== evt.currentTarget.parentNode) {
+        active.classList.remove('active');
+        evt.currentTarget.parentNode.classList.add('active');
+
+        offerChangeGallery(); // функция из functions.js на сервере
+
+        swiper.update();
+        swiper.setProgress(0, 0);
+        swiperThumbs.update();
+        swiperThumbs.setProgress(0, 0);
+      }
+   }
+
+   if(colorBtns) {
+      colorBtns.forEach(btn => {
+         btn.addEventListener('click', onClickRefreshSlider)
+      })
+   }
 }
 
 //-------------
@@ -99,7 +123,7 @@ const initOffersSlider = (slider) => {
       new Swiper (slider, {
          slidesPerView: 'auto',
          spaceBetween: 14,
-         loop: true,
+         //loop: true,
    
          scrollbar: {
             el: '.swiper-scrollbar',
@@ -122,30 +146,18 @@ if(productCardSliders.length) {
       const pcslider = new Swiper(slider, {
          slidesPerView: 1,
          nested: true,
-         //loop: true,
-   
-         /*autoplay: {
-            delay: 1000
-         },*/
-   
+  
          pagination: {
             el: ".product-card-swiper-pagination",
          },
    
-         /*on: {
-            afterInit: function() {
-               this.autoplay.stop();
-            }
-         }*/
+         on: {
+            slideChangeTransitionEnd: function () {
+              let active_offer_id = slider.querySelector('.swiper-slide-active').getAttribute('data-offer');              
+              offerChange(active_offer_id);
+            },
+         },
       });
-
-      /*slider.addEventListener('mouseover', function(evt) {
-         pcslider.autoplay.start();
-      })
-
-      slider.addEventListener('mouseout', function() {
-         pcslider.autoplay.stop();
-      })*/
    })
 }
 

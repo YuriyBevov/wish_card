@@ -24,6 +24,7 @@
         color: $color_darkblue;
 
         cursor: pointer;
+        margin-right: 10px;
 
         @media(max-width: $desktop_lg_width) {
             margin-right: 1rem;

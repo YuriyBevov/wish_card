@@ -1,7 +1,7 @@
 -
   const buttons = [
     {text: 'Описание', data_id: 1, class: "active"},
-    {text: 'Характеристики', data_id: 2},
+    {text: 'Характеристики', data_id: 2, data_type: 'chars'},
     {text: 'Наличие', data_id: 3},
     {text: 'Отзывы', data_id: 4},
     {text: 'Оплата', data_id: 5},
@@ -27,6 +27,7 @@
           {par: '12 способен передавать данные со скоростью до 2 Гбит/с. А значит, можно быстрее скачивать фильмы и сериалы, отправлять фото и смотреть онлайн видео более высокого качества.'},
         ],
       data_id: 2,
+      data_type: 'chars',
       class: 'hidden'
     },
 
@@ -86,16 +87,15 @@ section.cmn.description
           .swiper-wrapper
             each btn in buttons
               .swiper-slide
-                button.description__header-btn(data-id=btn.data_id class=btn.class ? btn.class : null)= btn.text
+                button.description__header-btn(data-type= btn.data_type ? btn.data_type : null data-id=btn.data_id class=btn.class ? btn.class : null)= btn.text
 
         ul.description__content
           each desc in descriptions
-            li.description__content-item(data-id=desc.data_id class=desc.class ? desc.class : null)
+            li.description__content-item(data-type= desc.data_type ? desc.data_type : null data-id=desc.data_id class=desc.class ? desc.class : null)
               each text in desc.text
                 p= text.par
 
       .description__brand-card
-
         .description__brand-name
           img(src="assets/img/apple.png" alt="логотип apple" width="16" height="16")
           h2 Apple

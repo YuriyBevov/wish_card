@@ -4,6 +4,7 @@
     height: 100%;
     width: inherit;
     cursor: pointer;
+    position: relative;
 
     &:hover,
     &:focus {
@@ -13,9 +14,8 @@
     }
 
     &__header {
-        min-height: 24rem;
-        max-height: 24rem;
-        margin-bottom: 3rem;
+        height: 20rem;
+        margin-bottom: 1.5rem;
         position: relative;
 
         &-action {
@@ -45,19 +45,23 @@
             padding: 0;
             border: 0;
             background-color: transparent;
-        }
+            margin-bottom: 10px;
+            &.active {
+                svg {
+                    fill: #E3594E;
+                }
+            }
+        } 
     }
 
     &__content {
         display: flex;
         flex-direction: column;
         padding: 0 1.7rem;
-        margin-top: auto;
         margin-bottom: 1.6rem;
         
         min-height: 10rem;
         max-height: 10rem;
-
 
         h3 {
             width: 100%;
@@ -66,16 +70,21 @@
             font-size: 1.6rem;
             line-height: 1.9rem;
             margin-bottom: 0.5rem;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
 
             color: #333333;
         }
 
         &-available {
+            display: inline-block;
             position: relative;
             width: 100%;
             font-size: 1.4rem;
             line-height: 1.6rem;
             padding-left: 2.3rem;
+            margin-bottom: 0.5rem;
 
             color: #333333;
 
@@ -140,9 +149,11 @@
         }
 
         &-chars {
-            position: relative;
+            position: absolute;
             width: inherit;
             opacity: 0;
+            left: 0;
+            top: -100%;
             background-color: $color_white;
             z-index: -1;
             
@@ -152,28 +163,37 @@
 
             li {
                 display: flex;
-                justify-content: space-between;
                 border-bottom: 1px dashed #F5F8FB;
                 padding: 0.4rem 0 0.6rem;
 
                 b,
                 span {
-                    font-size: 1.4rem;
-                    line-height: 1.4rem;
+                    font-size: 1.2rem;
+                    line-height: 1;
                 }
 
                 b {
-                    font-weight: 400;    
+                    width: calc(45% - 15px);
+                    font-weight: 400;
+                    padding-right: 10px;
                     
                     color: $color_black;
                 }
 
                 span {
+                    width: 55%;
                     color: #818282;
+                    text-align: right;
                 }
             }
 
             a {
+                font-size: 1.4rem;
+                line-height: 1;
+                color: #3361C5;
+            }
+
+            .one_click {
                 font-size: 1.4rem;
                 line-height: 2.7rem;
                 padding: 0.5rem 0;

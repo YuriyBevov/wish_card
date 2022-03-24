@@ -3,7 +3,7 @@
     position: relative;
 
     .swiper-slide {
-        width: 30rem;
+        width: 23rem;
         margin-right: 1.5rem;
 
         @media(max-width: 440px) {
@@ -17,13 +17,20 @@
 
     .slider-content {
         img {
+            width: 100%;
             margin-bottom: 1.2rem;
+            height: 100%;
+            object-fit: contain;
+            max-width: 30rem;
+            height: 23rem;
+            width: 100%;
+            object-position: bottom;
         }
 
         p {
             font-family: $font_sec-bold;
-            font-size: 1.6rem;
-            line-height: 1.9rem;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
             max-width: 26rem;
 
             color: $color_darkblue;
@@ -49,7 +56,6 @@
         &.swiper-button-disabled {
             width: 30px;
             background-color: $color_white;
-            
         }
 
         .btn {

@@ -1,0 +1,23 @@
+.bx_filter_button_box.active {
+    background-color: transparent !important;
+    padding: 2rem 0 !important;
+
+    .bx_filter_parameters_box_container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+
+        input:first-child {
+            width: 70%;
+            max-width: 250px;
+            height: 100%;
+            margin-right: 10px;
+            color: #ffffff;
+        }
+
+        input:nth-child(2) {
+            color: $color_blue;
+        }
+    }
+}

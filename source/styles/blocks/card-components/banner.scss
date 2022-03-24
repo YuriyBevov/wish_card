@@ -1,6 +1,6 @@
 .banner {
     max-width: 215px;
-    max-height: 233px;
+    max-height: 100%;
     
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,37 +15,19 @@
     align-items: center;
     justify-content: center;
 
-    &:hover,
-    &:focus {
-        span {
-            color: $color_blue;
-        }
-    }
-
-    @media(max-width: $desktop_lg_width) {
-        display: flex;
-        align-items: center;
-        max-width: 46.7rem;
-        max-height: 7.8rem;
-        padding: 0.9rem 1.4rem;
-        padding-right: 0.5rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
-        margin-bottom: 3.2rem;
-    }
+    margin-left: auto;
 
     @media(max-width: $desktop_sm_width) {
-        max-width: calc(100% - 4rem);
+        max-width: 100%;
         max-height: 100%;
         padding: 1.6rem;
     }
 
-    &__wrapper {
-        @media(max-width: $desktop_lg_width) {
-            display: flex;
-            align-items: center;
-        }
+    @media(max-width: $tablet_width) {
+        margin-left: 0;
+    }
 
+    &__wrapper {
         @media(max-width: $desktop_sm_width) {
             flex-direction: column;
             width: 100%;
@@ -59,14 +41,9 @@
         justify-content: space-between;
         margin-bottom: 0.8rem;
 
-        @media(max-width: $desktop_lg_width) {
-            align-items: flex-start;
-            flex-direction: column;
-        }
-
         @media(max-width: $desktop_sm_width) {
             flex-direction: row;
-        align-items: center;
+            align-items: center;
         }
 
         &-title {
@@ -111,6 +88,7 @@
         line-height: 1.6rem;
         letter-spacing: -0.01em;
         opacity: 0.75;
+        margin-bottom: 0 !important;
 
         color: $color_white;
 

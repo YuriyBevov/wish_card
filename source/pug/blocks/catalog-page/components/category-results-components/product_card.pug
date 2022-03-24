@@ -5,23 +5,28 @@ mixin product_card(isDiscount, discountValue, isAvailable, name, price, isSale, 
       .product-card__header-action
         if isDiscount  
           span= discountValue
-        button(type="button" aria-label="добавить в избранное")
+        button(type="button" aria-label="добавить в избранное") 
           svg(width="23" height="20")
             use(xlink:href="#icon-heart")
+        
+        button(type="button" aria-label="Сравнить") 
+          svg(width="23" height="20")
+            use(xlink:href="#icon-chart")
       
       .product-card-swiper-container 
         .swiper-wrapper
           each img in imgList
-            .swiper-slide
-              img(src=img.url, alt=img.name)
+            .swiper-slide(data-offer= img.name)
+              a(href="#")
+                img(src=img.url, alt=img.name)
         .product-card-swiper-pagination
 
     .product-card__content
-      h3= name
+      h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea voluptate illo praesentium repudiandae magnam quaerat, alias quod, tenetur dignissimos aspernatur ab error harum labore at neque architecto, doloribus ex sit?
       if isAvailable
         span.product-card__content-available= 'В наличии'
           svg(width="17" height="17")
-            use(xlink:href="#icon-available")
+            use(xlink:href="#icon-notavailable")
 
       .product-card__content-price
         if isSale
@@ -32,8 +37,12 @@ mixin product_card(isDiscount, discountValue, isAvailable, name, price, isSale, 
       button.cmn__btn.cmn__btn--color-bg.product-card__footer-btn Добавить в корзину
       button.cmn__btn.cmn__btn--reg Подробнее
 
-      .product-card__footer-chars
+      //.product-card__footer-chars
         ul
+          li
+              b Брэнд
+              a(href="#") Xiaomi
+
           li
               b Экран
               span 2400x1080, 6.5 дюйм
@@ -44,8 +53,8 @@ mixin product_card(isDiscount, discountValue, isAvailable, name, price, isSale, 
               b Память
               span 128 ГБ / 4 ГБ
           li
-              b Название
-              span Параметры
+              b Диаuональ экрана
+              span ualcomm SM7325 Snapdragon 778G 5G ualcomm SM7325 Snapdragon 778G 5G
         
-        a(href="#") Купить в 1 клик
+        a(href="#").one_click Купить в 1 клик
         

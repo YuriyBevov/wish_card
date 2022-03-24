@@ -3,6 +3,10 @@
     min-width: 121rem;
     margin-left: auto;
 
+    &.results-search {
+        width: 100%;
+    }
+
     @media(max-width: $desktop_lg_width) {
         width: 93.7rem;
         min-width: 93.7rem;
@@ -44,7 +48,6 @@
         @media(max-width: $desktop_sm_width) {
             padding: 1.5rem;
             padding-bottom: 17.6rem; 
-            justify-content: center;
         }
 
         @media(max-width: 654px) {
@@ -173,7 +176,7 @@
                     left: -1px;
                     padding: 1.2rem 1.7rem 1.6rem;
                     opacity: 1;
-                    z-index: 100;
+                    z-index: 1010;
                     border: 1px solid #175CFF;
                     border-top: 0;
                 }

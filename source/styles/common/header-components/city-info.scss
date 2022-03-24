@@ -1,13 +1,17 @@
 .city-info {
     display: flex;
     padding: 1rem 2.3rem;
-    padding-right: 3.8rem;
+    //padding-right: 3.8rem;
     background: #F6F9FC;
     border-radius: 1.2rem;
     
     min-height: 6.3rem;
     margin-right: 1.2rem;
     margin-left: auto;
+
+    @media(max-width: $desktop_sm_width) {
+        padding: 1rem;
+    }
 
     @media(max-width: $tablet_width) {
         flex-direction: column;
@@ -45,7 +49,7 @@
 
             color: $color_darkblue;
 
-            @media(max-width: $tablet_width) {
+            @media(max-width: $desktop_sm_width) {
                 font-size: 1.6rem;
                 line-height: 1.9rem;
             }
@@ -59,6 +63,7 @@
 
             color: $color_darkblue;
             transition: color $transition_rules;
+
             @media(max-width: $tablet_width) {
                 margin-bottom: 0.4rem;
 
@@ -98,7 +103,7 @@
                 color: $color_darkblue;
                 transition: color $transition_rules;
 
-                @media(max-width: $tablet_width) {
+                @media(max-width: $desktop_sm_width) {
                     font-size: 1.6rem;
                     line-height: 1.9rem;
                 }

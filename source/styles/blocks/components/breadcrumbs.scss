@@ -19,6 +19,11 @@
         line-height: 1.7rem;
         padding-right: 1.7rem;
         margin-right: 1rem;
+
+        max-width: 150px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         
         color: #505050;
 
@@ -33,6 +38,12 @@
             height: 0.8rem;
 
             background-image: url("../assets/img/breadcrumb-arr.svg");
+        }
+
+        &:hover,
+        &:focus {
+            color: #505050;
+            text-decoration: none;
         }
     }
 }

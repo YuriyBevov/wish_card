@@ -8,8 +8,11 @@
 //--- plugins
 
 @import "plugins/swiper";
+@import "plugins/nouislider";
 
 // blocks
+@import "common/bitrix-styles";
+@import "common/text-content";
 @import "common/header";
 @import "common/header-mobile";
 @import "common/header-components/nav";
