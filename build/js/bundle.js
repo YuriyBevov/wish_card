@@ -16966,10 +16966,10 @@ const onClickShowInnerList = (evt) => {
 
 const onHoverShowInnerList = (evt) => {
     if(windowWidth > 959) {
-        catalog.scrollTo({
+        /*catalog.scrollTo({
             top: 0,
             left: 0
-        });
+        });*/
 
         menuItems.forEach(item => {
             item.classList.contains('active') ?
