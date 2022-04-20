@@ -3,11 +3,21 @@ mixin banner-wide-slider(array)
   .banner-wide-swiper-container.banner-wide-slider
     .swiper-wrapper
       each slide in array
-        .swiper-slide(style="background-image: url('" + slide.bg + "')")
+        .swiper-slide
           .slider-content
-            img(src=slide.logoImg alt=slide.title)
-            p.cmn__colored-text= slide.desc
-            a(href="#").cmn__banner-link=slide.linkText 
+          
+            //img(src=slide.logoImg alt=slide.title)
+            picture
+              source(media="(min-width: 1920px)" srcset="./assets/img/ban1920.png 1920w")
+              source(media="(min-width: 1366px)" srcset="./assets/img/ban1366.png 1366w")
+              source(media="(min-width: 1024px)" srcset="./assets/img/ban1024.png 1024w")
+              source(media="(min-width: 960px)" srcset="./assets/img/ban960.png 960w")
+              source(media="(min-width: 768px)" srcset="./assets/img/ban768.png 768w")
+              source(media="(min-width: 540px)" srcset="./assets/img/ban768.png 540w")
+              source(media="(min-width: 375px)" srcset="./assets/img/ban375.png 375w" width="100vw")
+              img(srcset="./assets/img/ban320.png 320w" )
+            //p.cmn__colored-text= slide.desc
+            //a(href="#").cmn__banner-link=slide.linkText 
     <div class="banner-wide-swiper-button-prev"></div>
     <div class="banner-wide-swiper-button-next"></div>
     <div class="banner-wide-swiper-pagination"></div>

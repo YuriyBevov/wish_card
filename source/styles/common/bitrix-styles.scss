@@ -9,7 +9,7 @@
         width: 100%;
 
         input:first-child {
-            width: 70%;
+            width: calc(70% - 10px);
             max-width: 250px;
             height: 100%;
             margin-right: 10px;
@@ -20,4 +20,8 @@
             color: $color_blue;
         }
     }
+}
+
+.scroll-to-top {
+    display: none !important;
 }

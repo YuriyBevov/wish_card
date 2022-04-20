@@ -1,11 +1,13 @@
 .delivery-rules {
-    margin-bottom: 4.2rem;
+    //margin-bottom: 2rem;
+
     &__wrapper {
         @include block_container();
 
         background-color: transparent;
         padding-left: 0;
         padding-right: 0;
+        padding-bottom: 0 !important;
     }
 
     &__content {
@@ -40,19 +42,19 @@
         }
 
         &-container {
-            padding: 2.5rem;
+            padding: 1.5rem;
         }
 
         picture {
             width: 100%;
-            height: 30rem;
+            height: 25rem;
             max-width: 80rem;
 
             img {
                 width: 100%;
                 height: inherit;
                 object-fit: cover;
-                object-position: bottom;
+                object-position: top;
                 border-radius: 1.2rem 1.2rem 0 0;
             }
 
@@ -63,13 +65,13 @@
 
         h2 {
             font-size: 2rem;
-            line-height: 2.6rem;
+            line-height: 1.2;
             margin-bottom: 1.2rem;
         }
 
         p {
-            font-size: 1.6rem;
-            line-height: 2.6rem;            
+            font-size: 1.4rem;
+            line-height: 1.2;            
             
             color: $color_lightblack;
         }

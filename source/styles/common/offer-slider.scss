@@ -1,6 +1,9 @@
 .offer-slider {
     overflow: hidden;
     position: relative;
+    width: 100%;
+    padding: 0 5rem;
+    margin: 0 auto;
 
     .swiper-slide {
         width: 23rem;
@@ -41,28 +44,30 @@
     .offer-swiper-button-next {
         position: absolute;
         top: 0;
-        left: -8px;
-        width: 67px;
+        left: 0;
+        width: 50px;
         height: 100%;
         
         z-index: 100;
+        background-color: $color_white;
         
-        background: linear-gradient(90deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
+        // background: linear-gradient(90deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
 
-        @media(max-width: 440px) {
+        @media(max-width: $tablet_xs_width) {
             display: none;
         }
 
         &.swiper-button-disabled {
-            width: 30px;
-            background-color: $color_white;
+            .btn {
+                opacity: .5;
+            }
         }
 
         .btn {
             position: absolute;
             top: 50%;
             left: 15px;
-            transform: translateY(-50%);
+            transform: translate(-50%, -50%);
             content: '';
             width: 30px;
             height: 30px;
@@ -72,31 +77,31 @@
             background-repeat: no-repeat;
             background-position: center;
             background-color: $color_white;
-            box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.05), 0px 2.1901px 4.74521px rgba(0, 0, 0, 0.05), 0px 1.06325px 2.30371px rgba(0, 0, 0, 0.03), 0px 0.521226px 1.12932px rgba(0, 0, 0, 0.03), 0px 0.206094px 0.446536px rgba(0, 0, 0, 0.02);
+            border: 1px solid $color_blue;
             z-index: 100;
             cursor: pointer;
         }
     }
 
     .offer-swiper-button-next {
-        left: calc(100% - 63px);
-        background: linear-gradient(270deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
+        left: calc(100% - 50px);
+        //background: linear-gradient(270deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
         
         @media(max-width: $tablet_width) {
-            left: calc(100% - 53px);
+            //left: calc(100% - 53px);
         }
         
         .btn {
-            left: 30px;
-            transform: rotate(-180deg) translateY(14px);
+            left: -6px;
+            transform: rotate(-180deg) translate(-50%, 50%);
 
             @media(max-width: $tablet_width) {
-                left: 18px;
+                //left: 18px;
             }
         }
     }
 
-    .swiper-button-disabled {
-        display: none;
-    }
+    /*.swiper-button-disabled {
+        opacity: .5;
+    } */
 }

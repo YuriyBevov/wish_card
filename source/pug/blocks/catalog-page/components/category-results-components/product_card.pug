@@ -18,8 +18,8 @@ mixin product_card(isDiscount, discountValue, isAvailable, name, price, isSale, 
           each img in imgList
             .swiper-slide(data-offer= img.name)
               a(href="#")
+                .color-badge
                 img(src=img.url, alt=img.name)
-        .product-card-swiper-pagination
 
     .product-card__content
       h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea voluptate illo praesentium repudiandae magnam quaerat, alias quod, tenetur dignissimos aspernatur ab error harum labore at neque architecto, doloribus ex sit?
@@ -33,28 +33,16 @@ mixin product_card(isDiscount, discountValue, isAvailable, name, price, isSale, 
           span.product-card__content-price-prof!= prof
           span.product-card__content-price-old= oldPrice
         span.product-card__content-price-actual= price
+
+    .product-card-pagination
+      .pagination-bullet(data-id="0").active
+      .pagination-bullet(data-id="1")
+      .pagination-bullet(data-id="2")
+      .pagination-bullet(data-id="3")
+      .pagination-bullet(data-id="4")
+      .pagination-bullet(data-id="5")
+    
     .product-card__footer
       button.cmn__btn.cmn__btn--color-bg.product-card__footer-btn Добавить в корзину
       button.cmn__btn.cmn__btn--reg Подробнее
-
-      //.product-card__footer-chars
-        ul
-          li
-              b Брэнд
-              a(href="#") Xiaomi
-
-          li
-              b Экран
-              span 2400x1080, 6.5 дюйм
-          li
-              b Камера
-              span 64 Мп, селфи - 32 Мп
-          li
-              b Память
-              span 128 ГБ / 4 ГБ
-          li
-              b Диаuональ экрана
-              span ualcomm SM7325 Snapdragon 778G 5G ualcomm SM7325 Snapdragon 778G 5G
-        
-        a(href="#").one_click Купить в 1 клик
         

@@ -1,6 +1,6 @@
 .chars {
     width: 100%;
-    max-width: 37rem;
+    max-width: 25rem;
     margin-right: 1rem;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@
     }
 
     &__list {
-        margin-bottom: 3.3rem;
+        margin-bottom: 1.2rem;
         
         @media(max-width: 1280px) {
             width: 100%;
@@ -43,8 +43,8 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        max-width: 37rem;
-        margin-bottom: 2rem;
+        //max-width: 37rem;
+        margin-bottom: 0.5rem;
 
         @media(max-width: 1280px) {
             max-width: 100%;
@@ -54,8 +54,8 @@
             display: block;
             width: 50%;
             font-family: $font_prim_reg;
-            font-size: 1.4rem;
-            line-height: 1.4rem;
+            font-size: 1.2rem;
+            line-height: 1.2;
             margin-bottom: 0;
 
             color: $color_black;
@@ -68,7 +68,7 @@
         background-color: transparent;
         font-size: 1.4rem;
         line-height: 1.4rem;
-        margin-top: auto;
+        //margin-top: auto;
 
         text-decoration-line: underline;
 

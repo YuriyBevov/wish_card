@@ -16866,28 +16866,22 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_headerSticky_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/headerSticky.js */ "./source/scripts/modules/headerSticky.js");
-/* harmony import */ var _modules_headerSticky_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_headerSticky_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/offersTabs.js */ "./source/scripts/modules/offersTabs.js");
-/* harmony import */ var _modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_descriptionTabs_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/descriptionTabs.js */ "./source/scripts/modules/descriptionTabs.js");
-/* harmony import */ var _modules_descriptionTabs_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_descriptionTabs_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/swiper.js */ "./source/scripts/modules/swiper.js");
-/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/menu.js */ "./source/scripts/modules/menu.js");
-/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _modules_range_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/range.js */ "./source/scripts/modules/range.js");
-/* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/catalogMenu.js */ "./source/scripts/modules/catalogMenu.js");
-/* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/masonry.js */ "./source/scripts/modules/masonry.js");
-/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_masonry_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/filter.js */ "./source/scripts/modules/filter.js");
-/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_filter_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _modules_scrollToChars_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/scrollToChars.js */ "./source/scripts/modules/scrollToChars.js");
-/* harmony import */ var _modules_scrollToChars_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_scrollToChars_js__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _modules_limitStr_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/limitStr.js */ "./source/scripts/modules/limitStr.js");
-/* harmony import */ var _modules_limitStr_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_limitStr_js__WEBPACK_IMPORTED_MODULE_10__);
-
-
+/* harmony import */ var _modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/offersTabs.js */ "./source/scripts/modules/offersTabs.js");
+/* harmony import */ var _modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_offersTabs_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_descriptionTabs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/descriptionTabs.js */ "./source/scripts/modules/descriptionTabs.js");
+/* harmony import */ var _modules_descriptionTabs_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_descriptionTabs_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swiper.js */ "./source/scripts/modules/swiper.js");
+/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/menu.js */ "./source/scripts/modules/menu.js");
+/* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_range_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/range.js */ "./source/scripts/modules/range.js");
+/* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/catalogMenu.js */ "./source/scripts/modules/catalogMenu.js");
+/* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/masonry.js */ "./source/scripts/modules/masonry.js");
+/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_masonry_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/filter.js */ "./source/scripts/modules/filter.js");
+/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_filter_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_scrollToChars_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/scrollToChars.js */ "./source/scripts/modules/scrollToChars.js");
+/* harmony import */ var _modules_scrollToChars_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_scrollToChars_js__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -17144,8 +17138,11 @@ if(filter) {
             items[i].classList.add('hidden');
         }
 
-        if(itemsToShow >= items.length && showMoreBtn) {
-            showMoreBtn.classList.add('hidden');
+        console.log('MORE', list, showMoreBtn);
+        if(itemsToShow >= items.length) {
+            if(showMoreBtn) {
+              showMoreBtn.classList.add('hidden');
+            }
         }
 
         const onClickShowAllItems = (evt) => {
@@ -17157,7 +17154,7 @@ if(filter) {
         }
 
         if(showMoreBtn) {
-            showMoreBtn.addEventListener('click', onClickShowAllItems)
+          showMoreBtn.addEventListener('click', onClickShowAllItems);
         }
     })
 
@@ -17198,46 +17195,6 @@ if(filter) {
 
 
 
-
-/***/ }),
-
-/***/ "./source/scripts/modules/headerSticky.js":
-/*!************************************************!*\
-  !*** ./source/scripts/modules/headerSticky.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-const header = document.querySelector('.header');
-
-let isCatalogPage = document.querySelector('.catalog');
-isCatalogPage ?
-header.style.position = 'static' : null;
-
-/***/ }),
-
-/***/ "./source/scripts/modules/limitStr.js":
-/*!********************************************!*\
-  !*** ./source/scripts/modules/limitStr.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function limitStr( str, n ) {
-    if ( str.length > n ) {
-        return str.slice(0, n) + '...';
-    } else {
-        return str
-    }
-}
-
-let titles = document.querySelectorAll('.product-card__content h3');
-
-if(titles) {
-    titles.forEach(title => {
-        title.innerHTML = limitStr(title.innerHTML, 90);
-    });
-};
 
 /***/ }),
 
@@ -17421,19 +17378,13 @@ if(rangeSliders) {
 
         const rangeFrom = filterSection.querySelector('input[type="number"]:first-of-type');
         const rangeTo = filterSection.querySelector('input[type="number"]:last-of-type');
-        const rangeValueFrom = Number(rangeFrom.getAttribute('value'));
-        const rangeValueTo = Number(rangeTo.getAttribute('value'));
 
-        let min = Number(rangeFrom.getAttribute('min'));       
+        let min = Number(rangeFrom.getAttribute('min'));
         let max = Number(rangeTo.getAttribute('max'));
-
-        let startPos = rangeValueFrom > 0 ? rangeValueFrom : min;
-        let endPos = rangeValueTo > 0 ? rangeValueTo : max;
-
         const step = Number(rangeFrom.getAttribute('step'));
 
         nouislider__WEBPACK_IMPORTED_MODULE_0___default.a.create(range, {
-            start: [startPos, endPos],
+            start: [min, max],
             connect: true,
             step: step ? step : 1,
             range: {
@@ -17561,6 +17512,11 @@ breakpointChecker();
 
 const cardSlider = document.querySelector('.card-swiper-container');
 
+function changeSlides() {
+  console.log('test')
+  //offerChangeGallery();
+}
+
 if(cardSlider) {
    let swiper = new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".card-slider-thumbs", {
       slidesPerView: 'auto',
@@ -17620,7 +17576,7 @@ if(cardSlider) {
         active.classList.remove('active');
         evt.currentTarget.parentNode.classList.add('active');
 
-        offerChangeGallery(); // функция из functions.js на сервере
+        offerChangeGallery();
 
         swiper.update();
         swiper.setProgress(0, 0);
@@ -17665,48 +17621,23 @@ const productCardSliders = document.querySelectorAll('.product-card-swiper-conta
 
 if(productCardSliders.length) {
    productCardSliders.forEach(slider => {
-
       const pcslider = new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
          slidesPerView: 1,
          nested: true,
+
+  
+         pagination: {
+            clickable: true,
+            el: ".product-card-swiper-pagination",
+         },
    
          on: {
             slideChangeTransitionEnd: function () {
               let active_offer_id = slider.querySelector('.swiper-slide-active').getAttribute('data-offer');              
               offerChange(active_offer_id);
             },
-
-            slideChange: function() {
-               paginationBullets.forEach(bullet => {
-                  bullet.classList.contains('active') ?
-                  bullet.classList.remove('active') : null;
-               })
-               paginationBullets[pcslider.activeIndex].classList.add('active'); 
-            }
          },
       });
-
-      let productCard = slider.parentNode.parentNode;
-
-      const paginationBullets = productCard.querySelectorAll('.pagination-bullet');
-
-      if(paginationBullets) {
-         const onCLickChangeSlide = function (evt) {
-
-            paginationBullets.forEach(bullet => {
-               bullet.classList.contains('active') ?
-               bullet.classList.remove('active') : null;
-            })
-
-            evt.target.classList.add('active');
-            let index = evt.target.getAttribute('data-id');
-            pcslider.slideTo(index);
-         }
-
-         paginationBullets.forEach((btn,i) => {
-            btn.addEventListener('click', onCLickChangeSlide);
-         })
-      }
    })
 }
 
@@ -17730,12 +17661,12 @@ mainSliders ?
 mainSliders.forEach(slider => {
          
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
-      slidesPerView: 'auto',
-      // loop: true,
+      slidesPerView: 1,
+      loop: true,
       
       breakpoints: {
          375: {
-            //slidesPerView: 'auto',
+            slidesPerView: 'auto',
          },
       },
 
@@ -17754,7 +17685,7 @@ offerSliders.forEach(slider => {
          
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
       slidesPerView: 'auto',
-      //loop: true,
+      loop: true,
 
       navigation: {
          nextEl: ".offer-swiper-button-next",
@@ -17796,6 +17727,13 @@ if(bannerThinSlider) {
       }
    })
 };
+
+const catalog = document.querySelector('.catalog');
+
+if(catalog) {
+  console.log('static')
+  document.querySelector('.header').style.position = 'static';
+}
 
 
 

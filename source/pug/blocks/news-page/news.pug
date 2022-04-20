@@ -32,11 +32,11 @@ section.news-common
         ul
           each news in newsList
             li
-              .news-common__header
-                img(src=news.imgUrl alt=news.title width="307" height="307")
-                h2.cmn__title=news.title
+              .news-common__item
+                a(href="#") 
+                  img(src=news.imgUrl alt=news.title width="307" height="307")
 
-              .news-common__container
+              .news-common__item-desc
                 h2.cmn__title=news.title
                 p=news.desc
   

@@ -37,18 +37,21 @@ if(filter) {
             items[i].classList.add('hidden');
         }
 
-        if(itemsToShow >= items.length) {
+        if(itemsToShow >= items.length && showMoreBtn) {
             showMoreBtn.classList.add('hidden');
         }
 
-        const onClickShowAllItems = () => {
+        const onClickShowAllItems = (evt) => {
+            evt.preventDefault();
             for(let i = itemsToShow; i < items.length; i++) {
                 items[i].classList.remove('hidden');
             }
             showMoreBtn.classList.add('hidden');
         }
 
-        showMoreBtn.addEventListener('click', onClickShowAllItems)
+        if(showMoreBtn) {
+            showMoreBtn.addEventListener('click', onClickShowAllItems)
+        }
     })
 
     const onClickShowFilter = (evt) => {

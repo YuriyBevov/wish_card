@@ -91,7 +91,7 @@ if(cardSlider) {
 
    const colorBtns = document.querySelectorAll('.color-list__item-inner');
 
-   const onClickRefreshSlider = () => {
+   const onClickRefreshSlider = (evt) => {
       let active = document.querySelector('.color-list__item.active');
 
       if(active !== evt.currentTarget.parentNode) {
@@ -143,21 +143,48 @@ const productCardSliders = document.querySelectorAll('.product-card-swiper-conta
 
 if(productCardSliders.length) {
    productCardSliders.forEach(slider => {
+
       const pcslider = new Swiper(slider, {
          slidesPerView: 1,
          nested: true,
-  
-         pagination: {
-            el: ".product-card-swiper-pagination",
-         },
    
          on: {
             slideChangeTransitionEnd: function () {
               let active_offer_id = slider.querySelector('.swiper-slide-active').getAttribute('data-offer');              
               offerChange(active_offer_id);
             },
+
+            slideChange: function() {
+               paginationBullets.forEach(bullet => {
+                  bullet.classList.contains('active') ?
+                  bullet.classList.remove('active') : null;
+               })
+               paginationBullets[pcslider.activeIndex].classList.add('active'); 
+            }
          },
       });
+
+      let productCard = slider.parentNode.parentNode;
+
+      const paginationBullets = productCard.querySelectorAll('.pagination-bullet');
+
+      if(paginationBullets) {
+         const onCLickChangeSlide = function (evt) {
+
+            paginationBullets.forEach(bullet => {
+               bullet.classList.contains('active') ?
+               bullet.classList.remove('active') : null;
+            })
+
+            evt.target.classList.add('active');
+            let index = evt.target.getAttribute('data-id');
+            pcslider.slideTo(index);
+         }
+
+         paginationBullets.forEach((btn,i) => {
+            btn.addEventListener('click', onCLickChangeSlide);
+         })
+      }
    })
 }
 
@@ -181,12 +208,12 @@ mainSliders ?
 mainSliders.forEach(slider => {
          
    new Swiper (slider, {
-      slidesPerView: 1,
-      loop: true,
+      slidesPerView: 'auto',
+      // loop: true,
       
       breakpoints: {
          375: {
-            slidesPerView: 'auto',
+            //slidesPerView: 'auto',
          },
       },
 
@@ -205,7 +232,7 @@ offerSliders.forEach(slider => {
          
    new Swiper (slider, {
       slidesPerView: 'auto',
-      loop: true,
+      //loop: true,
 
       navigation: {
          nextEl: ".offer-swiper-button-next",

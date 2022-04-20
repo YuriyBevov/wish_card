@@ -57,7 +57,6 @@
 
     &__card {
         width: 29.7rem;
-        height: 44.4rem;
         background: #FFFFFF;
         border: 1px solid #E5E5E5;
         order: 3;
@@ -165,7 +164,7 @@
         &:focus:not(.results__card--banner) {
             box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.07);
             border: 1px solid #175CFF;
-            padding-bottom: 1.6rem;
+            //padding-bottom: 1.6rem;
 
             .product-card__footer {
                 position: relative;
@@ -188,7 +187,7 @@
 .results-banner {
     display: flex;
     flex-direction: column;
-    height: 44.4rem;
+    height: 100%;
     background-color: #F6F9FC;
 
     &__content {

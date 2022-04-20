@@ -9,13 +9,19 @@ if(rangeSliders) {
 
         const rangeFrom = filterSection.querySelector('input[type="number"]:first-of-type');
         const rangeTo = filterSection.querySelector('input[type="number"]:last-of-type');
+        const rangeValueFrom = Number(rangeFrom.getAttribute('value'));
+        const rangeValueTo = Number(rangeTo.getAttribute('value'));
 
-        let min = Number(rangeFrom.getAttribute('min'));
+        let min = Number(rangeFrom.getAttribute('min'));       
         let max = Number(rangeTo.getAttribute('max'));
+
+        let startPos = rangeValueFrom > 0 ? rangeValueFrom : min;
+        let endPos = rangeValueTo > 0 ? rangeValueTo : max;
+
         const step = Number(rangeFrom.getAttribute('step'));
 
         noUiSlider.create(range, {
-            start: [min, max],
+            start: [startPos, endPos],
             connect: true,
             step: step ? step : 1,
             range: {
