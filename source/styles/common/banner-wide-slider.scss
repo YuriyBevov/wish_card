@@ -4,38 +4,29 @@
     height: 100%;
 
     .swiper-slide {
-        background-size: cover;
+        /*background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
 
         @media(max-width: 540px) {
             display: flex;
             background-position: left;
-        }
+        }*/
 
         .slider-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            //padding: 2.5rem;
             border-radius: 1.2rem;
-            //outline: 1px solid red;
             height: 100%;
             width: 100%;
+            //если разметкой
+            padding: 2.5rem;
+            background-size: cover;
+            background-repeat: no-repeat;
 
-            picture {
-                width: 100%;
-                height: 100%;
-                //outline: 1px solid blue;
-            }
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                //outline: 1px solid black;
-            }
-
-            /*@media(max-width: $tablet_xs_width) {
+            //если разметкой
+            @media(max-width: $tablet_xs_width) {
                 margin: auto;
             }
 
@@ -56,7 +47,22 @@
                 @media(max-width: $tablet_xs_width) {
                     font-size: 2rem;
                 }
-            } */
+            }
+            //----
+
+            
+            // кадр-е
+            /*picture {
+                width: 100%;
+                height: 100%;
+                //outline: 1px solid blue;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                //outline: 1px solid black;
+            }*/
         }
     }
 

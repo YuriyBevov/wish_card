@@ -4,20 +4,20 @@ mixin banner-wide-slider(array)
     .swiper-wrapper
       each slide in array
         .swiper-slide
-          .slider-content
+          .slider-content(style="background-image: url('./assets/img/catalog-banner.png')")
           
-            //img(src=slide.logoImg alt=slide.title)
-            picture
+            img(src=slide.logoImg alt=slide.title)
+            //picture
               source(media="(min-width: 1920px)" srcset="./assets/img/ban1920.png 1920w")
               source(media="(min-width: 1366px)" srcset="./assets/img/ban1366.png 1366w")
               source(media="(min-width: 1024px)" srcset="./assets/img/ban1024.png 1024w")
-              source(media="(min-width: 960px)" srcset="./assets/img/ban960.png 960w")
-              source(media="(min-width: 768px)" srcset="./assets/img/ban768.png 768w")
-              source(media="(min-width: 540px)" srcset="./assets/img/ban768.png 540w")
-              source(media="(min-width: 375px)" srcset="./assets/img/ban375.png 375w" width="100vw")
+              source(media="(min-width: 960px)"  srcset="./assets/img/ban960.png 960w")
+              source(media="(min-width: 768px)"  srcset="./assets/img/ban768.png 768w")
+              source(media="(min-width: 540px)"  srcset="./assets/img/ban540.png 540w")
+              source(media="(min-width: 375px)"  srcset="./assets/img/ban375.png 375w" width="100vw")
               img(srcset="./assets/img/ban320.png 320w" )
-            //p.cmn__colored-text= slide.desc
-            //a(href="#").cmn__banner-link=slide.linkText 
+            p.cmn__colored-text= slide.desc
+            a(href="#").cmn__banner-link=slide.linkText 
     <div class="banner-wide-swiper-button-prev"></div>
     <div class="banner-wide-swiper-button-next"></div>
     <div class="banner-wide-swiper-pagination"></div>
