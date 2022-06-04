@@ -50,8 +50,15 @@
         border-radius: 1.2rem;
 
         @media(max-width: $tablet_xs_width) {
-            max-width: 100%;
+            //max-width: 100%;
             height: 30rem;
+        }
+
+        @media(max-width: 640px) {
+            max-width: 100%;
+            margin-bottom: 2rem;
+            height: 25rem;
+            min-width: 25rem;
         }
     }
 }

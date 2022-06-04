@@ -1,5 +1,8 @@
 .test {
     &-slider {
+        width: 100%;
+        max-width: 192rem;
+        margin: 0 auto;
         overflow: hidden;
     }
     .swiper-slide {
