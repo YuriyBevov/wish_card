@@ -73,7 +73,27 @@ include ../../mixins/banner-thin-slider
       }
   ]
 
-section.intro
+section.test
+  .text__wrapper
+    .test-swiper-container.test-slider
+      .swiper-wrapper
+        .swiper-slide
+          picture
+            source(media="(max-width: 768px)" srcset="./assets/img/banner1-mobile.png" type="image/png")    
+            source(media="(max-width: 1140px)" srcset="./assets/img/banner1-tablet.png" type="image/png")    
+            img(src="./assets/img/banner1.png" alt="баннер" width="1900" height="400")
+        
+        .swiper-slide
+          picture
+            source(media="(max-width: 768px)" srcset="./assets/img/banner2-mobile.png" type="image/png")    
+            source(media="(max-width: 1140px)" srcset="./assets/img/banner2-tablet.png" type="image/png")    
+            img(src="./assets/img/banner2.png" alt="баннер" width="1900" height="400")
+
+      <div class="test-swiper-button-prev"></div>
+      <div class="test-swiper-button-next"></div>
+      <div class="test-swiper-pagination"></div>
+
+//section.intro
   .cmn__wrapper
     .intro__wrapper
       .intro__wide-slider

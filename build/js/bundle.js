@@ -17731,6 +17731,25 @@ if(bannerWideSlider) {
    })
 };
 
+const testSlider = document.querySelector('.test-swiper-container');
+
+if(testSlider) {
+   new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](testSlider, {
+      slidesPerView: '1',
+      loop: true,
+
+      navigation: {
+         nextEl: ".test-swiper-button-next",
+         prevEl: ".test-swiper-button-prev",
+      },
+
+      pagination: {
+         el: ".test-swiper-pagination", 
+         clickable: true
+      }
+   })
+};
+
 const bannerThinSlider = document.querySelector('.banner-thin-swiper-container');
 
 if(bannerThinSlider) {
