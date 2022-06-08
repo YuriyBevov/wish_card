@@ -21,8 +21,8 @@
 @import "common/header-components/cart";
 @import "common/header-components/catalog-menu";
 @import "common/offer-slider";
-@import "common/banner-wide-slider";
-@import "common/banner-thin-slider";
+//@import "common/banner-wide-slider";
+@import "common/safety-slider";
 
 
 @import "blocks/card";
@@ -37,7 +37,6 @@
 @import "blocks/advantages";
 
 //index-page
-@import "blocks/index-page/intro";
 @import "blocks/index-page/advantages";
 @import "blocks/index-page/categories";
 @import "blocks/index-page/hits";
@@ -45,7 +44,7 @@
 @import "blocks/index-page/map";
 @import "blocks/index-page/news";
 @import "blocks/index-page/about";
-@import "blocks/index-page/test";
+@import "blocks/index-page/intro";
 
 // catalog-page
 
@@ -85,6 +84,7 @@
 @import "blocks/components/acc-card";
 @import "blocks/components/sliders";
 @import "blocks/components/breadcrumbs";
+@import "blocks/components/safety-slider";
 
 
 @import "common/footer";

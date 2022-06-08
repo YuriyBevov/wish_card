@@ -17731,34 +17731,29 @@ if(bannerWideSlider) {
    })
 };
 
-const testSlider = document.querySelector('.test-swiper-container');
+const introSlider = document.querySelector('.intro-swiper-container');
 
-if(testSlider) {
-   new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](testSlider, {
+if(introSlider) {
+   new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](introSlider, {
       slidesPerView: '1',
       loop: true,
 
-      navigation: {
-         nextEl: ".test-swiper-button-next",
-         prevEl: ".test-swiper-button-prev",
-      },
-
       pagination: {
-         el: ".test-swiper-pagination", 
+         el: ".intro-swiper-pagination", 
          clickable: true
       }
    })
 };
 
-const bannerThinSlider = document.querySelector('.banner-thin-swiper-container');
+const bannerThinSlider = document.querySelector('.safety-swiper-container');
 
 if(bannerThinSlider) {
-   new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".banner-thin-swiper-container", {
+   new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".safety-swiper-container", {
       slidesPerView: 'auto',
       loop: true,
 
       pagination: {
-         el: ".banner-thin-swiper-pagination",
+         el: ".safety-swiper-pagination",
          clickable: true
       }
    })

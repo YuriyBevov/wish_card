@@ -1,6 +1,5 @@
-mixin banner-thin-slider(array)
-
-  .banner-thin-swiper-container.banner-thin-slider
+mixin safety-slider(array)
+  .safety-swiper-container.safety-slider
     .swiper-wrapper
       each slide in array
         .swiper-slide(style="background-image: url('./assets/img/banner-bg.png')")
@@ -9,4 +8,4 @@ mixin banner-thin-slider(array)
 
             each par in slide.desc
               p=par
-    <div class="banner-thin-swiper-pagination"></div>
+    <div class="safety-swiper-pagination"></div>

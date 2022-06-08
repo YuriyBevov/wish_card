@@ -4,15 +4,6 @@
     height: 100%;
 
     .swiper-slide {
-        /*background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        @media(max-width: 540px) {
-            display: flex;
-            background-position: left;
-        }*/
-
         .slider-content {
             display: flex;
             flex-direction: column;
@@ -48,21 +39,6 @@
                     font-size: 2rem;
                 }
             }
-            //----
-
-            
-            // кадр-е
-            /*picture {
-                width: 100%;
-                height: 100%;
-                //outline: 1px solid blue;
-            }
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                //outline: 1px solid black;
-            }*/
         }
     }
 

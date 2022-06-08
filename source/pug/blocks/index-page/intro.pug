@@ -1,81 +1,6 @@
-include ../../mixins/banner-wide-slider
-include ../../mixins/banner-thin-slider
-
--
-  const bWideList = [
-      {
-          bg: './assets/img/catalog-banner.png',
-          logoImg: './assets/img/iphone-logo.png',
-          title: 'Iphone 12',
-          desc: 'Пять свежих цветов.',
-          linkText: 'Купить'
-      },
-
-      {
-          bg: './assets/img/catalog-banner.png',
-          logoImg: './assets/img/iphone-logo.png',
-          title: 'Iphone 12',
-          desc: 'Пять свежих цветов.',
-          linkText: 'Купить'
-      },
-
-      {
-          bg: './assets/img/catalog-banner.png',
-          logoImg: './assets/img/iphone-logo.png',
-          title: 'Iphone 12',
-          desc: 'Пять свежих цветов.',
-          linkText: 'Купить'
-      },
-
-      {
-          bg: './assets/img/catalog-banner.png',
-          logoImg: './assets/img/iphone-logo.png',
-          title: 'Iphone 12',
-          desc: 'Пять свежих цветов.',
-          linkText: 'Купить'
-      },
-
-      {
-          bg: './assets/img/catalog-banner.png',
-          logoImg: './assets/img/iphone-logo.png',
-          title: 'Iphone 12',
-          desc: 'Пять свежих цветов.',
-          linkText: 'Купить'
-      },
-      
-  ]
-
--
-  const bThinList = [
-      {
-          title: 'Зона безопасного сервиса',
-          desc: ['Измеряем температуру курьеров дважды в день', 'Носим маски и перчатки', 'Используем антисептики'],
-      },
-
-      {
-          title: 'Зона безопасного сервиса',
-          desc: ['Измеряем температуру курьеров дважды в день', 'Носим маски и перчатки', 'Используем антисептики'],
-      },
-
-      {
-          title: 'Зона безопасного сервиса',
-          desc: ['Измеряем температуру курьеров дважды в день', 'Носим маски и перчатки', 'Используем антисептики'],
-      },
-
-      {
-          title: 'Зона безопасного сервиса',
-          desc: ['Измеряем температуру курьеров дважды в день', 'Носим маски и перчатки', 'Используем антисептики'],
-      },
-
-      {
-          title: 'Зона безопасного сервиса',
-          desc: ['Измеряем температуру курьеров дважды в день', 'Носим маски и перчатки', 'Используем антисептики'],
-      }
-  ]
-
-section.test
-  .text__wrapper
-    .test-swiper-container.test-slider
+section.intro
+  .intro__wrapper
+    .intro-swiper-container.intro-slider
       .swiper-wrapper
         .swiper-slide
           picture
@@ -89,14 +14,4 @@ section.test
             source(media="(max-width: 1140px)" srcset="./assets/img/banner_4-lg.png" type="image/png")    
             img(src="./assets/img/banner_4.png" alt="баннер" width="1900" height="400")
 
-      <div class="test-swiper-button-prev"></div>
-      <div class="test-swiper-button-next"></div>
-      <div class="test-swiper-pagination"></div>
-
-//section.intro
-  .cmn__wrapper
-    .intro__wrapper
-      .intro__wide-slider
-        +banner-wide-slider(bWideList)(class="intro-banner-wide-swiper")
-      .intro__thin-slider
-        +banner-thin-slider(bThinList)(class="intro-banner-thin-swiper")
+      <div class="intro-swiper-pagination"></div>
