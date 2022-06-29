@@ -1,7 +1,9 @@
 .slider {
-    
+    position: sticky;
+    top: 2rem;
     width: 100%;
-    max-width: 51rem;
+    max-width: 61rem;
+    height: 48rem;
     display: flex;
     margin-right: 3.4rem;
 
@@ -21,10 +23,10 @@
 
     .card-swiper-container {
         width: 100%;
-        height: 58rem;
+        height: 100%;
         overflow: hidden;
 
-        @media(max-width: $desktop_lg_width) {
+        /*@media(max-width: $desktop_lg_width) {
             height: 49rem;
         }
 
@@ -38,19 +40,19 @@
 
         @media(max-width: $tablet_width) {
             height: 34.7rem;
-        }
+        }*/
     }
 
     .card-slider  {
-        width: 54rem;
+        //width: 54rem;
         order: 2;
         border-radius: 10px;
 
-        @media(max-width: $desktop_lg_width) {
+        /*@media(max-width: $desktop_lg_width) {
             width: 54rem;
-        }
+        }*/
 
-        @media(max-width: $desktop_sm_width) {
+        /*@media(max-width: $desktop_sm_width) {
             width: 43rem;
         }
 
@@ -61,7 +63,7 @@
         @media(max-width: $tablet_width) {
             width: 100%;
             margin-bottom: 1.1rem;
-        }
+        }*/
 
         .swiper-slide {
             background-color: white;
@@ -117,7 +119,8 @@
 
     .card-slider-thumbs {
         position: relative;
-        width: 6.2rem;
+        width: 100%;
+        max-width: 6.2rem;
         height: 47rem;
         order: 1;
         margin-right: 2rem;
@@ -144,6 +147,7 @@
             border: 1px solid #D4D4D4;
             border-radius: 10px;
             opacity: 0.3;
+            background-color: $color-white;
 
             img {
                 width: 100%;

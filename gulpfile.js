@@ -85,7 +85,7 @@ const images = () => (
       imagemin.svgo({
           plugins: [
               {removeViewBox: true},
-              {cleanupIDs: false}
+              {cleanupIDs: true}
           ]
       })
     ]))

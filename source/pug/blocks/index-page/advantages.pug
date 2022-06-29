@@ -1,7 +1,7 @@
 include ../../mixins/safety-slider
 -
   const safetyList = [
-      {
+      /*{
           title: 'Зона безопасного сервиса',
           desc: ['Измеряем температуру курьеров дважды в день', 'Носим маски и перчатки', 'Используем антисептики'],
       },
@@ -24,7 +24,24 @@ include ../../mixins/safety-slider
       {
           title: 'Зона безопасного сервиса',
           desc: ['Измеряем температуру курьеров дважды в день', 'Носим маски и перчатки', 'Используем антисептики'],
-      }
+      }*/
+
+      {
+        title: 'Пылесос Dyson V15 Detect Absolute',
+        img: './assets/img/sm-banner1.png'
+      },
+      {
+        title: 'Фен Dyson Supersonic HD07 Gift Edition',
+        img: './assets/img/sm-banner2.png'
+      },
+      {
+        title: 'Очиститель воздуха Dyson Pure Cool Me',
+        img: './assets/img/sm-banner3.png'
+      },
+      {
+        title: 'Фен Dyson Supersonic Professional',
+        img: './assets/img/sm-banner4.png'
+      },
   ]
 
 section.adv
@@ -33,14 +50,14 @@ section.adv
       h2.visually-hidden Преимущества
       ul.adv__list
         li.adv__item
-          img(src="./assets/img/index-adv1.svg" alt="2 года гарантии" width="145" height="86")
+          img(src="./assets/img/index-adv1.svg" alt="2 года гарантии" width="180" height="106")
           p.cmn__text 2 года расширенного гарантийного обслуживания на все смартфоны
         li.adv__item
-          img(src="./assets/img/index-adv2.svg" alt="Бесплатный самовывоз" width="166" height="85")
+          img(src="./assets/img/index-adv2.svg" alt="Бесплатный самовывоз" width="207" height="106")
           p.cmn__text Бесплатный самовывоз при заказе день в день
         li.adv__item
-          img(src="./assets/img/index-adv3.svg" alt="Проверка устройства ДО ОПЛАТЫ" width="191" height="85")
+          img(src="./assets/img/index-adv3.svg" alt="Проверка устройства ДО ОПЛАТЫ" width="242" height="106")
           p.cmn__text Проверка устройства ДО ОПЛАТЫ
       
       .safety-slider
-        +safety-slider(safetyList)(class="intro-banner-thin-swiper")
+        +safety-slider(safetyList)(class="intro-banner-thin-swiper") 

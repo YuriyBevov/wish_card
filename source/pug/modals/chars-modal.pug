@@ -1,0 +1,29 @@
+-
+  const charList = [
+    {title: 'Артикул:', desc: '69215'},{title: 'Тип уборки:', desc: 'сухая'},
+    {title: 'Тип пылесборника:', desc: 'контейнер'},{title: 'Объем пылесборника:', desc: '0.76 л'},
+    {title: 'Дополнительные функции:', desc: 'возможность подключения электрощетки'},{title: 'Особенности конструкции:', desc: 'место для хранения насадок, вертикальная парковка, индикатор заполнения пылесборника, регулятор мощности на корпусе'},
+    {title: 'Тип питания:', desc: 'от аккумулятора'},{title: 'Время работы от аккумулятора:', desc: '60 мин'},
+    {title: 'Время зарядки аккумулятора:', desc: '270 мин'},{title: 'Потребляемая мощность:', desc: '660 Вт'},
+    {title: 'Мощность всасывания:', desc: '240 Вт'},{title: 'Уровень шума:', desc: '89 дБ'},
+    {title: 'Дополнительная информация:', desc: 'три режима мощности, ЖК-дисплей, съемный аккумулятор, индикатор уровня заряда'},{title: 'Размеры:', desc: '25x12.64x25.20 см'},
+    {title: 'Вес:', desc: '3.08 кг'},{title: 'Бренд:', desc: 'Dyson'},
+    {title: 'Состояние:', desc: 'Новый'},{title: 'Гарантия:', desc: 'Гарантийное обслуживание 1 год'},
+  ]
+
+.modal-overlay
+  .modal.chars-modal#chars-modal
+    .modal__header
+      span Характеристики
+      button(type="button").modal__close.chars-modal__close
+        svg(width="17" height="17")
+          use(xlink:href="#icon-close2")
+    .modal__content
+      ul.chars__list
+        each char in charList
+          li.chars__item
+            .chars__item-name
+              p= char.title
+              .dashed-border(aria-hidden="true")
+            .chars__item-desc
+              p= char.desc

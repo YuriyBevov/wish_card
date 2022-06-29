@@ -1,6 +1,6 @@
 const menuOpener = document.querySelectorAll('.js-menu-opener');
 const menuCloser = document.querySelector('.js-menu-closer');
-const menu = document.querySelector('.header-mobile');
+const menu = document.querySelector('.js-burger');
 
 const onClickOpenMenu = (evt) => {
     evt.stopPropagation();
@@ -9,7 +9,7 @@ const onClickOpenMenu = (evt) => {
 
     menuOpener.forEach(btn => {
         btn.classList.toggle('js-menu-opened');
-    })
+    });
 
     document.addEventListener('click', evt => {
         if(!menu.contains(evt.target)) {
@@ -19,7 +19,7 @@ const onClickOpenMenu = (evt) => {
                 btn.classList.remove('js-menu-opened');
             });
         }
-    })
+    });
 }
 
 menuCloser.addEventListener('click', () => {
@@ -28,8 +28,8 @@ menuCloser.addEventListener('click', () => {
     menuOpener.forEach(btn => {
         btn.classList.toggle('js-menu-opened');
     })
-})
+});
 
 menuOpener.forEach(btn => {
     btn.addEventListener('click', onClickOpenMenu);
-})
+});

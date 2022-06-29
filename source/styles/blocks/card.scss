@@ -78,10 +78,8 @@
     }
 
     &__content {
-
         &-wrapper {
             display: flex;
-            align-items: flex-start;
 
             @media(max-width: $tablet_width) { 
                flex-direction: column;
@@ -111,6 +109,7 @@
                 align-items: center;
                 padding: 1.6rem 2rem;
                 margin-bottom: 1rem;
+                min-height: 33rem;
 
                 @media(max-width: $tablet_width) {
                     margin-bottom: 2.1rem;

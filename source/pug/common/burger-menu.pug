@@ -1,44 +1,52 @@
-.header-mobile
-  .header-mobile__wrapper
-    .header-mobile__nav
-      a(href="index.html").header-mobile__nav-logo
-        img(src="./assets/img/logo-name.png" alt="логотип" width="175" height="13")
+.burger.js-burger
+  .burger__wrapper
+    .burger__nav
+      a(href="index.html").burger__nav-logo
+        img(src="./assets/img/logo-name-svg.svg" alt="логотип" width="206" height="49")
 
-      button(aria-label="закрыть меню").header-mobile__close-btn.js-menu-closer
+      button(aria-label="закрыть меню").burger__close-btn.js-menu-closer
         svg(width="16" height="16")
           use(xlink:href="#icon-close")
 
-      ul.header-mobile__nav-list
-        li.header-mobile__nav-item.header-mobile__nav-item--stock
+      ul.burger__nav-list
+        li.burger__nav-item.burger__nav-item--stock
           a(href="#")
             img(src="./assets/img/jet.png" alt="иконка молнии" width="9" height="17")
             span Акции
 
-        li.header-mobile__nav-item
+        li.burger__nav-item
+          svg(width="24" height="24")
+            use(xlink:href="#icon-blog")
           a(href="#") 
-            span Новости
+            span Блог
 
-        li.header-mobile__nav-item
+        li.burger__nav-item
+          svg(width="24" height="24")
+            use(xlink:href="#icon-delivery-car")
           a(href="#") 
             span Доставка и самовывоз
         
-        li.header-mobile__nav-item
+        li.burger__nav-item
+          svg(width="24" height="24")
+            use(xlink:href="#icon-contacts")
           a(href="#")
             span Контакты
 
-        li.header-mobile__nav-item
+        li.burger__nav-item
+          svg(width="24" height="24")
+            use(xlink:href="#icon-contacts")
           a(href="#") 
             span Гарантия и возврат
 
-        li.header-mobile__nav-item
+        li.burger__nav-item
           a(href="#") 
             span Условия оплаты
 
-        li.header-mobile__nav-item
+        li.burger__nav-item
           a(href="#") 
             span О компании
 
-    .header-mobile__banner
+    //.burger__banner
       a(href="#" aria-label="купить")
         <picture>
           <source srcset="./assets/img/header-mobile-banner_mobile.jpg" media="(max-width: 1600px)">

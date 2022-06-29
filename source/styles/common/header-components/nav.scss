@@ -98,7 +98,8 @@
         align-items: center;
 
         @media(max-width: $desktop_lg_width) {
-            flex-direction: column;
+            //flex-direction: column;
+            flex-wrap: wrap;
         }
 
         @media(max-width: $desktop_sm_width) {
@@ -114,19 +115,22 @@
         width: fit-content;
 
         @media(max-width: $desktop_lg_width) {
+            margin-right: 0;
             &--dmd-hide {
                 display: none;
             }
         }
 
         a {    
-            display: block;
+            display: flex;
+            align-items: center;
             padding: 0.5rem;
             
             span {
                 font-family: $font_sec-bold;
-                font-size: 2rem;
-                line-height: 2.3rem;
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+                padding-left: 0.5rem;
 
                 color: $color_darkblue;
             }

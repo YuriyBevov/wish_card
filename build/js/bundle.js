@@ -16876,16 +16876,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/menu.js */ "./source/scripts/modules/menu.js");
 /* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _modules_range_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/range.js */ "./source/scripts/modules/range.js");
-/* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/catalogMenu.js */ "./source/scripts/modules/catalogMenu.js");
-/* harmony import */ var _modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_catalogMenu_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/masonry.js */ "./source/scripts/modules/masonry.js");
-/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_masonry_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/filter.js */ "./source/scripts/modules/filter.js");
-/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_filter_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _modules_scrollToChars_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/scrollToChars.js */ "./source/scripts/modules/scrollToChars.js");
-/* harmony import */ var _modules_scrollToChars_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_scrollToChars_js__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _modules_limitStr_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/limitStr.js */ "./source/scripts/modules/limitStr.js");
-/* harmony import */ var _modules_limitStr_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_limitStr_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/masonry.js */ "./source/scripts/modules/masonry.js");
+/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_masonry_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/filter.js */ "./source/scripts/modules/filter.js");
+/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_filter_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_limitStr_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/limitStr.js */ "./source/scripts/modules/limitStr.js");
+/* harmony import */ var _modules_limitStr_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_limitStr_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _modules_cityChooser_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/cityChooser.js */ "./source/scripts/modules/cityChooser.js");
+/* harmony import */ var _modules_cityChooser_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_cityChooser_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _modules_modals_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/modals.js */ "./source/scripts/modules/modals.js");
 
 
 
@@ -16894,8 +16893,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+//import catalogMenu from './modules/catalogMenu.js'
+//import catalogMenu from './modules/catalog.js'
 
 
+//import './modules/scrollToChars.js';
 
 
 
@@ -16903,109 +16905,59 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./source/scripts/modules/catalogMenu.js":
+/***/ "./source/scripts/modules/cityChooser.js":
 /*!***********************************************!*\
-  !*** ./source/scripts/modules/catalogMenu.js ***!
+  !*** ./source/scripts/modules/cityChooser.js ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-const openBtn = document.querySelector('.js-open-catalog-menu');
-const closeBtn = document.querySelector('.js-close-catalog-menu');
-const catalog = document.querySelector('.catalog-menu');
-let body = document.querySelector('body');
-const header = document.querySelector('.header');
+document.addEventListener("DOMContentLoaded", function() {
+    const initModal = document.querySelector('.city-ask');
+    const chooserModal = document.querySelector('.city-chooser');
+    const chooserOpener = document.querySelector('.city-info__choose a');
 
-let headerHeight = header.getBoundingClientRect().height;
-
-const setCatalogPos = () => {
-    catalog.style.marginTop = headerHeight + 'px';
-    catalog.style.maxHeight = 'calc(100vh - ' + headerHeight + 'px)';
-};
-
-const onClickShowCatalog = () => {
-    catalog.classList.toggle('js-opened');
-    body.classList.toggle('body-locked');
-
-    setCatalogPos();
-}
-
-const onClickHideCatalog = () => {
-    if(catalog.classList.contains('js-opened')) {
-        catalog.classList.remove('js-opened');
-        body.classList.remove('body-locked');
+    const onClickCloseModal = (evt) => {
+        const modalName = evt.currentTarget.getAttribute('data-id');
+        let modal = document.querySelector('.' + modalName);
+        modal.classList.remove('active');
+        let closers = modal.querySelectorAll('.close-button');
+        closers.forEach(closer => {
+            closer.removeEventListener('click', onClickCloseModal);
+        });
     }
-}
 
-openBtn.addEventListener('click', onClickShowCatalog)
-closeBtn.addEventListener('click', onClickHideCatalog)
+    const onClickOpenChooser = (evt) => {
+        initModal.classList.remove('active');
+        const modalName = evt.currentTarget.getAttribute('data-id');
+        const modal = document.querySelector('.' + modalName);
+        modal.classList.add('active');
 
-const menuItems = document.querySelectorAll('.catalog-menu__item');
-const innerLists = document.querySelectorAll('.catalog-menu__inner');
+        init(modal);
+    }
 
-let isScrolled = false;
-let windowWidth = window.innerWidth;
+    initModal.classList.add('active');
 
-const onClickShowInnerList = (evt) => {
-    if(windowWidth < 960) {
-        let btn = evt.currentTarget.querySelector('button');
+    function init(modal) {
+        let closers = modal.querySelectorAll('.close-button');
 
-        if(evt.target === btn) {
-            evt.preventDefault();
-            
-            let active = evt.currentTarget.querySelector('.catalog-menu__inner');
-            active.scrollTo({top: 0})
-
-            const menuItem = evt.currentTarget;
-
-            menuItem.classList.toggle('active');
-            menuItem.querySelector('.catalog-menu__inner').classList.toggle('active')
+        closers.forEach(closer => {
+            closer.addEventListener('click', onClickCloseModal);
+        });
+        
+        let opener = modal.querySelector('.open-button');
+        if(opener) {
+            opener.addEventListener('click', onClickOpenChooser);
         }
     }
-}
 
-const onHoverShowInnerList = (evt) => {
-    if(windowWidth > 959) {
-        /*catalog.scrollTo({
-            top: 0,
-            left: 0
-        });*/
+    init(initModal);
 
-        menuItems.forEach(item => {
-            item.classList.contains('active') ?
-            item.classList.remove('active') : null
-        })
-
-        innerLists.forEach(list => {
-            list.classList.contains('active') ?
-            list.classList.remove('active') : null
-        })
-        
-        const menuItem = evt.currentTarget;
-        menuItem.classList.add('active');
-        menuItem.querySelector('.catalog-menu__inner').classList.add('active');
-    }
-    
-}
-
-
-menuItems.forEach(item => {
-    item.addEventListener('mouseover', onHoverShowInnerList);
-    item.addEventListener('click', onClickShowInnerList);
-})
-
-const onResizeSetWindowWidth = () => {
-    windowWidth = window.innerWidth;
-    let currentHeaderHeight = header.getBoundingClientRect().height;
-
-    if(headerHeight !== currentHeaderHeight) {
-        headerHeight = currentHeaderHeight;
-        setCatalogPos();
-    }
-}
-
-window.addEventListener('resize', onResizeSetWindowWidth);
-
+    chooserOpener.addEventListener('click', () => {
+        chooserModal.classList.add('active');
+        init(chooserModal);
+    })
+});
 
 
 /***/ }),
@@ -17230,7 +17182,7 @@ catalogMasonry.forEach(grid => {
 
 const menuOpener = document.querySelectorAll('.js-menu-opener');
 const menuCloser = document.querySelector('.js-menu-closer');
-const menu = document.querySelector('.header-mobile');
+const menu = document.querySelector('.js-burger');
 
 const onClickOpenMenu = (evt) => {
     evt.stopPropagation();
@@ -17239,7 +17191,7 @@ const onClickOpenMenu = (evt) => {
 
     menuOpener.forEach(btn => {
         btn.classList.toggle('js-menu-opened');
-    })
+    });
 
     document.addEventListener('click', evt => {
         if(!menu.contains(evt.target)) {
@@ -17249,7 +17201,7 @@ const onClickOpenMenu = (evt) => {
                 btn.classList.remove('js-menu-opened');
             });
         }
-    })
+    });
 }
 
 menuCloser.addEventListener('click', () => {
@@ -17258,11 +17210,81 @@ menuCloser.addEventListener('click', () => {
     menuOpener.forEach(btn => {
         btn.classList.toggle('js-menu-opened');
     })
-})
+});
 
 menuOpener.forEach(btn => {
     btn.addEventListener('click', onClickOpenMenu);
-})
+});
+
+/***/ }),
+
+/***/ "./source/scripts/modules/modals.js":
+/*!******************************************!*\
+  !*** ./source/scripts/modules/modals.js ***!
+  \******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_functions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions.js */ "./source/scripts/utils/functions.js");
+
+
+let modalOpeners = document.querySelectorAll('.modal-opener');
+
+function initModal(opener, overlay, modal) {
+    opener.removeEventListener('click', onClickOpenModal);
+    overlay.classList.add('is-opened');
+    modal.classList.add('is-active');
+
+    const closer = modal.querySelector('.modal__close');
+
+    const closeModal = () => {
+        opener.addEventListener('click', onClickOpenModal);
+        overlay.classList.remove('is-opened');
+        modal.classList.remove('is-active');
+        Object(_utils_functions_js__WEBPACK_IMPORTED_MODULE_0__["bodyLocker"])(false);
+    }
+
+    const onClickCloseModal = () => {
+        closer.removeEventListener('click', onClickCloseModal);
+        closeModal();
+    };
+
+    const closeByEscBtn = (evt) => {
+        if (evt.key === "Escape") {
+            document.removeEventListener('keydown', closeByEscBtn);
+            closeModal();
+        }
+    }
+
+    const closeByOverlayClick = (evt) => {
+        if(evt.target === overlay) {
+            document.removeEventListener('click', closeByOverlayClick);
+            closeModal();
+        }
+    }
+
+    closer.addEventListener('click', onClickCloseModal);
+    document.addEventListener('keydown', closeByEscBtn);
+    document.addEventListener('click', closeByOverlayClick);
+}
+
+const onClickOpenModal = (evt) => {
+    let modalName = evt.currentTarget.getAttribute('data-modal-anchor');
+    const modal = document.querySelector('.' + modalName);
+
+    if(modal) {
+        Object(_utils_functions_js__WEBPACK_IMPORTED_MODULE_0__["bodyLocker"])(true);
+        initModal(evt.currentTarget, modal.parentNode, modal);
+    }
+}
+
+if(modalOpeners) {
+    modalOpeners.forEach(opener => {
+      opener.addEventListener('click', onClickOpenModal);
+  });
+}
 
 /***/ }),
 
@@ -17409,50 +17431,6 @@ if(rangeSliders) {
             });
         });
     })
-}
-
-/***/ }),
-
-/***/ "./source/scripts/modules/scrollToChars.js":
-/*!*************************************************!*\
-  !*** ./source/scripts/modules/scrollToChars.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-let btn = document.querySelector('.chars__btn');
-
-const onClickShowChars = () => {
-    let headerHeight = document.querySelector('.header').getBoundingClientRect().height;
-    let descriptionPosY = document.querySelector('.description').offsetTop - headerHeight - 50;
-
-    let desc_btns = document.querySelectorAll('.description__header-btn');
-
-    desc_btns.forEach(btn => {
-        btn.classList.contains('active') ?
-        btn.classList.remove('active') : null;
-
-        btn.getAttribute('data-type') === 'chars' ?
-        btn.classList.add('active') : null;
-    })
-    let tabs = document.querySelectorAll('.description__content-item');
-
-    tabs.forEach(tab => {
-        !tab.classList.contains('hidden') ?
-        tab.classList.add('hidden') : null;
-
-        tab.getAttribute('data-type') === 'chars' ?
-        tab.classList.remove('hidden') : null;
-    })
-
-    window.scrollTo({
-        top: descriptionPosY,
-        behavior: 'smooth'
-    })
-}
-
-if(btn) {
-    btn.addEventListener('click', onClickShowChars);
 }
 
 /***/ }),
@@ -17758,6 +17736,107 @@ if(bannerThinSlider) {
       }
    })
 };
+
+
+
+
+/***/ }),
+
+/***/ "./source/scripts/utils/functions.js":
+/*!*******************************************!*\
+  !*** ./source/scripts/utils/functions.js ***!
+  \*******************************************/
+/*! exports provided: windowInnerWidth, limitStr, addClass, removeClass, checkClass, toggleClass, bodyLocker, getBoundingClientRect */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "windowInnerWidth", function() { return windowInnerWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "limitStr", function() { return limitStr; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addClass", function() { return addClass; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeClass", function() { return removeClass; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkClass", function() { return checkClass; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toggleClass", function() { return toggleClass; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bodyLocker", function() { return bodyLocker; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBoundingClientRect", function() { return getBoundingClientRect; });
+// работа с классами эл-та
+function addClass(el, cl) {
+  el.classList.add(cl);
+}
+
+function removeClass(el, cl) {
+  el.classList.remove(cl);
+}
+
+function checkClass(el, cl) {
+  return el.classList.contains(cl);
+}
+
+function toggleClass(el, cl) {
+  el.classList.toggle(cl);
+}
+
+// Ограничение длины текста по кол-ву символов
+function limitStr( str, n ) {
+  if ( str.length > n ) {
+      return str.slice(0, n) + '...';
+  } else {
+      return str
+  }
+}
+
+// запрет скролла у body
+function bodyLocker(bool) {
+  let body = document.querySelector('body');
+  let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+
+  if(bool) {
+      body.style.overflow = 'hidden';
+      body.style.paddingRight = paddingOffset;
+  } else {
+      body.style.overflow = 'auto';
+      body.style.paddingRight = '0px';
+  }
+}
+
+// вычисление поз-и/размеров эл-та
+function getBoundingClientRect(elem, side) {
+  if(side === 'height') {
+      return elem.getBoundingClientRect().height
+  }
+
+  if(side === 'width') {
+      return elem.getBoundingClientRect().width
+  }
+
+  if(side === 'top') {
+      return elem.getBoundingClientRect().top
+  }
+
+  if(side === 'bottom') {
+    return elem.getBoundingClientRect().bottom
+  }
+
+  if(side === 'left') {
+    return elem.getBoundingClientRect().left
+  }
+
+  if(side === 'right') {
+    return elem.getBoundingClientRect().right
+  }
+
+  if(side === 'x') {
+    return elem.getBoundingClientRect().x
+  }
+
+  if(side === 'y') {
+    return elem.getBoundingClientRect().y
+  }
+}
+
+function windowInnerWidth() {
+  return window.innerWidth;
+}
 
 
 

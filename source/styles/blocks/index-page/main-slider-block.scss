@@ -1,4 +1,4 @@
-.hits {
+.main-slider-block {
     &__wrapper {
         @include block_container();
 
@@ -16,5 +16,9 @@
                 padding: 0 1rem;
             }
         }
+    }
+
+    &__slider {
+        margin-bottom: 2rem;
     }
 }

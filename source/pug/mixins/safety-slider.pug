@@ -4,8 +4,6 @@ mixin safety-slider(array)
       each slide in array
         .swiper-slide(style="background-image: url('./assets/img/banner-bg.png')")
           .slider-content
+            img(src=slide.img alt= slide.title width="189" height="207")
             h3= slide.title
-
-            each par in slide.desc
-              p=par
     <div class="safety-swiper-pagination"></div>

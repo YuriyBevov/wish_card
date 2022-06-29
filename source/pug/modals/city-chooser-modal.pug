@@ -1,0 +1,40 @@
+
+.city-chooser
+  .city-chooser__wrapper
+    .city-chooser__header
+      button(type="button" data-id="city-chooser").close-button
+        svg(width="17" height="17")
+          use(xlink:href="#icon-close2")
+      span Выберите город
+
+      form(action="#")
+        input(type="text" placeholder="Ваш город")
+        button(type="submit")
+          svg(width="20" height="20")
+            use(xlink:href="#icon-search-city")
+      
+      a(href="#") Определить автоматически 
+
+    .city-chooser__content
+      ul.city-list
+        li.city-item.active
+          a(href="#") Москва
+        li.city-item
+          a(href="#") Санкт-Петербург
+        li.city-item
+          a(href="#") Екатеринбург
+        li.city-item
+          a(href="#") Нижний Новгород
+        li.city-item
+          a(href="#") Новосибирск
+        li.city-item
+          a(href="#") Омск
+        li.city-item
+          a(href="#") Самара
+        li.city-item
+          a(href="#") Саратов
+        li.city-item
+          a(href="#") Челябинск
+
+    .city-chooser__footer
+      button(type="button").cmn__outlined-link.cmn__btn Моего города нет в списке

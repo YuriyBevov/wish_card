@@ -14,7 +14,7 @@
 @import "common/bitrix-styles";
 @import "common/text-content";
 @import "common/header";
-@import "common/header-mobile";
+@import "common/burger-menu";
 @import "common/header-components/nav";
 @import "common/header-components/city-info";
 @import "common/header-components/user";
@@ -39,7 +39,7 @@
 //index-page
 @import "blocks/index-page/advantages";
 @import "blocks/index-page/categories";
-@import "blocks/index-page/hits";
+@import "blocks/index-page/main-slider-block";
 @import "blocks/index-page/stock";
 @import "blocks/index-page/map";
 @import "blocks/index-page/news";
@@ -91,6 +91,9 @@
 @import "common/main-footer";
 
 // modals
-
+@import "modals/modal";
+@import "modals/city-chooser-modal";
+@import "modals/city-ask-modal";
+@import "modals/chars-modal";
 // модалка на 24е число
 // @import "modals/info-modal";

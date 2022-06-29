@@ -1,5 +1,81 @@
 .chars {
     width: 100%;
+    max-width: 37rem;
+    margin-right: 2rem;
+
+    &__title {
+        font-family: $font_sec-reg;
+        font-weight: 400;
+        font-size: 2.4rem;
+
+        color: $color_darkblue;
+        margin-bottom: 3rem;
+
+        @media(max-width: $desktop_lg_width) {
+            margin-bottom: 1.6rem;
+            font-size: 2.2rem;
+        }
+    }
+
+    &__list {
+        margin-bottom: 2rem;
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: 1.5rem;
+
+        &-name {
+            position: relative;
+            font-size: 1.4rem;
+            width: calc(50% - 1rem);
+            padding-right: 3rem;
+            margin-right: 1rem;
+            color: #757579;
+
+            p {
+                display: block;
+                background-color: $color_white;
+                width: fit-content;
+                position: relative;
+                z-index: 10;
+                padding-right: 5px;
+            }
+
+            .dashed-border {
+                position: absolute;
+                top: 1.1rem;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                border-bottom: 1px dashed #757579;
+            }
+        }
+
+        &-desc {
+            font-size: 1.4rem;
+            width: 50%;
+            color: $color_black;
+        }
+    }
+
+    &__btn {
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+        font-size: 1.4rem;
+        text-decoration-line: underline;
+
+        color: #121212;
+
+        transition: color $transition_rules;
+
+        &:hover,
+        &:focus {
+            color: $color_blue;
+        }
+    }
+    /*width: 100%;
     max-width: 25rem;
     margin-right: 1rem;
     display: flex;
@@ -9,7 +85,7 @@
     @media(max-width: 1280px) {
         order: 2;
         max-width: 100%;
-    }
+    } 
 
     @media(max-width: $tablet_width) {
         display: none;
@@ -81,5 +157,5 @@
             color: $color_blue;
         }
         
-    }
+    }*/
 }

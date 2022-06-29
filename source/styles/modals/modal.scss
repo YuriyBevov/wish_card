@@ -1,0 +1,95 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, .5);
+
+    z-index: 10000;
+    opacity: 0;
+
+    &.is-opened {
+        display: flex;
+        animation: showOverlay 0.6s ease-in forwards;
+    }
+}
+
+.modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    width: 90vw;
+    max-width: 600px;
+    height: fit-content;
+    min-height: 200px;
+    max-height: 90vh;
+    background-color: $color_white;
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__content {
+        margin-top: auto;
+        overflow: hidden;
+        overflow-y: auto;
+        height: 100%;
+    }
+
+    &.is-active {
+        animation: showModal 0.6s linear forwards;
+    }
+
+    @keyframes showModal {
+        0% {
+          opacity: 0;
+          transform: translateY(150px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+    }
+
+    @keyframes showOverlay {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+  }
+
+  &__close {
+    /*@extend .button-default;
+    @extend .flex-centered-content;
+    top: 30px;
+    right: 30px;
+
+    @include m-b-tablet-down {
+      top: 15px;
+      right: 15px;
+    }
+
+    svg {
+      fill: var(--dark-color);
+
+      @include m-b-tablet-down {
+        width: 32px;
+        height: 32px;
+      }
+    }*/
+  }
+}

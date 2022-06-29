@@ -1,13 +1,16 @@
 'use strict'
 
-import headerSticky from './modules/headerSticky.js';
-import offersTabs from './modules/offersTabs.js'
-import descriptionTabs from './modules/descriptionTabs.js'
-import swiper from './modules/swiper.js'
-import menu from './modules/menu.js'
-import range from './modules/range.js';
-import catalogMenu from './modules/catalogMenu.js'
-import masonry from './modules/masonry.js'
-import filter from './modules/filter.js'
-import scrollToChars from './modules/scrollToChars.js';
-import limitStr from './modules/limitStr.js';
+import './modules/headerSticky.js';
+import './modules/offersTabs.js'
+import './modules/descriptionTabs.js'
+import './modules/swiper.js'
+import './modules/menu.js'
+import './modules/range.js';
+//import catalogMenu from './modules/catalogMenu.js'
+//import catalogMenu from './modules/catalog.js'
+import './modules/masonry.js'
+import './modules/filter.js'
+//import './modules/scrollToChars.js';
+import './modules/limitStr.js';
+import './modules/cityChooser.js';
+import './modules/modals.js';

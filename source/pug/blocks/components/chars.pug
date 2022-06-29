@@ -1,24 +1,24 @@
 -
   chars = [
     {
-      name: 'Артикул:',
-      desc: '2766/2763'
+      name: 'Тип уборки:',
+      desc: 'сухая'
     },
     {
-      name: 'Операционная система:',
-      desc: 'iOS'
+      name: 'Тип пылесборника:',
+      desc: 'контейнер'
     },
     {
-      name: 'Водозащита:',
-      desc: 'IP68'
+      name: 'Объем пылесборника:',
+      desc: '0,76л'
     },
     {
-      name: 'Количество SIM-карт:',
-      desc: '2 (nano SIM+eSIM)'
+      name: 'Дополнительные функции:',
+      desc: 'возможность подключения электрощетки'
     },
     {
-      name: 'Количество SIM-карт:',
-      desc: '2 (nano SIM+eSIM)'
+      name: 'Тип питания:',
+      desc: 'от аккумулятора'
     },
 
   ];
@@ -28,6 +28,12 @@
   ul.chars__list
     each char in chars
       li.chars__item
-        p.chars__item-name= char.name
-        p.chars__item-desc= char.desc
-  button(type="button").chars__btn Смотреть все характеристики
+        .chars__item-name
+          p= char.name
+          .dashed-border(aria-hidden="true")
+        .chars__item-desc
+          p= char.desc
+  
+  button(type="button" data-modal-anchor="chars-modal").modal-opener.chars__btn Смотреть все характеристики
+
+  include ../../modals/chars-modal
