@@ -42,6 +42,11 @@
         left: 0;
         transform: translateX(-14rem);
     }
+
+    @media(max-width: 414px) {
+        top: 123px;
+        left: 151px;
+    } 
     
     &__wrapper {
         position: relative;
@@ -72,6 +77,9 @@
         @media(max-width: $tablet_width) {
             transform: translateX(115%) rotate(45deg);
         }
+        @media(max-width: 414px) {
+            left: 13px;
+        } 
     }
 
     &__header {

@@ -32,30 +32,29 @@
         border-radius: 1rem;
         margin: 0 1rem;
         margin-bottom: 2rem;
-        padding: 5px;
+        padding: 1rem;
 
-        /*@media(max-width: 1400px) {
+        @media(max-width: 1680px) {
             width: calc(100% / 2 - 20px);
         }
 
-        @media(max-width: $desktop_lg_width) {
-
-            
-        }
-
-        @media(max-width: 1100px) {
+        @media(max-width: 1440px) {
             width: 100%;
         }
 
-        @media(max-width: $tablet_width) {
-            width: calc(100% / 2 - 10px);
+        @media(max-width: 1240px) {
+            width: calc(100% / 3 - 2rem);
         }
 
-        @media(max-width: 500px) {
-            width: 100%;
-        }*/
+        @media(max-width: 1024px) {
+            width: calc(100% / 2 - 20px);
+        }
 
-        &-name {
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+
+        &-name { 
             font-family: $font_sec-bold;
             font-weight: 700;
             font-size: 1.5rem;
@@ -65,7 +64,7 @@
             color: $color_blue;
 
             @media(max-width: 1680px) {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
         }
 

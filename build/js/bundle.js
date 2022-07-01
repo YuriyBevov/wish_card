@@ -17493,40 +17493,20 @@ if(cardSlider) {
       watchSlidesProgress: true,
       spaceBetween: 20,
       direction: "horizontal",
-      //loop: true,
 
       breakpoints: {
 
-         960: {
-            spaceBetween: 35,
-            slidesPerView: 4,
-            direction: "vertical",
-         },
-
-         1024: {
+         535: {
             spaceBetween: 50,
             slidesPerView: 4,
             direction: "vertical",
-         }
+         },
       }
    });
 
    let swiperThumbs = new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".card-slider", {
-      //loop: true,
       spaceBetween: 10,
       slidesPerView: 1,
-
-      breakpoints: {
-
-         768: {
-            slidesPerView: 2,
-         },
-
-         960: {
-            slidesPerView: 1,
-         }
-      },
-
       thumbs: {
         swiper: swiper,
       },
@@ -17562,8 +17542,6 @@ if(cardSlider) {
    }
 }
 
-//-------------
-
 const initOffersSlider = (slider) => {
 
    if(slider) {
@@ -17571,7 +17549,6 @@ const initOffersSlider = (slider) => {
       new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
          slidesPerView: 'auto',
          spaceBetween: 14,
-         //loop: true,
    
          scrollbar: {
             el: '.swiper-scrollbar',
@@ -17657,13 +17634,6 @@ mainSliders.forEach(slider => {
          
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
       slidesPerView: 'auto',
-      // loop: true,
-      
-      breakpoints: {
-         375: {
-            //slidesPerView: 'auto',
-         },
-      },
 
       navigation: {
          nextEl: ".main-swiper-button-next",
@@ -17680,7 +17650,6 @@ offerSliders.forEach(slider => {
          
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
       slidesPerView: 'auto',
-      //loop: true,
 
       navigation: {
          nextEl: ".offer-swiper-button-next",
@@ -17734,6 +17703,21 @@ if(bannerThinSlider) {
          el: ".safety-swiper-pagination",
          clickable: true
       }
+   })
+};
+
+const burgerMenuSlider = document.querySelector('.burger-menu-swiper-container');
+
+if(burgerMenuSlider) {
+   new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](burgerMenuSlider, {
+      slidesPerView: 'auto',
+      //freeMode: true,
+      //spaceBetween: 25,
+
+      navigation: {
+         nextEl: ".burger-menu-button-next",
+         prevEl: ".burger-menu-button-prev"
+      },
    })
 };
 

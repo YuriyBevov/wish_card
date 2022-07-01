@@ -2,14 +2,14 @@
     background: #F6F9FC;
     border-radius: 1.2rem;
   
-    margin-right: 5.7rem;
+    margin-right: 6rem;
 
-    @media(max-width: $desktop_sm_width) {
-        margin-right: 3.2rem;
+    @media(max-width: 1440px) {
+        margin-right: 3rem;
     }
 
-    @media(max-width: $tablet_lg_width) {
-        margin-right: 1.6rem;
+    @media(max-width: $tablet_width) {
+        margin-right: 2rem;
     }
 
     @media(max-width: $tablet_sm_width) {
@@ -27,6 +27,7 @@
         display: flex;
         align-items: center;
         width: 100%;
+        min-width: 15rem;
         height: 100%;
         padding: 0.8rem 1.4rem;
         min-height: 6.3rem;

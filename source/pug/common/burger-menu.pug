@@ -1,57 +1,37 @@
+-
+  const burgerItems = [
+    {title: 'Блог', icon: 'icon-blog'},
+    {title: 'Доставка и самовывоз', icon: 'icon-delivery-car'},{title: 'Новости', icon: 'icon-news'},
+    {title: 'Контакты', icon: 'icon-contacts'},{title: 'Гарантия и возврат', icon: 'icon-quarantee'},
+    {title: 'Условия оплаты', icon: 'icon-payment'},{title: 'О компании', icon: 'icon-info'},
+  ]
+
 .burger.js-burger
   .burger__wrapper
+    a(href="index.html").burger__nav-logo
+      img(src="./assets/img/logo-name-svg.svg" alt="логотип" width="206" height="49")
+
     .burger__nav
-      a(href="index.html").burger__nav-logo
-        img(src="./assets/img/logo-name-svg.svg" alt="логотип" width="206" height="49")
-
       button(aria-label="закрыть меню").burger__close-btn.js-menu-closer
-        svg(width="16" height="16")
+        svg(width="10" height="10")
           use(xlink:href="#icon-close")
-
-      ul.burger__nav-list
-        li.burger__nav-item.burger__nav-item--stock
-          a(href="#")
-            img(src="./assets/img/jet.png" alt="иконка молнии" width="9" height="17")
-            span Акции
-
-        li.burger__nav-item
-          svg(width="24" height="24")
-            use(xlink:href="#icon-blog")
-          a(href="#") 
-            span Блог
-
-        li.burger__nav-item
-          svg(width="24" height="24")
-            use(xlink:href="#icon-delivery-car")
-          a(href="#") 
-            span Доставка и самовывоз
-        
-        li.burger__nav-item
-          svg(width="24" height="24")
-            use(xlink:href="#icon-contacts")
-          a(href="#")
-            span Контакты
-
-        li.burger__nav-item
-          svg(width="24" height="24")
-            use(xlink:href="#icon-contacts")
-          a(href="#") 
-            span Гарантия и возврат
-
-        li.burger__nav-item
-          a(href="#") 
-            span Условия оплаты
-
-        li.burger__nav-item
-          a(href="#") 
-            span О компании
-
-    //.burger__banner
-      a(href="#" aria-label="купить")
-        <picture>
-          <source srcset="./assets/img/header-mobile-banner_mobile.jpg" media="(max-width: 1600px)">
-
-          img(src="./assets/img/header-mobile-banner.jpg" alt="баннер" width="850" height="206")
-        </picture>
-        
-        span Купить
+        span Меню
+      
+      .burger-menu-swiper-container.burger__nav-list
+        .swiper-wrapper
+          .swiper-slide.burger__nav-item
+            a(href="#")
+              img(src="./assets/img/jet.png" alt="иконка молнии" width="9" height="17")
+              span.stock Акции
+          each item in burgerItems
+            .swiper-slide.burger__nav-item
+              a(href="#")
+                svg(width="24" height="24")
+                  use(xlink:href=`#${item.icon}`)
+                span=item.title
+        .burger-menu-button-prev.swiper-button-prev
+          svg(width="8" height="14")
+            use(xlink:href="#icon-slider-arrow")
+        .burger-menu-button-next.swiper-button-next
+          svg(width="8" height="14")
+            use(xlink:href="#icon-slider-arrow")

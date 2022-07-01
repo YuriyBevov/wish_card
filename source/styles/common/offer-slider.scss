@@ -50,8 +50,6 @@
         
         z-index: 100;
         background-color: $color_white;
-        
-        // background: linear-gradient(90deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
 
         @media(max-width: $tablet_xs_width) {
             display: none;
@@ -85,23 +83,10 @@
 
     .offer-swiper-button-next {
         left: calc(100% - 50px);
-        //background: linear-gradient(270deg, #FFFFFF 63.95%, rgba(255, 255, 255, 0) 99.4%);
-        
-        @media(max-width: $tablet_width) {
-            //left: calc(100% - 53px);
-        }
         
         .btn {
             left: -6px;
             transform: rotate(-180deg) translate(-50%, 50%);
-
-            @media(max-width: $tablet_width) {
-                //left: 18px;
-            }
         }
     }
-
-    /*.swiper-button-disabled {
-        opacity: .5;
-    } */
 }

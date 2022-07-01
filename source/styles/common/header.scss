@@ -1,12 +1,7 @@
 .header {
     background: $color_white;
-    //box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
-    /*position: sticky;
-    top: 0;
-    left: 0;*/
     z-index: 10;
     max-height: 100vh;
-    //overflow-y: auto;
 
     @media(max-width: $tablet_sm_width) {
         position: relative;
@@ -23,63 +18,68 @@
         }
     }
 
+    &__city-info {
+        @media(max-width: 414px) {
+            width: 100%;
+        }
+    }
+
     &__wrapper {
         position: relative;
-        padding-left: 22.3rem;
+        padding-left: 6rem;
         max-width: 1920px;
         margin: 0 auto;
         background-color: $color_white;
         z-index: 100;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+
+        @media(max-width: 1440px) {
+           padding-left: 3rem;
+        }
         
         @media(max-width: $desktop_lg_width) {
             margin-bottom: 0;
-            padding-left: 12.3rem;
-        }
-
-        @media(max-width: $desktop_sm_width) {
-            padding-left: 9.3rem;
-        }
-        
-        @media(max-width: $tablet_lg_width) {
-            padding-left: 6.3rem;
         }
 
         @media(max-width: $tablet_width) {
-            padding-left: 1.6rem;
-        }        
+            padding-left: 1.5rem;
+        }    
     }
 
     &__top {
         display: flex;
         align-items: center;
-        padding: 1rem 0;
+        padding: 1.5rem 0;
         border-bottom: 1px solid #E6E6E6;
 
         .header__nav {
-            //margin-right: auto;
             flex-grow: 1;
+
+            @media(max-width: 414px) {
+                margin-bottom: 1.5rem;
+            }
         }
 
         @media(max-width: $tablet_width) {
             border-bottom: 0;
             padding-right: 16rem;
         }
-    }
 
-    
+        @media(max-width: 414px) {
+            flex-direction: column;
+            padding-right: 0;
+            align-items: flex-start;
+            padding-bottom: 0;
+        }
+    }
 
     &__bottom {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
 
-        @media(max-width: $desktop_sm_width) {
-            padding-top: 1.6rem;
-        }
-
-        @media(max-width: $tablet_width) {
-            padding: 0;
+        @media(max-width: 1200px) {
+            padding: 1.5rem 0;
         }
 
         a {
@@ -94,7 +94,7 @@
             border-radius: 0.8rem;
 
             @media(max-width: $desktop_sm_width) {
-                margin-right: 1.2rem;
+                margin-right: 1.5rem;
                 min-width: 17.6rem;
             }
 
@@ -102,7 +102,12 @@
                 min-height: 4.2rem;
             }
 
-            @media(max-width: 374px) {
+            @media(max-width: 640px) {
+                width: 22rem;
+                margin-bottom: 1.5rem;
+            }
+
+            @media(max-width: 414px) {
                 width: 100%;
             }
 
@@ -139,18 +144,16 @@
 
             @media(max-width: $desktop_sm_width) {
                 max-width: 100%;
-            }
-
-            @media(max-width: $tablet_lg_width) {
-                margin-right: 1.6rem;
+                margin-right: 3rem;
             }
 
             @media(max-width: $tablet_width) {
                 margin-right: 18rem;
             }
 
-            @media(max-width: 644px) {
-                display: none;
+            @media(max-width: 640px) {
+                width: 100%;
+                margin-right: 1.5rem;
             }
 
             input {
@@ -198,30 +201,8 @@
             margin-left: auto;
             background-color: #F5F8FB;
 
-            @media(max-width: $desktop_sm_width) {
-                width: 100%;
-                margin-top: 1.3rem;
-
-                margin-left: -9.3rem;
-                width: calc(100% + 9.3rem);
-            }
-
-            @media(max-width: $tablet_lg_width) {
-                margin-left: -7.3rem;
-                width: calc(100% + 7.3rem);
-            }
-
-            @media(max-width: $tablet_width) {
-                margin-left: -10.3rem;
-                width: calc(100% + 10.3rem);
-            }
-
-            @media(max-width: 534px) {
-                padding-left: 16.6rem;
-            }
-
-            @media(max-width: 374px) {
-                padding-left: 10.3rem;
+            @media(max-width: 1200px) {
+                display: none;
             }
 
             img {

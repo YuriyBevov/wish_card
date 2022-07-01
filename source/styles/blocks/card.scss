@@ -81,8 +81,8 @@
         &-wrapper {
             display: flex;
 
-            @media(max-width: $tablet_width) { 
-               flex-direction: column;
+            @media(max-width: 1240px) { 
+               flex-direction: column; 
             }
         }
 
@@ -93,7 +93,7 @@
                 display: flex;
                 width: 100%;
 
-                @media(max-width: 1280px) {
+                @media(max-width: 1680px) {
                     flex-direction: column;
                 }
             }
@@ -108,18 +108,23 @@
                 display: flex;
                 align-items: center;
                 padding: 1.6rem 2rem;
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
                 min-height: 33rem;
-
-                @media(max-width: $tablet_width) {
-                    margin-bottom: 2.1rem;
-                }
             }
 
             &-bottom {
                 display: flex;
 
                 @media(max-width: $desktop_sm_width) {
+                    flex-direction: column;
+                }
+
+                
+                @media(max-width: 1240px) {
+                    flex-direction: row;
+                }
+
+                @media(max-width: 768px) {
                     flex-direction: column;
                 }
             }

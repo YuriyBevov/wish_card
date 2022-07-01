@@ -7,18 +7,18 @@
     display: flex;
     margin-right: 3.4rem;
 
-    @media(max-width: $desktop_lg_width) {
-        margin-right: 1.9rem;
-    }
-
-    @media(max-width: $tablet_width) {
-        margin-bottom: 2.4rem;
-        flex-direction: column;
-    }
-
-    @media(max-width: $tablet_width) {
+    @media(max-width: 1240px) {
+        position: initial;
+        top: 0;
         max-width: 100%;
         margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    @media(max-width: 534px) {
+        height: 43rem;
+        margin-bottom: 2.4rem;
+        flex-direction: column;
     }
 
     .card-swiper-container {
@@ -26,45 +26,19 @@
         height: 100%;
         overflow: hidden;
 
-        /*@media(max-width: $desktop_lg_width) {
-            height: 49rem;
-        }
-
-        @media(max-width: $desktop_sm_width) {
-            height: 43.5rem;
-        }
-
-        @media(max-width: $tablet_lg_width) {
-            height: 41.2rem;
-        }
-
-        @media(max-width: $tablet_width) {
+        @media(max-width: 534px) {
             height: 34.7rem;
-        }*/
+        }
     }
 
     .card-slider  {
-        //width: 54rem;
         order: 2;
         border-radius: 10px;
 
-        /*@media(max-width: $desktop_lg_width) {
-            width: 54rem;
-        }*/
-
-        /*@media(max-width: $desktop_sm_width) {
-            width: 43rem;
-        }
-
-        @media(max-width: $tablet_lg_width) {
-            width: 40.8rem;
-        }
-
-        @media(max-width: $tablet_width) {
-            width: 100%;
+        @media(max-width: 534px) {
             margin-bottom: 1.1rem;
-        }*/
-
+        }
+        
         .swiper-slide {
             background-color: white;
             align-items: center;
@@ -91,7 +65,7 @@
                 width: 8rem;
                 height: 10.3rem;
 
-                @media(max-width: $tablet_width) {
+                @media(max-width: 534px) {
                     width: 5.8rem;
                     height: 7.4rem;
                 }
@@ -131,7 +105,7 @@
             height: 43.5rem;            
         }
 
-        @media(max-width: $tablet_width) {
+        @media(max-width: 534px) {
             width: fit-content;
             max-width: 100%;
             height: 6.6rem;
@@ -166,7 +140,7 @@
             width: 100%;
             background-image: url("../assets/img/card-slider-arr-bottom.svg");
 
-            @media(max-width: $tablet_width) {
+            @media(max-width: 534px) {
                 right: 0;
                 background-image: url("../assets/img/card-slider-arr-right.svg");
             }
@@ -176,7 +150,7 @@
             top: 0;
             background-image: url("../assets/img/card-slider-arr-top.svg");
 
-            @media(max-width: $tablet_width) {
+            @media(max-width: 534px) {
                 left: 0;
                 background-image: url("../assets/img/card-slider-arr-left.svg");
             }
@@ -194,7 +168,7 @@
             background-color: #f6f9fc;
             z-index: 100;
 
-            @media(max-width: $tablet_width) {
+            @media(max-width: 534px) {
                 width: 2.4rem;
                 height: 100%;
                 

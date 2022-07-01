@@ -59,10 +59,10 @@
         display: flex;
         align-items: center;
 
-        color: #97A2AC;
+        color: $color_darkblue;
 
         background-color: transparent;
-        border: 1px solid #97A2AC;
+        border: 1px solid $color_darkblue;
         border-radius: 0.8rem;
         margin-right: 2.3rem;
 
@@ -75,6 +75,7 @@
         }
 
         svg {
+            fill: $color_darkblue;
             margin-right: 1rem;
             transition: fill $transition-rules;
         }
@@ -83,26 +84,24 @@
 
         &:hover,
         &:focus {
-            color: $color_blue;
-            border: 1px solid $color_blue;
+            color: #97A2AC;
+            border: 1px solid #97A2AC;
 
             svg {
-                fill: $color_blue;
+                fill: #97A2AC;
             }
         }
     }
 
     &__list {
         display: flex;
-        flex-grow: 1;
         align-items: center;
 
         @media(max-width: $desktop_lg_width) {
-            //flex-direction: column;
             flex-wrap: wrap;
         }
 
-        @media(max-width: $desktop_sm_width) {
+        @media(max-width: 1280px) {
             &--tab-hide {
                 display: none;
             }

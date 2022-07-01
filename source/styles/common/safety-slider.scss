@@ -30,19 +30,6 @@
     @media(max-width: 534px) {
         display: none; 
     }
-    
-    /*&::before {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        content: '';
-        width: 3rem;
-        height: 3.2rem; 
-        background-image: url('../assets/img/banner-icon.png'); 
-        background-repeat: no-repeat;
-        background-size: cover;
-        z-index: 10;
-    }*/
 
     .swiper-slide {
         background-size: cover;
@@ -73,25 +60,6 @@
                height: 207px;
                object-fit: contain;
             }
-
-            /*h3 {
-                font-family: $font_banner_semi;
-                font-size: 2.6rem;
-                line-height: 2.6rem;
-                margin-bottom: 2.4rem;
-                max-width: 20rem;
-
-                color: $color_white;
-            }
-    
-            p {
-                font-family: $font_banner_semi;
-                font-size: 1.4rem;
-                line-height: 1.7rem;
-                margin-bottom: 1.4rem;
-
-                color: $color_white;
-            }*/
         }
     }
 
