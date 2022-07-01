@@ -7,7 +7,7 @@ import './modules/swiper.js'
 import './modules/menu.js'
 import './modules/range.js';
 //import catalogMenu from './modules/catalogMenu.js'
-//import catalogMenu from './modules/catalog.js'
+import'./modules/catalog.js'
 import './modules/masonry.js'
 import './modules/filter.js'
 //import './modules/scrollToChars.js';

@@ -263,8 +263,6 @@ const burgerMenuSlider = document.querySelector('.burger-menu-swiper-container')
 if(burgerMenuSlider) {
    new Swiper(burgerMenuSlider, {
       slidesPerView: 'auto',
-      //freeMode: true,
-      //spaceBetween: 25,
 
       navigation: {
          nextEl: ".burger-menu-button-next",

@@ -16876,15 +16876,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/menu.js */ "./source/scripts/modules/menu.js");
 /* harmony import */ var _modules_menu_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_menu_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _modules_range_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/range.js */ "./source/scripts/modules/range.js");
-/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/masonry.js */ "./source/scripts/modules/masonry.js");
-/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_masonry_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/filter.js */ "./source/scripts/modules/filter.js");
-/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_filter_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _modules_limitStr_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/limitStr.js */ "./source/scripts/modules/limitStr.js");
-/* harmony import */ var _modules_limitStr_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_limitStr_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _modules_cityChooser_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/cityChooser.js */ "./source/scripts/modules/cityChooser.js");
-/* harmony import */ var _modules_cityChooser_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_cityChooser_js__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _modules_modals_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/modals.js */ "./source/scripts/modules/modals.js");
+/* harmony import */ var _modules_catalog_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/catalog.js */ "./source/scripts/modules/catalog.js");
+/* harmony import */ var _modules_catalog_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_catalog_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/masonry.js */ "./source/scripts/modules/masonry.js");
+/* harmony import */ var _modules_masonry_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_masonry_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/filter.js */ "./source/scripts/modules/filter.js");
+/* harmony import */ var _modules_filter_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_filter_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _modules_limitStr_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/limitStr.js */ "./source/scripts/modules/limitStr.js");
+/* harmony import */ var _modules_limitStr_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_limitStr_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _modules_cityChooser_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/cityChooser.js */ "./source/scripts/modules/cityChooser.js");
+/* harmony import */ var _modules_cityChooser_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_cityChooser_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _modules_modals_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/modals.js */ "./source/scripts/modules/modals.js");
 
 
 
@@ -16894,7 +16896,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //import catalogMenu from './modules/catalogMenu.js'
-//import catalogMenu from './modules/catalog.js'
+
 
 
 //import './modules/scrollToChars.js';
@@ -16902,6 +16904,68 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/***/ }),
+
+/***/ "./source/scripts/modules/catalog.js":
+/*!*******************************************!*\
+  !*** ./source/scripts/modules/catalog.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*const items = document.querySelectorAll('.catalog-menu__cats-item');
+let active = document.querySelector('.catalog-menu__cats-item.active');
+
+const inners = document.querySelectorAll('.catalog-menu__inner-list');
+let activeInner = inners[active.getAttribute('data-id') - 1]
+activeInner.style.display = 'block';
+let activeInnerItem = activeInner.querySelector('.catalog-menu__cats-link');
+activeInnerItem.classList.add('active');
+
+let activeProducts = activeInner.querySelector('.catalog-menu__product-list');
+
+activeProducts.style.display = 'block';
+
+const onMouseOverShowInnerList = (evt) => {
+    if(evt.currentTarget !== active) {
+        active.classList.remove('active');
+        activeInner.style.display = 'none';
+        activeProducts.style.display = 'none';
+        activeInnerItem.classList.remove('active');
+        active = evt.currentTarget;
+        active.classList.add('active');
+        
+        activeInner = inners[active.getAttribute('data-id') - 1]
+        activeInner.style.display = 'block';
+        activeInnerItem = activeInner.querySelector('.catalog-menu__cats-link');
+        activeInnerItem.classList.add('active');
+
+        activeProducts = activeInner.querySelector('.catalog-menu__product-list');
+
+        activeProducts.style.display = 'block';
+    }
+}
+
+items.forEach(item => {
+    item.addEventListener('mouseover', onMouseOverShowInnerList)
+})*/
+
+const catalog = document.querySelector('.catalog-menu');
+const items = catalog.querySelectorAll('.catalog-menu__item');
+
+const onMouseOverChangeActiveItem = (evt) => {
+    if(!evt.currentTarget.classList.contains('active')) {
+        catalog.querySelector('.catalog-menu__item.active')
+        .classList.remove('active');
+
+        evt.currentTarget.classList.add('active');
+    }
+}
+
+items.forEach(item => {
+    item.addEventListener('mouseover', onMouseOverChangeActiveItem);
+})
 
 /***/ }),
 
@@ -17711,8 +17775,6 @@ const burgerMenuSlider = document.querySelector('.burger-menu-swiper-container')
 if(burgerMenuSlider) {
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](burgerMenuSlider, {
       slidesPerView: 'auto',
-      //freeMode: true,
-      //spaceBetween: 25,
 
       navigation: {
          nextEl: ".burger-menu-button-next",

@@ -1,4 +1,4 @@
-const items = document.querySelectorAll('.catalog-menu__cats-item');
+/*const items = document.querySelectorAll('.catalog-menu__cats-item');
 let active = document.querySelector('.catalog-menu__cats-item.active');
 
 const inners = document.querySelectorAll('.catalog-menu__inner-list');
@@ -33,4 +33,20 @@ const onMouseOverShowInnerList = (evt) => {
 
 items.forEach(item => {
     item.addEventListener('mouseover', onMouseOverShowInnerList)
+})*/
+
+const catalog = document.querySelector('.catalog-menu');
+const items = catalog.querySelectorAll('.catalog-menu__item');
+
+const onMouseOverChangeActiveItem = (evt) => {
+    if(!evt.currentTarget.classList.contains('active')) {
+        catalog.querySelector('.catalog-menu__item.active')
+        .classList.remove('active');
+
+        evt.currentTarget.classList.add('active');
+    }
+}
+
+items.forEach(item => {
+    item.addEventListener('mouseover', onMouseOverChangeActiveItem);
 })
