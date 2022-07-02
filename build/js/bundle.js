@@ -16914,58 +16914,88 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*const items = document.querySelectorAll('.catalog-menu__cats-item');
-let active = document.querySelector('.catalog-menu__cats-item.active');
+const catalogOpener = document.querySelector('.js-open-catalog-menu');
 
-const inners = document.querySelectorAll('.catalog-menu__inner-list');
-let activeInner = inners[active.getAttribute('data-id') - 1]
-activeInner.style.display = 'block';
-let activeInnerItem = activeInner.querySelector('.catalog-menu__cats-link');
-activeInnerItem.classList.add('active');
+if(catalogOpener) {
+    const catalog = document.querySelector('.catalog-menu');
 
-let activeProducts = activeInner.querySelector('.catalog-menu__product-list');
+    const onClickShowCatalog = () => {
+        catalog.classList.toggle('opened');
+    }
+    catalogOpener.addEventListener('click', onClickShowCatalog);
 
-activeProducts.style.display = 'block';
+    function setActiveProductList(activeInnerItem) {
+        activeProductList.classList.remove('active');
+        activeProductList = document.querySelector(`.catalog-menu__product-list[data-product=${activeInnerItem.getAttribute("data-product")}]`);
+        activeProductList.classList.add('active');
+    }
 
-const onMouseOverShowInnerList = (evt) => {
-    if(evt.currentTarget !== active) {
-        active.classList.remove('active');
-        activeInner.style.display = 'none';
-        activeProducts.style.display = 'none';
-        activeInnerItem.classList.remove('active');
-        active = evt.currentTarget;
-        active.classList.add('active');
-        
-        activeInner = inners[active.getAttribute('data-id') - 1]
-        activeInner.style.display = 'block';
-        activeInnerItem = activeInner.querySelector('.catalog-menu__cats-link');
+    function setActiveInnerItem(innerItems, activeItem) {
+        innerItems.forEach(inner => {
+            inner.classList.contains('active') ?
+            inner.classList.remove('active') : null;
+        });
+        activeInnerItem = activeItem;
         activeInnerItem.classList.add('active');
-
-        activeProducts = activeInner.querySelector('.catalog-menu__product-list');
-
-        activeProducts.style.display = 'block';
     }
-}
 
-items.forEach(item => {
-    item.addEventListener('mouseover', onMouseOverShowInnerList)
-})*/
+    function onMouseOverSetItem(evt) {
+        if(
+            evt.currentTarget.classList.contains('catalog-menu__item')
+            && !evt.currentTarget.classList.contains('active')
+          ) {
+            
+            items.forEach(item => {
+                item.classList.contains('active') ?
+                item.classList.remove('active') : null;
+            });
 
-const catalog = document.querySelector('.catalog-menu');
-const items = catalog.querySelectorAll('.catalog-menu__item');
+            evt.currentTarget.classList.add('active');
 
-const onMouseOverChangeActiveItem = (evt) => {
-    if(!evt.currentTarget.classList.contains('active')) {
-        catalog.querySelector('.catalog-menu__item.active')
-        .classList.remove('active');
+            innerItems.forEach(inner => {
+                inner.removeEventListener('mouseover', onMouseOverSetInnerItem);
+            });
 
-        evt.currentTarget.classList.add('active');
+            innerItems = evt.currentTarget.querySelectorAll('.catalog-menu__inner-item');
+
+            setActiveInnerItem(innerItems, innerItems[0]);
+            setActiveProductList(activeInnerItem);
+
+            innerItems.forEach(inner => {
+                inner.addEventListener('mouseover', onMouseOverSetInnerItem);
+            });
+        }
     }
-}
 
-items.forEach(item => {
-    item.addEventListener('mouseover', onMouseOverChangeActiveItem);
-})
+    function onMouseOverSetInnerItem(evt) {
+        if(
+            evt.currentTarget.classList.contains('catalog-menu__inner-item')
+            && !evt.currentTarget.classList.contains('active')
+          ) {
+            setActiveInnerItem(innerItems, evt.currentTarget);
+            setActiveProductList(activeInnerItem);
+        }
+    }
+
+    const items = catalog.querySelectorAll('.catalog-menu__item');
+    let activeItem = items[0];
+    activeItem.classList.add('active');
+
+    let innerItems = activeItem.querySelectorAll('.catalog-menu__inner-item');
+    let activeInnerItem = innerItems[0];
+    activeInnerItem.classList.add('active');
+
+    let activeProductList = document.querySelector(`.catalog-menu__product-list[data-product=${activeInnerItem.getAttribute("data-product")}]`);
+    activeProductList.classList.add('active');
+
+    items.forEach(item => {
+        item.addEventListener('mouseover', onMouseOverSetItem);
+    });
+
+    innerItems.forEach(inner => {
+        inner.addEventListener('mouseover', onMouseOverSetInnerItem);
+    });
+}
 
 /***/ }),
 
