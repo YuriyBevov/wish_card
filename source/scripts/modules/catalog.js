@@ -5,8 +5,31 @@ if(catalogOpener) {
 
     const onClickShowCatalog = () => {
         catalog.classList.toggle('opened');
+
+        if(catalog.classList.contains('opened')) {
+            init();
+        } else {
+            catalogMenu.classList.contains('mobile-hide') ?
+            catalogMenu.classList.remove('mobile-hide') : null;            
+        }
     }
     catalogOpener.addEventListener('click', onClickShowCatalog);
+    
+    let categoryItems = document.querySelectorAll('.catalog-menu__inner-item:not(.catalog-menu__back)');
+    let catalogMenu = document.querySelector('.catalog-menu__list');
+    let backBtn = document.querySelectorAll('.catalog-menu__back');
+
+    categoryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            catalogMenu.classList.add('mobile-hide');
+        })
+    })
+
+    backBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            catalogMenu.classList.remove('mobile-hide');
+        })
+    })
 
     function setActiveProductList(activeInnerItem) {
         activeProductList.classList.remove('active');
@@ -24,11 +47,15 @@ if(catalogOpener) {
     }
 
     function onMouseOverSetItem(evt) {
+        if(type === 'mobile') {
+            evt.preventDefault();
+        }
+
         if(
             evt.currentTarget.classList.contains('catalog-menu__item')
             && !evt.currentTarget.classList.contains('active')
           ) {
-            
+
             items.forEach(item => {
                 item.classList.contains('active') ?
                 item.classList.remove('active') : null;
@@ -38,45 +65,93 @@ if(catalogOpener) {
 
             innerItems.forEach(inner => {
                 inner.removeEventListener('mouseover', onMouseOverSetInnerItem);
+                inner.removeEventListener('click', onMouseOverSetInnerItem);
             });
 
-            innerItems = evt.currentTarget.querySelectorAll('.catalog-menu__inner-item');
+            innerItems = evt.currentTarget.querySelectorAll('.catalog-menu__inner-item:not(.catalog-menu__back)');
 
             setActiveInnerItem(innerItems, innerItems[0]);
             setActiveProductList(activeInnerItem);
 
             innerItems.forEach(inner => {
-                inner.addEventListener('mouseover', onMouseOverSetInnerItem);
+                if(type === 'desktop') {
+                    inner.addEventListener('mouseover', onMouseOverSetInnerItem);
+                } else {
+                    inner.addEventListener('click', onMouseOverSetInnerItem);
+                }
             });
         }
     }
 
     function onMouseOverSetInnerItem(evt) {
+        if(type === 'mobile') {
+            evt.preventDefault();
+        }
+
         if(
             evt.currentTarget.classList.contains('catalog-menu__inner-item')
-            && !evt.currentTarget.classList.contains('active')
           ) {
             setActiveInnerItem(innerItems, evt.currentTarget);
             setActiveProductList(activeInnerItem);
         }
     }
+    
+    function init() {
+        if(type === 'desktop') {
+            items.forEach(item => {
+                item.addEventListener('mouseover', onMouseOverSetItem);
+            });
+        
+            innerItems.forEach(inner => {
+                inner.addEventListener('mouseover', onMouseOverSetInnerItem);
+            });
+        } else {
+            items.forEach(item => {
+                item.addEventListener('click', onMouseOverSetItem);
+            });
+        
+            innerItems.forEach(inner => {
+                inner.addEventListener('click', onMouseOverSetInnerItem);
+            });
+        }
+    }
 
-    const items = catalog.querySelectorAll('.catalog-menu__item');
+    const items = catalog.querySelectorAll('.catalog-menu__item:not(.catalog-menu__back)');
     let activeItem = items[0];
-    activeItem.classList.add('active');
-
-    let innerItems = activeItem.querySelectorAll('.catalog-menu__inner-item');
+    let innerItems = activeItem.querySelectorAll('.catalog-menu__inner-item:not(.catalog-menu__back)');
     let activeInnerItem = innerItems[0];
-    activeInnerItem.classList.add('active');
-
     let activeProductList = document.querySelector(`.catalog-menu__product-list[data-product=${activeInnerItem.getAttribute("data-product")}]`);
+    activeItem.classList.add('active');
+    activeInnerItem.classList.add('active');
     activeProductList.classList.add('active');
 
-    items.forEach(item => {
-        item.addEventListener('mouseover', onMouseOverSetItem);
-    });
+    let type;
 
-    innerItems.forEach(inner => {
-        inner.addEventListener('mouseover', onMouseOverSetInnerItem);
-    });
+    if(window.innerWidth > 820) {
+        type = 'desktop';
+    } else {
+        type = 'mobile';
+    }
+
+    const onResizeCloseCatalog = () => {
+        catalog.classList.remove('opened');
+
+        if(window.innerWidth > 820) {
+            type = 'desktop';
+        } else {
+            type = 'mobile';
+        }
+
+        items.forEach(item => {
+            item.removeEventListener('mouseover', onMouseOverSetItem);
+            item.removeEventListener('click', onMouseOverSetItem);
+        });
+    
+        innerItems.forEach(inner => {
+            inner.removeEventListener('mouseover', onMouseOverSetInnerItem);
+            inner.removeEventListener('click', onMouseOverSetInnerItem);
+        });
+    }
+
+    window.addEventListener('resize', onResizeCloseCatalog);
 }
