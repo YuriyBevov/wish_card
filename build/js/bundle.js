@@ -17069,7 +17069,7 @@ if(catalogOpener) {
         });
     }*/
 
-    window.addEventListener('resize', onResizeCloseCatalog);
+ //   window.addEventListener('resize', onResizeCloseCatalog); 
 }
 
 /***/ }),
