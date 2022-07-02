@@ -122,11 +122,14 @@ section.cmn.offers
           button(type="button" data-id="2") Аксессуары
         h2.offers__title В комплекте выгоднее!
         
-      .offers-swiper-container
+      .offers-swiper-container.offer-slider
         .swiper-wrapper
           each acc in accessories
             .swiper-slide
               +acc_card(acc.className, acc.saleValue, acc.accName, acc.accGift, acc.newPrice, acc.oldPrice, acc.imgUrl)
-        <div class="offers-swiper-button-next"></div>
-        <div class="offers-swiper-button-prev"></div>
+
+        .swiper-button-prev.offers-swiper-button-prev
+          .btn
+        .swiper-button-next.offers-swiper-button-next
+          .btn
         <div class="swiper-scrollbar"></div>

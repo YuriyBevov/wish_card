@@ -17714,7 +17714,6 @@ if(cardSlider) {
 const initOffersSlider = (slider) => {
 
    if(slider) {
-      
       new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"] (slider, {
          slidesPerView: 'auto',
          spaceBetween: 14,

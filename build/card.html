@@ -693,8 +693,8 @@
           </div>
         </div>
         <div class="header__bottom"><a class="js-open-catalog-menu" href="#">
-            <svg width="10" height="10">
-              <use xlink:href="#icon-catalog-menu"></use>
+            <svg width="24" height="24">
+              <use xlink:href="#icon-catalog-burger"></use>
             </svg><span>Каталог товаров</span></a>
           <form action="#">
             <input type="text" placeholder="Поиск по сайту" autocomplete="off">
@@ -2139,7 +2139,7 @@
               </div>
               <h2 class="offers__title">В комплекте выгоднее!</h2>
             </div>
-            <div class="offers-swiper-container">
+            <div class="offers-swiper-container offer-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                         <div class="acc-card">
@@ -2405,14 +2405,17 @@
                           </div>
                         </div>
                 </div>
-              </div><div class="offers-swiper-button-next"></div>
-<div class="offers-swiper-button-prev"></div>
-<div class="swiper-scrollbar"></div>
+              </div>
+              <div class="swiper-button-prev offers-swiper-button-prev">
+                <div class="btn"></div>
+              </div>
+              <div class="swiper-button-next offers-swiper-button-next">
+                <div class="btn"></div>
+              </div><div class="swiper-scrollbar"></div>
             </div>
           </div>
         </div>
       </section>
-      <!--include ./blocks/description-->
       <section class="cmn advantages">
         <div class="cmn__wrapper">
           <div class="advantages__wrapper">
@@ -2516,7 +2519,6 @@
         </div>
       </div>
     </footer>
-    <!-- include ./modals/menuModal-->
     <script src="./js/bundle.js"></script>
   </body>
 </html>

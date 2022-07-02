@@ -40,13 +40,20 @@
         }
     }
 
-    .offer-swiper-button-prev,
-    .offer-swiper-button-next {
+    .swiper-button-next,
+    .swiper-button-prev {
+        &:after {
+            display: none;
+        }
+    }
+
+    .offers-swiper-button-prev,
+    .offers-swiper-button-next {
         position: absolute;
         top: 0;
         left: 0;
         width: 50px;
-        height: 100%;
+        height: 101%;
         
         z-index: 100;
         background-color: $color_white;
@@ -81,7 +88,7 @@
         }
     }
 
-    .offer-swiper-button-next {
+    .offers-swiper-button-next {
         left: calc(100% - 50px);
         
         .btn {

@@ -97,7 +97,6 @@ if(cardSlider) {
 const initOffersSlider = (slider) => {
 
    if(slider) {
-      
       new Swiper (slider, {
          slidesPerView: 'auto',
          spaceBetween: 14,
