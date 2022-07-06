@@ -448,6 +448,9 @@
 
 .catalog-menu
   .catalog-menu__wrapper
+    button(type="button").js-catalog-menu-closer
+      svg(width="16" height="16")
+        use(xlink:href="#icon-close")
     ul.catalog-menu__list
       each item in catalog
         li.catalog-menu__item( data-id= item.id)
@@ -466,6 +469,9 @@
                   svg(width="12" height="12").catalog-arrow
                     use(xlink:href='#icon-catalog-arrow')
                   span= inner.title
+      li.catalog-menu__all
+        a(href="test.html")
+          span Весь каталог
     
     .catalog-menu__products
       each item in catalog

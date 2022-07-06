@@ -1,6 +1,6 @@
 .catalog-menu {
     position: absolute;
-    height: 53.5rem;
+    height: 60rem;
     width: 100%;
     box-shadow: 0px 2px 10px rgba(29, 30, 36, 0.07);
     background-color: $color-white;
@@ -33,6 +33,19 @@
         min-height: inherit;
         padding-left: 6rem;
         margin: 0 auto;
+
+        button {
+            position: absolute;
+            top: 0;
+            left: .8rem;
+            z-index: 151;
+            background-color: transparent;
+            border: 0;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     /*list*/
@@ -41,7 +54,7 @@
         width: 22.5rem;
         height: 100%;
         min-height: inherit;
-        padding-top: 1.5rem;
+        padding-top: 2.5rem;
 
         background-color: #F6F9FC;
 
@@ -78,6 +91,22 @@
                     transform: translateX(-500px);
                 }
             }
+        }
+    }
+
+    &__all {
+        a {
+            width: 100%;
+            height: 100%;
+            min-height: 4rem;
+            padding-right: 3rem;
+            display: flex;
+            align-items: center;
+            font-family: $font_sec-reg;
+            font-size: 16px;
+
+            text-decoration: underline !important;
+            color: $color_blue;
         }
     }
 
@@ -122,24 +151,14 @@
         left: 100%;
         width: 25rem;
         height: 100%;
-        max-height: 53.5rem;
-        padding: 1.5rem 0;
+        max-height: 60rem;
+        padding: 2.5rem 0;
         padding-left: 2rem;
         background-color: $color_lightblue-100;
         opacity: 0;
 
         overflow: hidden;
         overflow-y: auto;
-
-        /*@media(max-width: 1240px) {
-            width: 30rem;
-            transform: translateX(-200%);
-            z-index: 99;
-
-            &.active {
-                transform: translateX(-100%);
-            }
-        }*/
 
         @media(max-width: 820px) {
             position: relative;
@@ -174,13 +193,13 @@
     &__products {
         position: relative;
         left: 25rem;
-        padding: 1.5rem 2rem;
+        padding: 2.5rem 2rem;
         width: fit-content;
         min-width: 28rem;
         max-width: 35rem;
         
         height: 100%;
-        max-height: 53.5rem;
+        max-height: 60rem;
         overflow: hidden;
         overflow-y: auto;
 
@@ -324,7 +343,7 @@
             width: 100%;
             max-width: 40.7rem;
             height: 100%;
-            max-height: 53.5rem;
+            max-height: 60rem;
             object-fit: contain;
         }
 

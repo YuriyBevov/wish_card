@@ -5,6 +5,10 @@
     padding: 0 5rem;
     margin: 0 auto;
 
+    @media (max-width: $tablet_xs_width) {
+        padding: 0;
+    }
+
     .swiper-slide {
         width: 23rem;
         margin-right: 1.5rem;

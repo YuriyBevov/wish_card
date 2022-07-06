@@ -1,20 +1,21 @@
 const catalogOpener = document.querySelector('.js-open-catalog-menu');
 
+
 if(catalogOpener) {
     const catalog = document.querySelector('.catalog-menu');
-
+    const closer = catalog.querySelector('.js-catalog-menu-closer');
+    
     const onClickShowCatalog = () => {
         catalog.classList.toggle('opened');
 
         if(catalog.classList.contains('opened')) {
             init();
-        } /*else {
-            catalogMenu.classList.contains('mobile-hide') ?
-            catalogMenu.classList.remove('mobile-hide') : null;            
-        }*/
+        }
     }
+
     catalogOpener.addEventListener('click', onClickShowCatalog);
-    
+    closer.addEventListener('click', onClickShowCatalog);
+
     let categoryItems = document.querySelectorAll('.catalog-menu__inner-item:not(.catalog-menu__back)');
     let catalogMenu = document.querySelector('.catalog-menu__list');
     let backBtn = document.querySelectorAll('.catalog-menu__back');
@@ -132,26 +133,4 @@ if(catalogOpener) {
     } else {
         type = 'mobile';
     }
-
-    /*const onResizeCloseCatalog = () => {
-        //catalog.classList.remove('opened');
-        init();
-        if(window.innerWidth > 820) {
-            type = 'desktop';
-        } else {
-            type = 'mobile';
-        }
-
-        items.forEach(item => {
-            item.removeEventListener('mouseover', onMouseOverSetItem);
-            item.removeEventListener('click', onMouseOverSetItem);
-        });
-    
-        innerItems.forEach(inner => {
-            inner.removeEventListener('mouseover', onMouseOverSetInnerItem);
-            inner.removeEventListener('click', onMouseOverSetInnerItem);
-        });
-    }*/
-
- //   window.addEventListener('resize', onResizeCloseCatalog); 
 }
