@@ -1,20 +1,51 @@
+include ../../mixins/safety-slider
+-
+  const safetyList = [
+      {
+        title: 'Пылесос Dyson V15 Detect Absolute',
+        img: './assets/img/sm-banner1.png'
+      },
+      {
+        title: 'Фен Dyson Supersonic HD07 Gift Edition',
+        img: './assets/img/sm-banner2.png'
+      },
+      {
+        title: 'Очиститель воздуха Dyson Pure Cool Me',
+        img: './assets/img/sm-banner3.png'
+      },
+      {
+        title: 'Фен Dyson Supersonic Professional',
+        img: './assets/img/sm-banner4.png'
+      },
+  ]
+
 section.intro
   h1.visually-hidden Wishmaster - интернет магазин электроники
-  .intro__wrapper
-    .intro-swiper-container.intro-slider
-      .swiper-wrapper
-        .swiper-slide
-          a(href="#") 
-            picture
-              source(media="(max-width: 768px)" srcset="./assets/img/banner_3-mobile.png" type="image/png")    
-              source(media="(max-width: 1140px)" srcset="./assets/img/banner_3-lg.png" type="image/png")    
-              img(src="./assets/img/banner_3.png" alt="баннер" width="1900" height="400")
-        
-        .swiper-slide
-          a(href="#") 
-            picture
-              source(media="(max-width: 768px)" srcset="./assets/img/banner_4-mobile.png" type="image/png")    
-              source(media="(max-width: 1140px)" srcset="./assets/img/banner_4-lg.png" type="image/png")    
-              img(src="./assets/img/banner_4.png" alt="баннер" width="1900" height="400")
+  .cmn__wrapper
+    .intro__wrapper
+      .intro-swiper-container.intro-slider
+        .swiper-wrapper
+          .swiper-slide
+            a(href="#") 
+              picture
+                // 768*480
+                source(media="(max-width: 767px)" srcset="./assets/img/banner_3-mobile.png" type="image/png")
+                // 1140*400px  
+                source(media="(max-width: 1139px)" srcset="./assets/img/banner_3-lg.png" type="image/png")
+                // 1900*400px
+                source(media="(max-width: 1439px)" srcset="./assets/img/banner_3.png" type="image/png")
+                // 1024px*300px    
+                img(src="./assets/img/banner_3-xl.png" alt="баннер" width="1024" height="300")
+          
+          .swiper-slide
+            a(href="#") 
+              picture
+                source(media="(max-width: 767px)" srcset="./assets/img/banner_4-mobile.png" type="image/png")    
+                source(media="(max-width: 1139px)" srcset="./assets/img/banner_4-lg.png" type="image/png")
+                source(media="(max-width: 1439px)" srcset="./assets/img/banner_4.png" type="image/png")     
+                img(src="./assets/img/banner_4-xl.png" alt="баннер" width="1024" height="300")
 
-      <div class="intro-swiper-pagination"></div> 
+        <div class="intro-swiper-pagination"></div>
+      
+      .intro__banner
+        +safety-slider(safetyList)(class="intro-banner-thin-swiper") 

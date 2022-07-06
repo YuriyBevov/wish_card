@@ -1,35 +1,9 @@
 .safety-slider {
     position: relative;
     width: 100%;
-    max-width: 30rem;
-    min-width: 30rem;
     overflow: hidden;
     height: 100%;
-    max-height: 30rem;
     border-radius: 1.2rem;
-
-    @media(max-width: 1140px) {
-        position: sticky;
-        top: 20px;
-    }
-
-    @media(max-width: $tablet_xs_width) {
-        height: 30rem;
-    }
-
-    @media(max-width: 640px) {
-        display: none; 
-        position: relative;
-        top: initial;
-        max-width: 100%;
-        margin-bottom: 2rem;
-        height: 25rem;
-        min-width: 25rem;
-    }
-
-    @media(max-width: 534px) {
-        display: none; 
-    }
 
     .swiper-slide {
         background-size: cover;
@@ -50,7 +24,8 @@
             h3 {
                 font-family: $font_sec-bold;
                 font-size: 2rem;
-                max-width: 21rem;
+                //max-width: 21rem;
+                padding-right: 2rem;
                 align-self: flex-start;
                 color: $color-white;
             }
@@ -59,6 +34,7 @@
                width: 189px;
                height: 207px;
                object-fit: contain;
+               margin-bottom: 2rem;
             }
         }
     }

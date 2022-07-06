@@ -1,11 +1,39 @@
 .intro {
+    &__wrapper {
+        @media(min-width: 1440px) {
+            @include block-container();
+
+            padding: 0;
+            background-color: transparent;
+        }
+        
+        display: flex;
+    }
+
+    &__banner {
+        width: calc(100% - 1044px);
+        max-height: 30rem;
+
+        @media(max-width: 1439px) {
+            display: none; 
+        }
+    }
+
     &-slider {
         position: relative;
-        width: 100%;
-        max-width: 192rem;
-        margin: 0 auto;
+        width: 1024px;
+        max-height: 300px;
         overflow: hidden;
-        margin-bottom: 2rem;
+        margin-right: 2rem;
+        border-radius: 12px;
+
+        @media(max-width: 1439px) {
+            width: 100%; 
+            margin: 0;
+            margin-bottom: 2rem;
+            border-radius: 0;
+            max-height: 48rem;
+        }
     }
 
     .swiper-slide {
@@ -56,4 +84,6 @@
             }
         }
     }
+
+
 }

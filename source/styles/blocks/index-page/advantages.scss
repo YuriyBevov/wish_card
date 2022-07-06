@@ -10,13 +10,11 @@
     &__list {
         display: flex;
         justify-content: center;
-        margin-right: 2rem;
         flex-grow: 1;
 
-        @media(max-width: 1140px) {
-            flex-direction: column;
+        @media(max-width: 1440px) {
+            flex-wrap: wrap;
         }
-
         @media(max-width: 640px) {
             order: 2;
             margin-right: 0;
@@ -28,24 +26,29 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        margin: 0 3rem;
+        margin: 0 1rem;
 
-        width: calc(100% / 3);
+        width: calc(100% / 5);
 
-        @media(max-width: 1140px) {
-            width: 100%;
-        }
-
-        @media(max-width: $desktop_lg_width) {
-            margin: 0 2rem; 
-        }
-
-        @media(max-width: $desktop_sm_width) {
-            margin: 0 1rem; 
-        }
-
-        @media(max-width: 1140px) {
+        @media(max-width: 1440px) {
+            width: calc(100% / 3);
+            max-width: 30rem;
             margin-bottom: 2rem;
+        }
+
+        @media(max-width: 1140px) {
+            max-width: 25rem;
+            margin-bottom: 2rem;
+        }
+
+        @media(max-width: $tablet_width) {
+            width: 50%;
+            max-width: calc(50% - 2rem);
+        }
+
+        @media(max-width: 600px) {
+            width: 100%;
+            max-width: calc(100% - 2rem);
         }
 
         img {

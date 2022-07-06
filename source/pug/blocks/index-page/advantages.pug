@@ -1,49 +1,3 @@
-include ../../mixins/safety-slider
--
-  const safetyList = [
-      /*{
-          title: 'Зона безопасного сервиса',
-          desc: ['Измеряем температуру курьеров дважды в день', 'Носим маски и перчатки', 'Используем антисептики'],
-      },
-
-      {
-          title: 'Зона безопасного сервиса',
-          desc: ['Измеряем температуру курьеров дважды в день', 'Носим маски и перчатки', 'Используем антисептики'],
-      },
-
-      {
-          title: 'Зона безопасного сервиса',
-          desc: ['Измеряем температуру курьеров дважды в день', 'Носим маски и перчатки', 'Используем антисептики'],
-      },
-
-      {
-          title: 'Зона безопасного сервиса',
-          desc: ['Измеряем температуру курьеров дважды в день', 'Носим маски и перчатки', 'Используем антисептики'],
-      },
-
-      {
-          title: 'Зона безопасного сервиса',
-          desc: ['Измеряем температуру курьеров дважды в день', 'Носим маски и перчатки', 'Используем антисептики'],
-      }*/
-
-      {
-        title: 'Пылесос Dyson V15 Detect Absolute',
-        img: './assets/img/sm-banner1.png'
-      },
-      {
-        title: 'Фен Dyson Supersonic HD07 Gift Edition',
-        img: './assets/img/sm-banner2.png'
-      },
-      {
-        title: 'Очиститель воздуха Dyson Pure Cool Me',
-        img: './assets/img/sm-banner3.png'
-      },
-      {
-        title: 'Фен Dyson Supersonic Professional',
-        img: './assets/img/sm-banner4.png'
-      },
-  ]
-
 section.adv
   .cmn__wrapper
     .adv__wrapper
@@ -58,6 +12,9 @@ section.adv
         li.adv__item
           img(src="./assets/img/index-adv3.svg" alt="Проверка устройства ДО ОПЛАТЫ" width="242" height="106")
           p.cmn__text Проверка устройства ДО ОПЛАТЫ
-      
-      .safety-slider
-        +safety-slider(safetyList)(class="intro-banner-thin-swiper") 
+        li.adv__item
+          img(src="./assets/img/adv_6.svg" alt="Проверка устройства ДО ОПЛАТЫ" width="242" height="106")
+          p.cmn__text Официальные партнеры брендов Karcher, Lenovo
+        li.adv__item
+          img(src="./assets/img/adv_7.svg" alt="Проверка устройства ДО ОПЛАТЫ" width="242" height="106")
+          p.cmn__text Сотрудничество с Яндекс Маркет, Ozon, Wildberries, Сбермаркет
