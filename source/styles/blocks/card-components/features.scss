@@ -38,7 +38,7 @@
             width: calc(100% / 2 - 20px);
         }
 
-        @media(max-width: 1440px) {
+        @media(max-width: 1400px) {
             width: 100%;
         }
 
@@ -63,7 +63,7 @@
 
             color: $color_blue;
 
-            @media(max-width: 1680px) {
+            @media(max-width: 1400px) {
                 font-size: 1.5rem;
             }
         }

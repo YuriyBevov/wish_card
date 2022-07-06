@@ -2,10 +2,14 @@
     position: sticky;
     top: 2rem;
     width: 100%;
-    max-width: 61rem;
+    max-width: 61rem; 
     height: 48rem;
     display: flex;
-    margin-right: 3.4rem;
+    margin-right: 2rem;
+
+    @media(max-width: $desktop_lg_width) {
+        max-width: 53rem;
+    }
 
     @media(max-width: 1240px) {
         position: initial;
