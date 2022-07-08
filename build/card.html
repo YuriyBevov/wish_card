@@ -2117,7 +2117,7 @@
                               <use xlink:href="#icon-original"></use>
                             </svg><span>Подробнее </span></a></li>
                         <li class="features__item"><a class="features__item-link" href="#">
-                            <p class="features__item-name">Кэшбек 300р<br>за&nbsp;отзыв</p>
+                            <p class="features__item-name">Кэшбек 300р за отзыв</p>
                             <svg width="40" height="40">
                               <use xlink:href="#icon-cashback"></use>
                             </svg><span>Подробнее </span></a></li>
@@ -2503,26 +2503,80 @@
     </footer>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <div class="main-footer__info">
-          <div class="main-footer__info-container">
-            <div class="main-footer__info-section"><img class="main-footer__info-logo" src="./assets/img/logo-name.png" alt="логотип" width="175" height="13"><a href="telto:+74999384565">+7 499 938-45-65</a><a href="telto:+74999384565">+7 499 938-45-65</a></div>
-            <div class="main-footer__info-section"><img class="main-footer__banner" src="./assets/img/yandex-banner.png" alt="Оценка яндекса" width="120" height="110"></div>
-          </div>
-          <div class="main-footer__info-law">
-            <p>Юридическая информация ИП Дегтярев Геннадий Юрьевич ИНН 772077699212 ОГРНИП 320774600425035 </p>
-            <p>Сайт носит информационный характер и не является публичной офертой, определяемой положениями <br> Статьи 437(2) Гражданского кодекса РФ. </p>
-          </div>
+        <div class="main-footer__top">
+          <div class="main-footer__top-section"><img class="main-footer__top-logo" src="./assets/img/logo-name.png" alt="логотип" width="175" height="13"><a href="telto:+74999384565">+7 499 938-45-65</a><a href="telto:+74999384565">+7 499 938-45-65</a></div>
+          <div class="main-footer__top-section"><img class="main-footer__banner" src="./assets/img/yandex-banner.png" alt="Оценка яндекса" width="120" height="110"></div>
         </div>
-        <div class="main-footer__describe" style="background-image: url(./assets/img/footer-img.svg);">
-          <div class="main-footer__describe-container">
+        <div class="main-footer__nav">
+          <ul class="main-footer__nav-list">
+            <li class="main-footer__nav-item"><a href="#"> О компании</a></li>
+            <li class="main-footer__nav-item"><a href="#"> Условия оплаты</a></li>
+            <li class="main-footer__nav-item"><a href="#"> Условия доставки</a></li>
+            <li class="main-footer__nav-item"><a href="#"> Гарантия на товар</a></li>
+            <li class="main-footer__nav-item"><a href="#"> Блог</a></li>
+            <li class="main-footer__nav-item"><a href="news.html"> Новости</a></li>
+            <li class="main-footer__nav-item"><a href="sales.html"> Акции</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__bottom">
+          <div class="main-footer__info">
+            <p>Юридическая информация ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «КБ ЭММАЙТИ» ОГРН 1200200036805, ИНН 0245963778 </p>
+            <p>Сайт носит информационный характер и не является публичной офертой, определяемой положениями <br> Статьи 437(2) Гражданского кодекса РФ.</p><a href="#" target="_blank">Соглашение на обработку персональных данных</a>
+          </div>
+          <div class="main-footer__describe" style="background-image: url(./assets/img/footer-img.svg);">
             <h3 class="cmn__subtitle">Подпишитесь <br><span>У нас для вас кое-что есть </span></h3>
             <p>Получайте бонусы на почту через несколько секунд пребывания на сайте.</p>
+            <form action="#">
+              <input type="text" placeholder="Введите почту:">
+              <button class="main-footer__subscribe-btn" type="submit">Отправить</button>
+            </form>
           </div>
-          <form action="#">
-            <input type="text" placeholder="Введите почту:">
-            <button class="main-footer__subscribe-btn" type="submit">Отправить</button>
-          </form>
         </div>
+        <!--.main-footer__info
+        .main-footer__info-container
+          .main-footer__info-section
+            img(src="./assets/img/logo-name.png" alt="логотип" width="175" height="13").main-footer__info-logo
+        
+            a(href="telto:+74999384565") +7 499 938-45-65
+            a(href="telto:+74999384565") +7 499 938-45-65
+          .main-footer__info-section
+            img.main-footer__banner(src="./assets/img/yandex-banner.png" alt="Оценка яндекса" width="120" height="110")
+          
+        ul.main-footer__nav
+          li.main-footer__nav-item
+            a(href="#")  О компании
+          li.main-footer__nav-item
+            a(href="#")  Условия оплаты
+          li.main-footer__nav-item
+            a(href="#")  Условия доставки
+          li.main-footer__nav-item
+            a(href="#")  Гарантия на товар
+          li.main-footer__nav-item
+            a(href="#")  Блог
+          li.main-footer__nav-item
+            a(href="news.html")  Новости
+          li.main-footer__nav-item
+            a(href="sales.html")  Акции
+        
+        
+        .main-footer__info-law
+          p Юридическая информация ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «КБ ЭММАЙТИ» ОГРН 1200200036805, ИНН 0245963778 
+          p Сайт носит информационный характер и не является публичной офертой, определяемой положениями <br/> Статьи 437(2) Гражданского кодекса РФ.
+        
+          a(href="#" target="_blank") Соглашение на обработку персональных данных
+        
+        -->
+        <!--.main-footer__describe(style="background-image: url(./assets/img/footer-img.svg);")
+        .main-footer__describe-container
+          h3.cmn__subtitle Подпишитесь <br/><span>У нас для вас кое-что есть </span>
+        
+          p Получайте бонусы на почту через несколько секунд пребывания на сайте.
+        
+        form(action="#")
+          input(type="text" placeholder="Введите почту:")
+          button.main-footer__subscribe-btn(type="submit") Отправить  
+           
+        -->
       </div>
     </footer>
     <script src="./js/bundle.js"></script>

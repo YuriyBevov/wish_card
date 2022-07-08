@@ -47,8 +47,13 @@ if(cardSlider) {
       direction: "horizontal",
 
       breakpoints: {
+         769: {
+            spaceBetween: 40,
+            slidesPerView: 3,
+            direction: "vertical",
+         },
 
-         535: {
+         961: {
             spaceBetween: 50,
             slidesPerView: 4,
             direction: "vertical",
@@ -59,6 +64,7 @@ if(cardSlider) {
    let swiperThumbs = new Swiper(".card-slider", {
       spaceBetween: 10,
       slidesPerView: 1,
+
       thumbs: {
         swiper: swiper,
       },
