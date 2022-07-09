@@ -1,136 +1,90 @@
-const catalogOpener = document.querySelector('.js-open-catalog-menu');
+function setActiveItem(prev, current, type) {
+    prev.classList.remove('active');
+    current.classList.add('active');
 
+    if(type === 'cathegory') {
+        let subcathegories = current.querySelectorAll('.catalog-menu__item--subcathegory');
+        setActiveItem(catalog.querySelector('.catalog-menu__item--subcathegory.active'), subcathegories[0], 'subcathegory');
+    };
 
-if(catalogOpener) {
-    const catalog = document.querySelector('.catalog-menu');
+    if(type === 'subcathegory') {
+        let id = current.getAttribute('data-cathegory-id');
+        let activeProduct = catalog.querySelector(`.catalog-menu__product-list[data-cathegory-id= "${ id }" ]`);
+
+        setActiveItem(document.querySelector('.catalog-menu__product-list.active'), activeProduct , 'product');
+    };
+}
+
+const catalog = document.querySelector('.catalog-menu');
+
+if(catalog) {
+    const catalogOpener = document.querySelector('.js-open-catalog-menu');
     const closer = catalog.querySelector('.js-catalog-menu-closer');
-    
+
     const onClickShowCatalog = () => {
         catalog.classList.toggle('opened');
 
-        if(catalog.classList.contains('opened')) {
-            init();
+        if(!catalog.classList.contains('opened')) {
+            //возвращаю каталог в изначальную позицию при закрытии
+            setActiveItem(catalog.querySelector('.catalog-menu__item--cathegory.active'), cathegoryItems[0], 'cathegory');
         }
     }
 
     catalogOpener.addEventListener('click', onClickShowCatalog);
     closer.addEventListener('click', onClickShowCatalog);
 
-    let categoryItems = document.querySelectorAll('.catalog-menu__inner-item:not(.catalog-menu__back)');
-    let catalogMenu = document.querySelector('.catalog-menu__list');
-    let backBtn = document.querySelectorAll('.catalog-menu__back');
+    const cathegoryItems = catalog.querySelectorAll('.catalog-menu__item--cathegory');
+    const subcathegoryItems = catalog.querySelectorAll('.catalog-menu__item--subcathegory');
+    const products = document.querySelector('.catalog-menu__products');
+    const backBtns = document.querySelectorAll('.catalog-menu__item--back');
 
-    categoryItems.forEach(item => {
-        item.addEventListener('click', () => {
-            catalogMenu.classList.add('mobile-hide');
-        })
-    })
+    const onClickRefreshMobileProducts = (evt) => {
+        evt.preventDefault();
+        refreshMobileProducts();
+    };
 
-    backBtn.forEach(btn => {
-        btn.addEventListener('click', () => {
-            catalogMenu.classList.remove('mobile-hide');
-        })
-    })
+    const refreshMobileProducts = () => {
+        products.classList.contains('showed') ?
+        products.classList.remove('showed') : null;
+    };
 
-    function setActiveProductList(activeInnerItem) {
-        activeProductList.classList.remove('active');
-        activeProductList = document.querySelector(`.catalog-menu__product-list[data-product=${activeInnerItem.getAttribute("data-product")}]`);
-        activeProductList.classList.add('active');
-    }
+    backBtns.forEach(btn => {
+        btn.addEventListener('click', onClickRefreshMobileProducts);
+    });
 
-    function setActiveInnerItem(innerItems, activeItem) {
-        innerItems.forEach(inner => {
-            inner.classList.contains('active') ?
-            inner.classList.remove('active') : null;
-        });
-        activeInnerItem = activeItem;
-        activeInnerItem.classList.add('active'); 
-    }
+    function showMobileProducts() {
+        products.classList.add('showed');
+    };
 
-    function onMouseOverSetItem(evt) {
-        if(type === 'mobile') {
-            evt.preventDefault();
+    const onClickSetActiveItem = (evt) => {
+        evt.preventDefault();
+        setActiveItem(catalog.querySelector('.catalog-menu__item--cathegory.active'), evt.currentTarget, 'cathegory');
+    };
+
+    const onClickShowActiveProducts = (evt) => {
+        evt.preventDefault();
+        evt.stopPropagation();
+
+        if(window.innerWidth < 661) {
+            showMobileProducts();
         }
 
-        if(
-            evt.currentTarget.classList.contains('catalog-menu__item')
-            && !evt.currentTarget.classList.contains('active')
-          ) {
+        setActiveItem(catalog.querySelector('.catalog-menu__item--subcathegory.active'), evt.currentTarget, 'subcathegory');
+    };
 
-            items.forEach(item => {
-                item.classList.contains('active') ?
-                item.classList.remove('active') : null;
-            });
+    cathegoryItems.forEach(item => {
+        item.addEventListener('click', onClickSetActiveItem);
+    });
 
-            evt.currentTarget.classList.add('active');
+    subcathegoryItems.forEach(item => {
+        item.addEventListener('click', onClickShowActiveProducts);
+    });
 
-            innerItems.forEach(inner => {
-                inner.removeEventListener('mouseover', onMouseOverSetInnerItem);
-                inner.removeEventListener('click', onMouseOverSetInnerItem);
-            });
-
-            innerItems = evt.currentTarget.querySelectorAll('.catalog-menu__inner-item:not(.catalog-menu__back)');
-
-            setActiveInnerItem(innerItems, innerItems[0]);
-            setActiveProductList(activeInnerItem);
-
-            innerItems.forEach(inner => {
-                if(type === 'desktop') {
-                    inner.addEventListener('mouseover', onMouseOverSetInnerItem);
-                } else {
-                    inner.addEventListener('click', onMouseOverSetInnerItem);
-                }
-            });
+    const onResizeRefreshMobileProducts = () => {
+        if(window.innerWidth > 660) {
+            refreshMobileProducts();
         }
-    }
+    };
 
-    function onMouseOverSetInnerItem(evt) {
-        if(type === 'mobile') {
-            evt.preventDefault();
-        }
-
-        if(
-            evt.currentTarget.classList.contains('catalog-menu__inner-item')
-          ) {
-            setActiveInnerItem(innerItems, evt.currentTarget);
-            setActiveProductList(activeInnerItem);
-        }
-    }
-    
-    function init() {
-        if(type === 'desktop') {
-            items.forEach(item => {
-                item.addEventListener('mouseover', onMouseOverSetItem);
-            });
-        
-            innerItems.forEach(inner => {
-                inner.addEventListener('mouseover', onMouseOverSetInnerItem);
-            });
-        } else {
-            items.forEach(item => {
-                item.addEventListener('click', onMouseOverSetItem);
-            });
-        
-            innerItems.forEach(inner => {
-                inner.addEventListener('click', onMouseOverSetInnerItem);
-            });
-        }
-    }
-
-    const items = catalog.querySelectorAll('.catalog-menu__item:not(.catalog-menu__back)');
-    let activeItem = items[0];
-    let innerItems = activeItem.querySelectorAll('.catalog-menu__inner-item:not(.catalog-menu__back)');
-    let activeInnerItem = innerItems[0];
-    let activeProductList = document.querySelector(`.catalog-menu__product-list[data-product=${activeInnerItem.getAttribute("data-product")}]`);
-    activeItem.classList.add('active');
-    activeInnerItem.classList.add('active');
-    activeProductList.classList.add('active');
-
-    let type;
-
-    if(window.innerWidth > 820) {
-        type = 'desktop';
-    } else {
-        type = 'mobile';
-    }
+    window.addEventListener('resize', onResizeRefreshMobileProducts);
 }
