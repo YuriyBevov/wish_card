@@ -196,7 +196,7 @@
         padding: 2.5rem 2rem;
         width: fit-content;
         min-width: 28rem;
-        max-width: 35rem;
+        max-width: calc(100% - 100rem);
         
         height: 100%;
         max-height: 60rem;
@@ -204,6 +204,10 @@
         overflow-y: auto;
 
         background-color: $color_white;
+
+        @media(max-width: 1240px) {
+            max-width: calc(100% - 50rem);
+        }
 
         @media(max-width: 820px) {
             left: 0;
@@ -220,8 +224,18 @@
         opacity: 0;
 
         &.active {
-            display: block;
+            display: flex;
+            flex-wrap: wrap;
             animation: fadeIn 0.4s 0.1s ease-in forwards;
+        }
+    }
+
+    &__product-item {
+        max-width: 22rem;
+        margin-bottom: 0.7rem;
+
+        @media(max-width: 820px) {
+            max-width: 100%;
         }
     }
 
