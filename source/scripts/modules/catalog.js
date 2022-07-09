@@ -27,6 +27,7 @@ if(catalog) {
         if(!catalog.classList.contains('opened')) {
             //возвращаю каталог в изначальную позицию при закрытии
             setActiveItem(catalog.querySelector('.catalog-menu__item--cathegory.active'), cathegoryItems[0], 'cathegory');
+            refreshMobileProducts();
         }
     }
 
