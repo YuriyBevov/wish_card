@@ -61,10 +61,6 @@
 
         .header__nav {
             flex-grow: 1;
-
-            @media(max-width: 414px) {
-                margin-bottom: 1.5rem;
-            }
         }
 
         @media(max-width: $tablet_width) {
