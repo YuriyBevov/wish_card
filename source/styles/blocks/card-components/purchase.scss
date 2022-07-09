@@ -8,17 +8,17 @@
 
     padding: 1.6rem;
 
-    @media(max-width: 1440px) {
+    @media(max-width: 1439px) {
         order: 1;
         margin-bottom: 1.6rem;
     }
 
-    @media(max-width: 1140px) {
+    @media(max-width: 1139px) {
         order: 2;
         margin-bottom: 0;
     }
 
-    @media(max-width: 960px) {
+    @media(max-width: 959px) {
         order: 1;
         margin-bottom: 1.6rem;
         min-width: initial;
@@ -44,7 +44,7 @@
         &-menu {
             display: flex;
 
-            @media(max-width: 1680px) {
+            @media(max-width: 1679px) {
                 flex-direction: column;
             }
 
@@ -73,7 +73,7 @@
             &:not(:last-child) {
                 margin-right: 0.8rem;
 
-                @media(max-width: 1680px) {
+                @media(max-width: 1679px) {
                     margin-right: 0;
                     margin-bottom: 0.5rem;
                 }

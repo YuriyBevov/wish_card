@@ -7,21 +7,21 @@
     max-width: 50rem;
     margin-right: 2rem;
 
-    @media(max-width: 1680px) {
+    @media(max-width: 1679px) {
         max-width: 40rem;
     }
 
-    @media(max-width: 1440px) {
+    @media(max-width: 1439px) {
         order: 2;
         max-width: 100%;
     }
 
-    @media(max-width: 1140px) {
+    @media(max-width: 1139px) {
         order: 1;
         max-width: 40rem;
     }
 
-    @media(max-width: 960px) {
+    @media(max-width: 959px) {
         order: 2;
         max-width: 100%;
     }
