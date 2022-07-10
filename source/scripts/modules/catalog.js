@@ -11,7 +11,7 @@ function setActiveItem(prev, current, type) {
         let id = current.getAttribute('data-cathegory-id');
         let activeProduct = catalog.querySelector(`.catalog-menu__product-list[data-cathegory-id= "${ id }" ]`);
 
-        setActiveItem(document.querySelector('.catalog-menu__product-list.active'), activeProduct , 'product');
+        setActiveItem(catalog.querySelector('.catalog-menu__product-list.active'), activeProduct , 'product');
     };
 }
 
@@ -36,8 +36,8 @@ if(catalog) {
 
     const cathegoryItems = catalog.querySelectorAll('.catalog-menu__item--cathegory');
     const subcathegoryItems = catalog.querySelectorAll('.catalog-menu__item--subcathegory');
-    const products = document.querySelector('.catalog-menu__products');
-    const backBtns = document.querySelectorAll('.catalog-menu__item--back');
+    const products = catalog.querySelector('.catalog-menu__products');
+    const backBtns = catalog.querySelectorAll('.catalog-menu__item--back');
 
     const onClickRefreshMobileProducts = (evt) => {
         evt.preventDefault();
@@ -57,7 +57,7 @@ if(catalog) {
         products.classList.add('showed');
     };
 
-    const onClickSetActiveItem = (evt) => {
+    const onClickSetActiveCathegory = (evt) => {
         evt.preventDefault();
         setActiveItem(catalog.querySelector('.catalog-menu__item--cathegory.active'), evt.currentTarget, 'cathegory');
     };
@@ -74,7 +74,7 @@ if(catalog) {
     };
 
     cathegoryItems.forEach(item => {
-        item.addEventListener('click', onClickSetActiveItem);
+        item.addEventListener('click', onClickSetActiveCathegory);
     });
 
     subcathegoryItems.forEach(item => {
