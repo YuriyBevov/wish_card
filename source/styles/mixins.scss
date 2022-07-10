@@ -21,6 +21,11 @@
         margin-bottom: 2.5rem;
     }
 
+    @media(max-width: 1439px) {
+        margin: 0 2.8rem;
+        margin-bottom: 2.5rem;
+    }
+
     // до 1360px
     @media(max-width: $desktop_sm_width) {
         margin: 0 4rem;
@@ -53,15 +58,10 @@
     max-width: 1920px;
     min-width: $min_width;
     background-color: transparent;
-    
-    // до 1500px
-    /* @media(max-width: $desktop_md_width) {
-        max-width: 1400px;
-    }*/
+
     // до 1360px
     @media(max-width: $desktop_sm_width) {
         max-width: $desktop_sm_width;
-
     }
 
     // до 1024px

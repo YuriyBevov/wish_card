@@ -49,8 +49,8 @@
 
         button {
             position: absolute;
-            top: 0.2rem;
-            right: 43rem;
+            top: 1.3rem;
+            left: 0;
             
             display: flex;
             align-items: center;
@@ -65,12 +65,13 @@
             
             z-index: 101;
 
-            @media(max-width: 1365px) {
-                right: 3rem;
+            svg {
+                fill: $color_black-300;
             }
 
             @media(max-width: 660px) {
                 top: 0;
+                left: initial;
                 right: 1.5rem;
             }
         }
