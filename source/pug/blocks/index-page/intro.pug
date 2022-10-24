@@ -2,20 +2,24 @@ include ../../mixins/safety-slider
 -
   const safetyList = [
       {
-        title: 'Пылесос Dyson V15 Detect Absolute',
-        img: './assets/img/sm-banner1.png'
+        title: 'Смартфон <br/>Samsung&nbsp;Galaxy&nbsp;A52',
+        desc: ['Съемка видео в&nbsp;4К', 'Мощный , Энергосберегающий процессор Qualcomm Snapdragon&nbsp;720G'],
+        img: './assets/img/a52.png'
       },
       {
-        title: 'Фен Dyson Supersonic HD07 Gift Edition',
-        img: './assets/img/sm-banner2.png'
+        title: 'Ноутбук&nbsp;Apple MacBook&nbsp;Air&nbsp;2022',
+        desc: ['Абсолютно новый процессор Apple&nbsp;M2', 'Невероятная четкость экрана Liquid Retina с разрешением  2560x1664'],
+        img: './assets/img/air22.png'
       },
       {
-        title: 'Очиститель воздуха Dyson Pure Cool Me',
-        img: './assets/img/sm-banner3.png'
+        title: 'Смартфон <br/> Google&nbsp;Pixel&nbsp;6',
+        desc: ['Собственный процессор от&nbsp;Google "Google&nbsp;Tensor"', 'Новая мощная камера&nbsp;50&nbsp;МП&nbsp;F/1.85,  12&nbsp;МП&nbsp;F/2.20'],
+        img: './assets/img/pixel6.png'
       },
       {
-        title: 'Фен Dyson Supersonic Professional',
-        img: './assets/img/sm-banner4.png'
+        title: 'Смартфон <br/>OnePlus&nbsp;Ace',
+        desc: ['Быстрая Зарядка мощностью 150W способная зарядить телефон  с&nbsp;0&nbsp;до&nbsp;100%&nbsp;за&nbsp;17&nbsp;минут', 'Новый мощный процессор от&nbsp;MediaTek "MediaTek&nbsp;Dimensity&nbsp;8100&nbsp;Max"'],
+        img: './assets/img/ace.png'
       },
   ]
 
@@ -40,7 +44,7 @@ section.intro
             a(href="#") 
               picture
                 source(media="(max-width: 767px)" srcset="./assets/img/banner_4-mobile.png" type="image/png")    
-                source(media="(max-width: 1139px)" srcset="./assets/img/banner_4-lg.png" type="image/png")
+                source(media="(max-width: 1139px)" srcset="./assets/img/banner_4-lg.png" type="image/png") 
                 source(media="(max-width: 1439px)" srcset="./assets/img/banner_4.png" type="image/png")     
                 img(src="./assets/img/banner_4-xl.png" alt="баннер" width="1024" height="300")
 

@@ -21,7 +21,7 @@
 @import "common/header-components/cart";
 @import "common/header-components/catalog-menu";
 @import "common/offer-slider";
-@import "common/safety-slider";
+
 
 
 @import "blocks/card";
@@ -63,6 +63,8 @@
 @import "blocks/catalog-page/catalog-components/cats";
 @import "blocks/catalog-page/catalog-footer";
 
+@import "common/safety-slider";
+
 // news-page
 
 @import "blocks/news-page/news";
@@ -83,7 +85,7 @@
 @import "blocks/components/acc-card";
 @import "blocks/components/sliders";
 @import "blocks/components/breadcrumbs";
-@import "blocks/components/safety-slider";
+//@import "blocks/components/safety-slider";
 
 @import "common/footer";
 @import "common/main-footer";
