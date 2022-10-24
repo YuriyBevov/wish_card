@@ -3,13 +3,14 @@ mixin safety-slider(data)
     .swiper-wrapper
       each slide in data
         .swiper-slide(style="background-image: url('./assets/img/safety-slider-bg@1x.png')")
-          .slider-content
-            h3!= slide.title
-            ul
-              each item in slide.desc 
-                li!= item
+          a(href="#") 
+            .slider-content
+              h3!= slide.title
+              ul
+                each item in slide.desc 
+                  li!= item
 
-            span Купить
-            
-          img(src=slide.img alt= slide.title width="189" height="207")
+              span Купить
+              
+            img(src=slide.img alt= slide.title)
     <div class="safety-swiper-pagination"></div> 
