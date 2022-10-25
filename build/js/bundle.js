@@ -17802,7 +17802,8 @@ const bannerThinSlider = document.querySelector('.safety-swiper-container');
 
 if(bannerThinSlider) {
    new swiper_core__WEBPACK_IMPORTED_MODULE_0__["default"](".safety-swiper-container", {
-      slidesPerView: 'auto',
+      slidesPerView: 1,
+      spaceBetween: 15,
       loop: true,
 
       pagination: {

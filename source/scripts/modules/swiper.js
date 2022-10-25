@@ -253,7 +253,8 @@ const bannerThinSlider = document.querySelector('.safety-swiper-container');
 
 if(bannerThinSlider) {
    new Swiper(".safety-swiper-container", {
-      slidesPerView: 'auto',
+      slidesPerView: 1,
+      spaceBetween: 15,
       loop: true,
 
       pagination: {
