@@ -17,8 +17,12 @@
             align-items: center;
             border-radius: 12px;
             padding: 25px;
-            @media(max-width: 1600px) {
+            /*@media(max-width: 1600px) {
                 padding-right: 0;
+            }*/
+
+            @media(max-width: 1735px) {
+                flex-direction: column;
             }
 
             .slider-content {
@@ -29,8 +33,15 @@
                 min-width: 280px;
                 padding-right: 10px;
 
-                @media(max-width: 1600px) {
+                /*@media(max-width: 1600px) {
                     min-width: 240px;
+                }*/
+
+                @media(max-width: 1735px) {
+                    order: 2;
+                    padding-right: 0;
+                    min-width: initial;
+                    height: initial;
                 }
 
                 h3 {
@@ -44,7 +55,15 @@
 
                     color: $color_white;
 
-                    @media(max-width: 1600px) {
+                    /*@media(max-width: 1600px) {
+                        font-size: 22px;
+                        line-height: 28px;
+                        margin-bottom: 15px;
+                    }*/
+
+                    @media(max-width: 1735px) {
+                        text-align: center;
+                        margin-top: auto;
                         font-size: 22px;
                         line-height: 28px;
                         margin-bottom: 15px;
@@ -71,6 +90,17 @@
                     letter-spacing: -0.02em;
 
                     color: #166BFF;
+
+                    @media(max-width: 1735px) {
+                        margin: 0 auto;
+                        margin-top: initial;
+                    }
+                }
+
+                ul {
+                    @media(max-width: 1735px) {
+                        display: none;
+                    }
                 }
 
                 li {
@@ -105,6 +135,12 @@
                 height: 210px;
                 min-width: 250px;
                 object-fit: contain;
+
+                @media(max-width: 1735px) {
+                    order: 1;
+                    height: auto;
+                    margin-bottom: 15px;
+                }
 
                 @media(max-width: 1600px) {
                     //min-width: initial;
